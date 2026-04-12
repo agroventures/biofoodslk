@@ -7,7 +7,7 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const location = useLocation();
-    const isTransparentPage = ['/', '/process'].includes(location.pathname);
+    const isTransparentPage = ['/'].includes(location.pathname);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
