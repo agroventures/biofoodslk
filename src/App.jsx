@@ -7,6 +7,9 @@ import Process from './pages/Process';
 import ProcessingFacility from './pages/ProcessingFacility';
 import Media from './pages/Media';
 import ScrollToTop from './components/shared/ScrollToTop';
+import Producers from './pages/Producers';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -18,8 +21,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/process" element={<Process />} />
+        <Route path="/producers" element={<Producers />} />
         <Route path="/processing-facilities" element={<ProcessingFacility />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   );

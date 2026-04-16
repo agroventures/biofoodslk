@@ -1,18 +1,15 @@
 import React from 'react'
 import Navbar from '../components/shared/Navbar'
 import Footer from '../components/shared/Footer'
-import MediaHero from '../components/Media/MediaHero'
-import MediaVideos from '../components/Media/MediaVideos'
 
-function Media() {
+function TermsAndConditions() {
   return (
     <div className='min-h-screen'>
       <Navbar />
-      <MediaHero />
-      <MediaVideos />
+
       <Footer />
     </div>
   )
 }
 
-export default Media
+export default TermsAndConditions

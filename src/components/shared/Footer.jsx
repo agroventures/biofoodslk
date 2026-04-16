@@ -2,9 +2,22 @@ import React from 'react';
 import { Leaf, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     const currentYear = new Date().getFullYear();
+
+    const support = [
+        {id: 1, href: '/terms', title: 'Terms and Conditions'}, 
+        {id: 2, href: '/privacy', title: 'Privacy Policy'}
+    ]
+
+    const navLinks = [
+        {id: 1, href: '/about', title: 'About Us'}, 
+        {id: 2, href: '/products', title: 'Products'},
+        {id: 3, href: '/producers', title: 'Producers'},
+        {id: 4, href: '/media', title: 'Media'}
+    ]
 
     return (
         <footer className="relative bg-[#0a0f12] text-white pt-20 pb-10 overflow-hidden">
@@ -48,11 +61,11 @@ function Footer() {
                                 Company
                             </h4>
                             <ul className="space-y-4">
-                                {['About Us', 'Products', 'Producers', 'Media'].map((item) => (
-                                    <li key={item}>
-                                        <a href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-white hover:translate-x-1 flex items-center gap-1 transition-all duration-200">
-                                            {item}
-                                        </a>
+                                {navLinks.map((item) => (
+                                    <li key={item.id}>
+                                        <Link to={item.href} className="text-gray-400 hover:text-white hover:translate-x-1 flex items-center gap-1 transition-all duration-200">
+                                            {item.title}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -62,11 +75,11 @@ function Footer() {
                                 Support
                             </h4>
                             <ul className="space-y-4">
-                                {['FAQ', 'Shipping', 'Returns', 'Privacy Policy'].map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 block">
-                                            {item}
-                                        </a>
+                                {support.map((item) => (
+                                    <li key={item.id}>
+                                        <Link to={item.href} target='_blank' className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 block">
+                                            {item.title}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
