@@ -28,12 +28,10 @@ const Navbar = () => {
     }, [isOpen]);
 
     const getNavbarStyles = () => {
-        if (!isTransparentPage) {
-            return 'relative bg-white border-b border-gray-100 shadow-sm h-20 md:h-24 text-brand-dark';
+        if (!isTransparentPage || scrolled) {
+            return 'fixed bg-white border-b border-gray-100 shadow-sm h-20 md:h-24 text-brand-dark';
         }
-        return scrolled
-            ? 'fixed bg-white/40 backdrop-blur-md border-b border-white/20 shadow-lg h-20 md:h-24'
-            : 'fixed bg-transparent border-b border-transparent h-24 md:h-32';
+        return 'fixed bg-transparent border-b border-transparent h-24 md:h-32';
     };
 
     const navLinks = [
@@ -149,6 +147,8 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            {/* Spacer for non-transparent pages to prevent content from hiding under fixed navbar */}
+            {!isTransparentPage && <div className="h-20 md:h-24" />}
         </>
     );
 };
