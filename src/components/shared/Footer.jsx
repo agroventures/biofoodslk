@@ -77,7 +77,7 @@ function Footer() {
                             <ul className="space-y-4">
                                 {support.map((item) => (
                                     <li key={item.id}>
-                                        <Link to={item.href} target='_blank' className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 block">
+                                        <Link to={item.href} className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 block">
                                             {item.title}
                                         </Link>
                                     </li>
