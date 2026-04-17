@@ -18,7 +18,7 @@ function HomeSegments() {
             title: "Process",
             description: "Advanced sustainable processing techniques.",
             img: '/Home/process.avif',
-            link: '/process',
+            link: '/processing-facilities',
             gradient: 'from-brand-secondary to-brand-accent' 
         },
         {
@@ -34,7 +34,7 @@ function HomeSegments() {
             title: "Quality",
             description: "Certified excellence in every single batch.",
             img: '/Home/quality.avif',
-            link: '/quality',
+            link: '/quality-certifications',
             gradient: 'from-brand-primary to-brand-accent' 
         }
     ];

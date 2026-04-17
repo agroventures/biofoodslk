@@ -4,6 +4,8 @@ import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
 import HomeHero from '../components/Home/HomeHero';
 import HomeSegments from '../components/Home/HomeSegments';
+import HomeCertifications from '../components/Home/HomeCertfications';
+import HomeEcoPlus from '../components/Home/HomeEcoPlus';
 
 function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +23,9 @@ function Home() {
         <div className="min-h-screen">
             <Navbar />
             <HomeHero />
+            <HomeCertifications />
             <HomeSegments />
+            <HomeEcoPlus />
             <Footer />
         </div>
     )
