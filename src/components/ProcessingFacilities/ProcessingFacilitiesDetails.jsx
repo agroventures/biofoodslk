@@ -14,7 +14,7 @@ function ProcessingFacilitiesDetails() {
 
             <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 {/* Section Header */}
-                <div className="mb-16 lg:mb-20 text-center lg:text-left">
+                <div className="mb-16 lg:mb-20 text-center">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10 shadow-sm">
                         <Factory className="w-5 h-5" />
@@ -30,7 +30,7 @@ function ProcessingFacilitiesDetails() {
                     </h2>
 
                     {/* Subtitle */}
-                    <p className="text-lg text-gray-600 max-w-2xl lg:mx-0 mx-auto mt-4">
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
                         State-of-the-art facilities ensuring the highest standards of quality and safety throughout our supply chain.
                     </p>
                 </div>
