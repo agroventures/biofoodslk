@@ -101,9 +101,9 @@ function PrivacyPolicy() {
                                 We use cookies to enhance website performance, learn about your interests, and provide social media features. 
                                 By continuing to browse, you consent to our use of cookies.
                             </p>
-                            <button className="bg-white text-brand-primary font-bold px-8 py-3 rounded-full hover:bg-slate-100 transition-colors">
+                            {/* <button className="bg-white text-brand-primary font-bold px-8 py-3 rounded-full hover:bg-slate-100 transition-colors">
                                 Manage Preferences
-                            </button>
+                            </button> */}
                         </section>
                     </div>
 

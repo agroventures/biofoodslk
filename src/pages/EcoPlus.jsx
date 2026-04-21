@@ -9,11 +9,11 @@ function EcoPlus() {
             <Navbar />
 
             {/* 1. Hero Section - The First & Only */}
-            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-slate-900">
+            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-gray-300">
                 <img 
                     src="/Home/eco_plus.avif" 
                     alt="Eco Plus Fertilizer" 
-                    className="absolute inset-0 w-full h-full object-cover opacity-50"
+                    className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
                     <div className="inline-flex items-center gap-2 bg-brand-primary/20 backdrop-blur-md border border-brand-primary/30 text-brand-primary px-6 py-2 rounded-full mb-8">

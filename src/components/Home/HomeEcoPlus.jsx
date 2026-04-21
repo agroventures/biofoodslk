@@ -6,7 +6,7 @@ function HomeEcoPlus() {
     return (
         <section className="py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="relative bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl">
+                <div className="relative bg-white/40 backdrop-blur-2xl rounded-[3rem] overflow-hidden shadow-2xl border border-white/50">
 
                     {/* Decorative Background Elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-primary/10 blur-[120px] -mr-32" />
@@ -25,9 +25,9 @@ function HomeEcoPlus() {
                             <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
                                 <div className="flex items-center gap-3 text-white mb-2">
                                     <ShieldCheck className="text-brand-primary w-5 h-5" />
-                                    <span className="text-xs font-black uppercase tracking-widest">Patented Technology</span>
+                                    <span className="text-xs font-black text-brand-primary uppercase tracking-widest">Patented Technology</span>
                                 </div>
-                                <p className="text-white/80 text-sm leading-relaxed">
+                                <p className="text-brand-primary text-sm leading-relaxed">
                                     Revolutionizing agriculture with nutrient-dense, 100% organic waste-to-soil solutions.
                                 </p>
                             </div>
@@ -35,28 +35,23 @@ function HomeEcoPlus() {
 
                         {/* Content Side */}
                         <div className="p-10 lg:p-20 relative z-10">
-                            <div className="inline-flex items-center gap-2 bg-brand-primary/20 text-brand-primary px-4 py-1.5 rounded-full mb-8">
-                                <Sprout size={16} />
-                                <span className="text-xs font-black uppercase tracking-[0.2em]">Eco Planet Project</span>
-                            </div>
-
-                            <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tighter leading-[0.9] mb-8">
+                            <h2 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tighter leading-[0.9] mb-8">
                                 Groundbreaking <br />
                                 <span className="text-brand-primary">Organic Fertility.</span>
                             </h2>
 
-                            <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-md">
-                                We don't just harvest from the earth; we give back. Our Eco Plus project transforms organic by-products into premium fertilizers, closing the loop on sustainable farming.
+                            <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-md">
+                                We don't just harvest from the earth; we give back.
                             </p>
 
                             <div className="grid grid-cols-2 gap-6 mb-12">
                                 <div className="border-l-2 border-brand-primary/30 pl-4">
-                                    <div className="text-2xl font-bold text-white mb-1">Circular</div>
-                                    <div className="text-xs text-white/40 uppercase tracking-widest font-black">Economy</div>
+                                    <div className="text-2xl font-bold text-slate-900 mb-1">Circular</div>
+                                    <div className="text-xs text-slate-500 uppercase tracking-widest font-black">Economy</div>
                                 </div>
                                 <div className="border-l-2 border-brand-primary/30 pl-4">
-                                    <div className="text-2xl font-bold text-white mb-1">100%</div>
-                                    <div className="text-xs text-white/40 uppercase tracking-widest font-black">Bio-Degradable</div>
+                                    <div className="text-2xl font-bold text-slate-900 mb-1">100%</div>
+                                    <div className="text-xs text-slate-500 uppercase tracking-widest font-black">Bio-Degradable</div>
                                 </div>
                             </div>
 

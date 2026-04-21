@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
-import { Leaf, ChevronRight, Info, Filter, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Leaf, ChevronRight } from 'lucide-react';
 import { products } from '../../data/product';
 
 function ProductsDetails() {
     const [selectedCategory, setSelectedCategory] = useState(products[0]);
     const [activeSubTab, setActiveSubTab] = useState('');
+
+    // Automatically scroll to top whenever the selected category changes
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    }, [selectedCategory.id]);
 
     // Update sub-tab when category changes if it has nested grades
     const handleCategoryChange = (product) => {
@@ -72,7 +80,7 @@ function ProductsDetails() {
                                     alt={selectedCategory.name}
                                     className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                             </div>
                         </div>
                     </div>
@@ -80,12 +88,12 @@ function ProductsDetails() {
                     {/* Grades / Sub-items Section */}
                     {selectedCategory.grades && (
                         <div className="space-y-8">
-                            <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-gray-200 pb-4 gap-4">
                                 <h2 className="text-2xl font-black text-gray-900 tracking-tight">Available Grades & Varieties</h2>
                                 
                                 {/* Sub-Category Tabs (For Spices/Coconut) */}
                                 {!Array.isArray(selectedCategory.grades) && (
-                                    <div className="flex gap-2 overflow-x-auto pb-2">
+                                    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
                                         {Object.keys(selectedCategory.grades).map((tab) => (
                                             <button
                                                 key={tab}
@@ -107,7 +115,7 @@ function ProductsDetails() {
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                                 {(Array.isArray(selectedCategory.grades) 
                                     ? selectedCategory.grades 
-                                    : selectedCategory.grades[activeSubTab]
+                                    : selectedCategory.grades[activeSubTab] || []
                                 ).map((item) => (
                                     <div key={item.id} className="group bg-white rounded-3xl p-4 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                                         <div className="aspect-square rounded-2xl overflow-hidden bg-gray-50 mb-4">
