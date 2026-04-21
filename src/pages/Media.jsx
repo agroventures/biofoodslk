@@ -3,6 +3,7 @@ import Navbar from '../components/shared/Navbar'
 import Footer from '../components/shared/Footer'
 import MediaHero from '../components/Media/MediaHero'
 import MediaVideos from '../components/Media/MediaVideos'
+import useSEO from '../hooks/useSEO';
 
 function Media() {
   const url = window.location.href;
