@@ -2,8 +2,19 @@ import React from 'react';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
 import { ShieldCheck, Gavel, AlertCircle, RefreshCw, Mail, Cookie, Landmark } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 
 function PrivacyPolicy() {
+    const url = window.location.href;
+
+    useSEO({
+        // title: "Organic & Fairtrade Tea Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
+        // description: "Premium organic tea, spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
+        url,
+        image_alt: "Privacy Policy",
+        // keywords: ["organic food Sri Lanka, fair trade tea, organic spices exporter, coconut products Sri Lanka"],
+    });
+
     return (
         <div className="min-h-screen bg-white">
             <Navbar />
@@ -26,7 +37,7 @@ function PrivacyPolicy() {
 
             <main className="max-w-4xl mx-auto px-6 py-20">
                 <div className="prose prose-slate max-w-none">
-                    
+
                     {/* Disclaimer Section */}
                     <section className="mb-16 flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-8 rounded-3xl border border-slate-100">
                         <div className="bg-white p-4 rounded-2xl shadow-sm">
@@ -35,8 +46,8 @@ function PrivacyPolicy() {
                         <div>
                             <h2 className="text-xl font-bold text-slate-900 m-0 mb-2">No Warranties</h2>
                             <p className="text-slate-600 text-sm leading-relaxed m-0">
-                                This Website is provided "as is," with all faults. Bio Foods expresses no representations or 
-                                warranties of any kind related to this Website or the materials contained herein. 
+                                This Website is provided "as is," with all faults. Bio Foods expresses no representations or
+                                warranties of any kind related to this Website or the materials contained herein.
                                 Nothing on this Website shall be interpreted as advising you.
                             </p>
                         </div>
@@ -50,7 +61,7 @@ function PrivacyPolicy() {
                                 <h3 className="text-lg font-black text-slate-900 uppercase tracking-tight m-0">Limitation of Liability</h3>
                             </div>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                In no event shall Bio Foods, its officers, or directors be held liable for anything arising out of your 
+                                In no event shall Bio Foods, its officers, or directors be held liable for anything arising out of your
                                 use of this Website. We are not liable for any indirect, consequential, or special liabilities.
                             </p>
                         </section>
@@ -61,7 +72,7 @@ function PrivacyPolicy() {
                                 <h3 className="text-lg font-black text-slate-900 uppercase tracking-tight m-0">Indemnification</h3>
                             </div>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                You hereby indemnify Bio Foods to the fullest extent from any liabilities, costs, or demands 
+                                You hereby indemnify Bio Foods to the fullest extent from any liabilities, costs, or demands
                                 arising from your breach of any provisions within these terms.
                             </p>
                         </section>
@@ -74,8 +85,8 @@ function PrivacyPolicy() {
                         <section>
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Severability & Variation</h3>
                             <p className="text-slate-600">
-                                If any provision is found invalid under applicable law, it shall be deleted without affecting 
-                                the remaining provisions. Bio Foods reserves the right to revise these Terms at any time; 
+                                If any provision is found invalid under applicable law, it shall be deleted without affecting
+                                the remaining provisions. Bio Foods reserves the right to revise these Terms at any time;
                                 users are expected to review these terms regularly.
                             </p>
                         </section>
@@ -86,9 +97,9 @@ function PrivacyPolicy() {
                                 <h3 className="text-xl font-bold text-slate-900 m-0">Governing Law & Jurisdiction</h3>
                             </div>
                             <p className="text-slate-600 m-0">
-                                These Terms will be governed by and interpreted in accordance with the 
-                                <span className="text-slate-900 font-bold"> laws of Sri Lanka</span>. 
-                                You submit to the non-exclusive jurisdiction of the state and federal courts located in 
+                                These Terms will be governed by and interpreted in accordance with the
+                                <span className="text-slate-900 font-bold"> laws of Sri Lanka</span>.
+                                You submit to the non-exclusive jurisdiction of the state and federal courts located in
                                 Sri Lanka for the resolution of any disputes.
                             </p>
                         </section>
@@ -98,7 +109,7 @@ function PrivacyPolicy() {
                             <Cookie className="absolute -right-4 -bottom-4 w-32 h-32 opacity-10 rotate-12" />
                             <h3 className="text-2xl font-black mb-4">Cookie Policy</h3>
                             <p className="text-white/80 mb-6 leading-relaxed">
-                                We use cookies to enhance website performance, learn about your interests, and provide social media features. 
+                                We use cookies to enhance website performance, learn about your interests, and provide social media features.
                                 By continuing to browse, you consent to our use of cookies.
                             </p>
                             {/* <button className="bg-white text-brand-primary font-bold px-8 py-3 rounded-full hover:bg-slate-100 transition-colors">
@@ -114,8 +125,8 @@ function PrivacyPolicy() {
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 mb-2">Questions?</h3>
                         <p className="text-slate-500 mb-6">Reach out to our legal and data protection team.</p>
-                        <a 
-                            href="mailto:info@biofoodslk.com" 
+                        <a
+                            href="mailto:info@biofoodslk.com"
                             className="text-brand-primary font-black text-lg hover:underline underline-offset-8"
                         >
                             info@biofoodslk.com

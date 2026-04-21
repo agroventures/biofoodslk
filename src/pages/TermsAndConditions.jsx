@@ -2,8 +2,19 @@ import React from 'react';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
 import { ShieldCheck, FileText, Lock, EyeOff, Scale, Globe } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 
 function TermsAndConditions() {
+    const url = window.location.href;
+
+    useSEO({
+        // title: "Organic & Fairtrade Tea Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
+        // description: "Premium organic tea, spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
+        url,
+        image_alt: "Terms and Conditions",
+        // keywords: ["organic food Sri Lanka, fair trade tea, organic spices exporter, coconut products Sri Lanka"],
+    });
+
     return (
         <div className="min-h-screen bg-white selection:bg-brand-primary/20">
             <Navbar />
@@ -25,11 +36,11 @@ function TermsAndConditions() {
             {/* Content Section */}
             <main className="max-w-4xl mx-auto px-6 py-20">
                 <div className="prose prose-slate lg:prose-lg max-w-none">
-                    
+
                     {/* Introduction */}
                     <div className="bg-brand-light/30 border-l-4 border-brand-primary p-8 rounded-r-3xl mb-12">
                         <p className="text-slate-700 leading-relaxed m-0 italic font-medium">
-                            Please read these Terms and Conditions carefully before using the biofoodslk.com website. 
+                            Please read these Terms and Conditions carefully before using the biofoodslk.com website.
                             Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.
                         </p>
                     </div>
@@ -43,8 +54,8 @@ function TermsAndConditions() {
                             <h2 className="text-2xl font-black text-slate-900 m-0">General Agreement</h2>
                         </div>
                         <p className="text-slate-600">
-                            By using this Website, you agree to accept all terms and conditions written herein. 
-                            You must not use this Website if you disagree with any of these Standard Terms and Conditions. 
+                            By using this Website, you agree to accept all terms and conditions written herein.
+                            You must not use this Website if you disagree with any of these Standard Terms and Conditions.
                             Any new features or tools added to the current store shall also be subject to the Terms of Service.
                         </p>
                     </section>
@@ -96,7 +107,7 @@ function TermsAndConditions() {
                             <h2 className="text-2xl font-black text-slate-900 m-0">User Content</h2>
                         </div>
                         <p className="text-slate-600">
-                            "Content" shall mean any audio, video, text, images, or other material you choose to display on this Website. 
+                            "Content" shall mean any audio, video, text, images, or other material you choose to display on this Website.
                             By displaying Content, you grant Bio Foods a non-exclusive, worldwide irrevocable license to use, reproduce, adapt, publish, and distribute it in any and all media.
                         </p>
                     </section>

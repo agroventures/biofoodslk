@@ -93,7 +93,7 @@ function VisionMissionSustainability() {
                 <div className="absolute bottom-0 right-0 w-150 h-150 bg-brand-primary/20 rounded-full blur-[150px]" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                    <div className="max-w-3xl">
+                    <div className="max-w-3xl mx-auto text-center">
                         <div className="inline-flex items-center gap-2 bg-white/10 text-brand-accent px-5 py-2.5 rounded-full mb-8 border border-white/10 backdrop-blur-md">
                             <Leaf className="w-5 h-5" />
                             <span className="font-bold tracking-[0.2em] uppercase text-xs">Sustainability</span>
@@ -106,7 +106,7 @@ function VisionMissionSustainability() {
                             <p className="text-xl text-gray-400 leading-relaxed">
                                 We believe in the combination of organic and fair trade practices as the tool to establish sustainability in all agricultural practices. 
                             </p>
-                            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
+                            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-left">
                                 <div>
                                     <h4 className="text-brand-accent font-bold uppercase tracking-widest text-sm mb-3">Organic Standards</h4>
                                     <p className="text-gray-400 text-sm leading-relaxed">Ensuring environment remains fertile and chemical-free for the generations to come.</p>
