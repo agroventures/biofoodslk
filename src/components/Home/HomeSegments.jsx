@@ -43,9 +43,9 @@ function HomeSegments() {
         <div className='w-full py-16 lg:py-24 bg-brand-light overflow-hidden'>
             {/* Section Header */}
             <div className='max-w-7xl mx-auto mb-16 px-6 text-center'>
-                <div className='inline-flex items-center gap-2 bg-brand-accent/20 text-brand-primary px-5 py-2 rounded-full mb-6 text-sm font-bold tracking-wide'>
+                <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10 shadow-sm">
                     <Sparkles className='w-4 h-4' />
-                    <span>DISCOVER OUR JOURNEY</span>
+                    <span className="font-bold tracking-[0.15em] uppercase text-xs">Discover Our Journey</span>
                 </div>
                 <h2 className='text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tighter'>
                     Experience BioFoods

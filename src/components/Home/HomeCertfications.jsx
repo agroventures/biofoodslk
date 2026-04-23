@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 
 function HomeCertifications() {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-brand-light">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="bg-brand-light rounded-[3rem] p-8 lg:p-16 border border-brand-primary/5 relative overflow-hidden">
 
                     {/* Background Subtle Accent */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
@@ -59,7 +58,6 @@ function HomeCertifications() {
                         </div>
 
                     </div>
-                </div>
             </div>
         </section>
     );

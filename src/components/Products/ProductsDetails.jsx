@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Leaf, ChevronRight } from 'lucide-react';
-import { products } from '../../data/product';
+import { products } from '../../data/products';
 
 function ProductsDetails() {
     const [selectedCategory, setSelectedCategory] = useState(products[0]);

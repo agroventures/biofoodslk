@@ -20,8 +20,8 @@ function HomeHero() {
             </div>
 
             {/* Content Layer */}
-            <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center">
-                <div className="max-w-3xl">
+            <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center">
+                <div className="max-w-4xl">
                     {/* Brand Badge */}
                     <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-8 animate-fade-in">
                         <Leaf className="w-4 h-4 text-brand-primary" />
@@ -31,29 +31,28 @@ function HomeHero() {
                     </div>
 
                     {/* Main Headline */}
-                    <h1 className="text-6xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-8">
-                        The Organic <br />
-                        <span className="text-brand-primary italic">Way of Life.</span>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter leading-[0.9] mb-6 sm:mb-8">
+                        From Sri Lanka’s Living Soils <br />
+                        <span className="text-brand-primary italic">to Global Markets</span>
                     </h1>
 
-                    <p className="text-xl text-white/80 leading-relaxed mb-10 max-w-xl font-medium">
-                        World-renowned leaders in fair trade and organic excellence,
-                        connecting the heart of Sri Lanka’s soil to the global table.
+                    <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-medium">
+                        An exceptional collection of organic, biodynamic, and fair-trade ingredients cultivated with care,
+                        perfected through expertise, and delivered with the global strength of Agroventures Group.
                     </p>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                         <Link to='/products'>
                             <button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all group shadow-2xl shadow-brand-primary/20">
-                                Explore Products
+                                Explore Our Collection
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                         </Link>
 
-                        <Link to='/about'>
+                        <Link to='/contact'>
                             <button className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all">
-                                <Play className="w-4 h-4 fill-current" />
-                                Our Story
+                                Partner With Us
                             </button>
                         </Link>
                     </div>

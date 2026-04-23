@@ -7,6 +7,11 @@ import HomeSegments from '../components/Home/HomeSegments';
 import HomeCertifications from '../components/Home/HomeCertfications';
 import HomeEcoPlus from '../components/Home/HomeEcoPlus';
 import useSEO from '../hooks/useSEO';
+import HomeBrandNarrative from '../components/Home/HomeBrandNarrative';
+import HomeAgroVenturesAdvantage from '../components/Home/HomeAgroVenturesAdvantage';
+import HomeCorePrinciples from '../components/Home/HomeCorePrinciples';
+import HomeClosingReflection from '../components/Home/HomeClosingReflection';
+import HomeProductExperiences from '../components/Home/HomeProductExperiences';
 
 function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +39,14 @@ function Home() {
         <div className="min-h-screen">
             <Navbar />
             <HomeHero />
-            <HomeCertifications />
+            <HomeBrandNarrative />
+            <HomeAgroVenturesAdvantage />
+            <HomeCorePrinciples />
             <HomeSegments />
+            <HomeProductExperiences />
+            <HomeCertifications />
             <HomeEcoPlus />
+            <HomeClosingReflection />
             <Footer />
         </div>
     )
