@@ -6,6 +6,7 @@ import VisionMissionSustainability from '../components/About/VisionMission'
 import AboutDescription from '../components/About/AboutDescription'
 import AboutAwards from '../components/About/AboutAwards'
 import useSEO from '../hooks/useSEO'
+import AboutAgroVentures from '../components/About/AboutAgroVentures'
 
 function About() {
   const url = window.location.href;
@@ -22,8 +23,9 @@ function About() {
     <div className='min-h-screen'>
       <Navbar />
       <AboutHero />
-      <VisionMissionSustainability />
       <AboutDescription />
+      <VisionMissionSustainability />
+      <AboutAgroVentures />
       <AboutAwards />
       <Footer />
     </div>
