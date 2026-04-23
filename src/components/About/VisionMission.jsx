@@ -26,7 +26,7 @@ function VisionMissionSustainability() {
 
                             <div className="max-w-xl">
                                 <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                                    To be the best environmentally-friendly organic food producer in Asia, guaranteeing global customer satisfaction through a sustainable fair trade approach that empowers our primary producers and employees.
+                                    To become a global benchmark in organic agriculture, recognized for integrity, innovation, and sustainability.
                                 </p>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ function VisionMissionSustainability() {
                                     <Sparkles className="w-32 h-32 text-brand-primary" />
                                 </div>
                                 <p className="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight relative z-10">
-                                    "To establish ever higher standards of organic and fair trade production through the team effort of our primary producers and members of the Bio Foods family."
+                                    "To produce and deliver premium organic products through ethical sourcing, scientific advancement, and responsible business practices."
                                 </p>
                                 <div className="mt-12 flex items-center gap-6 relative z-10">
                                     <div className="flex -space-x-3">

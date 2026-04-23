@@ -104,14 +104,14 @@ function AboutDescription() {
                             <img 
                                 src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop" 
                                 alt="Bio Foods Story" 
-                                className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-100 object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-brand-primary/80 to-transparent" />
                             
                             {/* Award Badge */}
                             <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-5 shadow-xl">
                                 <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center shrink-0">
                                         <Award className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
@@ -128,7 +128,7 @@ function AboutDescription() {
                             <div className="space-y-6">
                                 {milestones.map((milestone, index) => (
                                     <div key={index} className="flex gap-4 group">
-                                        <div className="flex-shrink-0">
+                                        <div className="shrink-0">
                                             <div className="w-16 h-16 bg-brand-light border-2 border-brand-primary/20 rounded-xl flex items-center justify-center group-hover:bg-brand-primary group-hover:border-brand-primary transition-colors">
                                                 <span className="text-brand-primary group-hover:text-white font-black text-sm transition-colors">{milestone.year}</span>
                                             </div>
