@@ -13,7 +13,7 @@ function HomeEcoPlus() {
                 <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-0">
 
                     {/* Image Side */}
-                    <div className="relative h-[400px] sm:h-[500px] lg:h-full min-h-[350px] lg:min-h-[500px] group overflow-hidden rounded-3xl lg:rounded-none">
+                    <div className="relative h-100 sm:h-125 lg:h-full min-h-87.5 lg:min-h-125 group overflow-hidden rounded-3xl lg:rounded-none">
                         <img
                             src="/Home/eco_plus.avif"
                             alt="Eco Planet Organic Fertilizer"
