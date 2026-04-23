@@ -88,8 +88,8 @@ function AboutAgroVentures() {
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
                         {
-                            companies.map((item, index) => (
-                                <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                            companies.map((item) => (
+                                <div key={item.id} className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
                                     <img src={item.img} alt={item.name} className="w-full h-full object-contain" />
                                 </div>
                             ))
