@@ -13,9 +13,9 @@ function AboutGrowth() {
                             <img 
                                 src="https://images.unsplash.com/photo-1595855759920-86582396756a?w=800&h=700&fit=crop" 
                                 alt="Growth and Transformation" 
-                                className="w-full h-[400px] lg:h-[550px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-100 lg:h-137.5 object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-brand-dark/40 to-transparent" />
                             
                             {/* Floating Badge */}
                             <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-brand-light">
@@ -44,7 +44,7 @@ function AboutGrowth() {
 
                             <div className="space-y-6">
                                 <div className="flex gap-4">
-                                    <div className="flex-shrink-0 mt-2">
+                                    <div className="shrink-0 mt-2">
                                         <div className="w-2 h-2 bg-brand-secondary rounded-full" />
                                     </div>
                                     <p className="text-lg text-brand-dark/80 leading-relaxed">
@@ -54,7 +54,7 @@ function AboutGrowth() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="flex-shrink-0 mt-2">
+                                    <div className="shrink-0 mt-2">
                                         <div className="w-2 h-2 bg-brand-primary rounded-full" />
                                     </div>
                                     <p className="text-lg text-brand-dark/80 leading-relaxed">
