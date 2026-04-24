@@ -2,8 +2,10 @@ import React from 'react'
 import Navbar from '../components/shared/Navbar'
 import Footer from '../components/shared/Footer'
 import AboutHero from '../components/About/AboutHero'
-import VisionMissionSustainability from '../components/About/VisionMission'
-import AboutDescription from '../components/About/AboutDescription'
+import VisionMission from '../components/About/VisionMission'
+import AboutBioFoods from '../components/About/AboutBioFoods'
+import AboutFoundingVision from '../components/About/AboutFoundingVision'
+import AboutGrowth from '../components/About/AboutGrowth'
 import AboutAwards from '../components/About/AboutAwards'
 import useSEO from '../hooks/useSEO'
 import AboutAgroVentures from '../components/About/AboutAgroVentures'
@@ -23,10 +25,12 @@ function About() {
     <div className='min-h-screen'>
       <Navbar />
       <AboutHero />
-      <AboutDescription />
-      <VisionMissionSustainability />
+      <AboutBioFoods />
+      <AboutFoundingVision />
+      <AboutGrowth />
+      <VisionMission />
       <AboutAgroVentures />
-      <AboutAwards />
+      {/* <AboutAwards /> */}
       <Footer />
     </div>
   )

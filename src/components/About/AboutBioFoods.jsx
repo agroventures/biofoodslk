@@ -1,7 +1,7 @@
 import React from 'react';
 import { Award, Globe, Leaf, Users, TrendingUp, Heart, CheckCircle2, Sparkles } from 'lucide-react';
 
-function AboutDescription() {
+function AboutBioFoods() {
     const milestones = [
         { year: "1993", title: "Established", description: "Family-owned business founded in Kandy" },
         { year: "2014", title: "World Recognition", description: "First ever 'World's Fairest Fairtrader Award'" },
@@ -68,18 +68,18 @@ function AboutDescription() {
                                 <Leaf className="w-7 h-7 text-white" />
                             </div>
                             <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
-                                Established in 1993, we are a company devoted to sustainable, organic and fair trade way of life. 
-                                Starting out as a family owned business based in Kandy, this company has grown to be one of the 
+                                Established in 1993, we are a company devoted to sustainable, organic and fair trade way of life.
+                                Starting out as a family owned business based in Kandy, this company has grown to be one of the
                                 world leaders in biodynamic, organic and fair-trade agriculture.
                             </p>
                             <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
-                                We have always believed in clean, agrochemically uncontaminated produce the way nature makes it. 
-                                Even our fertilizer is certified organic, so that we can leave behind clean air, water and soil 
+                                We have always believed in clean, agrochemically uncontaminated produce the way nature makes it.
+                                Even our fertilizer is certified organic, so that we can leave behind clean air, water and soil
                                 for all living things, present and future.
                             </p>
                             <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
-                                In addition, from its very inception, Bio Foods also ensured fair trade standards to take care 
-                                of our farmers from fluctuating market prices and middle-man exploitation. This is what makes 
+                                In addition, from its very inception, Bio Foods also ensured fair trade standards to take care
+                                of our farmers from fluctuating market prices and middle-man exploitation. This is what makes
                                 us leaders in modern sustainable agriculture.
                             </p>
                         </div>
@@ -87,7 +87,7 @@ function AboutDescription() {
                         {/* Values Grid */}
                         <div className="grid grid-cols-2 gap-4">
                             {values.map((value, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className="bg-white rounded-2xl p-5 border border-brand-primary/10 hover:shadow-lg transition-all duration-300 group"
                                 >
@@ -101,13 +101,13 @@ function AboutDescription() {
                     {/* Right Column */}
                     <div className="space-y-6">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                            <img 
-                                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop" 
-                                alt="Bio Foods Story" 
+                            <img
+                                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop"
+                                alt="Bio Foods Story"
                                 className="w-full h-100 object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-brand-primary/80 to-transparent" />
-                            
+
                             {/* Award Badge */}
                             <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-5 shadow-xl">
                                 <div className="flex items-start gap-4">
@@ -149,7 +149,7 @@ function AboutDescription() {
                     <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Recognition & Achievements</h3>
                     <div className="grid md:grid-cols-3 gap-6">
                         {achievements.map((achievement, index) => (
-                            <div 
+                            <div
                                 key={index}
                                 className="group bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-brand-primary/10"
                             >
@@ -166,41 +166,41 @@ function AboutDescription() {
                 {/* Bottom Content */}
                 <div className="bg-white rounded-3xl p-8 lg:p-12 border border-brand-primary/10 shadow-xl">
                     <h3 className="text-2xl lg:text-3xl font-black text-brand-primary mb-6">Our Operations Today</h3>
-                    
+
                     <div className="space-y-6 text-base lg:text-lg text-gray-700 leading-relaxed">
                         <p>
-                            As a longtime processor and exporter of high quality products, Bio Foods plays a major role in 
-                            the organic post-harvested food industry in Sri Lanka. While fulfilling the ever-growing needs 
-                            of the international market, we take all the necessary steps (and responsibility!) to assure the 
+                            As a longtime processor and exporter of high quality products, Bio Foods plays a major role in
+                            the organic post-harvested food industry in Sri Lanka. While fulfilling the ever-growing needs
+                            of the international market, we take all the necessary steps (and responsibility!) to assure the
                             sustainability of all stakeholders of this essential supply chain; from producer to consumer.
                         </p>
-                        
+
                         <p>
-                            We provide a guaranteed minimum price at the farm-gate, transparent documentation for assured 
-                            traceability and rigorously maintain local and international environmental regulations. While we 
-                            were initially established as an exporter of organic and fair trade teas, Bio Foods soon expanded 
+                            We provide a guaranteed minimum price at the farm-gate, transparent documentation for assured
+                            traceability and rigorously maintain local and international environmental regulations. While we
+                            were initially established as an exporter of organic and fair trade teas, Bio Foods soon expanded
                             to be the worlds' first fairtrade registered processor & exporter for spices.
                         </p>
-                        
+
                         <p>
-                            We are now gearing up to introduce a large range of products marketed under our own brand, which 
-                            was our chairman's initiative to give back to the people of the land that we harvest our wonderful 
-                            produce from. These products range from teas, spices, herbs, fruits, vegetables, coconut products, 
-                            to whole grains, and should soon be accessible to the a discerning international audience as well, 
+                            We are now gearing up to introduce a large range of products marketed under our own brand, which
+                            was our chairman's initiative to give back to the people of the land that we harvest our wonderful
+                            produce from. These products range from teas, spices, herbs, fruits, vegetables, coconut products,
+                            to whole grains, and should soon be accessible to the a discerning international audience as well,
                             because we believe that the #organicway is for everyone, no matter where they are from.
                         </p>
-                        
+
                         <p>
-                            We have organised our many certified organic farmers into farmer groups, and we process our harvest 
-                            in our own processing units, scattered all over Sri Lanka. We also package the final goods, which 
+                            We have organised our many certified organic farmers into farmer groups, and we process our harvest
+                            in our own processing units, scattered all over Sri Lanka. We also package the final goods, which
                             is why we can take responsibility (and pride!) in the transparency of our entire production line.
                         </p>
-                        
+
                         <p>
-                            We currently can export the final products in bulk form or in consumer packing all over the world, 
-                            from Europe, North America, Japan, Australia and many other developed countries, under many different 
-                            certifications. The farmer associations founded by Bio Foods have set both local and international 
-                            standards, with our Marginalized organic Producers Association (MOPA) being awarded "Best Small 
+                            We currently can export the final products in bulk form or in consumer packing all over the world,
+                            from Europe, North America, Japan, Australia and many other developed countries, under many different
+                            certifications. The farmer associations founded by Bio Foods have set both local and international
+                            standards, with our Marginalized organic Producers Association (MOPA) being awarded "Best Small
                             Organic Farmer Group in Asia" in 2014 by the Fairtrade Labelling Organization (FLO).
                         </p>
                     </div>
@@ -230,4 +230,4 @@ function AboutDescription() {
     );
 }
 
-export default AboutDescription;
+export default AboutBioFoods;

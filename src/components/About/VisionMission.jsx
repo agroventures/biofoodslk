@@ -1,7 +1,7 @@
 import React from 'react';
 import { Eye, Target, Leaf, Sparkles, Globe, ShieldCheck, Users } from 'lucide-react';
 
-function VisionMissionSustainability() {
+function VisionMission() {
     return (
         <div className="w-full bg-white">
             {/* Vision Section - Focus on Clarity and Brand Primary */}
@@ -88,8 +88,7 @@ function VisionMissionSustainability() {
             </section>
 
             {/* Sustainability - The Commitment */}
-            <section className="py-20 lg:py-32 bg-gray-900 text-white overflow-hidden relative">
-                {/* Decorative primary glow */}
+            {/* <section className="py-20 lg:py-32 bg-gray-900 text-white overflow-hidden relative">
                 <div className="absolute bottom-0 right-0 w-150 h-150 bg-brand-primary/20 rounded-full blur-[150px]" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -119,9 +118,9 @@ function VisionMissionSustainability() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }
 
-export default VisionMissionSustainability;
+export default VisionMission;

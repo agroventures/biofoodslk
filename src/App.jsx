@@ -13,6 +13,8 @@ import QualityCertifications from './pages/QualityCertifications';
 import EcoPlus from './pages/EcoPlus';
 import Loader from './components/shared/Loader';
 import { useEffect, useState } from 'react';
+import Awards from './pages/Awards';
+import GlobalPresence from './pages/GlobalPresence';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/awards" element={<Awards />} />
+        <Route path="/global-presence" element={<GlobalPresence />} />
         <Route path="/producers" element={<Producers />} />
         <Route path="/processing-facilities" element={<ProcessingFacility />} />
         <Route path="/media" element={<Media />} />

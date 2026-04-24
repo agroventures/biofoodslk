@@ -1,13 +1,19 @@
 import React from 'react';
 import { certifications } from '../../data/certifications';
-import { 
-    ShieldCheck, 
-    Beaker, 
-    ClipboardCheck, 
-    Search, 
-    Microscope, 
-    Info, 
-    CheckCircle 
+import {
+    ShieldCheck,
+    Beaker,
+    ClipboardCheck,
+    Search,
+    Microscope,
+    Info,
+    CheckCircle,
+    BadgeCheck,
+    Shield,
+    Award,
+    FileCheck,
+    Network,
+    CheckCircle2
 } from 'lucide-react';
 
 function QualityCertificationsDetails() {
@@ -16,6 +22,18 @@ function QualityCertificationsDetails() {
         { title: "Quality Assurance", icon: <ClipboardCheck className="w-6 h-6" />, desc: "Systematic monitoring to ensure all processes meet global benchmarks." },
         { title: "Internal Control", icon: <ShieldCheck className="w-6 h-6" />, desc: "Rigorous ICS to maintain biodynamic and organic integrity." },
         { title: "Research & Development", icon: <Beaker className="w-6 h-6" />, desc: "Innovative processing methods to enhance nutritional value." },
+    ];
+
+    const qualitySystems = [
+        { icon: BadgeCheck, title: "ISO Certified Operations", color: "brand-primary" },
+        { icon: Shield, title: "HACCP Food Safety Compliance", color: "brand-secondary" },
+        { icon: Award, title: "GMP Manufacturing Standards", color: "brand-primary" }
+    ];
+
+    const qaProcess = [
+        { icon: Microscope, title: "Laboratory Testing", description: "Comprehensive chemical and biological analysis" },
+        { icon: FileCheck, title: "Certification Verification", description: "Third-party validation of compliance" },
+        { icon: Network, title: "Traceability Validation", description: "Complete supply chain transparency" }
     ];
 
     return (
@@ -42,8 +60,8 @@ function QualityCertificationsDetails() {
                             <span className="text-brand-primary">Precision.</span>
                         </h2>
                         <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                            Our processes are managed by a dedicated team of qualified professionals across four critical steps. 
-                            This systematic approach ensures we maintain the highest possible quality standards through rigorous 
+                            Our processes are managed by a dedicated team of qualified professionals across four critical steps.
+                            This systematic approach ensures we maintain the highest possible quality standards through rigorous
                             prevention, detection, and rejection procedures.
                         </p>
                         <div className="flex gap-4">
@@ -79,11 +97,11 @@ function QualityCertificationsDetails() {
                     </h3>
                     <div className="space-y-6 text-white/70 text-lg leading-relaxed">
                         <p>
-                            To be <span className="text-white font-bold">"Certified Organic"</span>, every single stage—from soil preparation to distribution—must comply 
+                            To be <span className="text-white font-bold">"Certified Organic"</span>, every single stage - from soil preparation to distribution - must comply
                             with stringent global regulations. It is a massive financial and operational commitment.
                         </p>
                         <p>
-                            Beyond the costs, these logos establish <span className="text-brand-primary">trust</span>. They are a visual identity for the organic 
+                            Beyond the costs, these logos establish <span className="text-brand-primary">trust</span>. They are a visual identity for the organic
                             farming sector, ensuring that when you see a logo, you are seeing a promise of health, sustainability, and ethics.
                         </p>
                     </div>
@@ -96,51 +114,88 @@ function QualityCertificationsDetails() {
                     <h2 className="text-sm font-black text-brand-primary uppercase tracking-[0.4em] mb-4">The Directory</h2>
                     <h3 className="text-4xl font-black text-slate-900 tracking-tight">Standard Compliance Index</h3>
                 </div>
-                
-                <div className="space-y-32">
-                    {certifications.map((cert, index) => (
-                        <div 
-                            key={cert.id} 
-                            className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${
-                                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                            }`}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    {certifications.map((cert) => (
+                        <div
+                            key={cert.id}
+                            className="group bg-white border border-brand-light rounded-2xl lg:rounded-3xl overflow-hidden hover:border-brand-primary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
                         >
-                            {/* Logo Side */}
-                            <div className="w-full lg:w-1/3 flex justify-center">
-                                <div className="group relative">
-                                    <div className="absolute inset-0 bg-brand-primary/10 rounded-full blur-3xl group-hover:bg-brand-primary/20 transition-colors" />
-                                    <img 
-                                        src={cert.img} 
-                                        alt={cert.name} 
-                                        className="relative z-10 w-48 h-48 lg:w-64 lg:h-64 object-contain transition-transform duration-500 group-hover:scale-110"
-                                        onError={(e) => { e.target.src = 'https://placehold.co/400x400?text=Certification'; }}
-                                    />
-                                </div>
+                            {/* Image Container */}
+                            <div className="relative h-48 bg-brand-light/30 flex items-center justify-center p-6 border-b border-brand-light">
+                                <img
+                                    src={cert.img}
+                                    alt={cert.name}
+                                    className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                                />
                             </div>
 
-                            {/* Text Side */}
-                            <div className="w-full lg:w-2/3">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="h-px w-12 bg-brand-primary" />
-                                    <span className="text-brand-primary font-black uppercase text-xs tracking-widest">
-                                        Standard {cert.id < 10 ? `0${cert.id}` : cert.id}
-                                    </span>
-                                </div>
-                                <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 uppercase tracking-tighter">
+                            {/* Content */}
+                            <div className="p-6 lg:p-8">
+                                <h3 className="text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-primary transition-colors">
                                     {cert.name}
-                                </h2>
-                                <div className="prose prose-slate lg:prose-lg max-w-none">
-                                    <p className="text-slate-600 leading-relaxed whitespace-pre-line">
-                                        {cert.desc}
-                                    </p>
-                                </div>
-                                <div className="mt-8 flex items-center gap-2 text-slate-400">
-                                    <CheckCircle size={16} className="text-brand-primary" />
-                                    <span className="text-xs font-bold uppercase tracking-wider">Third-Party Verified & Audited</span>
-                                </div>
+                                </h3>
+                                <p className="text-sm text-brand-dark/70 leading-relaxed line-clamp-4">
+                                    {cert.desc}
+                                </p>
                             </div>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            <section className="w-full py-20 lg:py-24 bg-brand-light/30 border-t border-brand-light">
+                <div className="w-full px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl lg:text-4xl font-black text-brand-dark mb-4">
+                                Quality & Safety Systems
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {qualitySystems.map((system, index) => (
+                                <div
+                                    key={index}
+                                    className="group bg-white border border-brand-light rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:border-brand-primary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+                                >
+                                    <div className="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors duration-300">
+                                        <system.icon className="w-7 h-7 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-brand-dark">{system.title}</h3>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* QA Process */}
+            <section className="w-full py-20 lg:py-24 bg-white border-t border-brand-light">
+                <div className="w-full px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl lg:text-4xl font-black text-brand-dark mb-4">
+                                Quality Assurance Process
+                            </h2>
+                            <p className="text-lg text-brand-dark/70">Each product undergoes:</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {qaProcess.map((process, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white border border-brand-light rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:border-brand-primary/20 hover:shadow-lg transition-all duration-300"
+                                >
+                                    <div className="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center mb-6">
+                                        <process.icon className="w-7 h-7 text-brand-primary" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-brand-dark mb-2">{process.title}</h3>
+                                    <p className="text-sm text-brand-dark/60 leading-relaxed">{process.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

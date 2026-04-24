@@ -4,6 +4,7 @@ import Footer from '../components/shared/Footer'
 import QualityCertificationsHero from '../components/QualityCertifications/QualityCertificationsHero'
 import QualityCertificationsDetails from '../components/QualityCertifications/QualityCertificationsDetails'
 import useSEO from '../hooks/useSEO'
+import QualityCertificationsAgroVentures from '../components/QualityCertifications/QualityCertificationsAgroVentures'
 
 function QualityCertifications() {
   const url = window.location.href;
@@ -21,6 +22,7 @@ function QualityCertifications() {
       <Navbar />
       <QualityCertificationsHero />
       <QualityCertificationsDetails />
+      <QualityCertificationsAgroVentures />
       <Footer />
     </div>
   )
