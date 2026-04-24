@@ -15,8 +15,9 @@ function Footer() {
     const navLinks = [
         {id: 1, href: '/about', title: 'About Us'}, 
         {id: 2, href: '/products', title: 'Products'},
-        {id: 3, href: '/producers', title: 'Producers'},
-        {id: 4, href: '/media', title: 'Media'}
+        {id: 3, href: '/eco-system', title: 'Our Eco System'},
+        {id: 4, href: '/global-presence', title: 'Global Presence'},
+        {id: 4, href: '/sustainability', title: 'Sustainability'},
     ]
 
     return (

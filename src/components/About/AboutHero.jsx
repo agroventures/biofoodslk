@@ -4,10 +4,11 @@ import ImageHero from "../shared/ImageHero";
 function AboutHero() {
   return (
     <ImageHero
+      variant="image"
       img="/About/hero.avif"
       alt="About BioFoods"
       badge="Get In Touch"
-      name="About Us"
+      title="About Us"
     />
   );
 }

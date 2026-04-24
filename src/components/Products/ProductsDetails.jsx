@@ -88,7 +88,7 @@ function ProductsDetails() {
                                     alt={selectedCategory.name}
                                     className="w-full h-full object-cover object-center transition-transform duration-[2s] group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:bg-none" />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent lg:bg-none" />
                             </div>
                         </div>
                     </header>
@@ -125,8 +125,8 @@ function ProductsDetails() {
                             {/* Grid Display */}
                             <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8">
                                 {displayItems.map((item) => (
-                                    <div key={item.id} className="group bg-white rounded-[2rem] p-4 border border-gray-50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
-                                        <div className="aspect-square rounded-[1.5rem] overflow-hidden bg-gray-50 mb-5">
+                                    <div key={item.id} className="group bg-white rounded-4xl p-4 border border-gray-50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                                        <div className="aspect-square rounded-3xl overflow-hidden bg-gray-50 mb-5">
                                             <img 
                                                 src={item.img} 
                                                 alt={item.name} 

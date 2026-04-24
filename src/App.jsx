@@ -15,6 +15,9 @@ import Loader from './components/shared/Loader';
 import { useEffect, useState } from 'react';
 import Awards from './pages/Awards';
 import GlobalPresence from './pages/GlobalPresence';
+import Sustainability from './pages/Sustainability';
+import PartnerWithUs from './pages/PartnerWithUs';
+import EcoSystem from './pages/EcoSystem';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +44,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/awards" element={<Awards />} />
         <Route path="/global-presence" element={<GlobalPresence />} />
+        <Route path="/sustainability" element={<Sustainability />} />
+        <Route path="/partner-with-us" element={<PartnerWithUs />} />
+        <Route path="/eco-system" element={<EcoSystem />} />
         <Route path="/producers" element={<Producers />} />
         <Route path="/processing-facilities" element={<ProcessingFacility />} />
         <Route path="/media" element={<Media />} />

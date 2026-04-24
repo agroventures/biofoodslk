@@ -76,7 +76,7 @@ function GlobalPresenceAgroVentures() {
                                         className="group bg-brand-light/30 rounded-2xl p-6 border border-brand-light hover:border-brand-secondary/20 transition-all duration-300"
                                     >
                                         <div className="flex gap-4">
-                                            <div className="flex-shrink-0">
+                                            <div className="shrink-0">
                                                 <div className="w-12 h-12 bg-brand-secondary/5 rounded-xl flex items-center justify-center group-hover:bg-brand-secondary transition-colors duration-300">
                                                     <enhancement.icon className="w-6 h-6 text-brand-secondary group-hover:text-white transition-colors duration-300" />
                                                 </div>
@@ -116,7 +116,7 @@ function GlobalPresenceAgroVentures() {
                                         key={index}
                                         className="flex items-center gap-3 bg-brand-light/30 rounded-xl p-4 border border-brand-light"
                                     >
-                                        <benefit.icon className="w-5 h-5 text-brand-primary flex-shrink-0" />
+                                        <benefit.icon className="w-5 h-5 text-brand-primary shrink-0" />
                                         <span className="text-base text-brand-dark/80 font-medium">{benefit.text}</span>
                                     </div>
                                 ))}
@@ -124,7 +124,7 @@ function GlobalPresenceAgroVentures() {
                         </div>
 
                         {/* Final Statement */}
-                        <div className="relative bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-3xl p-10 lg:p-16 border border-brand-primary/10 overflow-hidden">
+                        <div className="relative bg-linear-to-br from-brand-primary/5 to-brand-secondary/5 rounded-3xl p-10 lg:p-16 border border-brand-primary/10 overflow-hidden">
                             {/* Decorative Background Element */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
 

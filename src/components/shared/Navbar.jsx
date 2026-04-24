@@ -38,9 +38,15 @@ const Navbar = () => {
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
         { name: 'Products', href: '/products' },
+        { name: 'Our Eco System', href: '/eco-system' },
+        { name: 'Global Presence', href: '/global-presence' },
+        { name: 'Sustainability', href: '/sustainability' },
         { name: 'Producers', href: '/producers' },
         { name: 'Processing Facilities', href: '/processing-facilities' },
         { name: 'Media', href: '/media' },
+        { name: 'Quality & Certifications', href: '/quality-certifications' },
+        { name: 'Awards and Recognition', href: '/awards' },
+        { name: 'Partner With Us', href: '/partner-with-us' },
         { name: 'Contact Us', href: '/contact' }
     ];
 

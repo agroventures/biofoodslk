@@ -45,7 +45,7 @@ function Home() {
             <HomeSegments />
             <HomeProductExperiences />
             <HomeCertifications />
-            <HomeEcoPlus />
+            {/* <HomeEcoPlus /> */}
             <HomeClosingReflection />
             <Footer />
         </div>
