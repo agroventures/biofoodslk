@@ -5,15 +5,15 @@ import { Leaf } from 'lucide-react'
 function EcoSystemHero() {
     return (
         <ImageHero
-            variant="clean"
             icon={Leaf}
+            img="/EcoSystem/hero.avif"
             badge="Our Foundation"
-            title="Sustainability"
-            subtitle="A Core Commitment"
+            title="Our Eco System"
+            subtitle="A Holistic Agricultural Model"
             description={
                 <>
-                    Sustainability is not an initiative — it is{' '}
-                    <span className="font-bold text-brand-primary">the foundation of our operations</span>.
+                    Bio Foods operates a fully integrated ecosystem ensuring seamless coordination between
+                    farming, processing, and export.
                 </>
             }
         />

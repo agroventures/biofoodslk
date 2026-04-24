@@ -1,14 +1,17 @@
 import React from "react";
 import ImageHero from "../shared/ImageHero";
+import { Building, Building2 } from "lucide-react";
 
 function AboutHero() {
   return (
     <ImageHero
-      variant="image"
+      badge="Est. 1993 | Sri Lanka"
+      icon={Building2}
+      title="The Organic Way"
+      subtitle="Pioneering Sustainable & Ethical Agriculture for over 30 Years"
+      description="From our roots in Kandy to becoming global leaders in Fair Trade, we bridge the gap between small-scale farmers and the international market through 100% organic, chemical-free production."
       img="/About/hero.avif"
-      alt="About BioFoods"
-      badge="Get In Touch"
-      title="About Us"
+      alt="Bio Foods Organic Tea Plantation in Sri Lanka"
     />
   );
 }

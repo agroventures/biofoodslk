@@ -1,13 +1,16 @@
 import React from 'react'
 import ImageHero from '../shared/ImageHero'
+import { GrUserWorker } from 'react-icons/gr'
 
 function ProducersHero() {
   return (
     <ImageHero
-        img="/Producers/hero.avif"
-        alt="Producers BioFoods"
-        badge="Marginalized Organic Producers' Association"
-        name="MOPA"
+      icon={GrUserWorker}
+      img="/Producers/hero.avif"
+      badge="Marginalized Organic Producers' Association"
+      title="MOPA"
+      subtitle="Empowering Small-Scale Farmers"
+      description="MOPA is a collective of small-scale organic farmers committed to sustainable agriculture and fair trade practices."
     />
   )
 }
