@@ -6,7 +6,7 @@ function EcoSystemHero() {
     return (
         <ImageHero
             icon={Leaf}
-            img="/EcoSystem/hero.avif"
+            img="/EcoSystem/hero.png"
             badge="Our Foundation"
             title="Our Eco System"
             subtitle="A Holistic Agricultural Model"

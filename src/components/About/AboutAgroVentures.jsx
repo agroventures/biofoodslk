@@ -1,6 +1,11 @@
 import React from 'react';
 import { Building2, Factory, Ship, Network, TrendingUp, Globe, Sparkles } from 'lucide-react';
 import { companies } from '../../data/companies';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
 
 function AboutAgroVentures() {
     const expertise = [
@@ -86,14 +91,35 @@ function AboutAgroVentures() {
                     <p className="text-sm font-bold text-brand-dark/40 uppercase tracking-widest mb-4">
                         Agroventures Group of Companies
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-                        {
-                            companies.map((item) => (
-                                <div key={item.id} className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                                    <img src={item.img} alt={item.name} className="w-full h-full object-contain" />
-                                </div>
-                            ))
-                        }
+                    <div className="w-full py-10">
+                        <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={30}
+                            slidesPerView={2} // Default for mobile
+                            loop={true}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            breakpoints={{
+                                // Responsive breakpoints
+                                640: { slidesPerView: 3 },
+                                1024: { slidesPerView: 6 },
+                            }}
+                            className="flex items-center"
+                        >
+                            {companies.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                    <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center mx-auto">
+                                        <img
+                                            src={item.img}
+                                            alt={item.name}
+                                            className="w-full h-full object-contain p-2"
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
 

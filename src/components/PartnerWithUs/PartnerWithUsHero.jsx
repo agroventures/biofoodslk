@@ -5,11 +5,11 @@ import { Handshake } from 'lucide-react'
 function PartnerWithUsHero() {
   return (
     <ImageHero
-      variant="clean"
       icon={Handshake}
       badge="Collaboration"
       title="Partner With Us"
       subtitle="A Strategic Partnership"
+      img="/PartnerWithUs/hero.png"
       description={
         <>
           We seek long-term partnerships built on{' '}
