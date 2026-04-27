@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, X } from 'lucide-react';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -7,42 +7,70 @@ function ContactForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
+    // 1. Create a state object for all form fields
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    // 2. Handle input changes
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({ ...prev, [id]: value }));
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
+
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
+
         setIsLoading(false);
         setIsSubmitted(true);
-    };
 
-    if (isSubmitted) {
-        return (
-            <div className="max-w-6xl mx-auto my-16 px-6 text-center py-24 bg-white rounded-3xl shadow-xl border border-gray-100">
-                <div className="flex justify-center mb-6">
-                    <div className="p-4 bg-brand-light rounded-full">
-                        <CheckCircle2 className="w-16 h-16 text-brand-primary" />
-                    </div>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Message Sent!</h2>
-                <p className="text-gray-600 mb-8">Thank you for reaching out. Our team will get back to you shortly.</p>
-                <button 
-                    onClick={() => setIsSubmitted(false)}
-                    className="text-brand-primary font-semibold hover:text-brand-secondary transition-colors"
-                >
-                    Send another message
-                </button>
-            </div>
-        );
-    }
+        // 3. Clear the form fields
+        setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+        });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
         <div className="max-w-6xl mx-auto my-16 px-6">
+
+            {/* --- Success Message Header --- */}
+            {isSubmitted && (
+                <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl flex items-center justify-between animate-in fade-in slide-in-from-top-4 duration-500">
+                    <div className="flex items-center gap-4">
+                        <div className="p-2 bg-green-500 rounded-full">
+                            <CheckCircle2 className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-green-900">Message Sent Successfully!</h3>
+                            <p className="text-green-700">Thank you for reaching out. Our team will get back to you shortly.</p>
+                        </div>
+                    </div>
+                    <button
+                        onClick={() => setIsSubmitted(false)}
+                        className="p-2 hover:bg-green-100 rounded-full transition-colors"
+                        aria-label="Close message"
+                    >
+                        <X className="w-5 h-5 text-green-600" />
+                    </button>
+                </div>
+            )}
+
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
 
                 {/* Left Side: Contact Info Panel */}
                 <div className="md:w-1/3 bg-gray-900 p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
-                    {/* Decorative ambient glow using Brand Colors */}
                     <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 bg-brand-accent/10 rounded-full blur-3xl" />
 
@@ -123,8 +151,10 @@ function ContactForm() {
                                 id="name"
                                 required
                                 type="text"
+                                value={formData.name} // Controlled value
+                                onChange={handleChange} // Change handler
                                 placeholder="John Doe"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all placeholder:text-gray-300"
+                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
                             />
                         </div>
 
@@ -134,8 +164,10 @@ function ContactForm() {
                                 id="email"
                                 required
                                 type="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="john@example.com"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all placeholder:text-gray-300"
+                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
                             />
                         </div>
 
@@ -145,8 +177,10 @@ function ContactForm() {
                                 id="subject"
                                 required
                                 type="text"
+                                value={formData.subject}
+                                onChange={handleChange}
                                 placeholder="How can we help you?"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all placeholder:text-gray-300"
+                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
                             />
                         </div>
 
@@ -156,8 +190,10 @@ function ContactForm() {
                                 id="message"
                                 required
                                 rows="4"
+                                value={formData.message}
+                                onChange={handleChange}
                                 placeholder="Write your message here..."
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all resize-none placeholder:text-gray-300"
+                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all resize-none"
                             ></textarea>
                         </div>
 
@@ -165,7 +201,7 @@ function ContactForm() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full sm:w-auto px-12 py-4 bg-brand-primary hover:bg-brand-secondary disabled:bg-gray-400 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group shadow-lg shadow-brand-primary/20 active:scale-[0.98]"
+                                className="w-full sm:w-auto px-12 py-4 bg-brand-primary hover:bg-brand-secondary disabled:bg-gray-400 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
                             >
                                 {isLoading ? "Sending..." : "Send Message"}
                                 {!isLoading && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
