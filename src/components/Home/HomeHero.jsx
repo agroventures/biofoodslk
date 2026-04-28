@@ -24,7 +24,7 @@ function HomeHero() {
                 <div className="max-w-4xl">
                     {/* Brand Badge */}
                     <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-8 animate-fade-in">
-                        <Leaf className="w-4 h-4 text-brand-primary" />
+                        <Leaf className="w-4 h-4 text-white" />
                         <span className="text-white text-xs font-bold uppercase tracking-[0.2em]">
                             Pioneering Biodynamics Since 1993
                         </span>
