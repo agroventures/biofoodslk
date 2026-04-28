@@ -36,11 +36,19 @@ function HomeSegments() {
             img: '/Home/quality.avif',
             link: '/quality-certifications',
             gradient: 'from-brand-primary to-brand-accent' 
+        },
+        {
+            id: 5,
+            title: "Management",
+            description: "Supporting sustainable farming practices.",
+            img: '/Home/management.jpg',
+            link: '/about#management',
+            gradient: 'from-brand-accent to-brand-primary' 
         }
     ];
 
     return (
-        <div className='w-full py-16 lg:py-24 bg-brand-light overflow-hidden'>
+        <div className='w-full py-16 lg:py-24 bg-white overflow-hidden'>
             {/* Section Header */}
             <div className='max-w-7xl mx-auto mb-16 px-6 text-center'>
                 <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10 shadow-sm">
@@ -56,7 +64,7 @@ function HomeSegments() {
             </div>
 
             {/* Cards Grid - Adjusted to 4 columns for the 4 segments */}
-            <div className='max-w-350 mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div className='max-w-350 mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6'>
                 {segments.map((segment, index) => (
                     <Link
                         key={segment.id}

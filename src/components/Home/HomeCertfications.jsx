@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function HomeCertifications() {
     return (
-        <section className="py-16 md:py-24 bg-brand-light overflow-hidden">
+        <section className="py-16 md:py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative">
 
                 {/* Background Subtle Accent - Adjusted positioning for mobile */}

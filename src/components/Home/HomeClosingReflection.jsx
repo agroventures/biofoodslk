@@ -3,7 +3,7 @@ import { Leaf, Quote } from 'lucide-react';
 
 function HomeClosingReflection() {
     return (
-        <section className="relative w-full py-20 lg:py-28 bg-brand-light overflow-hidden">
+        <section className="relative w-full py-20 lg:py-28 bg-white overflow-hidden">
             {/* Subtle Background Decorations */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-brand-primary/2 rounded-full blur-3xl" />

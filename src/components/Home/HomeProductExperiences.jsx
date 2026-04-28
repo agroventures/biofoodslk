@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function HomeProductExperiences() {
     return (
-        <section className="relative w-full py-20 lg:py-28 bg-white overflow-hidden">
+        <section className="relative w-full py-20 lg:py-28 bg-brand-light overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 right-0 w-150 h-150 bg-brand-primary/5 rounded-full blur-3xl" />

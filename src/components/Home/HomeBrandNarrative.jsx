@@ -66,7 +66,7 @@ function HomeBrandNarrative() {
                     {principles.map((principle, index) => (
                         <div
                             key={index}
-                            className="group bg-brand-secondary/40 backdrop-blur-md border border-white/10 rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:bg-white/10 hover:border-brand-primary transition-all duration-500 hover:-translate-x-2"
+                            className="group bg-[#f8f8f8] backdrop-blur-md border border-white/10 rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:bg-white/10 hover:border-brand-primary transition-all duration-500 hover:-translate-x-2"
                         >
                             <div className="flex items-start gap-4">
                                 <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
@@ -86,7 +86,7 @@ function HomeBrandNarrative() {
                             <div className="w-10 h-10 bg-brand-accent rounded-xl flex items-center justify-center">
                                 <Sparkles className="w-5 h-5 text-brand-primary" />
                             </div>
-                            <h4 className="text-lg font-bold text-gray-900">Part of Agroventures Group</h4>
+                            <h4 className="text-lg font-bold text-gray-900">Subsidiary of Agroventures Group</h4>
                         </div>
                         <p className="text-sm text-gray-600 leading-relaxed">
                             A new era of excellence, scaling responsibly while maintaining the integrity of our organic origins.

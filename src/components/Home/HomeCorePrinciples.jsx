@@ -26,7 +26,7 @@ function HomeCorePrinciples() {
     ];
 
     return (
-        <section className="w-full py-20 lg:py-24 bg-white border-t border-brand-light">
+        <section className="w-full py-20 lg:py-24 bg-brand-light border-t border-brand-light">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12 lg:mb-16">

@@ -41,10 +41,10 @@ function Home() {
             <HomeHero />
             <HomeBrandNarrative />
             <HomeAgroVenturesAdvantage />
+            <HomeCertifications />
             <HomeCorePrinciples />
             <HomeSegments />
             <HomeProductExperiences />
-            <HomeCertifications />
             {/* <HomeEcoPlus /> */}
             <HomeClosingReflection />
             <Footer />

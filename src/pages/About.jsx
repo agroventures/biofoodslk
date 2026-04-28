@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/shared/Navbar'
 import Footer from '../components/shared/Footer'
 import AboutHero from '../components/About/AboutHero'
@@ -9,9 +9,17 @@ import AboutGrowth from '../components/About/AboutGrowth'
 import AboutAwards from '../components/About/AboutAwards'
 import useSEO from '../hooks/useSEO'
 import AboutAgroVentures from '../components/About/AboutAgroVentures'
+import AboutManagement from '../components/About/AboutManagement'
 
 function About() {
   const url = window.location.href;
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const el = document.querySelector(window.location.hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   useSEO({
     // title: "Organic & Fairtrade Tea Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
@@ -28,6 +36,7 @@ function About() {
       <AboutBioFoods />
       <AboutFoundingVision />
       <AboutGrowth />
+      <AboutManagement />
       <VisionMission />
       <AboutAgroVentures />
       {/* <AboutAwards /> */}
