@@ -11,7 +11,7 @@ function HomeSegments() {
             description: "Meet our trusted organic farmers across the island.",
             img: '/Home/producers.avif',
             link: '/producers',
-            gradient: 'from-brand-primary to-brand-secondary' 
+            gradient: 'from-brand-secondary to-brand-accent' 
         },
         {
             id: 2,
@@ -27,7 +27,7 @@ function HomeSegments() {
             description: "100% organic, fresh, and certified exports.",
             img: '/Home/products.avif',
             link: '/products',
-            gradient: 'from-brand-accent to-brand-primary' 
+            gradient: 'from-brand-secondary to-brand-accent' 
         },
         {
             id: 4,
@@ -35,7 +35,7 @@ function HomeSegments() {
             description: "Certified excellence in every single batch.",
             img: '/Home/quality.avif',
             link: '/quality-certifications',
-            gradient: 'from-brand-primary to-brand-accent' 
+            gradient: 'from-brand-secondary to-brand-accent' 
         },
         {
             id: 5,
@@ -43,7 +43,7 @@ function HomeSegments() {
             description: "Supporting sustainable farming practices.",
             img: '/Home/management.jpg',
             link: '/about#management',
-            gradient: 'from-brand-accent to-brand-primary' 
+            gradient: 'from-brand-secondary to-brand-accent' 
         }
     ];
 
