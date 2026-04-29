@@ -78,7 +78,7 @@ function HomeAgroVenturesAdvantage() {
                     <div className="flex items-start gap-4">
                         <div className="w-2 h-2 bg-brand-primary rounded-full mt-3 shrink-0" />
                         <p className="text-lg lg:text-xl text-brand-dark/80 leading-relaxed font-medium">
-                            This combination allows Bio Foods to offer both artisanal authenticity and industrial reliability — 
+                            This combination allows Bio Foods to offer both artisanal authenticity and industrial reliability - 
                             a rare balance in today's global organic sector.
                         </p>
                     </div>

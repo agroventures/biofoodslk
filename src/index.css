@@ -1,6 +1,5 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @theme {
   --color-brand-primary: #1d472e;
   --color-brand-secondary: #ad903e;
@@ -9,7 +8,7 @@
 }
 
 body{
-  font-family: "Radio Canada", sans-serif;;
+  font-family: "Syne", sans-serif;
 }
 
 @keyframes fadeInLeft {
