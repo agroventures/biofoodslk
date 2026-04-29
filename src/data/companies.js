@@ -28,5 +28,15 @@ export const companies = [
         id: 6,
         name: "Ventrax",
         img: "/About/logo/ventrax.png"
+    },
+    {
+        id: 7,
+        name: "Hasara",
+        img: "/About/logo/hasara.png"
+    },
+    {
+        id: 8,
+        name: "Rathu Ira",
+        img: "/About/logo/rathuira.png"
     }
 ]

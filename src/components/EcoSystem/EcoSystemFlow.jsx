@@ -69,7 +69,7 @@ function EcoSystemFlow() {
                                 {/* Processing */}
                                 <div className="relative">
                                     <div className="bg-brand-secondary/5 rounded-2xl p-8 border border-brand-secondary/10 text-center">
-                                        <div className="w-14 h-14 bg-brand-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                                        <div className="w-14 h-14 bg-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                                             <Package className="w-7 h-7 text-white" />
                                         </div>
                                         <h4 className="text-xl font-bold text-brand-dark mb-2">Processing</h4>
@@ -77,8 +77,8 @@ function EcoSystemFlow() {
                                     </div>
                                     {/* Arrow */}
                                     <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                                        <div className="w-6 h-6 bg-brand-secondary/20 rounded-full flex items-center justify-center">
-                                            <div className="w-0 h-0 border-t-4 border-t-transparent border-l-8 border-l-brand-secondary border-b-4 border-b-transparent"></div>
+                                        <div className="w-6 h-6 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                                            <div className="w-0 h-0 border-t-4 border-t-transparent border-l-8 border-l-brand-primary border-b-4 border-b-transparent"></div>
                                         </div>
                                     </div>
                                 </div>

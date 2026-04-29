@@ -33,7 +33,7 @@ function HomeHero() {
                     {/* Main Headline */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter leading-[0.9] mb-6 sm:mb-8">
                         From Sri Lanka’s Living Soils <br />
-                        <span className="text-brand-primary italic">to Global Markets</span>
+                        <span className="text-brand-secondary italic">to Global Markets</span>
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-medium">
