@@ -110,17 +110,17 @@ export const products = [
         img: "/Products/FrozenProducts/frozen-products.avif",
         desc: "The demand for fresh ingredients is ever increasing across the globe. However, fresh products are difﬁcult to transport across the globe, particularly if they are made without the use harmful chemicals and preserving agents. This led to the birth of our IQF (Instant Quick Freeze) facility. The very rapid freezing leaves the cellular structure of the produce intact, so that once its thawed, the cell composition is restored, along with the freshness, ﬂavor and nutritive value. The processing plant that carries out this production is a BRC certiﬁed facility, one of the handful of similar plants in the country, and was recently awarded with an ‘A’ rating. A large variety if items (e.g., fresh fruit, veggies and herbs) are lined up for processing at this plant."
     },
-    {
-        id: 8,
-        name: "Organic Fertilizer",
-        img: "/Products/Fertilizer/organic-fertilizer.avif",
-        desc: "Organic agriculture in Sri Lanka has created a demand in the field of Organic agricultural soil inputs.This requirement has led us to initiate the Eco Planet Organic Fertilizer Project with the intension of providing a complete nutrition solution for organic agricultural lands in Sri Lanka and across the globe which has ultimately become one of the most successful projects of Bio foods(Pvt) Ltd, a pioneer in organic produce exporting in Sri Lanka.Our priorities cover, production of organic soil and plant inputs such as organic composts and liquid fertilizer, provide agriculture extension services and organic agriculture consultancy services for the farmers.",
-        grades: [
-            { id: 1, name: "Eco Plus Granular Fertilizer", img: "/Products/Fertilizer/eco-plus-granular-fertilizer.avif" },
-            { id: 2, name: "Eco Plus Organic Fertilizer", img: "/Products/Fertilizer/eco-plus-organic-fertilizer.avif" },
-            { id: 3, name: "Eco Carb", img: "/Products/Fertilizer/eco-carb.avif" },
-            { id: 4, name: "Eco Plus Tea Special Fertilizer", img: "/Products/Fertilizer/eco-plus-tea-special-fertilizer.avif" },
-            { id: 5, name: "Eco Plus Coconut Special Fertilizer", img: "/Products/Fertilizer/eco-plus-coconut-special-fertilizer.avif" },
-            { id: 6, name: "Eco Plus Solid Fertlizer", img: "/Products/Fertilizer/eco-plus-solid-fertilizer.avif" },        ]
-    }
+    // {
+    //     id: 8,
+    //     name: "Organic Fertilizer",
+    //     img: "/Products/Fertilizer/organic-fertilizer.avif",
+    //     desc: "Organic agriculture in Sri Lanka has created a demand in the field of Organic agricultural soil inputs.This requirement has led us to initiate the Eco Planet Organic Fertilizer Project with the intension of providing a complete nutrition solution for organic agricultural lands in Sri Lanka and across the globe which has ultimately become one of the most successful projects of Bio foods(Pvt) Ltd, a pioneer in organic produce exporting in Sri Lanka.Our priorities cover, production of organic soil and plant inputs such as organic composts and liquid fertilizer, provide agriculture extension services and organic agriculture consultancy services for the farmers.",
+    //     grades: [
+    //         { id: 1, name: "Eco Plus Granular Fertilizer", img: "/Products/Fertilizer/eco-plus-granular-fertilizer.avif" },
+    //         { id: 2, name: "Eco Plus Organic Fertilizer", img: "/Products/Fertilizer/eco-plus-organic-fertilizer.avif" },
+    //         { id: 3, name: "Eco Carb", img: "/Products/Fertilizer/eco-carb.avif" },
+    //         { id: 4, name: "Eco Plus Tea Special Fertilizer", img: "/Products/Fertilizer/eco-plus-tea-special-fertilizer.avif" },
+    //         { id: 5, name: "Eco Plus Coconut Special Fertilizer", img: "/Products/Fertilizer/eco-plus-coconut-special-fertilizer.avif" },
+    //         { id: 6, name: "Eco Plus Solid Fertlizer", img: "/Products/Fertilizer/eco-plus-solid-fertilizer.avif" },        ]
+    // }
 ]
