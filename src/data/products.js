@@ -104,12 +104,12 @@ export const products = [
             ]
         }
     },
-    {
-        id: 7,
-        name: "Frozen Products",
-        img: "/Products/FrozenProducts/frozen-products.avif",
-        desc: "The demand for fresh ingredients is ever increasing across the globe. However, fresh products are difﬁcult to transport across the globe, particularly if they are made without the use harmful chemicals and preserving agents. This led to the birth of our IQF (Instant Quick Freeze) facility. The very rapid freezing leaves the cellular structure of the produce intact, so that once its thawed, the cell composition is restored, along with the freshness, ﬂavor and nutritive value. The processing plant that carries out this production is a BRC certiﬁed facility, one of the handful of similar plants in the country, and was recently awarded with an ‘A’ rating. A large variety if items (e.g., fresh fruit, veggies and herbs) are lined up for processing at this plant."
-    },
+    // {
+    //     id: 7,
+    //     name: "Frozen Products",
+    //     img: "/Products/FrozenProducts/frozen-products.avif",
+    //     desc: "The demand for fresh ingredients is ever increasing across the globe. However, fresh products are difﬁcult to transport across the globe, particularly if they are made without the use harmful chemicals and preserving agents. This led to the birth of our IQF (Instant Quick Freeze) facility. The very rapid freezing leaves the cellular structure of the produce intact, so that once its thawed, the cell composition is restored, along with the freshness, ﬂavor and nutritive value. The processing plant that carries out this production is a BRC certiﬁed facility, one of the handful of similar plants in the country, and was recently awarded with an ‘A’ rating. A large variety if items (e.g., fresh fruit, veggies and herbs) are lined up for processing at this plant."
+    // },
     // {
     //     id: 8,
     //     name: "Organic Fertilizer",
