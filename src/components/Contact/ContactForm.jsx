@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2, X } from 'lucide-react';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+
+    const [submitStatus, setSubmitStatus] = useState(null);
 
     // 1. Create a state object for all form fields
     const [formData, setFormData] = useState({
@@ -25,21 +28,22 @@ function ContactForm() {
         e.preventDefault();
         setIsLoading(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        setIsLoading(false);
-        setIsSubmitted(true);
-
-        // 3. Clear the form fields
-        setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        });
-
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        try {
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formData,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+            setSubmitStatus('success');
+            setIsSubmitted(true);
+            setFormData({ name: '', email: '', subject: '', message: '' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } catch (error) {
+            setSubmitStatus('error');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
