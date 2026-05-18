@@ -49,14 +49,14 @@ export const products = [
     {
         id: 5,
         name: "Organic Spices",
-        img: "/Products/OrganicSpices/organic-spices.avif",
+        img: "/Products/OrganicSpices/organic-spices.jpeg",
         desc: "We are honoured to be the first company in the world to achieve the fair trade certificate for exporting our range of spices. What makes something a spice? By definition, it is a fresh or dried seed, fruit, bark or vegetative substance used as a food additive for flavour, colour, aroma enhancement, or as a preservative that kills bacteria and/or prevents their growth. Our organic, fair trade and biodynamic range includes black (our major export crop) & white pepper, cinnamon, cardamom, clove, nutmeg, mace, turmeric, and ginger, but this roster sometimes changes due to seasonal availability.",
         grades: {
             "spices-whole": [
                 { id: 1, name: "Black Pepper", img: "/Products/OrganicSpices/spices-whole/black-pepper.avif" },
-                { id: 2, name: "Cardamom Pods", img: "/Products/OrganicSpices/spices-whole/cardomom-pods.avif" },
+                { id: 2, name: "Cardamom Pods", img: "/Products/OrganicSpices/spices-whole/organic-cardamom.jpeg" },
                 { id: 3, name: "Chilli", img: "/Products/OrganicSpices/spices-whole/chilli.avif" },
-                { id: 4, name: "Cinnamon Quills", img: "/Products/OrganicSpices/spices-whole/cinnamon-quills.avif" },
+                { id: 4, name: "Cinnamon Quills", img: "/Products/OrganicSpices/spices-whole/organic-cinnamon.jpeg" },
                 { id: 5, name: "Clove Pods", img: "/Products/OrganicSpices/spices-whole/clove-pods.avif" },
                 { id: 6, name: "Ginger Pieces", img: "/Products/OrganicSpices/spices-whole/ginger-pieces.avif" },
                 { id: 7, name: "Cardamom Seeds", img: "/Products/OrganicSpices/spices-whole/cardamom-seeds.avif" },
@@ -81,7 +81,7 @@ export const products = [
                 { id: 4, name: "Chilli Powder", img: "/Products/OrganicSpices/spices-powder/chilli.avif" },
                 { id: 5, name: "Mace Powder", img: "/Products/OrganicSpices/spices-powder/mace.avif" },
                 { id: 6, name: "Nutmeg Powder", img: "/Products/OrganicSpices/spices-powder/nutmeg.avif" },
-                { id: 7, name: "Turmeric Powder", img: "/Products/OrganicSpices/spices-powder/turmeric.avif" },
+                { id: 7, name: "Turmeric Powder", img: "/Products/OrganicSpices/spices-powder/turmeric-powder.jpeg" },
                 { id: 8, name: "White Pepper Powder", img: "/Products/OrganicSpices/spices-powder/white-pepper.avif" },
                 { id: 9, name: "Cinnamon Powder", img: "/Products/OrganicSpices/spices-powder/cinnamon.avif" },
             ]
@@ -90,7 +90,7 @@ export const products = [
     {
         id: 6,
         name: "Organic Coconut Products",
-        img: "/Products/CoconutProducts/organic-coconut-products.avif",
+        img: "/Products/CoconutProducts/cocnut-products.jpeg",
         desc: "We in Sri Lanka know the coconut tree as the ‘tree of life’. This is because the local people, probably for as long as we have been on an island, have used each an every part of the tree, from root to husk to leaves, for some purpose or another. As such, it is deeply respected product. Each day, the health benefits of coconut gain traction globally (coconut oil is now considered one of the healthiest oils to consume due to its medium chain triglyceride [MCT] composition) and its irreplaceable position in the vegan marketplace has been established, we are proud to provide an ever expanding range of coconut products.",
         grades: {
             "coconut-chips": [
