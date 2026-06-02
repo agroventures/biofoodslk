@@ -53,17 +53,17 @@ export const products = [
         desc: "We are honoured to be the first company in the world to achieve the fair trade certificate for exporting our range of spices. What makes something a spice? By definition, it is a fresh or dried seed, fruit, bark or vegetative substance used as a food additive for flavour, colour, aroma enhancement, or as a preservative that kills bacteria and/or prevents their growth. Our organic, fair trade and biodynamic range includes black (our major export crop) & white pepper, cinnamon, cardamom, clove, nutmeg, mace, turmeric, and ginger, but this roster sometimes changes due to seasonal availability.",
         grades: {
             "spices-whole": [
-                { id: 1, name: "Black Pepper", img: "/Products/OrganicSpices/spices-whole/black-pepper.avif" },
-                { id: 2, name: "Cardamom Pods", img: "/Products/OrganicSpices/spices-whole/organic-cardamom.jpeg" },
+                { id: 1, name: "Black Pepper", img: "/Products/OrganicSpices/spices-whole/black-pepper.png" },
+                { id: 2, name: "Cardamom Pods", img: "/Products/OrganicSpices/spices-whole/cardomom-pods.png" },
                 { id: 3, name: "Chilli", img: "/Products/OrganicSpices/spices-whole/chilli.avif" },
                 { id: 4, name: "Cinnamon Quills", img: "/Products/OrganicSpices/spices-whole/organic-cinnamon.jpeg" },
-                { id: 5, name: "Clove Pods", img: "/Products/OrganicSpices/spices-whole/clove-pods.avif" },
+                { id: 5, name: "Clove Pods", img: "/Products/OrganicSpices/spices-whole/ceylon-clove.png" },
                 { id: 6, name: "Ginger Pieces", img: "/Products/OrganicSpices/spices-whole/ginger-pieces.avif" },
                 { id: 7, name: "Cardamom Seeds", img: "/Products/OrganicSpices/spices-whole/cardamom-seeds.avif" },
                 { id: 8, name: "Mace Red", img: "/Products/OrganicSpices/spices-whole/mace-red.avif" },
-                { id: 9, name: "Nutmeg", img: "/Products/OrganicSpices/spices-whole/nutmeg.avif" },
+                { id: 9, name: "Nutmeg", img: "/Products/OrganicSpices/spices-whole/ceylon-nutmeg.png" },
                 { id: 10, name: "Vanilla Beans", img: "/Products/OrganicSpices/spices-whole/vanilla-beans.avif" },
-                { id: 11, name: "White Pepper", img: "/Products/OrganicSpices/spices-whole/white-pepper.avif" },
+                { id: 11, name: "White Pepper", img: "/Products/OrganicSpices/spices-whole/white-pepper.png" },
                 { id: 12, name: "Turmeric", img: "/Products/OrganicSpices/spices-whole/turmeric.avif" },
             ],
             "spices-tea-bag-cut": [
