@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Quote } from 'lucide-react';
+import { Award } from 'lucide-react';
 import { management } from '../../data/management';
 
 function AboutManagement() {
@@ -144,6 +144,80 @@ function AboutManagement() {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            <div className="flex flex-col lg:items-start gap-12 lg:gap-20 lg:flex-row max-w-7xl mx-auto px-6 mt-24 md:mt-32">
+
+                {/* Founder Image Card */}
+                <div className="w-full lg:w-2/5">
+                    <div className="relative group">
+                        <div className="absolute -inset-4 rounded-[2.5rem] bg-brand-primary opacity-10 rotate-3 transition-transform duration-500 group-hover:scale-105" />
+                        <div className="relative aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-4xl shadow-2xl">
+                            <img
+                                src="/About/Dr.Sarath-Ranaweera.avif"
+                                alt="Dr. Sarath Ranaweera"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <span className="text-brand-primary font-black uppercase tracking-[0.2em] text-xs">
+                                Consultant
+                            </span>
+                            <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-none">
+                                Dr. Sarath Ranaweera (Ph.D)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Content Side */}
+                <div className="w-full lg:w-3/5 space-y-8">
+                    <div className="space-y-6">
+                        <p className="text-lg md:text-xl leading-relaxed text-slate-600 italic">
+                            Dr. Sarath Ranaweera is the founder of Bio Foods and currently serves as a consultant to the company. In 2014, he received the “Fairest Fair-trader of the World” award at the first ever Fair Trade Awards (organized by FLO) held in Bonn, Germany.
+                        </p>
+
+                        <p className="text-slate-600">
+                            Selected from over 80 individuals, this award recognized special efforts or innovations by outstanding individuals within the global fair-trade system. In addition, the Marginalized Organic Producers’ Association (MOPA) that functions under the overall management of Bio Foods (and also founded by the chairman) was recognized as the best small Producer organization of the year 2014 in Asia at the ceremony.
+                        </p>
+
+                        <div className="pt-4">
+                            <div className="h-1.5 w-20 rounded-full bg-brand-primary mb-6" />
+                            <h4 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
+                                So how did he get here?
+                            </h4>
+
+                            <div className="space-y-4 text-slate-600">
+                                <p>
+                                    By training a mathematician (and notorious sportsman), he was the unfortunate victim of some aggressive food poisoning during his time in university. This prompted him to wonder what actually goes in our food.
+                                </p>
+
+                                <p>
+                                    A consequent switch in field to food technology and statistics (because he couldn’t just shed the numbers!) led him to develop his own tea manufacturing processes. He produced his first batch of tea with a rented factory, rented out a small square space at a trade fair, found a buyer that was so impressed with the quality of his tea that he ordered everything that could be produced, and that is how Bio Foods got its start.
+                                </p>
+
+                                <div className="relative my-6">
+                                    <span className="absolute -top-6 -left-4 text-8xl text-brand-primary/10 font-serif pointer-events-none">"</span>
+                                    <p className="relative z-10 text-lg italic text-slate-700">
+                                        "From the outset, he wanted to make sure that farmers were treated fairly, because none of the second generation farmers he met wanted to continue the work of their fathers because their livelihood was so risky."
+                                    </p>
+                                </div>
+
+                                <p>
+                                    Everything from fluctuating market prices to the weather could compromise their income, so to provide the farmers with some job security, Dr. Ranaweera set a minimum price that was above their cost of production. As such, no matter what the market price was, they could be assured of an income.
+                                </p>
+
+                                <p>
+                                    If the market price were to rise above that threshold, that price was matched, and farmers were given a buying guarantee. So right from the beginning, before FLO was even born, Bio Foods was practicing the fair trade and organic way. In fact, Dr. Ranaweera was involved in an advisory capacity when FLO was setting down their fair trade regulations.
+                                </p>
+
+                                <p className="font-semibold text-slate-800">
+                                    This is the enduring vision of our visionary founder that we commit ourselves to maintaining every day. A steadfastly supportive wife both at work and at home, two wonderful daughters, a doctorate in bio-statistics, and over two decades later, he remains a "Sri Lankan farmer" as he calls himself, recognized on the international platform as the fairest of them all.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
