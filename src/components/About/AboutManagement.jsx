@@ -109,7 +109,7 @@ function AboutManagement() {
                                     <div className={`absolute -inset-4 rounded-[2.5rem] opacity-10 transition-transform duration-500 group-hover:scale-105 ${index % 2 === 0 ? 'bg-brand-primary rotate-3' : 'bg-slate-900 -rotate-3'
                                         }`} />
 
-                                    <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl">
+                                    <div className="relative aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-4xl shadow-2xl">
                                         <img
                                             src={member.img}
                                             alt={member.name}
