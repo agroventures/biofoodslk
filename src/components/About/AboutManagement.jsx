@@ -155,7 +155,7 @@ function AboutManagement() {
                         <div className="absolute -inset-4 rounded-[2.5rem] bg-brand-primary opacity-10 rotate-3 transition-transform duration-500 group-hover:scale-105" />
                         <div className="relative aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-4xl shadow-2xl">
                             <img
-                                src="/About/Dr.Sarath-Ranaweera.avif"
+                                src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/Dr.Sarath-Ranaweera.avif"
                                 alt="Dr. Sarath Ranaweera"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />

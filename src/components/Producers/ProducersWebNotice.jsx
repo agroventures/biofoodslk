@@ -66,7 +66,7 @@ function ProducersWebNotice() {
                     <div className="relative">
                         <div className="rounded-[2.5rem] overflow-hidden shadow-2xl bg-white p-2">
                             <img 
-                                src="/Producers/web copy_edited.png" 
+                                src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Producers/web copy_edited.png" 
                                 alt="Field training session" 
                                 className="rounded-4xl w-full h-auto object-cover"
                             />

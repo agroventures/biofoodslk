@@ -8,7 +8,7 @@ function HomeHero() {
             {/* Background Video Layer */}
             <div className="absolute inset-0 z-0">
                 <video
-                    src="/Home/hero.mp4"
+                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/hero.mp4"
                     autoPlay
                     loop
                     muted

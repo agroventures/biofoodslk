@@ -45,8 +45,8 @@ function QualityCertificationsDetails() {
                         Our Global Compliance Standards
                     </p>
                     <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-24">
-                        <img src="/Home/ICS_logos.avif" alt="ICS" className="h-12 lg:h-16 w-auto object-contain" />
-                        <img src="/Home/Foodsafety.avif" alt="Food Safety" className="h-12 lg:h-16 w-auto object-contain" />
+                        <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/ICS_logos.avif" alt="ICS" className="h-12 lg:h-16 w-auto object-contain" />
+                        <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/Foodsafety.avif" alt="Food Safety" className="h-12 lg:h-16 w-auto object-contain" />
                     </div>
                 </div>
             </div>
@@ -65,8 +65,8 @@ function QualityCertificationsDetails() {
                             prevention, detection, and rejection procedures.
                         </p>
                         <div className="flex gap-4">
-                            <img src="/QualityCertifications/testing.avif" alt="Lab Testing" className="w-1/2 rounded-3xl shadow-xl" />
-                            <img src="/QualityCertifications/testing2.avif" alt="Quality Check" className="w-1/2 rounded-3xl shadow-xl mt-8" />
+                            <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/testing.avif" alt="Lab Testing" className="w-1/2 rounded-3xl shadow-xl" />
+                            <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/testing2.avif" alt="Quality Check" className="w-1/2 rounded-3xl shadow-xl mt-8" />
                         </div>
                     </div>
 
