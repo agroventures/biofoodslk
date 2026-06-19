@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Heart, ShieldCheck, Quote, Sparkles } from 'lucide-react';
+import { Leaf, Heart, ShieldCheck, Sparkles } from 'lucide-react';
 
 function AboutFoundingVision() {
     const principles = [
@@ -21,68 +21,67 @@ function AboutFoundingVision() {
     ];
 
     return (
-        <section className="w-full py-20 lg:py-24 bg-white border-t border-brand-light">
-            <div className="w-full px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="text-center mb-12 lg:mb-16">
-                    <div className="inline-flex items-center gap-2 bg-brand-primary/5 text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10">
-                        <Sparkles className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.15em] uppercase text-xs">Leadership</span>
+        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-t border-b border-neutral-100 py-24 lg:py-36">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                
+                {/* ── Header Matrix ── */}
+                <div className="border-b border-neutral-950 pb-8 mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2 text-neutral-950">
+                            <Sparkles className="w-4 h-4 stroke-[1.5]" />
+                            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400">Institutional Mandate</span>
+                        </div>
+                        <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
+                            The Founding Vision
+                        </h2>
                     </div>
-
-                    <h2 className="text-4xl sm:text-5xl font-black text-brand-dark tracking-tight">
-                        The Founding <span className="text-brand-primary">Vision</span>
-                    </h2>
                 </div>
 
-                {/* Main Content */}
-                <div className="max-w-6xl mx-auto">
-                    {/* Quote / Intro Block */}
-                    <div className="relative bg-brand-light/30 rounded-3xl p-8 lg:p-12 mb-12 border border-brand-light">
-                        <div className="absolute -top-6 left-8 lg:left-12 w-12 h-12 bg-brand-primary rounded-2xl flex items-center justify-center shadow-lg">
-                            <Quote className="w-6 h-6 text-white" />
-                        </div>
-                        
-                        <p className="text-lg lg:text-xl text-brand-dark/80 leading-relaxed pt-4">
-                            At the heart of Bio Foods lies the vision of <span className="font-bold text-brand-primary">Dr. Sarath Ranaweera</span>, whose philosophy redefined the role of agriculture in society.
-                        </p>
-                        
-                        <p className="text-base lg:text-lg text-brand-dark/70 leading-relaxed mt-4">
-                            He believed that farming must:
-                        </p>
-                    </div>
-
-                    {/* Three Principles Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
-                        {principles.map((principle, index) => (
-                            <div
-                                key={index}
-                                className="group bg-white border border-brand-light rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:border-brand-primary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-                            >
-                                <div className="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors duration-300">
-                                    <principle.icon className="w-7 h-7 text-brand-primary group-hover:text-white transition-colors duration-300" />
-                                </div>
-                                
-                                <h3 className="text-xl font-bold text-brand-dark mb-3 leading-snug">
-                                    {principle.title}
-                                </h3>
-                                
-                                <p className="text-sm text-brand-dark/60 leading-relaxed">
-                                    {principle.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Closing Statement */}
-                    <div className="text-center">
-                        <div className="inline-block bg-white border border-brand-light rounded-2xl px-8 py-6 shadow-sm">
-                            <p className="text-lg text-brand-dark/80 font-medium italic">
-                                This philosophy remains deeply embedded in every aspect of Bio Foods today.
+                {/* ── Main Editorial Structure ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                    
+                    {/* Left Column: Philosophical Positioning */}
+                    <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-12">
+                        <div className="bg-neutral-50 border border-neutral-200 p-8 relative">
+                            <p className="text-xl font-bold text-neutral-900 leading-relaxed uppercase tracking-tight">
+                                At the heart of Bio Foods lies the strategic vision of Dr. Sarath Ranaweera, whose system design completely redefined the role of agricultural infrastructure in modern society.
+                            </p>
+                            <p className="text-xs text-neutral-500 font-medium leading-relaxed mt-4 pt-4 border-t border-neutral-200">
+                                He established that commercial production models must remain completely synchronized with three unyielding systemic pillars:
                             </p>
                         </div>
                     </div>
+
+                    {/* Right Column: Technical Grid System */}
+                    <div className="lg:col-span-7 space-y-6">
+                        <div className="grid grid-cols-1 gap-4">
+                            {principles.map((principle, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white border border-neutral-200 p-6 flex flex-col sm:flex-row gap-6 items-start hover:border-neutral-950 transition-colors duration-300"
+                                >
+                                    <div className="p-3 bg-neutral-50 border border-neutral-200 text-neutral-950 shrink-0">
+                                        <principle.icon className="w-5 h-5 stroke-[1.5]" />
+                                    </div>
+                                    
+                                    <div className="space-y-2">
+                                        <div className="flex items-baseline gap-2">
+                                            <span className="font-mono text-[10px] text-neutral-400">[0{index + 1}]</span>
+                                            <h3 className="text-lg font-black uppercase tracking-tight text-neutral-950">
+                                                {principle.title}
+                                            </h3>
+                                        </div>
+                                        <p className="text-xs text-neutral-500 font-medium leading-relaxed max-w-xl">
+                                            {principle.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </section>
     );

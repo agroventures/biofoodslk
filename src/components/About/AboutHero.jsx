@@ -10,7 +10,7 @@ function AboutHero() {
       title="The Organic Way"
       subtitle="Pioneering Sustainable & Ethical Agriculture for over 30 Years"
       description="From our roots in Kandy to becoming global leaders in Fair Trade, we bridge the gap between small-scale farmers and the international market through 100% organic, chemical-free production."
-      img="/About/hero.avif"
+      img="/About/hero.jpg"
       alt="Bio Foods Organic Tea Plantation in Sri Lanka"
     />
   );

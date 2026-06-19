@@ -4,7 +4,6 @@ import { companies } from '../../data/companies';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 
 function AboutAgroVentures() {
@@ -45,64 +44,103 @@ function AboutAgroVentures() {
     ];
 
     return (
-        <section className="w-full py-20 lg:py-24 bg-white border-t border-brand-light">
-            <div className="w-full px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="text-center mb-12 lg:mb-16">
-                    <div className="inline-flex items-center gap-2 bg-brand-primary/5 text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10">
-                        <Sparkles className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.15em] uppercase text-xs">Our Parent Company</span>
+        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-t border-b border-neutral-100 py-24 lg:py-36">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                
+                {/* ── Editorial Header Structure ── */}
+                <div className="border-b border-neutral-950 pb-8 mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2 text-neutral-950">
+                            <Sparkles className="w-4 h-4 stroke-[1.5]" />
+                            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400">Parent Conglomerate</span>
+                        </div>
+                        <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
+                            Agroventures Group
+                        </h2>
                     </div>
-
-                    <h2 className="text-4xl sm:text-5xl font-black text-brand-dark tracking-tight">
-                        Agroventures <span className="text-brand-primary">Group</span>
-                    </h2>
                 </div>
 
-                {/* Main Description */}
-                <div className="max-w-4xl mx-auto text-center mb-16">
-                    <p className="text-lg lg:text-xl text-brand-dark/80 leading-relaxed">
-                        Agroventures Group is a diversified agribusiness conglomerate operating across the full
-                        agricultural value chain.
+                {/* ── Headline Narrative Payload ── */}
+                <div className="max-w-4xl mb-24">
+                    <p className="text-xl sm:text-2xl font-bold text-neutral-900 leading-relaxed uppercase tracking-tight">
+                        Agroventures Group operates as a diversified agribusiness conglomerate, engineering strategic infrastructure across the entirety of the agricultural value chain spectrum.
                     </p>
                 </div>
 
-                {/* Areas of Expertise */}
-                <div className="mb-16">
-                    <h3 className="text-2xl font-black text-brand-dark text-center mb-8">Areas of Expertise</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                        {expertise.map((item, index) => (
-                            <div
-                                key={index}
-                                className="group bg-white border border-brand-light rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:border-brand-primary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center"
-                            >
-                                <div className="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-brand-primary transition-colors duration-300">
-                                    <item.icon className="w-7 h-7 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                {/* ── Asymmetric Structural Sections ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                    
+                    {/* Left Grid: Core Capability Clusters */}
+                    <div className="lg:col-span-6 space-y-12">
+                        <div className="space-y-4">
+                            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 block">CORE CAPABILITIES</span>
+                            <h3 className="text-2xl font-black uppercase tracking-tighter text-neutral-950">Areas of Expertise</h3>
+                        </div>
+                        
+                        <div className="space-y-4">
+                            {expertise.map((item, index) => (
+                                <div key={index} className="border border-neutral-200 p-6 bg-white flex items-start gap-6 hover:border-neutral-950 transition-colors duration-300">
+                                    <div className="p-3 bg-neutral-50 border border-neutral-200 text-neutral-950 shrink-0">
+                                        <item.icon className="w-5 h-5 stroke-[1.5]" />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <div className="flex items-baseline gap-2">
+                                            <span className="font-mono text-[10px] text-neutral-400">[EXP_0{index + 1}]</span>
+                                            <h4 className="font-black uppercase tracking-tight text-neutral-950">{item.title}</h4>
+                                        </div>
+                                        <p className="text-xs text-neutral-500 font-medium">{item.description}</p>
+                                    </div>
                                 </div>
-                                <h4 className="text-lg font-bold text-brand-dark mb-2">{item.title}</h4>
-                                <p className="text-sm text-brand-dark/60">{item.description}</p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
+
+                    {/* Right Grid: Structural Integration Loop */}
+                    <div className="lg:col-span-6 space-y-12">
+                        <div className="space-y-4">
+                            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 block">INTEGRATION BENEFITS</span>
+                            <h3 className="text-2xl font-black uppercase tracking-tighter text-neutral-950">Strategic Asset Access</h3>
+                        </div>
+
+                        <div className="space-y-4">
+                            {benefits.map((item, index) => (
+                                <div key={index} className="border border-neutral-200 p-6 bg-white flex items-start gap-6 hover:border-neutral-950 transition-colors duration-300">
+                                    <div className="p-3 bg-neutral-50 border border-neutral-200 text-neutral-950 shrink-0">
+                                        <item.icon className="w-5 h-5 stroke-[1.5]" />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <div className="flex items-baseline gap-2">
+                                            <span className="font-mono text-[10px] text-neutral-400">[NET_0{index + 1}]</span>
+                                            <h4 className="font-black uppercase tracking-tight text-neutral-950">{item.title}</h4>
+                                        </div>
+                                        <p className="text-xs text-neutral-500 font-medium">{item.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
 
-                {/* Logos Placeholder */}
-                <div className="bg-brand-light/50 rounded-2xl lg:rounded-3xl p-10 lg:p-16 mb-16 text-center border border-brand-light">
-                    <p className="text-sm font-bold text-brand-dark/40 uppercase tracking-widest mb-4">
-                        Agroventures Group of Companies
-                    </p>
-                    <div className="w-full py-10">
+                {/* ── Corporate Assembly Registry Carousel ── */}
+                <div className="mt-24 pt-12 border-t border-neutral-950">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400">
+                            AGROVENTURES SUBSIDIARY ALLIANCE MATRIX
+                        </span>
+                    </div>
+
+                    <div className="border border-neutral-200 bg-neutral-50 p-4">
                         <Swiper
                             modules={[Autoplay]}
-                            spaceBetween={30}
-                            slidesPerView={2} // Default for mobile
+                            spaceBetween={16}
+                            slidesPerView={2}
                             loop={true}
                             autoplay={{
-                                delay: 2500,
+                                delay: 3000,
                                 disableOnInteraction: false,
                             }}
                             breakpoints={{
-                                // Responsive breakpoints
                                 640: { slidesPerView: 3 },
                                 1024: { slidesPerView: 6 },
                             }}
@@ -110,11 +148,11 @@ function AboutAgroVentures() {
                         >
                             {companies.map((item) => (
                                 <SwiperSlide key={item.id}>
-                                    <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center mx-auto">
+                                    <div className="w-full h-16 bg-white border border-neutral-200 flex items-center justify-center">
                                         <img
                                             src={item.img}
                                             alt={item.name}
-                                            className="w-full h-full object-contain p-2"
+                                            className="w-full h-full object-contain p-3 filter contrast-105 opacity-90"
                                         />
                                     </div>
                                 </SwiperSlide>
@@ -123,24 +161,6 @@ function AboutAgroVentures() {
                     </div>
                 </div>
 
-                {/* Partnership Benefits */}
-                <div>
-                    <h3 className="text-2xl font-black text-brand-dark text-center mb-8">Through This Partnership, Bio Foods Gains Access To</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                        {benefits.map((item, index) => (
-                            <div
-                                key={index}
-                                className="group bg-white border border-brand-light rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:border-brand-secondary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-                            >
-                                <div className="w-14 h-14 bg-brand-secondary/5 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-secondary transition-colors duration-300">
-                                    <item.icon className="w-7 h-7 text-brand-secondary group-hover:text-white transition-colors duration-300" />
-                                </div>
-                                <h4 className="text-lg font-bold text-brand-dark mb-2">{item.title}</h4>
-                                <p className="text-sm text-brand-dark/60">{item.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
             </div>
         </section>
     );

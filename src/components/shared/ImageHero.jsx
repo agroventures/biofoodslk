@@ -20,8 +20,8 @@ const ImageHero = ({
           className="w-full h-full object-cover object-center transform scale-100 transition-transform duration-1000 ease-out selection:bg-transparent"
         />
         {/* Precise Cinematic Vignette and Linear Gradient Mask */}
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/20 opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/80 via-transparent to-transparent hidden lg:block" />
+        <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/20 opacity-90" />
+        <div className="absolute inset-0 bg-linear-to-r from-neutral-950/80 via-transparent to-transparent hidden lg:block" />
       </div>
 
       {/* ── Subdued Blueprint Matrix Layer ── */}

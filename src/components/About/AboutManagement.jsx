@@ -92,133 +92,127 @@ function AboutManagement() {
         //     </div>
         // </section>
 
-        <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-t border-neutral-100 py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-6">
 
-                <div className="space-y-24 md:space-y-32">
+                {/* ── 1. The Executive Management Matrix ── */}
+                <div className="space-y-32 md:space-y-40">
                     {management.map((member, index) => (
                         <div
                             key={member.id}
-                            className={`flex flex-col lg:items-center gap-12 lg:gap-20 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                                }`}
+                            className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start ${
+                                index % 2 !== 0 ? 'lg:direction-rtl' : ''
+                            }`}
                         >
-                            {/* Image Side */}
-                            <div className="w-full lg:w-1/2">
-                                <div className="relative group">
-                                    {/* Decorative Accent Background */}
-                                    <div className={`absolute -inset-4 rounded-[2.5rem] opacity-10 transition-transform duration-500 group-hover:scale-105 ${index % 2 === 0 ? 'bg-brand-primary rotate-3' : 'bg-slate-900 -rotate-3'
-                                        }`} />
-
-                                    <div className="relative aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-4xl shadow-2xl">
-                                        <img
-                                            src={member.img}
-                                            alt={member.name}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                    </div>
+                            {/* Graphic Frame Asset */}
+                            <div className="lg:col-span-5">
+                                <div className="relative aspect-4/5 bg-neutral-50 overflow-hidden border border-neutral-200">
+                                    <img
+                                        src={member.img}
+                                        alt={member.name}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             </div>
 
-                            {/* Text Side */}
-                            <div className="w-full lg:w-1/2 space-y-6">
-                                <div className="space-y-2">
-                                    <span className="text-brand-primary font-black uppercase tracking-[0.2em] text-xs">
-                                        {member.role}
-                                    </span>
-                                    <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-none">
-                                        {member.name}
+                            {/* Typographic Core Payload */}
+                            <div className="lg:col-span-7 space-y-6 lg:pt-4">
+                                <div className="space-y-2 border-b border-neutral-950 pb-4">
+                                    <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
+                                        {member.name} <br/>
+                                        <span className="text-base md:text-lg font-medium tracking-tight text-neutral-500">{member.role}</span>
                                     </h3>
                                 </div>
 
-                                <div className="relative">
-                                    {/* Decorative Quote Mark */}
-                                    <span className="absolute -top-6 -left-4 text-8xl text-brand-primary/10 font-serif pointer-events-none">“</span>
-
-                                    <p className="text-lg md:text-xl text-slate-600 leading-relaxed italic relative z-10">
-                                        {member.message || "Commitment to excellence and organic integrity is at the heart of everything we do at Bio Foods."}
+                                <div className="relative pt-2">
+                                    <p className="text-base md:text-lg font-medium text-neutral-500 leading-relaxed max-w-2xl">
+                                        "{member.message || "Commitment to excellence and organic integrity is at the heart of everything we do at Bio Foods."}"
                                     </p>
                                 </div>
-
-                                <div className={`h-1.5 w-20 rounded-full ${index % 2 === 0 ? 'bg-brand-primary' : 'bg-slate-900'
-                                    }`} />
                             </div>
                         </div>
                     ))}
                 </div>
-            </div>
 
-            <div className="flex flex-col lg:items-start gap-12 lg:gap-20 lg:flex-row max-w-7xl mx-auto px-6 mt-24 md:mt-32">
+                {/* ── 2. The Institutional Founder Canvas ── */}
+                <div className="border-t-2 border-neutral-950 mt-32 md:mt-40 pt-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
-                {/* Founder Image Card */}
-                <div className="w-full lg:w-2/5">
-                    <div className="relative group">
-                        <div className="absolute -inset-4 rounded-[2.5rem] bg-brand-primary opacity-10 rotate-3 transition-transform duration-500 group-hover:scale-105" />
-                        <div className="relative aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-4xl shadow-2xl">
-                            <img
-                                src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/Dr.Sarath-Ranaweera.avif"
-                                alt="Dr. Sarath Ranaweera"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <span className="text-brand-primary font-black uppercase tracking-[0.2em] text-xs">
-                                Consultant
-                            </span>
-                            <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-none">
-                                Dr. Sarath Ranaweera (Ph.D)
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Content Side */}
-                <div className="w-full lg:w-3/5 space-y-8">
-                    <div className="space-y-6">
-                        <p className="text-lg md:text-xl leading-relaxed text-slate-600 italic">
-                            Dr. Sarath Ranaweera is the founder of Bio Foods and currently serves as a consultant to the company. In 2014, he received the “Fairest Fair-trader of the World” award at the first ever Fair Trade Awards (organized by FLO) held in Bonn, Germany.
-                        </p>
-
-                        <p className="text-slate-600">
-                            Selected from over 80 individuals, this award recognized special efforts or innovations by outstanding individuals within the global fair-trade system. In addition, the Marginalized Organic Producers’ Association (MOPA) that functions under the overall management of Bio Foods (and also founded by the chairman) was recognized as the best small Producer organization of the year 2014 in Asia at the ceremony.
-                        </p>
-
-                        <div className="pt-4">
-                            <div className="h-1.5 w-20 rounded-full bg-brand-primary mb-6" />
-                            <h4 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
-                                So how did he get here?
-                            </h4>
-
-                            <div className="space-y-4 text-slate-600">
-                                <p>
-                                    By training a mathematician (and notorious sportsman), he was the unfortunate victim of some aggressive food poisoning during his time in university. This prompted him to wonder what actually goes in our food.
-                                </p>
-
-                                <p>
-                                    A consequent switch in field to food technology and statistics (because he couldn’t just shed the numbers!) led him to develop his own tea manufacturing processes. He produced his first batch of tea with a rented factory, rented out a small square space at a trade fair, found a buyer that was so impressed with the quality of his tea that he ordered everything that could be produced, and that is how Bio Foods got its start.
-                                </p>
-
-                                <div className="relative my-6">
-                                    <span className="absolute -top-6 -left-4 text-8xl text-brand-primary/10 font-serif pointer-events-none">"</span>
-                                    <p className="relative z-10 text-lg italic text-slate-700">
-                                        "From the outset, he wanted to make sure that farmers were treated fairly, because none of the second generation farmers he met wanted to continue the work of their fathers because their livelihood was so risky."
-                                    </p>
-                                </div>
-
-                                <p>
-                                    Everything from fluctuating market prices to the weather could compromise their income, so to provide the farmers with some job security, Dr. Ranaweera set a minimum price that was above their cost of production. As such, no matter what the market price was, they could be assured of an income.
-                                </p>
-
-                                <p>
-                                    If the market price were to rise above that threshold, that price was matched, and farmers were given a buying guarantee. So right from the beginning, before FLO was even born, Bio Foods was practicing the fair trade and organic way. In fact, Dr. Ranaweera was involved in an advisory capacity when FLO was setting down their fair trade regulations.
-                                </p>
-
-                                <p className="font-semibold text-slate-800">
-                                    This is the enduring vision of our visionary founder that we commit ourselves to maintaining every day. A steadfastly supportive wife both at work and at home, two wonderful daughters, a doctorate in bio-statistics, and over two decades later, he remains a "Sri Lankan farmer" as he calls himself, recognized on the international platform as the fairest of them all.
-                                </p>
+                        {/* Founder Visual Metadata Card */}
+                        <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-8">
+                            <div className="aspect-4/5 bg-neutral-50 overflow-hidden border border-neutral-200">
+                                <img
+                                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/Dr.Sarath-Ranaweera.avif"
+                                    alt="Dr. Sarath Ranaweera"
+                                    className="w-full h-full object-cover opacity-90"
+                                />
+                            </div>
+                            <div className="space-y-1">
+                                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400 block">
+                                    CONSULTANT
+                                </span>
+                                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-neutral-950 leading-tight">
+                                    Dr. Sarath Ranaweera <span className="font-light text-neutral-500">(Ph.D)</span>
+                                </h3>
                             </div>
                         </div>
+
+                        {/* Narrative Editorial Spreadsheet */}
+                        <div className="lg:col-span-8 space-y-12">
+                            <div className="space-y-6">
+                                <p className="text-xl md:text-2xl font-black uppercase tracking-tight text-neutral-950 leading-snug border-b border-neutral-100 pb-8">
+                                    Dr. Sarath Ranaweera is the architect of Bio Foods. In 2014, he received the premier “Fairest Fair-trader of the World” award at the global Fair Trade Awards in Bonn, Germany.
+                                </p>
+
+                                <p className="text-xs text-neutral-500 font-medium leading-relaxed">
+                                    Selected from over 80 global contenders, this title highlighted pioneering process innovations within the international fair-trade network. Concurrently, the Marginalized Organic Producers’ Association (MOPA)—operating under the corporate framework of Bio Foods and established by the chairman—was documented as the premier Small Producer Organization of the Year in Asia.
+                                </p>
+                            </div>
+
+                            {/* Chronology Step Breakout */}
+                            <div className="space-y-8 pt-8 border-t border-neutral-100">
+                                <div className="space-y-2">
+                                    <span className="font-mono text-[9px] text-neutral-400 uppercase tracking-widest">[ HISTORICAL PROFILE TIMELINE ]</span>
+                                    <h4 className="text-lg font-black uppercase tracking-tight text-neutral-950">
+                                        Operational Genesis & Methodology
+                                    </h4>
+                                </div>
+
+                                <div className="space-y-6 text-xs text-neutral-500 font-medium leading-relaxed">
+                                    <p>
+                                        By original discipline a mathematician, an encounter with industrial food poisoning during his university tenure sparked a structural investigation into standard commercial crop chemical compositions.
+                                    </p>
+
+                                    <p>
+                                        This technical shift toward food technology and statistical analysis led him to refine custom agricultural processing models. Manufacturing his primary tea payload utilizing a leased regional factory, he secured a minimal exhibition stall at an international trade exposition. The immediate structural quality verification prompted buyers to place orders exhausting his maximum production capacity, establishing the commercial launchpad for Bio Foods.
+                                    </p>
+
+                                    {/* Inline Manifesto Statement Block */}
+                                    <div className="bg-neutral-50 border-l-2 border-neutral-950 p-6 my-6 space-y-2">
+                                        <span className="font-mono text-[9px] text-neutral-400 block uppercase tracking-widest">STRATEGIC CHARTER INTENT</span>
+                                        <p className="font-mono text-xs italic text-neutral-900 leading-relaxed">
+                                            "From the outset, the mission required that regional farmers receive protected equitable pricing structures, avoiding the volatile generational dropouts threatening agricultural stability."
+                                        </p>
+                                    </div>
+
+                                    <p>
+                                        To insulate individual agricultural nodes against shifting market thresholds and climate impacts, Dr. Ranaweera configured a minimum baseline price set clearly above localized cost matrices. This mechanism guaranteed programmatic income safety records.
+                                    </p>
+
+                                    <p>
+                                        When global asset lines moved above this calculated threshold, baseline payout metrics scaled dynamically to match, complemented by binding purchase guarantees. Long before standard FLO regulations were formalized, Bio Foods maintained functional fair-trade frameworks natively. Dr. Ranaweera subsequently served in an advisory capacity as FLO charted out initial fair-trade mandates.
+                                    </p>
+
+                                    <p className="font-bold text-neutral-950 border-t border-neutral-100 pt-6">
+                                        This remains the continuous blueprint to which we map our daily processing workflows. Armed with a doctorate in bio-statistics and spanning over two decades of processing infrastructure growth, he retains his foundational identity as a "Sri Lankan farmer"—structurally verified across the global ecosystem as the fairest of them all.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );

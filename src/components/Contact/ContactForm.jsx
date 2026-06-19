@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, X } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight, CheckCircle2, X } from 'lucide-react';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import emailjs from "@emailjs/browser";
 
-function ContactForm() {
+const ContactForm = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-
     const [submitStatus, setSubmitStatus] = useState(null);
 
-    // 1. Create a state object for all form fields
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -18,7 +16,6 @@ function ContactForm() {
         message: ''
     });
 
-    // 2. Handle input changes
     const handleChange = (e) => {
         const { id, value } = e.target;
         setFormData(prev => ({ ...prev, [id]: value }));
@@ -47,123 +44,124 @@ function ContactForm() {
     };
 
     return (
-        <div className="max-w-6xl mx-auto my-16 px-6">
-
-            {/* --- Success Message Header --- */}
+        <div className="max-w-7xl mx-auto my-20 px-6 font-sans">
+            
+            {/* ── Submission Feedback Node ── */}
             {isSubmitted && (
-                <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl flex items-center justify-between animate-in fade-in slide-in-from-top-4 duration-500">
+                <div className="mb-8 p-5 bg-neutral-950 text-white border border-white/10 rounded-xl flex items-center justify-between animate-in fade-in slide-in-from-top-2 duration-300">
                     <div className="flex items-center gap-4">
-                        <div className="p-2 bg-green-500 rounded-full">
-                            <CheckCircle2 className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold text-green-900">Message Sent Successfully!</h3>
-                            <p className="text-green-700">Thank you for reaching out. Our team will get back to you shortly.</p>
+                        <CheckCircle2 className="w-5 h-5 text-neutral-400 stroke-[1.5]" />
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                            <span className="text-sm font-mono uppercase tracking-wider font-bold">Transmission Successful</span>
+                            <span className="text-xs text-neutral-400">Our operational desk will review your submission shortly.</span>
                         </div>
                     </div>
                     <button
                         onClick={() => setIsSubmitted(false)}
-                        className="p-2 hover:bg-green-100 rounded-full transition-colors"
-                        aria-label="Close message"
+                        className="p-1 hover:bg-white/10 rounded-full transition-colors text-neutral-400 hover:text-white"
+                        aria-label="Dismiss alert"
                     >
-                        <X className="w-5 h-5 text-green-600" />
+                        <X className="w-4 h-4" />
                     </button>
                 </div>
             )}
 
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+            {/* ── Main Interface Split Matrix ── */}
+            <div className="flex flex-col md:flex-row border border-neutral-200/80 rounded-2xl overflow-hidden bg-white shadow-xs">
 
-                {/* Left Side: Contact Info Panel */}
-                <div className="md:w-1/3 bg-gray-900 p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl" />
-                    <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 bg-brand-accent/10 rounded-full blur-3xl" />
+                {/* Left Panel: Corporate Core Node */}
+                <div className="md:w-[35%] bg-neutral-950 p-8 lg:p-12 text-white flex flex-col justify-between relative border-r border-neutral-900">
+                    
+                    {/* Subtle Internal Grid Accent */}
+                    <div className="absolute inset-0 opacity-[0.015] pointer-events-none"
+                         style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(to right, #fff 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 
-                    <div className="relative z-10">
-                        <h2 className="text-3xl font-bold mb-4">Get in touch</h2>
-                        <p className="text-gray-400 mb-10 leading-relaxed">
-                            Our team welcomes inquiries related to partnerships, product sourcing, and global distribution.
-                        </p>
+                    <div className="relative z-10 space-y-12">
+                        <div>
+                            <span className="block font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-3">Contact</span>
+                            <h2 className="text-3xl font-black uppercase tracking-tight leading-none text-white">Get in<br />touch</h2>
+                            <p className="mt-4 text-sm text-neutral-400 font-medium leading-relaxed">
+                                Our team welcomes inquiries related to partnerships, product sourcing, and global distribution logistics.
+                            </p>
+                        </div>
 
-                        <div className="space-y-8">
-                            <div className="border-l-4 border-brand-primary pl-4 py-1">
-                                <h4 className="font-bold text-lg leading-tight">BioFoodsLK</h4>
-                                <p className="text-gray-400 text-xs uppercase tracking-wider">Agroventures Group Sri Lanka</p>
-                            </div>
-
-                            <div className="flex items-start gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl border border-white/10 transition-all group-hover:bg-brand-primary/20 group-hover:border-brand-primary/30">
-                                    <MapPin className="w-6 h-6 text-brand-accent" />
-                                </div>
+                        {/* Communication Streams */}
+                        <div className="space-y-6 pt-4">
+                            <div className="flex items-start gap-4">
+                                <MapPin className="w-4 h-4 text-neutral-500 mt-1 shrink-0 stroke-[1.5]" />
                                 <div>
-                                    <h4 className="font-medium text-white">Visit Us</h4>
-                                    <address className="not-italic text-sm text-gray-400 leading-relaxed">
-                                        52/1/D, New Kandy Road,<br /> Kothalawala, Kaduwela, Sri-Lanka.
+                                    <span className="block text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-1">HQ Location</span>
+                                    <address className="not-italic text-sm text-neutral-300 font-semibold leading-relaxed">
+                                        52/1/D, New Kandy Road,<br />Kothalawala, Kaduwela, Sri Lanka.
                                     </address>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl border border-white/10 transition-all group-hover:bg-brand-primary/20 group-hover:border-brand-primary/30">
-                                    <Phone className="w-6 h-6 text-brand-accent" />
-                                </div>
+                            <div className="flex items-start gap-4">
+                                <Phone className="w-4 h-4 text-neutral-500 mt-1 shrink-0 stroke-[1.5]" />
                                 <div>
-                                    <h4 className="font-medium text-white">Call Us</h4>
-                                    <p className="text-sm text-gray-400">+94 11 7487100</p>
+                                    <span className="block text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-1">Direct Line</span>
+                                    <a href="tel:+94117487100" className="text-sm text-neutral-300 font-mono font-bold hover:text-white transition-colors">
+                                        +94 11 7487100
+                                    </a>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl border border-white/10 transition-all group-hover:bg-brand-primary/20 group-hover:border-brand-primary/30">
-                                    <Mail className="w-6 h-6 text-brand-accent" />
-                                </div>
+                            <div className="flex items-start gap-4">
+                                <Mail className="w-4 h-4 text-neutral-500 mt-1 shrink-0 stroke-[1.5]" />
                                 <div>
-                                    <h4 className="font-medium text-white">Email Us</h4>
-                                    <p className="text-sm text-gray-400">info@biofoodsagro.com</p>
+                                    <span className="block text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-1">Inquiries</span>
+                                    <a href="mailto:info@biofoodsagro.com" className="text-sm text-neutral-300 font-semibold hover:text-white transition-colors">
+                                        info@biofoodsagro.com
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Social Links */}
-                    <div className="mt-12 pt-8 border-t border-white/10 relative z-10">
-                        <div className="flex items-center gap-4">
-                            {[
-                                { icon: <FaFacebookF />, href: "https://www.facebook.com/Biofoofdslk/", label: "Facebook" },
-                                { icon: <FaXTwitter />, href: "https://x.com/biofoodslk", label: "X" },
-                            ].map((social, idx) => (
-                                <a
-                                    key={idx}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    aria-label={social.label}
-                                    className="w-11 h-11 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 group"
-                                >
-                                    <span className="text-gray-400 group-hover:text-white">{social.icon}</span>
-                                </a>
-                            ))}
-                        </div>
+                    {/* Social Directory */}
+                    <div className="mt-16 pt-6 border-t border-white/5 relative z-10 flex items-center gap-3">
+                        {[
+                            { icon: <FaFacebookF size={12} />, href: "https://www.facebook.com/Biofoofdslk/", label: "Facebook" },
+                            { icon: <FaXTwitter size={12} />, href: "https://x.com/biofoodslk", label: "X" },
+                        ].map((social, idx) => (
+                            <a
+                                key={idx}
+                                href={social.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={social.label}
+                                className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-neutral-400 hover:bg-white hover:text-neutral-950 hover:border-white transition-all duration-300"
+                            >
+                                {social.icon}
+                            </a>
+                        ))}
                     </div>
                 </div>
 
-                {/* Right Side: Interactive Form */}
-                <div className="md:w-2/3 p-8 lg:p-12 bg-white">
-                    <form className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6" onSubmit={handleSubmit}>
-                        <div className="space-y-2">
-                            <label htmlFor="name" className="text-sm font-bold text-gray-700 ml-1">Full Name</label>
+                {/* Right Panel: Clean Interactive Form */}
+                <div className="md:w-[65%] p-8 lg:p-12 bg-white flex flex-col justify-center">
+                    <form className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8" onSubmit={handleSubmit}>
+                        
+                        <div className="group relative border-b border-neutral-200 focus-within:border-neutral-950 transition-colors duration-300 pb-2">
+                            <label htmlFor="name" className="block text-[10px] font-mono uppercase tracking-widest text-neutral-400 group-focus-within:text-neutral-950 transition-colors">
+                                Full Identity
+                            </label>
                             <input
                                 id="name"
                                 required
                                 type="text"
-                                value={formData.name} // Controlled value
-                                onChange={handleChange} // Change handler
+                                value={formData.name}
+                                onChange={handleChange}
                                 placeholder="John Doe"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
+                                className="w-full bg-transparent pt-2 pb-1 text-sm font-semibold text-neutral-900 outline-none placeholder-neutral-300"
                             />
                         </div>
 
-                        <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                        <div className="group relative border-b border-neutral-200 focus-within:border-neutral-950 transition-colors duration-300 pb-2">
+                            <label htmlFor="email" className="block text-[10px] font-mono uppercase tracking-widest text-neutral-400 group-focus-within:text-neutral-950 transition-colors">
+                                Email Address
+                            </label>
                             <input
                                 id="email"
                                 required
@@ -171,44 +169,49 @@ function ContactForm() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="john@example.com"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
+                                className="w-full bg-transparent pt-2 pb-1 text-sm font-semibold text-neutral-900 outline-none placeholder-neutral-300"
                             />
                         </div>
 
-                        <div className="sm:col-span-2 space-y-2">
-                            <label htmlFor="subject" className="text-sm font-bold text-gray-700 ml-1">Subject</label>
+                        <div className="sm:col-span-2 group relative border-b border-neutral-200 focus-within:border-neutral-950 transition-colors duration-300 pb-2">
+                            <label htmlFor="subject" className="block text-[10px] font-mono uppercase tracking-widest text-neutral-400 group-focus-within:text-neutral-950 transition-colors">
+                                Subject
+                            </label>
                             <input
                                 id="subject"
                                 required
                                 type="text"
                                 value={formData.subject}
                                 onChange={handleChange}
-                                placeholder="How can we help you?"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
+                                placeholder="Partnership, sourcing, or distribution request"
+                                className="w-full bg-transparent pt-2 pb-1 text-sm font-semibold text-neutral-900 outline-none placeholder-neutral-300"
                             />
                         </div>
 
-                        <div className="sm:col-span-2 space-y-2">
-                            <label htmlFor="message" className="text-sm font-bold text-gray-700 ml-1">Message</label>
+                        <div className="sm:col-span-2 group relative border-b border-neutral-200 focus-within:border-neutral-950 transition-colors duration-300 pb-2">
+                            <label htmlFor="message" className="block text-[10px] font-mono uppercase tracking-widest text-neutral-400 group-focus-within:text-neutral-950 transition-colors">
+                                Message
+                            </label>
                             <textarea
                                 id="message"
                                 required
-                                rows="4"
+                                rows="3"
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder="Write your message here..."
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all resize-none"
-                            ></textarea>
+                                placeholder="Provide your comprehensive transmission details here..."
+                                className="w-full bg-transparent pt-2 pb-1 text-sm font-semibold text-neutral-900 outline-none placeholder-neutral-300 resize-none min-h-20"
+                            />
                         </div>
 
-                        <div className="sm:col-span-2 pt-4">
+                        {/* Action Command Node */}
+                        <div className="sm:col-span-2 pt-4 flex justify-start">
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full sm:w-auto px-12 py-4 bg-brand-primary hover:bg-brand-secondary disabled:bg-gray-400 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
+                                className="w-full sm:w-auto px-10 py-3.5 bg-neutral-950 text-white hover:bg-neutral-800 disabled:bg-neutral-300 disabled:text-neutral-500 text-xs font-mono font-bold uppercase tracking-widest rounded-md transition-all flex items-center justify-center gap-3 group active:scale-[0.99]"
                             >
-                                {isLoading ? "Sending..." : "Send Message"}
-                                {!isLoading && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                                {isLoading ? "Processing..." : "Send Message"}
+                                {!isLoading && <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 stroke-2" />}
                             </button>
                         </div>
                     </form>
@@ -216,6 +219,6 @@ function ContactForm() {
             </div>
         </div>
     );
-}
+};
 
 export default ContactForm;
