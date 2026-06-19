@@ -10,7 +10,7 @@ function AboutGrowth() {
                         
                         {/* Graphic Column Framework */}
                         <div className="lg:col-span-5 space-y-6">
-                            <div className="aspect-[4/5] bg-neutral-50 overflow-hidden border border-neutral-200 relative">
+                            <div className="aspect-4/5 bg-neutral-50 overflow-hidden border border-neutral-200 relative">
                                 <img 
                                     src="https://images.unsplash.com/photo-1595855759920-86582396756a?w=800&h=700&fit=crop" 
                                     alt="Growth and Transformation" 
