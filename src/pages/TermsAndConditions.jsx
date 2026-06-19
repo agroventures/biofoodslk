@@ -40,7 +40,7 @@ function TermsAndConditions() {
                     {/* Introduction */}
                     <div className="bg-brand-light/30 border-l-4 border-brand-primary p-8 rounded-r-3xl mb-12">
                         <p className="text-slate-700 leading-relaxed m-0 italic font-medium">
-                            Please read these Terms and Conditions carefully before using the biofoodslk.com website.
+                            Please read these Terms and Conditions carefully before using the biofoodsagro.com website.
                             Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.
                         </p>
                     </div>
@@ -130,7 +130,7 @@ function TermsAndConditions() {
                 <div className="mt-20 pt-10 border-t border-slate-100 text-center">
                     <p className="text-slate-400 text-sm">
                         If you have any questions regarding these terms, please contact our legal team at <br />
-                        <a href="mailto:info@biofoodslk.com" className="text-brand-primary font-bold hover:underline">info@biofoodslk.com</a>
+                        <a href="mailto:info@biofoodsagro.com" className="text-brand-primary font-bold hover:underline">info@biofoodsagro.com</a>
                     </p>
                 </div>
             </main>

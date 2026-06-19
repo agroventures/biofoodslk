@@ -11,58 +11,47 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Lock body scroll when menu is open
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
+        document.body.style.overflow = isOpen ? 'hidden' : 'unset';
+        return () => { document.body.style.overflow = 'unset'; };
     }, [isOpen]);
 
     const getNavbarStyles = () => {
         if (!isTransparentPage || scrolled) {
-            return 'fixed bg-white border-b border-gray-100 shadow-sm h-20 md:h-24 text-brand-dark';
+            return 'fixed bg-white border-b border-neutral-100 text-neutral-900 shadow-sm h-20 md:h-24';
         }
-        return 'fixed bg-transparent border-b border-transparent h-24 md:h-32';
+        return 'fixed bg-transparent border-b border-transparent h-24 md:h-32 text-white';
     };
 
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
         { name: 'Products', href: '/products' },
-        { name: 'Our Eco System', href: '/eco-system' },
-        { name: 'Global Presence', href: '/global-presence' },
-        { name: 'Sustainability', href: '/sustainability' },
-        { name: 'Producers', href: '/producers' },
+        // { name: 'Our Eco System', href: '/eco-system' },
+        // { name: 'Global Presence', href: '/global-presence' },
+        // { name: 'Sustainability', href: '/sustainability' },
+        // { name: 'Producers', href: '/producers' },
         { name: 'Processing Facilities', href: '/processing-facilities' },
-        { name: 'Media', href: '/media' },
+        // { name: 'Media', href: '/media' },
         { name: 'Quality & Certifications', href: '/quality-certifications' },
         { name: 'Awards and Recognition', href: '/awards' },
-        { name: 'Partner With Us', href: '/partner-with-us' },
+        // { name: 'Partner With Us', href: '/partner-with-us' },
         { name: 'Contact Us', href: '/contact' }
     ];
 
-    const handleLinkClick = () => {
-        setIsOpen(false);
-    };
-
     return (
         <>
-            {/* Navbar */}
+            {/* ── Main Fixed Navigation Bar ── */}
             <nav className={`top-0 left-0 right-0 z-50 transition-all duration-500 flex items-center ${getNavbarStyles()}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full flex justify-between items-center">
 
-                    {/* Logo */}
+                    {/* Branding / Logo */}
                     <div className="shrink-0">
-                        <Link to='/'>
+                        <Link to="/" className="block selection:bg-transparent" onClick={() => setIsOpen(false)}>
                             <img
                                 src="/logo.png"
                                 alt="Logo"
@@ -75,85 +64,92 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Menu Button - Visible on all devices */}
+                    {/* Dynamic Command Trigger */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className={`p-2 sm:p-2.5 rounded-xl sm:rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 ${
+                        className={`group flex items-center gap-3 px-4 py-2 rounded-full border transition-all duration-300 active:scale-95 ${
                             !isTransparentPage || scrolled
-                                ? 'text-brand-dark bg-brand-primary/10 hover:bg-brand-primary/20'
-                                : 'text-brand-primary bg-white/10 hover:bg-white/20'
+                                ? 'border-neutral-200 bg-neutral-50 text-neutral-900 hover:bg-neutral-100'
+                                : 'border-white/20 bg-white/5 text-white hover:bg-white/10'
                         }`}
-                        aria-label="Toggle menu"
+                        aria-label="Toggle navigation drawer"
                     >
-                        {isOpen ? <X size={24} className="sm:w-7 sm:h-7" /> : <Menu size={24} className="sm:w-7 sm:h-7" />}
+                        {/* <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] pl-1 hidden sm:inline">
+                            {isOpen ? 'Close' : 'Menu'}
+                        </span> */}
+                        <div className="relative w-8 h-8 flex items-center justify-center overflow-hidden">
+                            <Menu className={`absolute w-6 h-6 transition-transform duration-300 ${isOpen ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`} />
+                            <X className={`absolute w-6 h-6 transition-transform duration-300 ${isOpen ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'}`} />
+                        </div>
                     </button>
                 </div>
             </nav>
 
-            {/* Overlay */}
+            {/* ── Structural Blur Overlay ── */}
             <div
-                className={`fixed inset-0 bg-brand-dark/40 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+                className={`fixed inset-0 bg-neutral-950/40 backdrop-blur-md z-40 transition-all duration-500 ${
                     isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                 }`}
                 onClick={() => setIsOpen(false)}
             />
 
-            {/* Sidebar */}
+            {/* ── Architectural Drawer Panel ── */}
             <div 
-                className={`fixed top-0 left-0 h-full w-[85vw] sm:w-80 bg-white z-50 shadow-2xl transform transition-transform duration-400 ease-in-out ${
-                    isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed top-0 right-0 h-full w-full sm:w-120 bg-neutral-950 text-white z-50 shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col justify-between ${
+                    isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
             >
-                {/* Sidebar Header */}
-                <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-100">
-                    <div className="flex items-center gap-3">
-                        <img 
-                            src="/logo.png" 
-                            alt="Logo" 
-                            className="h-8 sm:h-10 w-auto" 
-                        />
-                    </div>
+                {/* Drawer Interior Header */}
+                <div className="flex items-center justify-between p-6 sm:p-8 border-b border-white/5">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                        Navigation Index
+                    </span>
                     <button
                         onClick={() => setIsOpen(false)}
-                        className="text-gray-400 hover:text-brand-primary p-2 hover:bg-gray-50 rounded-full transition-colors"
-                        aria-label="Close menu"
+                        className="text-neutral-400 hover:text-white p-2 hover:bg-white/5 rounded-full transition-colors"
+                        aria-label="Dismiss panel"
                     >
-                        <X size={24} />
+                        <X size={18} className="stroke-[1.5]" />
                     </button>
                 </div>
 
-                {/* Sidebar Links */}
-                <div className="overflow-y-auto h-[calc(100%-160px)] sm:h-[calc(100%-180px)] px-3 sm:px-4 py-4 sm:py-6 scrollbar-hide">
-                    <div className="space-y-1 sm:space-y-1.5">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.href}
-                                onClick={handleLinkClick}
-                                className="group flex items-center px-3 sm:px-4 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-gray-700 hover:text-brand-primary hover:bg-brand-primary/5 rounded-xl transition-all duration-200 border border-transparent hover:border-brand-primary/10"
-                            >
-                                <span className="flex-1 tracking-wide">{link.name}</span>
-                                <div className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200">
-                                    <svg 
-                                        className="w-4 h-4 sm:w-5 sm:h-5 text-brand-primary" 
-                                        fill="none" 
-                                        stroke="currentColor" 
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path 
-                                            strokeLinecap="round" 
-                                            strokeLinejoin="round" 
-                                            strokeWidth={3} 
-                                            d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                                        />
-                                    </svg>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
+                {/* Editorial Index Links */}
+                <div className="overflow-y-auto flex-1 px-8 py-12 scrollbar-hide">
+                    <nav className="space-y-4">
+                        {navLinks.map((link, index) => {
+                            const isActive = location.pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    to={link.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="group flex items-baseline gap-4 py-2 text-2xl sm:text-3xl font-black tracking-tight uppercase transition-all duration-300 border-b border-transparent hover:border-white/10"
+                                >
+                                    <span className="font-mono text-xs text-neutral-600 group-hover:text-white transition-colors duration-300">
+                                        0{index + 1}
+                                    </span>
+                                    <span className={`flex-1 transition-transform duration-300 group-hover:translate-x-2 ${
+                                        isActive ? 'text-white' : 'text-neutral-500 hover:text-neutral-200'
+                                    }`}>
+                                        {link.name}
+                                    </span>
+                                </Link>
+                            );
+                        })}
+                    </nav>
                 </div>
+
+                {/* Technical Drawer Footer Panel */}
+                {/* <div className="p-6 sm:p-8 border-t border-white/5 bg-neutral-900/50 flex items-center justify-between">
+                    <div className="flex flex-col gap-1">
+                        <span className="font-mono text-[9px] uppercase tracking-widest text-neutral-500">Corporate Portal</span>
+                        <span className="text-[11px] text-neutral-400 font-medium">Agroventures Platform Layout</span>
+                    </div>
+                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                </div> */}
             </div>
-            {/* Spacer for non-transparent pages to prevent content from hiding under fixed navbar */}
+
+            {/* Static Content Push Layout Buffer (Preserved exact height fallback) */}
             {!isTransparentPage && <div className="h-20 md:h-24" />}
         </>
     );

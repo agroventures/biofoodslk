@@ -118,7 +118,7 @@ function ContactForm() {
                                 </div>
                                 <div>
                                     <h4 className="font-medium text-white">Email Us</h4>
-                                    <p className="text-sm text-gray-400">info@biofoodslk.com</p>
+                                    <p className="text-sm text-gray-400">info@biofoodsagro.com</p>
                                 </div>
                             </div>
                         </div>

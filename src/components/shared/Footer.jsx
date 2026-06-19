@@ -1,84 +1,111 @@
 import React from 'react';
-import { Leaf, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { FaFacebookF } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
-function Footer() {
+const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     const support = [
-        {id: 1, href: '/terms', title: 'Terms and Conditions'}, 
-        {id: 2, href: '/privacy', title: 'Privacy Policy'}
-    ]
+        { id: 1, href: '/terms', title: 'Terms and Conditions' }, 
+        { id: 2, href: '/privacy', title: 'Privacy Policy' }
+    ];
 
     const navLinks = [
-        {id: 1, href: '/about', title: 'About Us'}, 
-        {id: 2, href: '/products', title: 'Products'},
-        {id: 3, href: '/eco-system', title: 'Our Eco System'},
-        {id: 4, href: '/global-presence', title: 'Global Presence'},
-        {id: 4, href: '/sustainability', title: 'Sustainability'},
-    ]
+        // { name: 'Home', href: '/' },
+        { name: 'About Us', href: '/about' },
+        { name: 'Products', href: '/products' },
+        // { name: 'Our Eco System', href: '/eco-system' },
+        // { name: 'Global Presence', href: '/global-presence' },
+        // { name: 'Sustainability', href: '/sustainability' },
+        // { name: 'Producers', href: '/producers' },
+        { name: 'Processing Facilities', href: '/processing-facilities' },
+        // { name: 'Media', href: '/media' },
+        { name: 'Quality & Certifications', href: '/quality-certifications' },
+        { name: 'Awards and Recognition', href: '/awards' },
+        // { name: 'Partner With Us', href: '/partner-with-us' },
+        { name: 'Contact Us', href: '/contact' }
+    ];
 
     return (
-        <footer className="relative bg-[#0a0f12] text-white pt-20 pb-10 overflow-hidden">
-            <div 
-                className="absolute top-0 left-1/4 w-96 h-96 blur-[120px] bg-brand-secondary rounded-full pointer-events-none opacity-20" 
-            />
+        <footer className="relative bg-[#090D0F] text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
             
+            {/* Subtle Industrial Background Coordinates */}
+            <div className="absolute inset-0 pointer-events-none opacity-[0.02] mix-blend-overlay">
+                <div 
+                    className="w-full h-full"
+                    style={{
+                        backgroundImage: `linear-gradient(to right, #FFF 1px, transparent 1px),
+                                          linear-gradient(to bottom, #FFF 1px, transparent 1px)`,
+                        backgroundSize: '40px 40px',
+                    }}
+                />
+            </div>
+
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+                
+                {/* ── Main Editorial Structure ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
                     
-                    {/* Brand Section */}
-                    <div className="lg:col-span-4 space-y-6">
-                        <div className="flex items-center gap-2">
-                            <img src='/logo.png' alt="BioFoods Logo" className="h-12 w-auto brightness-110" />
-                        </div>
-                        <p className="text-gray-400 text-lg leading-relaxed max-w-sm">
-                            Sustainably grown, thoughtfully delivered. We bridge the gap between ethical producers and conscious consumers.
+                    {/* Frame 01: Core Platform Identity */}
+                    <div className="lg:col-span-5 flex flex-col items-start space-y-6 lg:pr-12">
+                        <Link to="/" className="block selection:bg-transparent">
+                            <img src='/logo.png' alt="Logo" className="h-10 w-auto tracking-tight filter brightness-110" />
+                        </Link>
+                        <p className="text-neutral-400 text-base font-medium leading-relaxed max-w-sm">
+                            Sustainably grown, thoughtfully delivered. We bridge the structural gap between ethical producers and global conscious consumers.
                         </p>
-                        <div className="flex gap-3">
+                        <div className="flex items-center gap-2.5 pt-2">
                             {[
-                                { icon: <FaFacebookF />, href: "https://www.facebook.com/Biofoofdslk/" },
-                                { icon: <FaXTwitter />, href: "https://x.com/biofoodslk" },
+                                { icon: <FaFacebookF size={14} />, href: "https://www.facebook.com/Biofoofdslk/" },
+                                { icon: <FaXTwitter size={14} />, href: "https://x.com/biofoodslk" },
                             ].map((social, idx) => (
                                 <a 
                                     key={idx}
                                     href={social.href} 
                                     target='_blank'
                                     rel="noreferrer"
-                                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 group hover:border-transparent hover:bg-brand-secondary"
+                                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white hover:text-neutral-950 hover:border-white"
                                 >
-                                    <span className="text-gray-400 group-hover:text-white">{social.icon}</span>
+                                    <span className="transition-colors">{social.icon}</span>
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    {/* Links Grid */}
-                    <div className="lg:col-span-5 grid grid-cols-2 gap-8">
+                    {/* Frame 02: Platform Indexing Directories */}
+                    <div className="lg:col-span-4 grid grid-cols-2 gap-6 lg:border-x lg:border-white/5 lg:px-8">
                         <div>
-                            <h4 className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-6">
-                                Company
-                            </h4>
-                            <ul className="space-y-4">
+                            <span className="block font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500 mb-6">
+                                Navigation
+                            </span>
+                            <ul className="space-y-3.5">
                                 {navLinks.map((item) => (
                                     <li key={item.id}>
-                                        <Link to={item.href} className="text-gray-400 hover:text-white hover:translate-x-1 flex items-center gap-1 transition-all duration-200">
-                                            {item.title}
+                                        <Link 
+                                            to={item.href} 
+                                            className="group flex items-center text-sm font-semibold text-neutral-400 hover:text-white transition-colors duration-200"
+                                        >
+                                            <span className="w-0 group-hover:w-2 h-px bg-white opacity-0 group-hover:opacity-100 mr-0 group-hover:mr-2 transition-all duration-300" />
+                                            {item.name}
                                         </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div>
-                            <h4 className="text-sm font-semibold uppercase text-brand-accent tracking-wider mb-6">
-                                Support
-                            </h4>
-                            <ul className="space-y-4">
+                            <span className="block font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500 mb-6">
+                                Legal
+                            </span>
+                            <ul className="space-y-3.5">
                                 {support.map((item) => (
                                     <li key={item.id}>
-                                        <Link to={item.href} className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 block">
+                                        <Link 
+                                            to={item.href} 
+                                            className="group flex items-center text-sm font-semibold text-neutral-400 hover:text-white transition-colors duration-200"
+                                        >
+                                            <span className="w-0 group-hover:w-2 h-px bg-white opacity-0 group-hover:opacity-100 mr-0 group-hover:mr-2 transition-all duration-300" />
                                             {item.title}
                                         </Link>
                                     </li>
@@ -87,45 +114,57 @@ function Footer() {
                         </div>
                     </div>
 
-                    {/* Contact Section */}
-                    <div className="lg:col-span-3 space-y-6">
-                        <h4 className="text-sm font-semibold uppercase text-brand-accent tracking-wider mb-6">
-                            Stay Connected
-                        </h4>
+                    {/* Frame 03: Communication Nodes */}
+                    <div className="lg:col-span-3 flex flex-col items-start lg:pl-8 space-y-6">
+                        <span className="block font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+                            Contact
+                        </span>
                         
-                        <div className="space-y-4 pt-4">
-                            <a href="tel:+94117487100" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                                <div className="p-2 rounded-lg bg-white/5 transition-colors group-hover:bg-white/10">
-                                    <Phone className="w-4 h-4 text-brand-accent" />
+                        <div className="w-full space-y-4">
+                            <a href="tel:+94117487100" className="group flex items-center gap-3.5 text-neutral-400 hover:text-white transition-colors">
+                                <div className="p-2 rounded-md bg-white/5 border border-white/5 transition-colors group-hover:bg-white/10">
+                                    <Phone className="w-3.5 h-3.5 stroke-[1.5]" />
                                 </div>
-                                <span className="text-sm">+94 11 748 7100</span>
+                                <span className="text-xs font-mono tracking-wider">+94 11 748 7100</span>
                             </a>
-                            <a href="mailto:info@biofoodslk.com" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                                <div className="p-2 rounded-lg bg-white/5 transition-colors group-hover:bg-white/10">
-                                    <Mail className="w-4 h-4 text-brand-accent" />
+                            <a href="mailto:info@biofoodsagro.com" className="group flex items-center gap-3.5 text-neutral-400 hover:text-white transition-colors">
+                                <div className="p-2 rounded-md bg-white/5 border border-white/5 transition-colors group-hover:bg-white/10">
+                                    <Mail className="w-3.5 h-3.5 stroke-[1.5]" />
                                 </div>
-                                <span className="text-sm">info@biofoodslk.com</span>
+                                <span className="text-xs font-mono tracking-wider">info@biofoodsagro.com</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-brand-secondary" />
-                        <address className="not-italic">
+                {/* ── Metadata MetaFooter Bar ── */}
+                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-[11px] font-mono tracking-wide text-neutral-500">
+                    <div className="flex items-center gap-2.5">
+                        <MapPin className="w-3.5 h-3.5 text-neutral-600 shrink-0" />
+                        <address className="not-italic text-neutral-400 font-sans font-medium">
                             52/1/D, New Kandy Road, Kaduwela, Sri Lanka
                         </address>
                     </div>
-                    <p>
-                        © {currentYear} <span className="text-gray-300 font-medium">BioFoods</span>. 
-                        Developed by <a href="https://www.ventrax.lk/" target='_blank' rel="noreferrer" className="transition-colors text-brand-secondary">Ventrax.lk</a>
-                    </p>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+                        <p>© {currentYear} <span className="text-neutral-400 font-sans font-bold">BioFoods</span>. All Rights Reserved.</p>
+                        <span className="hidden sm:inline text-neutral-700">|</span>
+                        <p>
+                            SYSTEM DEPLOYMENT BY{' '}
+                            <a 
+                                href="https://www.ventrax.lk/" 
+                                target='_blank' 
+                                rel="noreferrer" 
+                                className="text-neutral-400 hover:text-white transition-colors underline underline-offset-4 decoration-white/10 hover:decoration-white"
+                            >
+                                VENTRAX.LK
+                            </a>
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </footer>
     );
-}
+};
 
 export default Footer;

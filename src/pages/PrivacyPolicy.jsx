@@ -126,10 +126,10 @@ function PrivacyPolicy() {
                         <h3 className="text-2xl font-black text-slate-900 mb-2">Questions?</h3>
                         <p className="text-slate-500 mb-6">Reach out to our legal and data protection team.</p>
                         <a
-                            href="mailto:info@biofoodslk.com"
+                            href="mailto:info@biofoodsagro.com"
                             className="text-brand-primary font-black text-lg hover:underline underline-offset-8"
                         >
-                            info@biofoodslk.com
+                            info@biofoodsagro.com
                         </a>
                     </div>
                 </div>
