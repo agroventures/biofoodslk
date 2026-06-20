@@ -3,46 +3,43 @@ import { Leaf, Quote } from 'lucide-react';
 
 function HomeClosingReflection() {
     return (
-        <section className="relative w-full py-20 lg:py-28 bg-white overflow-hidden">
-            {/* Subtle Background Decorations */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-brand-primary/2 rounded-full blur-3xl" />
-            </div>
-
-            <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                {/* Decorative Top Element */}
-                <div className="flex items-center justify-center gap-4 mb-10">
-                    <div className="h-px w-12 bg-brand-primary/20" />
-                    <div className="w-10 h-10 bg-brand-primary/5 rounded-full flex items-center justify-center">
-                        <Leaf className="w-5 h-5 text-brand-primary" />
+        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-b border-neutral-100 py-24 lg:py-36">
+            <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center space-y-10">
+                
+                {/* ── Micro Blueprint Indicator ── */}
+                <div className="flex items-center justify-center gap-3">
+                    <div className="w-8 h-px bg-neutral-200" />
+                    <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950">
+                        <Leaf className="w-4 h-4 stroke-[1.5]" />
                     </div>
-                    <div className="h-px w-12 bg-brand-primary/20" />
+                    <div className="w-8 h-px bg-neutral-200" />
                 </div>
 
-                {/* Quote Icon */}
-                <div className="flex justify-center mb-8">
-                    <div className="w-16 h-16 bg-brand-primary/5 rounded-2xl flex items-center justify-center">
-                        <Quote className="w-8 h-8 text-brand-primary" />
+                {/* ── Minimalist Quote Frame ── */}
+                <div className="flex justify-center">
+                    <div className="p-4 bg-neutral-950 border border-neutral-950 text-white">
+                        <Quote className="w-6 h-6 stroke-[1.5] fill-white" />
                     </div>
                 </div>
 
-                {/* Main Text */}
-                <blockquote className="relative">
-                    <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-brand-dark leading-tight tracking-tight">
-                        Every product tells a story of{' '}
-                        <span className="text-brand-primary">origin</span>,{' '}
-                        <span className="text-brand-secondary">care</span>, and{' '}
-                        <span className="text-brand-primary">responsibility</span>{' '}
-                        brought to life through the strength of Agroventures.
+                {/* ── Main High-Contrast Statement ── */}
+                <blockquote className="max-w-4xl mx-auto">
+                    <p className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
+                        Every product tells a story of <br className="hidden sm:inline" />
+                        <span className="text-neutral-400 italic font-normal tracking-tight normal-case">origin</span>, care, and responsibility <br />
+                        <span className="text-neutral-500 font-mono text-base sm:text-lg block tracking-widest uppercase mt-6 sm:mt-8">
+                            Sustained through the infrastructure of Agroventures Group
+                        </span>
                     </p>
                 </blockquote>
 
-                {/* Decorative Bottom Element */}
-                <div className="flex items-center justify-center gap-4 mt-10">
-                    <div className="h-px w-16 bg-linear-to-r from-transparent to-brand-primary/20" />
-                    <div className="w-2 h-2 bg-brand-primary/30 rounded-full" />
-                    <div className="h-px w-16 bg-linear-to-l from-transparent to-brand-primary/20" />
+                {/* ── System Anchor Asset ── */}
+                <div className="flex items-center justify-center gap-3 pt-4">
+                    <div className="w-12 h-px bg-linear-to-r from-transparent to-neutral-200" />
+                    <span className="font-mono text-[11px] text-neutral-400 uppercase tracking-[0.25em]">End Matrix</span>
+                    <div className="w-12 h-px bg-linear-to-l from-transparent to-neutral-200" />
                 </div>
+                
             </div>
         </section>
     );

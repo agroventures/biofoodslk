@@ -8,129 +8,139 @@ function TermsAndConditions() {
     const url = window.location.href;
 
     useSEO({
-        // title: "Organic & Fairtrade Tea Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
-        // description: "Premium organic tea, spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
         url,
         image_alt: "Terms and Conditions",
-        // keywords: ["organic food Sri Lanka, fair trade tea, organic spices exporter, coconut products Sri Lanka"],
     });
 
     return (
-        <div className="min-h-screen bg-white selection:bg-brand-primary/20">
+        <div className="min-h-screen bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white">
             <Navbar />
 
-            {/* Hero Header */}
-            <header className="bg-slate-50 border-b border-slate-100 py-20">
+            {/* ── Editorial Header ── */}
+            <header className="border-b border-neutral-950 py-24 lg:py-32">
                 <div className="max-w-4xl mx-auto px-6">
-                    <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-1.5 rounded-full mb-6">
-                        <ShieldCheck size={16} />
-                        <span className="text-xs font-bold uppercase tracking-widest">Legal & Governance</span>
+                    <div className="flex items-center gap-2 text-neutral-950 mb-6">
+                        <ShieldCheck className="w-4 h-4 stroke-[1.5]" />
+                        <span className="font-mono text-xs uppercase tracking-[0.3em] text-neutral-500">Legal & Governance</span>
                     </div>
-                    <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight mb-4">
-                        Terms & <span className="text-brand-primary">Conditions</span>
+                    <h1 className="text-5xl lg:text-7xl font-black uppercase tracking-tighter text-neutral-950 leading-none mb-6">
+                        Terms & <br />
+                        <span className="text-neutral-400 italic font-normal normal-case tracking-tight">Conditions</span>
                     </h1>
-                    <p className="text-slate-500 font-medium">Last Updated: October 2023</p>
+                    <p className="font-mono text-xs uppercase tracking-wider text-neutral-400">
+                        Last Updated: October 2023
+                    </p>
                 </div>
             </header>
 
-            {/* Content Section */}
-            <main className="max-w-4xl mx-auto px-6 py-20">
-                <div className="prose prose-slate lg:prose-lg max-w-none">
+            {/* ── Content Section ── */}
+            <main className="max-w-4xl mx-auto px-6 py-20 lg:py-28">
+                
+                {/* Introduction Statement */}
+                <div className="border border-neutral-950 p-8 bg-neutral-950 text-white mb-16">
+                    <p className="text-base sm:text-lg font-medium leading-relaxed m-0">
+                        Please review these Standard Terms and Conditions carefully prior to navigating the platform. Your prolonged access to and interface with this Service confirms your absolute compliance with the systematic rules described herein.
+                    </p>
+                </div>
 
-                    {/* Introduction */}
-                    <div className="bg-brand-light/30 border-l-4 border-brand-primary p-8 rounded-r-3xl mb-12">
-                        <p className="text-slate-700 leading-relaxed m-0 italic font-medium">
-                            Please read these Terms and Conditions carefully before using the biofoodsagro.com website.
-                            Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.
-                        </p>
-                    </div>
-
+                <div className="space-y-16">
                     {/* Section: Overview */}
-                    <section className="mb-16">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white">
-                                <FileText size={20} />
+                    <section className="group border-b border-neutral-100 pb-12">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950 transition-colors duration-300 group-hover:bg-neutral-950 group-hover:border-neutral-950 group-hover:text-white">
+                                <FileText className="w-4 h-4 stroke-[1.5]" />
                             </div>
-                            <h2 className="text-2xl font-black text-slate-900 m-0">General Agreement</h2>
+                            <div className="flex items-baseline gap-2">
+                                <h2 className="text-xl font-black uppercase tracking-tight text-neutral-950 m-0">General Agreement</h2>
+                            </div>
                         </div>
-                        <p className="text-slate-600">
-                            By using this Website, you agree to accept all terms and conditions written herein.
-                            You must not use this Website if you disagree with any of these Standard Terms and Conditions.
-                            Any new features or tools added to the current store shall also be subject to the Terms of Service.
+                        <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed pl-0 sm:pl-12">
+                            By navigating this platform, you commit to accepting all conditions structured inside this framework. You are restricted from using this Website if you maintain any systematic disagreement with any of these established criteria. Any subsequent tool integrations will seamlessly cascade under these exact terms.
                         </p>
                     </section>
 
                     {/* Section: IP */}
-                    <section className="mb-16">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white">
-                                <Scale size={20} />
+                    <section className="group border-b border-neutral-100 pb-12">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950 transition-colors duration-300 group-hover:bg-neutral-950 group-hover:border-neutral-950 group-hover:text-white">
+                                <Scale className="w-4 h-4 stroke-[1.5]" />
                             </div>
-                            <h2 className="text-2xl font-black text-slate-900 m-0">Intellectual Property Rights</h2>
+                            <div className="flex items-baseline gap-2">
+                                <h2 className="text-xl font-black uppercase tracking-tight text-neutral-950 m-0">Intellectual Property</h2>
+                            </div>
                         </div>
-                        <p className="text-slate-600">
-                            Other than the content you own, under these Terms, <strong>Bio Foods and/or its licensors</strong> own all the intellectual property rights and materials contained in this Website. You are granted a limited license only for the purposes of viewing the material contained on this Website.
+                        <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed pl-0 sm:pl-12">
+                            Excluding personal content assets owned explicitly by users, <strong className="text-neutral-950 font-bold">Bio Foods and/or its corporate licensors</strong> retain absolute governance over all architectural intellectual property and visual systems contained on this Website. Licenses are restricted to isolated user-viewing purposes only.
                         </p>
                     </section>
 
                     {/* Section: Restrictions */}
-                    <section className="mb-16 bg-slate-50 p-8 lg:p-12 rounded-[2.5rem] border border-slate-100">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center text-white">
-                                <EyeOff size={20} />
+                    <section className="group border border-neutral-200 p-8 lg:p-12 bg-white hover:border-neutral-950 transition-colors duration-300">
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950">
+                                <EyeOff className="w-4 h-4 stroke-[1.5]" />
                             </div>
-                            <h2 className="text-2xl font-black text-slate-900 m-0">Prohibited Restrictions</h2>
+                            <div className="flex items-baseline gap-2">
+                                <h2 className="text-xl font-black uppercase tracking-tight text-neutral-950 m-0">Prohibited Actions</h2>
+                            </div>
                         </div>
-                        <ul className="grid md:grid-cols-2 gap-4 list-none p-0">
+                        
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0">
                             {[
-                                "Publishing Website material in any other media",
-                                "Commercializing any Website material",
-                                "Data mining or extraction activities",
-                                "Using Website in a way that is damaging",
-                                "Contrary to applicable laws and regulations",
-                                "Engaging in unauthorized advertising"
+                                "Publishing platform assets to external media elements",
+                                "Commercializing localized structural code or data patterns",
+                                "Systematic data mining, scraping, or extraction behaviors",
+                                "Utilizing platform infrastructure in damaging trajectories",
+                                "Actions contrary to applicable regulatory frameworks",
+                                "Engaging in unauthorized promotional or marketing maneuvers"
                             ].map((item, i) => (
-                                <li key={i} className="flex gap-3 text-sm text-slate-600 font-medium">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" />
-                                    {item}
+                                <li key={i} className="flex gap-3 text-xs sm:text-sm text-neutral-600 font-medium">
+                                    <span className="font-mono text-xs text-neutral-400 mt-0.5">[{i + 1}]</span>
+                                    <span>{item}</span>
                                 </li>
                             ))}
                         </ul>
                     </section>
 
                     {/* Section: Content */}
-                    <section className="mb-16">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white">
-                                <Globe size={20} />
+                    <section className="group border-b border-neutral-100 pb-12">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950 transition-colors duration-300 group-hover:bg-neutral-950 group-hover:border-neutral-950 group-hover:text-white">
+                                <Globe className="w-4 h-4 stroke-[1.5]" />
                             </div>
-                            <h2 className="text-2xl font-black text-slate-900 m-0">User Content</h2>
+                            <div className="flex items-baseline gap-2">
+                                <h2 className="text-xl font-black uppercase tracking-tight text-neutral-950 m-0">User Content</h2>
+                            </div>
                         </div>
-                        <p className="text-slate-600">
-                            "Content" shall mean any audio, video, text, images, or other material you choose to display on this Website.
-                            By displaying Content, you grant Bio Foods a non-exclusive, worldwide irrevocable license to use, reproduce, adapt, publish, and distribute it in any and all media.
+                        <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed pl-0 sm:pl-12">
+                            Content targets isolated media items, texts, logs, or images deployed by users inside the digital grid. By broadcasting assets here, you provide Bio Foods a non-exclusive, worldwide, irrevocable privilege to distribute, transcode, and mirror the elements across global channels.
                         </p>
                     </section>
 
                     {/* Section: Third Party */}
-                    <section className="mb-16">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white">
-                                <Lock size={20} />
+                    <section className="group border-b border-neutral-100 pb-12">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950 transition-colors duration-300 group-hover:bg-neutral-950 group-hover:border-neutral-950 group-hover:text-white">
+                                <Lock className="w-4 h-4 stroke-[1.5]" />
                             </div>
-                            <h2 className="text-2xl font-black text-slate-900 m-0">Third-Party Links</h2>
+                            <div className="flex items-baseline gap-2">
+                                <h2 className="text-xl font-black uppercase tracking-tight text-neutral-950 m-0">Third-Party Protocols</h2>
+                            </div>
                         </div>
-                        <p className="text-slate-600">
-                            Bio Foods has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You acknowledge that Bio Foods shall not be responsible or liable, directly or indirectly, for any damage or loss caused by or in connection with use of such content.
+                        <p className="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed pl-0 sm:pl-12">
+                            Bio Foods maintains zero governance or regulatory mapping over peripheral third-party digital layers. You validate that Bio Foods assumes zero accountability or liability for any systemic anomalies or capital losses generated via external domain vectors.
                         </p>
                     </section>
                 </div>
 
-                {/* Footer Notice */}
-                <div className="mt-20 pt-10 border-t border-slate-100 text-center">
-                    <p className="text-slate-400 text-sm">
-                        If you have any questions regarding these terms, please contact our legal team at <br />
-                        <a href="mailto:info@biofoodsagro.com" className="text-brand-primary font-bold hover:underline">info@biofoodsagro.com</a>
+                {/* ── Bottom Notice / System Footer ── */}
+                <div className="mt-24 pt-12 border-t border-neutral-950 text-center space-y-3">
+                    <span className="font-mono text-xs uppercase tracking-wider text-neutral-400">Legal Communication Endpoint</span>
+                    <p className="text-sm text-neutral-600 font-medium leading-relaxed">
+                        Direct all queries regarding these systematic criteria directly to our compliance matrix via <br />
+                        <a href="mailto:info@biofoodsagro.com" className="text-neutral-950 font-black border-b border-neutral-950 pb-0.5 hover:text-neutral-500 hover:border-neutral-300 transition-colors">
+                            info@biofoodsagro.com
+                        </a>
                     </p>
                 </div>
             </main>
