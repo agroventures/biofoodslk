@@ -18,7 +18,7 @@ const useSEO = ({
   // Basic
   title = "Organic & Fairtrade Tea Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
   description = "Premium organic tea, spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
-  keywords = ["organic food Sri Lanka, fair trade tea, organic spices exporter, coconut products Sri Lanka"],
+  keywords = ["biofoods, biofoods sri lanka, biofoods.lk, biofoods agroventures, organic food Sri Lanka, organic spices exporter, coconut products Sri Lanka"],
 
   // Open Graph
   locale = "en_US",
