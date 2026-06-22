@@ -3,20 +3,20 @@ import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ICS = [
-  "/QualityCertifications/demeter.avif",
-  "/QualityCertifications/logo2.avif",
-  "/QualityCertifications/usda_organic.avif",
-  "/QualityCertifications/control_union_certifications.avif",
-  "/QualityCertifications/biologique_canada.avif",
-  "/QualityCertifications/naturland.avif",
-  "/QualityCertifications/fairtrade.avif"
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/demeter.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/logo2.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/usda_organic.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/control_union_certifications.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/biologique_canada.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/naturland.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/fairtrade.avif"
 ]
 
 const foodSafety = [
-  "/QualityCertifications/controle_equitable_par_ecocert.avif",
-  "/QualityCertifications/amfori.png",
-  "/QualityCertifications/fssc.jpg",
-  "/QualityCertifications/control_union.png",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/controle_equitable_par_ecocert.avif",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/amfori.png",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/fssc.jpg",
+  "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk//QualityCertifications/control_union.png",
 ]
 
 function HomeCertifications({ section }) {
