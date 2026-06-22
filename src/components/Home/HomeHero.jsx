@@ -13,7 +13,7 @@ export default function Hero() {
       }}
     >
       {/* Background overlay gradient for premium readable text separation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent z-0" />
+      <div className="absolute inset-0 bg-linear-to-r from-white/60 via-white/30 to-transparent z-0" />
       
       {/* Decorative vertical line */}
       <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-300 lg:block" />

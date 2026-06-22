@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.biofoodsagro.com</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/about</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/products</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/contact</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/awards</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/processing-facilities</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/quality-certifications</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/terms</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.biofoodsagro.com/privacy</loc>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>

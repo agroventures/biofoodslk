@@ -36,7 +36,7 @@ function ContactMap() {
 
         {/* MAP */}
 
-        <div className="relative w-full h-[550px] overflow-hidden border border-neutral-200">
+        <div className="relative w-full h-137.5 overflow-hidden border border-neutral-200">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7633657422743!2d79.97150067581788!3d6.918868518440914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368947bee892b%3A0x3306e6fd6c21a8cc!2sBio%20Foods%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1775802948575!5m2!1sen!2slk"
             className="
@@ -63,7 +63,7 @@ function ContactMap() {
             absolute
             top-8
             left-8
-            w-[340px]
+            w-85
             max-w-[calc(100%-4rem)]
           "
           >
