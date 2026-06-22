@@ -1,75 +1,85 @@
-import { ArrowUpRight, Leaf } from 'lucide-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
-function HomeHero() {
-    return (
-        <section className="relative h-screen w-full overflow-hidden bg-neutral-950 antialiased">
-            {/* Background Video Layer */}
-            <div className="absolute inset-0 z-0">
-                <video
-                    src="/Home/hero2.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover opacity-50 scale-105"
-                />
-                {/* Industrial Grid Overlay & Gradient */}
-                <div className="absolute inset-0 bg-linear-to-b from-neutral-950/70 via-neutral-950/30 to-neutral-950/80" />
-            </div>
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen overflow-hidden bg-brand-light" style={{ backgroundImage: "url('/Home/hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className="absolute inset-0 bg-linear-to-r from-white/30 via-white/10 to-transparent z-0" />
+      {/* Decorative line */}
+      <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-300 lg:block" />
 
-            {/* Content Layer */}
-            <div className="relative z-10 h-full max-w-7xl mx-auto px-6 lg:px-8 flex flex-col justify-center">
-                <div className="max-w-5xl space-y-8">
-                    
-                    {/* Brand Badge */}
-                    <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2.5">
-                        <Leaf className="w-3.5 h-3.5 text-white stroke-[1.5]" />
-                        <span className="text-white font-mono text-xs uppercase tracking-[0.25em]">
-                            Pioneering Biodynamics Since 1993
-                        </span>
-                    </div>
+      <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 px-8 py-16 lg:grid-cols-12 lg:gap-20 lg:px-16 xl:px-24">
+        {/* Left */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="lg:col-span-5"
+        >
+          <span className="mb-6 inline-flex items-center gap-3 uppercase tracking-[0.35em] text-xs text-neutral-500">
+            <span className="h-px w-12 bg-brand-secondary" />
+            BIOFOODSLK
+          </span>
 
-                    {/* Main Headline */}
-                    <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-none">
-                        From Sri Lanka’s <br />
-                        <span className="text-neutral-400 italic font-normal tracking-tight normal-case">Living Soils</span> <br />
-                        to Global Markets
-                    </h1>
+          <h1
+            className="font-serif text-5xl leading-[1.05] tracking-tight text-neutral-900 md:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Crafted by
+            <br />
+            Nature.
+            <br />
+            <span className="text-brand-primary">Refined for the World.</span>
+          </h1>
 
-                    {/* Editorial Description Payload */}
-                    <p className="text-lg sm:text-xl text-neutral-300 font-medium leading-relaxed max-w-3xl">
-                        An exceptional portfolio of organic, biodynamic, and fair-trade ingredients cultivated with care, perfected through experience, and delivered via the global logistics network of Agroventures Group.
-                    </p>
+          <p className="mt-8 max-w-lg text-lg leading-8 text-neutral-600">
+            Every product begins with carefully selected natural ingredients
+            and is thoughtfully crafted to deliver exceptional quality with a
+            timeless touch.
+          </p>
 
-                    {/* High-Contrast Interactive Commands */}
-                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
-                        <Link to='/products'>
-                            <button className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-neutral-950 px-7 py-4 border border-white font-mono text-xs uppercase tracking-widest hover:bg-transparent hover:text-white transition-colors duration-300 group cursor-pointer">
-                                Explore Our Collection
-                                <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 stroke-[1.5]" />
-                            </button>
-                        </Link>
+          <div className="mt-12 flex flex-wrap gap-5">
+            <button className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              Explore Collection
+              <ArrowRight
+                size={18}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </button>
 
-                        <Link to='/contact'>
-                            <button className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-transparent text-white px-7 py-4 border border-white/20 font-mono text-xs uppercase tracking-widest hover:border-white transition-colors duration-300 cursor-pointer">
-                                Partner With Us
-                            </button>
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            <button className="rounded-full border border-neutral-300 px-8 py-4 transition hover:border-neutral-900 hover:bg-white">
+              Our Story
+            </button>
+          </div>
+        </motion.div>
 
-            {/* Bottom Scroll Indicator Layout */}
-            <div className="absolute bottom-12 left-6 lg:left-8 z-10 hidden md:block">
-                <div className="flex items-center gap-4 rotate-90 origin-left translate-y-12">
-                    <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/40">Scroll Matrix</span>
-                    <div className="w-16 h-px bg-white/20" />
-                </div>
-            </div>
-        </section>
-    );
+        {/* Floating Badge */}
+        <motion.div
+          animate={{ y: [-6, 6, -6] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute right-16 top-1/2 z-20 -translate-y-1/2 rounded-2xl bg-white/90 backdrop-blur-sm p-6 shadow-xl hidden lg:block"
+        >
+          <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Since</p>
+          <h3 className="mt-2 text-3xl font-semibold text-neutral-900">1993</h3>
+          <p className="mt-2 text-sm text-neutral-500">Organic Products</p>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        animate={{ y: [0, 12, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 2,
+        }}
+        className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center lg:flex"
+      >
+        <span className="mb-3 text-xs uppercase tracking-[0.4em] text-neutral-500">
+          Scroll
+        </span>
+
+        <div className="h-16 w-px bg-neutral-400" />
+      </motion.div>
+    </section>
+  );
 }
-
-export default HomeHero;

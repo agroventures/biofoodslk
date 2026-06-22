@@ -57,7 +57,7 @@ function HomeSegments() {
                             <Sparkles className="w-4 h-4 stroke-[1.5]" />
                             <span className="font-mono text-xs uppercase tracking-[0.3em] text-neutral-500">Discover Our Journey</span>
                         </div>
-                        <h2 className="text-5xl sm:text-7xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
+                        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
                             Experience BioFoods
                         </h2>
                     </div>
@@ -74,7 +74,7 @@ function HomeSegments() {
                         <Link
                             key={segment.id}
                             to={segment.link}
-                            className="group relative block bg-neutral-950 border border-neutral-200 overflow-hidden h-112.5 lg:h-130 transition-all duration-300 hover:border-neutral-950"
+                            className="group relative block bg-neutral-950 border border-neutral-200 overflow-hidden h-80 md:h-112.5 lg:h-130 transition-all duration-300 hover:border-neutral-950"
                         >
                             {/* Image Layer with Contrast Mapping */}
                             <div className="absolute inset-0 z-0 h-full w-full">

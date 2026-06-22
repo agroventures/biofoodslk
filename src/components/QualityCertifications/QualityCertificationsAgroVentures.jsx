@@ -1,108 +1,238 @@
-import React from 'react';
-import { Award, Network, Shield, TrendingUp } from 'lucide-react';
+import React from "react";
+import { Award, Network, Shield, TrendingUp, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
+
+const enhancements = [
+  {
+    icon: Shield,
+    title: "Enhanced Quality Assurance Protocols",
+    description:
+      "Rigorous verification procedures implemented across every stage of production to ensure consistency, safety, and compliance.",
+  },
+  {
+    icon: Network,
+    title: "Integrated Traceability Systems",
+    description:
+      "Digital tracking systems provide complete visibility from cultivation and sourcing through export and delivery.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Continuous Improvement Framework",
+    description:
+      "Performance-driven methodologies focused on innovation, efficiency, and sustainable operational excellence.",
+  },
+  {
+    icon: Award,
+    title: "Advanced Processing Technologies",
+    description:
+      "Modern facilities and technologies designed to preserve product quality while maximising value creation.",
+  },
+];
 
 function QualityCertificationsAgroVentures() {
-    const agroventuresEnhancements = [
-        { icon: Shield, title: "Enhanced Quality Assurance Protocols", description: "Rigorous multi-stage operational verification matrices applied at factory nodes." },
-        { icon: Network, title: "Digitally Integrated Traceability Systems", description: "Real-time ledger tracking spanning from field cultivation nodes straight to export cargo." },
-        { icon: TrendingUp, title: "Continuous Improvement Methodologies", description: "Data-driven systemic optimization loops to maintain peak payload performance." },
-        { icon: Award, title: "Modern Processing Technologies", description: "State-of-the-art facilities engineered for premium value preservation." }
-    ];
+  return (
+    <section className="w-full bg-white text-neutral-950 border-t border-neutral-100">
 
-    return (
-        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-t border-neutral-100">
-            <div className="w-full px-6 lg:px-8 py-24 lg:py-32">
-                <div className="max-w-7xl mx-auto">
-                    
-                    {/* ── 1. Brutalist Layout Split Header ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 pb-12 border-b border-neutral-100">
-                        <div className="lg:col-span-8 space-y-3">
-                            <div className="flex items-center gap-2 text-neutral-950">
-                                <TrendingUp className="w-3.5 h-3.5 stroke-2" />
-                                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400">System Optimization</span>
-                            </div>
-                            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-                                Enhanced by Agroventures
-                            </h2>
-                        </div>
-                        <div className="lg:col-span-4 flex items-end">
-                            <span className="font-mono text-[11px] uppercase tracking-wider text-neutral-400">
-                                Operational Integration Framework
-                            </span>
-                        </div>
-                    </div>
+      {/* INTRO — dark split */}
+      <div className="bg-brand-primary">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
 
-                    {/* ── 2. Structural Content Grid Matrix ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24">
-                        
-                        {/* Left Column: Long-Form Corporate Narrative */}
-                        <div className="lg:col-span-5 space-y-6">
-                            <span className="block font-mono text-[9px] uppercase tracking-[0.25em] text-neutral-400">STRATEGIC REALIGNMENT</span>
-                            <p className="text-lg font-bold text-neutral-900 leading-relaxed uppercase tracking-tight">
-                                The integration with Agroventures Group represents a decisive evolution in Bio Foods' core operational excellence.
-                            </p>
-                            <div className="text-sm text-neutral-500 font-medium leading-relaxed space-y-4">
-                                <p>
-                                    This introduces advanced structural precision, governance, and systemic scalability that elevates every component layer of our underlying value chain.
-                                </p>
-                                <p>
-                                    Through this alignment, our quality frameworks transition away from reactive checkpoint compliance measures into an overarching, continuous performance monitoring pipeline ensuring product integrity across all production payload runs.
-                                </p>
-                            </div>
-                        </div>
+          <motion.span
+            {...fadeUp(0)}
+            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-white/50"
+          >
+            <span className="h-px w-10 bg-brand-secondary" />
+            Agro Ventures Integration
+          </motion.span>
 
-                        {/* Right Column: Dynamic Performance Pillars */}
-                        <div className="lg:col-span-7 space-y-12 lg:pl-12 lg:border-l border-neutral-100">
-                            <div>
-                                <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest mb-8">
-                                    [ From cultivation to final export shipment, touchpoints are fortified via: ]
-                                </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <motion.h2
+              {...fadeUp(0.1)}
+              className="text-5xl lg:text-7xl tracking-tight leading-[1.05] text-white"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Strengthened by
+              <br />
+              <span className="text-brand-secondary">Agro Ventures.</span>
+            </motion.h2>
 
-                                {/* Enhancements Directory Lines */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
-                                    {agroventuresEnhancements.map((enhancement, index) => (
-                                        <div key={index} className="space-y-3 pt-6 border-t border-neutral-100 group">
-                                            <div className="text-neutral-950 flex justify-between items-center">
-                                                <span className="font-mono text-[9px] text-neutral-400">MATRIX NODE_0{index + 1}</span>
-                                                <enhancement.icon className="w-4 h-4 stroke-[1.5]" />
-                                            </div>
-                                            <h4 className="text-xs font-black uppercase tracking-wider text-neutral-950 leading-tight">
-                                                {enhancement.title}
-                                            </h4>
-                                            <p className="text-xs text-neutral-400 leading-relaxed font-medium">
-                                                {enhancement.description}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+            <motion.p {...fadeUp(0.2)} className="text-base leading-8 text-white/60">
+              The integration with Agro Ventures represents an important step
+              forward in our commitment to quality, innovation, and operational
+              excellence. By combining expertise, technology, and governance,
+              we continue to strengthen every aspect of our value chain.
+            </motion.p>
+          </div>
 
-                    </div>
+        </div>
+      </div>
 
-                    {/* ── 3. High-Contrast Bottom Strategic Verdict Canvas ── */}
-                    <div className="border-t-2 border-neutral-950 pt-16">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                            <div className="lg:col-span-4">
-                                <span className="font-mono text-[10px] uppercase tracking-[0.3em] font-black text-neutral-950">
-                                    REPEATABLE QUALITY OUTCOME
-                                </span>
-                            </div>
-                            <div className="lg:col-span-8 space-y-6">
-                                <p className="text-xl lg:text-3xl font-black uppercase tracking-tighter text-neutral-950 leading-tight">
-                                    This framework enables Bio Foods to ship output payloads that satisfy the most unyielding global trade expectations,not on variable cycles, but consistently and natively at enterprise volume.
-                                </p>
-                                <p className="text-sm font-mono tracking-wide text-neutral-400">
-                                    In essence, Agroventures transforms baseline operational intent from a simple target into a completely measurable, repeatable, and globally benchmarked industrial reality.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+      {/* ENHANCEMENTS — numbered rows */}
+      <div className="py-24 lg:py-32 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-                </div>
+          <div className="grid lg:grid-cols-12 gap-16 items-start">
+
+            {/* sticky label col */}
+            <motion.div {...fadeUp(0)} className="lg:col-span-4 lg:sticky lg:top-32">
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="h-px w-10 bg-brand-secondary" />
+                Strategic Alignment
+              </span>
+
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight leading-snug"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Driving long-term
+                operational excellence.
+              </h3>
+
+              <p className="mt-6 text-sm leading-8 text-neutral-600">
+                Through this integration, Bio Foods benefits from enhanced
+                governance structures, improved operational efficiencies, and
+                stronger quality management systems — supporting sustainable
+                growth at every level.
+              </p>
+            </motion.div>
+
+            {/* rows col */}
+            <div className="lg:col-span-8 divide-y divide-neutral-200 border-y border-neutral-200">
+              {enhancements.map(({ icon: Icon, title, description }, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeUp(i * 0.08)}
+                  className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
+                >
+                  {/* index */}
+                  <span
+                    className="hidden sm:block shrink-0 text-xs text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* icon box */}
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  </div>
+
+                  {/* text */}
+                  <div className="flex-1">
+                    <h4
+                      className="text-lg text-neutral-900"
+                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                      {title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-7 text-neutral-600">
+                      {description}
+                    </p>
+                    <div className="mt-4 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
+                  </div>
+                </motion.div>
+              ))}
             </div>
-        </section>
-    );
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* PULL-QUOTE SECTION */}
+      <div className="py-24 lg:py-32 bg-brand-light border-b border-neutral-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <motion.div {...fadeUp(0)}>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-8">
+                <span className="h-px w-10 bg-brand-secondary" />
+                Enhanced Capabilities
+              </span>
+
+              <p
+                className="text-3xl lg:text-4xl tracking-tight leading-snug text-neutral-900"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                "From compliance
+                to continuous
+                improvement — quality
+                is built into every step."
+              </p>
+            </motion.div>
+
+            <motion.div {...fadeUp(0.15)} className="space-y-6">
+              <p className="text-sm leading-8 text-neutral-600">
+                Our quality systems are designed to go beyond meeting standards.
+                Through structured monitoring, advanced technologies, and
+                integrated traceability, we create greater transparency and
+                reliability throughout the production journey.
+              </p>
+              <p className="text-sm leading-8 text-neutral-600">
+                The result is a resilient operational framework capable of
+                consistently delivering premium products that meet the
+                expectations of customers and international markets worldwide.
+              </p>
+            </motion.div>
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* CLOSING BANNER */}
+      <div className="bg-brand-primary py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-end">
+
+            <motion.div {...fadeUp(0)}>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50 mb-8">
+                <span className="h-px w-8 bg-brand-secondary" />
+                Sustainable Growth
+              </span>
+
+              <h2
+                className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Building stronger
+                foundations for
+                the future.
+              </h2>
+            </motion.div>
+
+            <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-8">
+              <p className="text-base leading-8 text-white/60">
+                By combining operational expertise, modern technology, and
+                internationally recognised quality frameworks, we continue to
+                elevate our standards and deliver exceptional value to customers
+                around the world.
+              </p>
+
+              <div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                >
+                  Get in Touch
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
 }
 
 export default QualityCertificationsAgroVentures;

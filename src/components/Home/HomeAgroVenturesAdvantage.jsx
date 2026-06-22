@@ -1,92 +1,149 @@
-import React from 'react';
-import { GitMerge, Factory, Globe, TrendingUp, Sparkles } from 'lucide-react';
+import React from "react";
+import {
+  GitMerge,
+  Factory,
+  Globe,
+  TrendingUp,
+  Sparkles,
+} from "lucide-react";
 
-function HomeAgroVenturesAdvantage() {
-    const advantages = [
-        {
-            icon: GitMerge,
-            title: "Integrated Supply Chain Systems",
-            description: "Ensuring highly structured, consistent, and resilient high-volume production metrics."
-        },
-        {
-            icon: Factory,
-            title: "Advanced Processing Facilities",
-            description: "Maintaining rigorous standards of purity, biological hygiene, and product architectural integrity."
-        },
-        {
-            icon: Globe,
-            title: "International Trade Networks",
-            description: "Enabling frictionless logistical export execution across critical global market channels."
-        },
-        {
-            icon: TrendingUp,
-            title: "Strategic Growth Vision",
-            description: "Driven by systemic environmental sustainability and long-term capital value creation."
-        }
-    ];
+function HomeAgroVenturesAdvantage({ section }) {
+  const advantages = [
+    {
+      icon: GitMerge,
+      title: "Integrated Supply Chain",
+      description:
+        "A connected ecosystem ensuring consistency, transparency, and reliability from origin to global delivery.",
+    },
+    {
+      icon: Factory,
+      title: "Advanced Processing",
+      description:
+        "State-of-the-art facilities preserving quality, purity, and the natural integrity of every product.",
+    },
+    {
+      icon: Globe,
+      title: "Global Reach",
+      description:
+        "Trusted international distribution networks serving customers across diverse world markets.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Sustainable Growth",
+      description:
+        "Long-term expansion guided by environmental responsibility and strategic innovation.",
+    },
+  ];
 
-    return (
-        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-b border-neutral-100 py-24 lg:py-36">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                
-                {/* ── Editorial Layout Header ── */}
-                <div className="border-b border-neutral-950 pb-8 mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-neutral-950">
-                            <Sparkles className="w-4 h-4 stroke-[1.5]" />
-                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-neutral-500">Why Choose Us</span>
-                        </div>
-                        <h2 className="text-5xl sm:text-7xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-                            The Agroventures Advantage
-                        </h2>
-                    </div>
-                    <div className="max-w-md">
-                        <p className="text-base text-neutral-600 font-medium leading-relaxed">
-                            The corporate infrastructure of Agroventures Group elevates Bio Foods into a premium, globally agile agribusiness network.
-                        </p>
-                    </div>
-                </div>
+  return (
+    <section className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+      {/* Decorative Number */}
+      <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
+        <span className="text-[280px] font-black leading-none text-black/3">
+          {section}
+        </span>
+      </div>
 
-                {/* ── High-Contrast Structural Advantage Matrix ── */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-                    {advantages.map((advantage, index) => (
-                        <div
-                            key={index}
-                            className="group bg-white border border-neutral-200 p-8 flex flex-col justify-between items-start h-70 hover:border-neutral-950 transition-colors duration-300"
-                        >
-                            {/* Structural Icon Container */}
-                            <div className="p-3 bg-neutral-50 border border-neutral-200 text-neutral-950 transition-colors duration-300 group-hover:bg-neutral-950 group-hover:border-neutral-950 group-hover:text-white">
-                                <advantage.icon className="w-5 h-5 stroke-[1.5]" />
-                            </div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-20 grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="h-px w-12 bg-brand-secondary" />
 
-                            {/* Text Payload Block */}
-                            <div className="space-y-2 mt-auto">
-                                <div className="flex items-baseline gap-2">
-                                    <h3 className="text-lg font-black uppercase tracking-tight text-neutral-950 leading-tight">
-                                        {advantage.title}
-                                    </h3>
-                                </div>
-                                <p className="text-sm text-neutral-600 font-medium leading-relaxed">
-                                    {advantage.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* ── Bottom Balanced Narrative Block ── */}
-                <div className="border border-neutral-950 p-8 lg:p-12 bg-neutral-950 text-white space-y-4">
-                    <div className="flex items-center gap-2">
-                        <h4 className="font-mono text-xs font-black uppercase tracking-tight text-white">System Synthesis</h4>
-                    </div>
-                    <p className="text-lg sm:text-xl font-bold leading-relaxed tracking-tight max-w-5xl">
-                        This convergence empowers Bio Foods to scale with absolute industrial reliability while maintaining the deep, uncompromising trace provenance of artisanal cultivation.
-                    </p>
-                </div>
-
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-brand-secondary" />
+                <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                  Why Choose Us
+                </span>
+              </div>
             </div>
-        </section>
-    );
+
+            <h2
+              className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              The Strength Behind
+              <br />
+              Every Harvest.
+            </h2>
+          </div>
+
+          <div className="flex items-end lg:col-span-5">
+            <p className="max-w-md text-lg leading-8 text-neutral-600">
+              Supported by the broader Agroventures ecosystem, Bio Foods
+              benefits from an integrated network that combines agricultural
+              expertise, operational excellence, and global market access.
+            </p>
+          </div>
+        </div>
+
+        {/* Advantage Cards */}
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {advantages.map((advantage, index) => (
+            <div
+              key={index}
+              className="
+                group
+                rounded-4xl
+                bg-white
+                p-8
+                shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+                transition-all
+                duration-500
+                hover:-translate-y-2
+                hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+              "
+            >
+              <div className="mb-10 flex items-center justify-between">
+                <div className="rounded-2xl bg-brand-muted p-4 text-brand-primary">
+                  <advantage.icon className="h-5 w-5" />
+                </div>
+
+                <span className="text-xs tracking-[0.25em] text-brand-secondary">
+                  0{index + 1}
+                </span>
+              </div>
+
+              <h3 className="mb-4 text-2xl font-semibold tracking-tight text-neutral-950">
+                {advantage.title}
+              </h3>
+
+              <p className="leading-7 text-neutral-600">
+                {advantage.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Feature Statement */}
+        <div className="mt-16 overflow-hidden rounded-[40px] bg-brand-primary p-10 text-white lg:p-14">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-gold" />
+
+            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">
+              System Advantage
+            </span>
+          </div>
+
+          <h3
+            className="max-w-4xl text-3xl leading-tight lg:text-5xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            A modern agricultural ecosystem built for scale,
+            consistency, and long-term sustainability.
+          </h3>
+
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/80">
+            The strength of Agroventures allows Bio Foods to combine the
+            authenticity of responsible cultivation with the confidence of
+            industrial-grade infrastructure, creating products trusted by
+            customers around the world.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default HomeAgroVenturesAdvantage;

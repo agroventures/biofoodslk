@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const ImageHero = ({
   badge,
@@ -7,85 +8,91 @@ const ImageHero = ({
   description,
   icon: Icon,
   img,
-  alt = "Hero background"
+  alt = "Hero image",
 }) => {
   return (
-    <section className="relative w-full min-h-[75vh] lg:min-h-[85vh] flex items-end overflow-hidden bg-neutral-950 text-white">
-      
-      {/* ── Background Imagery Frame ── */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative min-h-[75vh] lg:min-h-[calc(100vh-6rem)] overflow-hidden bg-light">
+      {/* Image */}
+      <div className="absolute inset-0">
         <img
           src={img}
           alt={alt}
-          className="w-full h-full object-cover object-center transform scale-100 transition-transform duration-1000 ease-out selection:bg-transparent"
+          className="h-full w-full object-cover"
         />
-        {/* Precise Cinematic Vignette and Linear Gradient Mask */}
-        <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/20 opacity-90" />
-        <div className="absolute inset-0 bg-linear-to-r from-neutral-950/80 via-transparent to-transparent hidden lg:block" />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
-      {/* ── Subdued Blueprint Matrix Layer ── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.03] z-1">
-        <div 
-          className="w-full h-full"
-          style={{
-            backgroundImage: `linear-gradient(to right, #FFF 1px, transparent 1px),
-                              linear-gradient(to bottom, #FFF 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
-          }}
-        />
-      </div>
+      {/* Content */}
+      <div className="relative z-10 mx-auto flex min-h-[75vh] lg:min-h-[calc(100vh-6rem)] max-w-7xl items-end px-8 pb-16 lg:px-16 lg:pb-24">
+        <div className="max-w-4xl">
+          {/* Label */}
+          {badge && (
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8 flex items-center gap-4"
+            >
+              <div className="h-px w-12 bg-[#D7C29E]" />
 
-      {/* ── Main Layout Wrapper ── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-32 lg:pb-24 lg:pt-40">
-        
-        {/* Structural Editorial Grid */}
-        <div className="grid lg:grid-cols-12 gap-8 items-end border-b border-white/10 pb-12 lg:pb-16">
-          
-          {/* Left Column: Heading Layout */}
-          <div className="lg:col-span-8 flex flex-col items-start">
-            {badge && (
-              <div className="flex items-center gap-2.5 mb-6 bg-white/5 backdrop-blur-md border border-white/10 px-3.5 py-1.5 rounded-md">
-                {Icon && <Icon className="w-3.5 h-3.5 text-neutral-300 stroke-[1.5]" />}
-                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-neutral-300">
+              <div className="flex items-center gap-2">
+                {Icon && (
+                  <Icon className="h-4 w-4 text-[#D7C29E]" />
+                )}
+
+                <span className="text-xs uppercase tracking-[0.35em] text-white/80">
                   {badge}
                 </span>
               </div>
-            )}
+            </motion.div>
+          )}
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] uppercase font-sans text-white">
-              {title}
-            </h1>
-          </div>
+          {/* Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-8xl"
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+            }}
+          >
+            {title}
+          </motion.h1>
 
-          {/* Right Column: Subtitle & Context Description */}
+          {/* Description */}
           {(subtitle || description) && (
-            <div className="lg:col-span-4 flex flex-col items-start gap-4 lg:pl-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="mt-8 max-w-2xl"
+            >
               {subtitle && (
-                <h2 className="text-lg sm:text-xl font-bold uppercase tracking-wider text-neutral-200">
+                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-[#D7C29E]">
                   {subtitle}
-                </h2>
+                </p>
               )}
+
               {description && (
-                <p className="text-sm sm:text-base text-neutral-400 font-medium leading-relaxed">
+                <p className="text-lg leading-8 text-white/85">
                   {description}
                 </p>
               )}
-            </div>
+            </motion.div>
           )}
-
         </div>
+      </div>
 
-        {/* Technical Footer Metabar */}
-        {/* <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 opacity-40">
-          <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-neutral-400">
-            <span>SYS-REF // HERO-01</span>
-            <span>·</span>
-            <span>Scale Controlled</span>
-          </div>
-          <div className="w-12 h-px bg-white hidden sm:block" />
-        </div> */}
+      {/* Scroll Hint */}
+      <div className="absolute bottom-10 right-10 hidden lg:flex flex-col items-center">
+        <span className="mb-3 text-xs uppercase tracking-[0.35em] text-white/60">
+          Scroll
+        </span>
 
+        <div className="h-16 w-px bg-white/30" />
       </div>
     </section>
   );

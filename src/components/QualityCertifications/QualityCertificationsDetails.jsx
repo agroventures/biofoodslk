@@ -1,203 +1,362 @@
-import React from 'react';
-import { certifications } from '../../data/certifications';
+import React from "react";
+import { certifications } from "../../data/certifications";
 import {
-    ShieldCheck,
-    Beaker,
-    ClipboardCheck,
-    Search,
-    Microscope,
-    Info,
-    BadgeCheck,
-    Shield,
-    Award,
-    FileCheck,
-    Network
-} from 'lucide-react';
+  ShieldCheck, Beaker, ClipboardCheck, Search,
+  Microscope, BadgeCheck, Shield, Award,
+  FileCheck, Network, TrendingUp, Globe, ArrowUpRight,
+} from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
+
+const STATS = [
+  { value: "20+",    label: "Global Certifications",  icon: Award },
+  { value: "100%",   label: "Traceable Supply Chain", icon: Shield },
+  { value: "ISO",    label: "Certified Systems",       icon: BadgeCheck },
+  { value: "Global", label: "Export Standards",        icon: Globe },
+];
+
+const procedures = [
+  { icon: Search,        title: "Quality Control",          desc: "Prevention, detection and monitoring procedures implemented throughout every production stage." },
+  { icon: ClipboardCheck,title: "Quality Assurance",        desc: "Continuous verification systems ensure compliance with international quality requirements." },
+  { icon: ShieldCheck,   title: "Internal Control System",  desc: "Comprehensive monitoring framework supporting organic and biodynamic integrity." },
+  { icon: Beaker,        title: "Research & Development",   desc: "Innovation-driven product development focused on quality, efficiency and sustainability." },
+];
+
+const qaItems = [
+  { icon: Microscope, title: "Laboratory Testing",       description: "Comprehensive physical, chemical and microbiological testing procedures." },
+  { icon: BadgeCheck, title: "ISO Certified Operations", description: "International systems management across every processing facility." },
+  { icon: Shield,     title: "HACCP Food Safety",        description: "Critical control point monitoring at every stage of production." },
+  { icon: FileCheck,  title: "Certification Verification", description: "Regular audits and third-party validation against international standards." },
+  { icon: Network,    title: "Traceability Validation",  description: "Complete product traceability from cultivation through export distribution." },
+  { icon: Award,      title: "GMP Manufacturing",        description: "Good Manufacturing Practice standards upheld across all facilities." },
+];
 
 function QualityCertificationsDetails() {
-    const procedures = [
-        { title: "Quality Control", icon: <Search className="w-4 h-4 stroke-[1.5]" />, desc: "Prevention, detection, and rejection at every manufacturing block." },
-        { title: "Quality Assurance", icon: <ClipboardCheck className="w-4 h-4 stroke-[1.5]" />, desc: "Systematic compliance tracking to ensure processes match international marks." },
-        { title: "Internal Control", icon: <ShieldCheck className="w-4 h-4 stroke-[1.5]" />, desc: "Rigorous ICS verification to defend organic crop and biodynamic status." },
-        { title: "Research & Development", icon: <Beaker className="w-4 h-4 stroke-[1.5]" />, desc: "Innovative structural extraction methodologies to improve final yield matrices." },
-    ];
+  return (
+    <section className="w-full bg-white text-neutral-950">
 
-    const qualitySystems = [
-        { icon: BadgeCheck, title: "ISO Certified Operations" },
-        { icon: Shield, title: "HACCP Food Safety Compliance" },
-        { icon: Award, title: "GMP Manufacturing Standards" }
-    ];
+      {/* INTRO */}
+      <div className="py-24 lg:py-36 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-    const qaProcess = [
-        { icon: Microscope, title: "Laboratory Testing", description: "Comprehensive structural chemical and biological extraction assay checks." },
-        { icon: FileCheck, title: "Certification Verification", description: "Third-party validation audits executed over strict annual schedules." },
-        { icon: Network, title: "Traceability Validation", description: "Complete digital tracking maps monitored from crop node through transit paths." }
-    ];
+          <motion.span
+            {...fadeUp(0)}
+            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+          >
+            <span className="h-px w-10 bg-brand-secondary" />
+            Quality & Certifications
+          </motion.span>
 
-    return (
-        <div className="bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white font-sans">
-            
-            {/* ── 1. Structural Trust Anchor Node ── */}
-            <div className="py-16 border-b border-neutral-100">
-                <div className="max-w-7xl mx-auto px-6">
-                    <p className="text-center font-mono text-[10px] uppercase tracking-[0.4em] text-neutral-400 mb-10">
-                        Global Compliance Architecture
-                    </p>
-                    <div className="flex flex-wrap justify-center items-center gap-16 lg:gap-32 opacity-100">
-                        <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/ICS_logos.avif" alt="ICS" className="h-10 lg:h-12 w-auto object-contain" />
-                        <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/Foodsafety.avif" alt="Food Safety" className="h-10 lg:h-12 w-auto object-contain" />
-                    </div>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <motion.h2
+              {...fadeUp(0.1)}
+              className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Certified excellence,
+              <br />
+              <span className="text-brand-primary">trusted worldwide.</span>
+            </motion.h2>
+
+            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
+              Every product is supported by internationally recognised
+              certifications, rigorous quality systems, and complete traceability
+              processes that ensure consistency, safety, and sustainability
+              throughout the value chain.
+            </motion.p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* STATS BAND */}
+      <div className="bg-brand-primary">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+          {STATS.map(({ value, label, icon: Icon }, i) => (
+            <motion.div key={label} {...fadeUp(i * 0.08)} className="py-10 px-6 flex items-center justify-between gap-3">
+              <div>
+                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                  {value}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">{label}</p>
+              </div>
+              <Icon className="h-4 w-4 text-white/20 shrink-0" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* TRUST LOGOS */}
+      <div className="border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+          <motion.div
+            {...fadeUp(0)}
+            className="grid grid-cols-2 gap-px bg-neutral-200 border border-neutral-200"
+          >
+            {[
+              { src: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/ICS_logos.avif", alt: "ICS" },
+              { src: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/Foodsafety.avif", alt: "Food Safety" },
+            ].map((logo) => (
+              <div key={logo.alt} className="bg-white flex items-center justify-center py-10 px-8">
+                <img src={logo.src} alt={logo.alt} className="h-12 object-contain" />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* QUALITY FRAMEWORK — numbered rows */}
+      <div className="py-24 lg:py-32 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <div className="grid lg:grid-cols-12 gap-16 items-start">
+
+            {/* sticky label */}
+            <motion.div {...fadeUp(0)} className="lg:col-span-4 lg:sticky lg:top-32">
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="h-px w-10 bg-brand-secondary" />
+                Quality Framework
+              </span>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight leading-snug"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Built on rigorous
+                systems and continuous
+                improvement.
+              </h3>
+            </motion.div>
+
+            {/* rows */}
+            <div className="lg:col-span-8 divide-y divide-neutral-200 border-y border-neutral-200">
+              {procedures.map(({ icon: Icon, title, desc }, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeUp(i * 0.08)}
+                  className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
+                >
+                  <span className="hidden sm:block shrink-0 text-xs text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div className="flex-1">
+                    <h4
+                      className="text-lg text-neutral-900"
+                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                      {title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-7 text-neutral-600">{desc}</p>
+                    <div className="mt-4 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
-            {/* ── 2. The Four Pillars Strategic Matrix ── */}
-            <section className="py-24 max-w-7xl mx-auto px-6 border-b border-neutral-100">
-                <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start mb-24">
-                    <div className="lg:col-span-5 space-y-6">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400 block">OPERATIONAL STANDARD</span>
-                        <h2 className="text-4xl lg:text-6xl font-black text-neutral-950 tracking-tighter uppercase leading-[0.85]">
-                            Governed by<br />Precision
-                        </h2>
-                        <p className="text-neutral-500 text-sm font-medium leading-relaxed max-w-md">
-                            Our operations are strictly managed by certified technical officers across four clear nodes. This protocol shields the supply structure using meticulous prevention, immediate detection, and batch exclusion methods.
-                        </p>
-                        <div className="flex gap-4 pt-4">
-                            <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/testing.avif" alt="Lab Testing" className="w-1/2 aspect-square object-cover rounded-xl border border-neutral-200/60" />
-                            <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/testing2.avif" alt="Quality Check" className="w-1/2 aspect-square object-cover rounded-xl border border-neutral-200/60 mt-6" />
-                        </div>
-                    </div>
+          </div>
 
-                    <div className="lg:col-span-7 grid sm:grid-cols-2 gap-x-8 gap-y-12 pt-4">
-                        {procedures.map((item) => (
-                            <div key={item.title} className="space-y-4 pt-6 border-t border-neutral-100 group">
-                                <div className="text-neutral-950 flex items-center justify-between">
-                                    <span className="font-mono text-[9px] text-neutral-400 uppercase tracking-widest">[ SECURITY NODE ]</span>
-                                    {item.icon}
-                                </div>
-                                <h3 className="font-black text-neutral-950 uppercase tracking-wider text-xs">{item.title}</h3>
-                                <p className="text-xs text-neutral-400 leading-relaxed font-medium">{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ── 3. Educational Context Canvas ── */}
-            <section className="bg-neutral-950 py-24 text-white overflow-hidden relative">
-                <div className="max-w-4xl mx-auto px-6 relative z-10 space-y-8">
-                    <div className="flex items-center gap-3">
-                        <Info className="text-white w-4 h-4 stroke-[1.5]" />
-                        <h4 className="text-[10px] font-mono uppercase tracking-[0.3em] text-neutral-500">Framework Paradigm</h4>
-                    </div>
-                    <h3 className="text-3xl lg:text-5xl font-black uppercase tracking-tighter max-w-2xl leading-none">
-                        What parameters constitute true biological verification?
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-8 pt-4 border-t border-white/10 text-neutral-400 text-xs leading-relaxed font-medium">
-                        <p>
-                            To be logged as <span className="text-white font-bold">"Certified Organic"</span>, every micro-tier—extending cleanly from substrate enrichment schedules up through modern factory line outputs—must satisfy critical global validation matrices. It represents an intensive institutional and financial setup step.
-                        </p>
-                        <p>
-                            Beyond structural cost figures, these international marks construct verified commercial trust. They establish a reliable visual blueprint for clean enterprise trade networks, serving as an unbroken pledge toward ecosystem equilibrium.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* ── 4. Main Standard Compliance Index ── */}
-            <section className="py-24 max-w-7xl mx-auto px-6 border-b border-neutral-100">
-                <div className="mb-16">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400 block mb-2">DIRECTORY RESOURCE</span>
-                    <h3 className="text-2xl font-black text-neutral-950 uppercase tracking-tight">Standard Compliance Index</h3>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-12 divide-y md:divide-y-0 border-b border-neutral-100 pb-16">
-                    {certifications.map((cert, index) => (
-                        <div
-                            key={cert.id}
-                            className={`group bg-white pt-8 md:pt-0 md:px-8 transition-colors duration-300 ${
-                                index % 3 !== 0 ? 'lg:border-l lg:border-neutral-100' : ''
-                            } ${
-                                index % 2 !== 0 ? 'md:border-l md:border-neutral-100 lg:border-l-0 lg:border-neutral-100' : ''
-                            }`}
-                        >
-                            <div className="h-40 bg-neutral-50/60 rounded-xl flex items-center justify-center p-6 border border-neutral-200/50 mb-6 overflow-hidden">
-                                <img
-                                    src={cert.img}
-                                    alt={cert.name}
-                                    className="max-h-full max-w-full object-contain opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <span className="block font-mono text-[9px] text-neutral-400">CERTIFICATION REG_0{cert.id || index + 1}</span>
-                                <h3 className="text-sm font-black text-neutral-950 uppercase tracking-wider leading-tight group-hover:text-neutral-600 transition-colors">
-                                    {cert.name}
-                                </h3>
-                                <p className="text-xs text-neutral-400 leading-relaxed font-medium line-clamp-3">
-                                    {cert.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* ── 5. Quality & Safety Framework Rows ── */}
-            <section className="w-full py-24 max-w-7xl mx-auto px-6 border-b border-neutral-100">
-                <div className="grid lg:grid-cols-12 gap-8 items-baseline mb-12">
-                    <div className="lg:col-span-4">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.3em] font-black text-neutral-950">CRITICAL ACCREDITATION</span>
-                    </div>
-                    <div className="lg:col-span-8">
-                        <h2 className="text-xl lg:text-3xl font-black text-neutral-950 uppercase tracking-tight">
-                            Quality & Safety Infrastructure
-                        </h2>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-neutral-950 divide-y md:divide-y-0 md:divide-x divide-neutral-950">
-                    {qualitySystems.map((system, index) => (
-                        <div key={index} className="py-8 md:px-8 first:pl-0 last:pr-0 bg-white flex items-center gap-4 group">
-                            <div className="text-neutral-950 shrink-0">
-                                <system.icon className="w-4 h-4 stroke-2" />
-                            </div>
-                            <h3 className="text-xs font-mono font-black uppercase tracking-wider text-neutral-950 group-hover:translate-x-1 transition-transform">
-                                {system.title}
-                            </h3>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* ── 6. Industrial Quality Assurance Process ── */}
-            <section className="w-full py-24 max-w-7xl mx-auto px-6">
-                <div className="grid lg:grid-cols-12 gap-8 items-start mb-16">
-                    <div className="lg:col-span-4">
-                        <h2 className="text-2xl font-black text-neutral-950 uppercase tracking-tighter">
-                            Quality Assurance Process
-                        </h2>
-                    </div>
-                    <div className="lg:col-span-8 flex items-end">
-                        <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400">
-                            Each production payload passes through three explicit screening validation rows:
-                        </span>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {qaProcess.map((process, index) => (
-                        <div key={index} className="space-y-3 pt-6 border-t-2 border-neutral-950 bg-white">
-                            <div className="text-neutral-950 flex items-center justify-between mb-4">
-                                <span className="font-mono text-[9px] text-neutral-400">PHASE ROUTE LAYER_0{index + 1}</span>
-                                <process.icon className="w-4 h-4 stroke-[1.5]" />
-                            </div>
-                            <h3 className="text-sm font-black text-neutral-950 uppercase tracking-wider">{process.title}</h3>
-                            <p className="text-xs text-neutral-500 font-medium leading-relaxed max-w-sm">{process.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
         </div>
-    );
+      </div>
+
+      {/* PULL-QUOTE */}
+      <div className="py-24 lg:py-32 bg-brand-light border-b border-neutral-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+
+          <motion.div {...fadeUp(0)}>
+            <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-8">
+              <span className="h-px w-10 bg-brand-secondary" />
+              Organic Certification
+            </span>
+            <p
+              className="text-3xl lg:text-4xl tracking-tight leading-snug text-neutral-900"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              "What makes certified
+              organic production
+              fundamentally different?"
+            </p>
+          </motion.div>
+
+          <motion.div {...fadeUp(0.15)} className="space-y-6">
+            <p className="text-sm leading-8 text-neutral-600">
+              Organic certification requires strict compliance across cultivation,
+              harvesting, processing and distribution. Every stage is monitored
+              to ensure environmental responsibility and product integrity.
+            </p>
+            <p className="text-sm leading-8 text-neutral-600">
+              These certifications provide transparency, consumer confidence and
+              global market access while supporting sustainable farming practices
+              and long-term ecosystem health.
+            </p>
+          </motion.div>
+
+        </div>
+      </div>
+
+      {/* CERTIFICATIONS GRID */}
+      <div className="py-24 lg:py-32 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+            <motion.div {...fadeUp(0)}>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="h-px w-10 bg-brand-secondary" />
+                Global Certifications
+              </span>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                International standards
+                <br />
+                recognised worldwide.
+              </h3>
+            </motion.div>
+
+            <motion.p {...fadeUp(0.1)} className="max-w-sm text-sm leading-7 text-neutral-500">
+              {certifications.length} active certifications spanning organic farming,
+              food safety, fair trade, and international market access.
+            </motion.p>
+          </div>
+
+          <motion.div
+            {...fadeUp(0.1)}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200"
+          >
+            {certifications.map((cert, i) => (
+              <motion.div
+                key={cert.id}
+                {...fadeUp(i * 0.04)}
+                className="group bg-white p-6 hover:bg-brand-light transition-colors duration-300 flex flex-col"
+              >
+                {/* logo */}
+                <div className="h-20 flex items-center justify-start mb-5">
+                  <img
+                    src={cert.img}
+                    alt={cert.name}
+                    className="max-h-16 max-w-[120px] object-contain"
+                  />
+                </div>
+
+                {/* name */}
+                <h4
+                  className="text-base text-neutral-900 mb-3 leading-snug"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  {cert.name}
+                </h4>
+
+                {/* desc — clipped */}
+                <p className="text-xs leading-6 text-neutral-500 line-clamp-3 flex-1">
+                  {cert.desc}
+                </p>
+
+                <div className="mt-4 h-px w-0 group-hover:w-8 bg-brand-secondary transition-all duration-500" />
+              </motion.div>
+            ))}
+          </motion.div>
+
+        </div>
+      </div>
+
+      {/* QA SYSTEMS — 3-col grid */}
+      <div className="py-24 lg:py-32 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+            <motion.div {...fadeUp(0)}>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="h-px w-10 bg-brand-secondary" />
+                Quality Assurance
+              </span>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Every product undergoes
+                <br />
+                comprehensive verification.
+              </h3>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
+            {qaItems.map(({ icon: Icon, title, description }, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp(i * 0.08)}
+                className="group p-8 hover:bg-brand-light transition-colors duration-300"
+              >
+                <div className="flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300 mb-5">
+                  <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h4
+                  className="text-lg text-neutral-900 mb-3"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  {title}
+                </h4>
+                <p className="text-sm leading-7 text-neutral-600">{description}</p>
+                <div className="mt-5 h-px w-0 group-hover:w-8 bg-brand-secondary transition-all duration-500" />
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
+      {/* CLOSING BANNER */}
+      <div className="bg-brand-primary py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-end">
+
+            <motion.div {...fadeUp(0)}>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50 mb-8">
+                <span className="h-px w-8 bg-brand-secondary" />
+                Quality Commitment
+              </span>
+              <h2
+                className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Certified quality,
+                <br />
+                from farm to export.
+              </h2>
+            </motion.div>
+
+            <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-8">
+              <p className="text-base leading-8 text-white/60">
+                Our commitment to quality extends beyond certification. Through
+                rigorous testing, traceability systems and internationally
+                recognised standards, we ensure every product meets the
+                expectations of customers worldwide.
+              </p>
+              <div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                >
+                  Get in Touch
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
 }
 
 export default QualityCertificationsDetails;

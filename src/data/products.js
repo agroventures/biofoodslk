@@ -43,7 +43,7 @@ export const products = [
     {
         id: 6,
         name: "Organic Coconut Products",
-        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/CoconutProducts/cocnut-products.jpeg",
+        img: "/Products/CoconutProducts/coconut.jpg",
         desc: "We in Sri Lanka know the coconut tree as the ‘tree of life’. This is because the local people, probably for as long as we have been on an island, have used each an every part of the tree, from root to husk to leaves, for some purpose or another. As such, it is deeply respected product. Each day, the health benefits of coconut gain traction globally (coconut oil is now considered one of the healthiest oils to consume due to its medium chain triglyceride [MCT] composition) and its irreplaceable position in the vegan marketplace has been established, we are proud to provide an ever expanding range of coconut products.",
         grades: {
             "coconut-chips": [

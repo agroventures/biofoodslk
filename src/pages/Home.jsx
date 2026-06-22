@@ -38,14 +38,12 @@ function Home() {
     return (
         <div className="min-h-screen">
             <Navbar />
-            <HomeHero />
-            <HomeBrandNarrative />
-            <HomeAgroVenturesAdvantage />
-            <HomeCertifications />
-            <HomeCorePrinciples />
-            <HomeSegments />
-            <HomeProductExperiences />
-            {/* <HomeEcoPlus /> */}
+            <HomeHero section="1" />
+            <HomeBrandNarrative section="02" />
+            <HomeAgroVenturesAdvantage section="03" />
+            <HomeCertifications section="04" />
+            <HomeCorePrinciples section="05" />
+            <HomeProductExperiences section="06" />
             <HomeClosingReflection />
             <Footer />
         </div>

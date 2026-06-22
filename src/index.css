@@ -1,15 +1,19 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
 @theme {
-  --color-brand-primary: #1d472e;
-  --color-brand-secondary: #ad903e;
+  --color-brand-primary: #395144;
+  --color-brand-secondary: #B18B4A;
   --color-brand-accent: #6FCF97;
-  --color-brand-light: #EEEEEE;
+  --color-brand-light: #F8F6F2;
+  --color-brand-muted: #F4EFE6;
+  --color-brand-gold: #D7C29E;
 }
 
 body{
+  font-family: "Inter", sans-serif;
   /* font-family: "Syne", sans-serif; */
-  font-family: 'Satoshi', sans-serif;
+  /* font-family: 'Satoshi', sans-serif; */
 }
 
 @keyframes fadeInLeft {
@@ -84,7 +88,7 @@ body{
 /* Custom scrollbar for smoother experience */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #10b981 #f3f4f6;
+  scrollbar-color: #395144 #f3f4f6;
 }
 
 *::-webkit-scrollbar {
@@ -97,12 +101,12 @@ body{
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #10b981;
+  background: #395144;
   border-radius: 4px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #059669;
+  background: #2d4137;
 }
 
 

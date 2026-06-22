@@ -13,7 +13,7 @@ function HomeEcoPlus() {
                 <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-0">
 
                     {/* Image Side */}
-                    <div className="relative h-100 sm:h-125 lg:h-full min-h-87.5 lg:min-h-125 group overflow-hidden rounded-3xl lg:rounded-none">
+                    <div className="relative h-72 sm:h-100 lg:h-full min-h-0 lg:min-h-125 group overflow-hidden rounded-3xl lg:rounded-none">
                         <img
                             src="/Home/eco_plus.avif"
                             alt="Eco Planet Organic Fertilizer"
@@ -38,23 +38,23 @@ function HomeEcoPlus() {
                             <span className="text-brand-primary">Organic Fertility.</span>
                         </h2>
 
-                        <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-md">
+                        <p className="text-neutral-600 text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-md">
                             We don't just harvest from the earth; we give back.
                         </p>
 
                         <div className="grid grid-cols-2 gap-4 md:gap-6 mb-10 md:mb-12">
                             <div className="border-l-2 border-brand-primary/30 pl-4">
-                                <div className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Circular</div>
-                                <div className="text-[10px] text-slate-500 uppercase tracking-widest font-black">Economy</div>
+                                <div className="text-xl md:text-2xl font-bold text-neutral-950 mb-1">Circular</div>
+                                <div className="text-[10px] text-neutral-500 uppercase tracking-widest font-black">Economy</div>
                             </div>
                             <div className="border-l-2 border-brand-primary/30 pl-4">
-                                <div className="text-xl md:text-2xl font-bold text-slate-900 mb-1">100%</div>
-                                <div className="text-[10px] text-slate-500 uppercase tracking-widest font-black">Bio-Degradable</div>
+                                <div className="text-xl md:text-2xl font-bold text-neutral-950 mb-1">100%</div>
+                                <div className="text-[10px] text-neutral-500 uppercase tracking-widest font-black">Bio-Degradable</div>
                             </div>
                         </div>
 
                         <Link to='/eco-plus' className="inline-block w-full sm:w-auto">
-                            <button className="w-full sm:w-auto group flex items-center justify-center gap-3 bg-brand-primary hover:bg-slate-900 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-black transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-primary/20">
+                            <button className="w-full sm:w-auto group flex items-center justify-center gap-3 bg-brand-primary hover:bg-neutral-950 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-black transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-primary/20">
                                 LEARN MORE ABOUT ECO PLUS
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
@@ -64,11 +64,11 @@ function HomeEcoPlus() {
 
                 {/* Bottom Trust bar */}
                 <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 opacity-40 grayscale pointer-events-none">
-                    <div className="flex items-center gap-2 text-slate-900">
+                    <div className="flex items-center gap-2 text-neutral-950">
                         <Globe size={18} />
                         <span className="font-bold uppercase tracking-widest text-[10px] md:text-xs">Environmentally Neutral</span>
                     </div>
-                    <div className="flex items-center gap-2 text-slate-900">
+                    <div className="flex items-center gap-2 text-neutral-950">
                         <Sprout size={18} />
                         <span className="font-bold uppercase tracking-widest text-[10px] md:text-xs">Soil Health First</span>
                     </div>

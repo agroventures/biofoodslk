@@ -1,169 +1,211 @@
-import React from 'react';
-import { Building2, Factory, Ship, Network, TrendingUp, Globe, Sparkles } from 'lucide-react';
-import { companies } from '../../data/companies';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import React from "react";
+import { Building2, Factory, Ship, Network, TrendingUp, Globe, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { companies } from "../../data/companies";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
-import 'swiper/css';
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
 
-function AboutAgroVentures() {
-    const expertise = [
-        {
-            icon: Building2,
-            title: "Plantation Development",
-            description: "Development and management"
-        },
-        {
-            icon: Factory,
-            title: "Advanced Processing",
-            description: "Food processing and manufacturing"
-        },
-        {
-            icon: Ship,
-            title: "Global Trade",
-            description: "Export logistics and international trade"
-        }
-    ];
+const expertise = [
+  { icon: Building2, title: "Plantation Development", description: "Development and management of sustainable agricultural estates." },
+  { icon: Factory,   title: "Advanced Processing",   description: "Modern food processing and value-added manufacturing." },
+  { icon: Ship,      title: "Global Trade",          description: "Export logistics and international market access." },
+];
 
-    const benefits = [
-        {
-            icon: Network,
-            title: "Large-Scale Infrastructure",
-            description: "Operational infrastructure at scale"
-        },
-        {
-            icon: TrendingUp,
-            title: "Investment-Backed Growth",
-            description: "Expansion opportunities backed by investment"
-        },
-        {
-            icon: Globe,
-            title: "Enhanced Market Reach",
-            description: "Global market access and distribution"
-        }
-    ];
+const advantages = [
+  { icon: Network,   title: "Large-Scale Infrastructure", description: "Access to operational infrastructure across the value chain." },
+  { icon: TrendingUp,title: "Investment-Backed Growth",   description: "Strategic resources supporting long-term expansion." },
+  { icon: Globe,     title: "Global Reach",               description: "Established distribution channels in international markets." },
+];
 
-    return (
-        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-t border-b border-neutral-100 py-24 lg:py-36">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                
-                {/* ── Editorial Header Structure ── */}
-                <div className="border-b border-neutral-950 pb-8 mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-neutral-950">
-                            <Sparkles className="w-4 h-4 stroke-[1.5]" />
-                            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400">Parent Conglomerate</span>
-                        </div>
-                        <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-                            Agroventures Group
-                        </h2>
-                    </div>
-                </div>
+export default function AboutAgroVentures() {
+  return (
+    <section className="w-full bg-white text-neutral-950 border-y border-neutral-100">
 
-                {/* ── Headline Narrative Payload ── */}
-                <div className="max-w-4xl mb-24">
-                    <p className="text-xl sm:text-2xl font-bold text-neutral-900 leading-relaxed uppercase tracking-tight">
-                        Agroventures Group operates as a diversified agribusiness conglomerate, engineering strategic infrastructure across the entirety of the agricultural value chain spectrum.
-                    </p>
-                </div>
+      {/* INTRO */}
+      <div className="py-24 lg:py-36">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-                {/* ── Asymmetric Structural Sections ── */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-                    
-                    {/* Left Grid: Core Capability Clusters */}
-                    <div className="lg:col-span-6 space-y-12">
-                        <div className="space-y-4">
-                            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 block">CORE CAPABILITIES</span>
-                            <h3 className="text-2xl font-black uppercase tracking-tighter text-neutral-950">Areas of Expertise</h3>
-                        </div>
-                        
-                        <div className="space-y-4">
-                            {expertise.map((item, index) => (
-                                <div key={index} className="border border-neutral-200 p-6 bg-white flex items-start gap-6 hover:border-neutral-950 transition-colors duration-300">
-                                    <div className="p-3 bg-neutral-50 border border-neutral-200 text-neutral-950 shrink-0">
-                                        <item.icon className="w-5 h-5 stroke-[1.5]" />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <div className="flex items-baseline gap-2">
-                                            <span className="font-mono text-[10px] text-neutral-400">[EXP_0{index + 1}]</span>
-                                            <h4 className="font-black uppercase tracking-tight text-neutral-950">{item.title}</h4>
-                                        </div>
-                                        <p className="text-xs text-neutral-500 font-medium">{item.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+          <motion.span
+            {...fadeUp(0)}
+            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+          >
+            <span className="h-px w-10 bg-brand-secondary" />
+            Parent Group
+          </motion.span>
 
-                    {/* Right Grid: Structural Integration Loop */}
-                    <div className="lg:col-span-6 space-y-12">
-                        <div className="space-y-4">
-                            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 block">INTEGRATION BENEFITS</span>
-                            <h3 className="text-2xl font-black uppercase tracking-tighter text-neutral-950">Strategic Asset Access</h3>
-                        </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <motion.h2
+              {...fadeUp(0.1)}
+              className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Agro Ventures
+              <br />
+              <span className="text-brand-primary">Group</span>
+            </motion.h2>
 
-                        <div className="space-y-4">
-                            {benefits.map((item, index) => (
-                                <div key={index} className="border border-neutral-200 p-6 bg-white flex items-start gap-6 hover:border-neutral-950 transition-colors duration-300">
-                                    <div className="p-3 bg-neutral-50 border border-neutral-200 text-neutral-950 shrink-0">
-                                        <item.icon className="w-5 h-5 stroke-[1.5]" />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <div className="flex items-baseline gap-2">
-                                            <span className="font-mono text-[10px] text-neutral-400">[NET_0{index + 1}]</span>
-                                            <h4 className="font-black uppercase tracking-tight text-neutral-950">{item.title}</h4>
-                                        </div>
-                                        <p className="text-xs text-neutral-500 font-medium">{item.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
+              Bio Foods operates as part of Agro Ventures Group — a diversified
+              agribusiness organisation connecting farming, processing,
+              manufacturing, and international trade across Sri Lanka and beyond.
+            </motion.p>
+          </div>
 
-                </div>
+        </div>
+      </div>
 
-                {/* ── Corporate Assembly Registry Carousel ── */}
-                <div className="mt-24 pt-12 border-t border-neutral-950">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400">
-                            AGROVENTURES SUBSIDIARY ALLIANCE MATRIX
-                        </span>
-                    </div>
+      {/* DARK BAND */}
+      <div className="bg-brand-primary">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-white/20">
+          {[
+            { value: "8+",   label: "Group Companies" },
+            { value: "5+",  label: "Years in Agribusiness" },
+            { value: "Global", label: "Market Presence" },
+          ].map((s, i) => (
+            <motion.div key={i} {...fadeUp(i * 0.1)} className="py-10 px-8 flex items-center justify-between gap-4">
+              <div>
+                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                  {s.value}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">{s.label}</p>
+              </div>
+              <ArrowUpRight className="h-5 w-5 text-white/20 shrink-0" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-                    <div className="border border-neutral-200 bg-neutral-50 p-4">
-                        <Swiper
-                            modules={[Autoplay]}
-                            spaceBetween={16}
-                            slidesPerView={2}
-                            loop={true}
-                            autoplay={{
-                                delay: 3000,
-                                disableOnInteraction: false,
-                            }}
-                            breakpoints={{
-                                640: { slidesPerView: 3 },
-                                1024: { slidesPerView: 6 },
-                            }}
-                            className="flex items-center"
-                        >
-                            {companies.map((item) => (
-                                <SwiperSlide key={item.id}>
-                                    <div className="w-full h-16 bg-white border border-neutral-200 flex items-center justify-center">
-                                        <img
-                                            src={item.img}
-                                            alt={item.name}
-                                            className="w-full h-full object-contain p-3 filter contrast-105 opacity-90"
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
-                </div>
+      {/* EXPERTISE + ADVANTAGES */}
+      <div className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 lg:gap-20">
 
+          {/* EXPERTISE */}
+          <div>
+            <motion.p {...fadeUp(0)} className="text-xs uppercase tracking-[0.35em] text-brand-primary mb-8">
+              Areas of Expertise
+            </motion.p>
+            <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
+              {expertise.map(({ icon: Icon, title, description }, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeUp(i * 0.1)}
+                  className="group flex gap-5 py-7 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
+                >
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium text-neutral-900">{title}</h3>
+                    <p className="mt-1 text-sm leading-7 text-neutral-600">{description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-        </section>
-    );
-}
+          </div>
 
-export default AboutAgroVentures;
+          {/* ADVANTAGES */}
+          <div>
+            <motion.p {...fadeUp(0)} className="text-xs uppercase tracking-[0.35em] text-brand-primary mb-8">
+              Strategic Advantages
+            </motion.p>
+            <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
+              {advantages.map(({ icon: Icon, title, description }, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeUp(i * 0.1)}
+                  className="group flex gap-5 py-7 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
+                >
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium text-neutral-900">{title}</h3>
+                    <p className="mt-1 text-sm leading-7 text-neutral-600">{description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* GROUP COMPANIES */}
+      <div className="border-t border-neutral-100 py-24 lg:py-32 bg-brand-light">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+            <motion.div {...fadeUp(0)}>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="h-px w-10 bg-brand-secondary" />
+                Group Companies
+              </span>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Working together
+                <br />
+                across the value chain.
+              </h3>
+            </motion.div>
+
+            <motion.p {...fadeUp(0.1)} className="max-w-sm text-sm leading-7 text-neutral-600">
+              Eight specialised companies operating under one group — each
+              contributing to a connected, resilient agribusiness ecosystem.
+            </motion.p>
+          </div>
+
+          {/* Desktop grid */}
+          <motion.div
+            {...fadeUp(0.15)}
+            className="hidden md:grid grid-cols-4 lg:grid-cols-8 gap-px bg-neutral-200 border border-neutral-200"
+          >
+            {companies.map((item) => (
+              <div
+                key={item.id}
+                className="group h-24 bg-white flex items-center justify-center p-4 hover:bg-brand-primary transition-colors duration-300"
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Mobile Swiper */}
+          <div className="md:hidden">
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={12}
+              slidesPerView={2}
+              loop
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              breakpoints={{ 480: { slidesPerView: 3 } }}
+            >
+              {companies.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <div className="h-20 bg-white border border-neutral-200 flex items-center justify-center p-4">
+                    <img src={item.img} alt={item.name} className="w-full h-full object-contain" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  );
+}

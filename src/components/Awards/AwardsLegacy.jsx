@@ -1,119 +1,145 @@
-import React from 'react';
-import { Globe, Heart, Shield, Target } from 'lucide-react';
+import React from "react";
+import { Globe, Heart, Target, ArrowRight } from "lucide-react";
 
-const AwardsLegacy = () => {
-    const continuityPrinciples = [
-        {
-            icon: Globe,
-            title: "Expanding International Reach",
-            description: "Without diluting origin authenticity."
-        },
-        {
-            icon: Heart,
-            title: "Scaling Operations",
-            description: "While maintaining artisanal quality standards."
-        },
-        {
-            icon: Target,
-            title: "Strengthening Brand Positioning",
-            description: "Within premium global segments natively."
-        }
-    ];
+const principles = [
+    {
+        icon: Globe,
+        number: "01",
+        title: "Expanding International Reach",
+        description:
+            "Growing our presence across global markets while preserving the authenticity and values that define our origins.",
+    },
+    {
+        icon: Heart,
+        number: "02",
+        title: "Scaling with Purpose",
+        description:
+            "Expanding operations thoughtfully while maintaining the craftsmanship, care, and quality our customers trust.",
+    },
+    {
+        icon: Target,
+        number: "03",
+        title: "Strengthening Global Positioning",
+        description:
+            "Enhancing our reputation as a premium organic brand through innovation, sustainability, and consistency.",
+    },
+];
 
-    return (
-        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white">
-            <div className="w-full px-6 lg:px-8 py-24 lg:py-32 border-t border-neutral-100">
-                <div className="max-w-7xl mx-auto">
-                    
-                    {/* ── Architectural Section Header ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 pb-12 border-b border-neutral-100">
-                        <div className="lg:col-span-8 space-y-3">
-                            <div className="flex items-center gap-2 text-neutral-950">
-                                <Shield className="w-3.5 h-3.5 stroke-2" />
-                                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400">Preservation Framework</span>
-                            </div>
-                            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-                                A Legacy Continued
-                            </h2>
-                        </div>
-                        <div className="lg:col-span-4 flex items-end">
-                            <span className="font-mono text-[11px] uppercase tracking-wider text-neutral-400">
-                                Integration Analysis / Agroventures Group
+const AwardsLegacy = () => (
+    <section className="w-full bg-white border-t border-neutral-100">
+
+        {/* DARK SPLIT BAND */}
+        <div className="bg-brand-primary text-white">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-end">
+                <div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
+                        Legacy & Growth
+                    </p>
+                    <h2
+                        className="text-5xl lg:text-7xl tracking-tight leading-none"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                        A legacy preserved,
+                        <br />
+                        a future strengthened.
+                    </h2>
+                </div>
+                <p className="text-white/70 text-lg leading-8 lg:max-w-md lg:ml-auto">
+                    For decades, Bio Foods has been built on a foundation of
+                    integrity, sustainability, and respect for nature. Through its
+                    integration with Agro Ventures, these values continue to guide
+                    the business while creating new opportunities for growth and
+                    global impact.
+                </p>
+            </div>
+        </div>
+
+        {/* PRINCIPLES — numbered row */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+            <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
+                {principles.map(({ icon: Icon, number, title, description }) => (
+                    <div key={number} className="p-10 lg:p-12 flex flex-col gap-6">
+                        <div className="flex items-start justify-between">
+                            <span
+                                className="text-5xl text-neutral-100 select-none"
+                                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                            >
+                                {number}
                             </span>
+                            <Icon className="w-5 h-5 text-brand-primary mt-1" />
+                        </div>
+                        <div>
+                            <h4 className="text-xl text-neutral-950 mb-3">{title}</h4>
+                            <p className="text-neutral-600 leading-7 text-sm">{description}</p>
                         </div>
                     </div>
+                ))}
+            </div>
+        </div>
 
-                    {/* ── Main Editorial Text Matrix ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                        
-                        {/* Left Column: Purpose & Context */}
-                        <div className="lg:col-span-5 space-y-8">
-                            <div className="space-y-4">
-                                <span className="block font-mono text-[9px] uppercase tracking-[0.25em] text-neutral-400">MISSION STATEMENT</span>
-                                <p className="text-lg font-bold text-neutral-900 leading-relaxed uppercase tracking-tight">
-                                    Bio Foods' journey is historically anchored by integrity, shared purpose, and a deep, systemic respect for nature.
-                                </p>
-                            </div>
-                            <p className="text-sm text-neutral-500 font-medium leading-relaxed">
-                                Its structural legacy—built over decades of verified ethical farming networks, certified fair-trade practices, and premium organic value chains—remains its most vital operational asset. With strategic integration into Agroventures Group, this legacy is extended sustainably into global markets.
-                            </p>
-                        </div>
-
-                        {/* Right Column: Dynamic Continuity Pillars */}
-                        <div className="lg:col-span-7 space-y-12 lg:pl-12 lg:border-l border-neutral-100">
-                            <div>
-                                <p className="text-sm text-neutral-500 font-medium leading-relaxed mb-8">
-                                    Agroventures systematically recognizes the permanent value of Bio Foods' heritage, preserving founding protocols while deploying global allocation infrastructure:
-                                </p>
-
-                                {/* Continuity Columns Directory */}
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                                    {continuityPrinciples.map((principle, index) => (
-                                        <div key={index} className="space-y-3 pt-6 border-t border-neutral-100">
-                                            <div className="text-neutral-950">
-                                                <principle.icon className="w-4 h-4 stroke-[1.5]" />
-                                            </div>
-                                            <h4 className="text-xs font-mono uppercase tracking-wider font-black text-neutral-950 leading-tight">
-                                                {principle.title}
-                                            </h4>
-                                            <p className="text-[11px] text-neutral-400 leading-relaxed font-medium">
-                                                {principle.description}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Structural Accent Quote Block */}
-                            <div className="bg-neutral-50 p-8 border border-neutral-200/60 rounded-xl">
-                                <p className="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400 mb-2">Evolution Yield</p>
-                                <p className="text-sm font-bold text-neutral-900 uppercase tracking-tight">
-                                    The definitive result is a seamless corporate paradigm where tradition remains dynamic, progressive, and scale-ready.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/* ── High-Contrast Strategic Footer Canvas ── */}
-                    <div className="mt-28 bg-neutral-950 text-white rounded-2xl p-8 lg:p-16 relative overflow-hidden">
-                        <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
-                             style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(to right, #fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-                        
-                        <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
-                            <span className="inline-block border border-white/20 font-mono text-[9px] uppercase tracking-[0.3em] px-3 py-1 bg-white/5 rounded-md">
-                                Core Summary Matrix
-                            </span>
-                            <h3 className="text-xl lg:text-3xl font-black uppercase tracking-tighter leading-tight">
-                                A premium corporate ecosystem that evolves without losing its essence, and scales without compromising its core principles.
-                            </h3>
-                        </div>
-                    </div>
-
+        {/* FEATURE BAND */}
+        <div className="bg-brand-light">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24 grid lg:grid-cols-12 gap-12">
+                <div className="lg:col-span-5">
+                    <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-6">
+                        Preserving What Matters
+                    </p>
+                    <h3
+                        className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                        Tradition and progress,
+                        working together.
+                    </h3>
+                </div>
+                <div className="lg:col-span-7 grid md:grid-cols-2 gap-8 lg:pt-16">
+                    <p className="text-neutral-600 leading-8">
+                        Agro Ventures recognizes the unique heritage and values that
+                        have shaped Bio Foods over the years. Rather than changing
+                        that identity, the partnership strengthens it through
+                        investment, expertise, and expanded opportunities.
+                    </p>
+                    <p className="text-neutral-600 leading-8">
+                        This balance between tradition and innovation allows the
+                        business to grow confidently while maintaining the trust,
+                        quality, and authenticity that customers expect.
+                    </p>
                 </div>
             </div>
-        </section>
-    );
-};
+        </div>
+
+        {/* CLOSING CTA */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 flex flex-col lg:flex-row lg:items-end gap-12 border-t border-neutral-100">
+            <div className="flex-1">
+                <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-6">
+                    Looking Ahead
+                </p>
+                <h2
+                    className="text-5xl lg:text-6xl tracking-tight text-neutral-950"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                    Growing responsibly,
+                    <br />
+                    preserving our values.
+                </h2>
+            </div>
+            <div className="lg:max-w-md">
+                <p className="text-lg leading-8 text-neutral-600 mb-8">
+                    Together, Bio Foods and Agro Ventures continue to build a
+                    future where sustainable growth, premium quality, and
+                    environmental responsibility remain at the heart of every
+                    decision.
+                </p>
+                <a
+                    href="/about"
+                    className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
+                >
+                    Our Story <ArrowRight className="w-4 h-4" />
+                </a>
+            </div>
+        </div>
+
+    </section>
+);
 
 export default AwardsLegacy;

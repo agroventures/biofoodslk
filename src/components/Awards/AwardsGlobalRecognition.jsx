@@ -1,88 +1,167 @@
-import React from 'react';
-import { Award, Globe, Trophy } from 'lucide-react';
+import React from "react";
+import { Trophy, Award, Globe, ArrowRight } from "lucide-react";
 
-const AwardsGlobalRecognition = () => {
-    const achievements = [
-        {
-            icon: Trophy,
-            title: "World's Fairest Fair Trader Award",
-            description: "Awarded by FLO for exceptional global fair trade pioneering practices."
-        },
-        {
-            icon: Award,
-            title: "Presidential Export Awards",
-            description: "Recognized natively by the Export Development Board & Government of Sri Lanka."
-        },
-        {
-            icon: Globe,
-            title: "Sustainability Leadership",
-            description: "International architecture recognition for environmental framework excellence."
-        }
-    ];
+const achievements = [
+    {
+        icon: Trophy,
+        number: "01",
+        title: "World's Fairest Fair Trader Award",
+        org: "FLO — Fairtrade Labelling Organizations",
+        description:
+            "Recognized for pioneering leadership in fair-trade practices and sustainable value creation across global supply chains.",
+    },
+    {
+        icon: Award,
+        number: "02",
+        title: "Presidential Export Awards",
+        org: "Export Development Board · Government of Sri Lanka",
+        description:
+            "Honored for outstanding export performance and international market excellence across multiple consecutive years.",
+    },
+    {
+        icon: Globe,
+        number: "03",
+        title: "Sustainability Leadership",
+        org: "International Recognition",
+        description:
+            "Acknowledged globally for advancing environmental stewardship, responsible sourcing, and sustainable business practices.",
+    },
+];
 
-    return (
-        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white">
-            <div className="w-full px-6 lg:px-8 py-24 lg:py-32 border-t border-neutral-100">
-                <div className="max-w-7xl mx-auto">
-                    
-                    {/* ── Editorial Layout Header Split ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24 items-start">
-                        <div className="lg:col-span-7 space-y-3">
-                            <div className="flex items-center gap-2 text-neutral-950">
-                                <Award className="w-3.5 h-3.5 stroke-2" />
-                                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-400">Verified Credentials</span>
-                            </div>
-                            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-                                Global Recognition
-                            </h2>
+const AwardsGlobalRecognition = () => (
+    <section className="w-full bg-white border-t border-neutral-100">
+
+        {/* DARK HEADER BAND */}
+        <div className="bg-brand-primary text-white">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-end">
+                <div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
+                        Global Recognition
+                    </p>
+                    <h2
+                        className="text-5xl lg:text-7xl tracking-tight leading-none"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                        Recognized for
+                        <br />
+                        excellence worldwide.
+                    </h2>
+                </div>
+                <p className="text-white/70 text-lg leading-8 lg:max-w-md lg:ml-auto">
+                    Over the years, Bio Foods has earned recognition from respected
+                    international organizations for its commitment to organic
+                    excellence, ethical trade, and sustainable business practices.
+                </p>
+            </div>
+        </div>
+
+        {/* ACHIEVEMENT ROWS */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-16">
+                International Achievements
+            </p>
+            <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+                {achievements.map(({ icon: Icon, number, title, org, description }) => (
+                    <div
+                        key={number}
+                        className="grid lg:grid-cols-12 gap-6 lg:gap-16 py-12 items-start group"
+                    >
+                        {/* Number + Icon */}
+                        <div className="lg:col-span-1 flex items-center gap-4 lg:flex-col lg:items-start lg:gap-3">
+                            <span
+                                className="text-4xl text-neutral-200 leading-none select-none"
+                                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                            >
+                                {number}
+                            </span>
+                            <Icon className="w-4 h-4 text-brand-primary" />
                         </div>
-                        <div className="lg:col-span-5 pt-4 lg:pt-8">
-                            <p className="text-sm text-neutral-500 font-medium leading-relaxed">
-                                Bio Foods has systematically secured numerous international titles acknowledging its absolute structural leadership in certified organic processing and fair-trade agricultural operations over consecutive decades.
+
+                        {/* Title + Org */}
+                        <div className="lg:col-span-5">
+                            <h3
+                                className="text-3xl lg:text-4xl tracking-tight text-neutral-950 leading-tight"
+                                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                            >
+                                {title}
+                            </h3>
+                            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-neutral-400">
+                                {org}
                             </p>
                         </div>
-                    </div>
 
-                    {/* ── Structural Grid Matrix ── */}
-                    <div className="border-t border-neutral-950 pt-12">
-                        <div className="mb-10">
-                            <span className="font-mono text-[10px] uppercase tracking-[0.3em] font-black text-neutral-950">
-                                [ Core Operational Manifest Honors ]
-                            </span>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-neutral-100">
-                            {achievements.map((achievement, index) => (
-                                <div
-                                    key={index}
-                                    className="group bg-white pt-8 pb-12 md:py-4 md:px-8 first:pl-0 last:pr-0 transition-colors duration-300"
-                                >
-                                    {/* Icon Identifier Node */}
-                                    <div className="text-neutral-950 mb-8 transition-transform duration-300 group-hover:translate-x-1">
-                                        <achievement.icon className="w-5 h-5 stroke-[1.5]" />
-                                    </div>
-                                    
-                                    {/* Content Block */}
-                                    <div className="space-y-2">
-                                        <span className="block font-mono text-[9px] text-neutral-400">
-                                            METRIC REF_0{index + 1}
-                                        </span>
-                                        <h3 className="text-base font-bold text-neutral-900 uppercase tracking-tight leading-tight">
-                                            {achievement.title}
-                                        </h3>
-                                        <p className="text-xs text-neutral-500 font-medium leading-relaxed max-w-sm">
-                                            {achievement.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        {/* Description */}
+                        <p className="lg:col-span-6 text-neutral-600 leading-8 lg:pt-1">
+                            {description}
+                        </p>
                     </div>
+                ))}
+            </div>
+        </div>
 
+        {/* FEATURE BAND */}
+        <div className="bg-brand-light">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24 grid lg:grid-cols-12 gap-12">
+                <div className="lg:col-span-5">
+                    <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-6">
+                        A Trusted Reputation
+                    </p>
+                    <h3
+                        className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                        Awards that reflect
+                        our values.
+                    </h3>
+                </div>
+                <div className="lg:col-span-7 grid md:grid-cols-2 gap-8 lg:pt-16">
+                    <p className="text-neutral-600 leading-8">
+                        Every recognition received by Bio Foods represents more than
+                        an achievement. It reflects our commitment to ethical
+                        sourcing, environmental responsibility, and the well-being
+                        of farming communities across our network.
+                    </p>
+                    <p className="text-neutral-600 leading-8">
+                        These awards strengthen our position as a trusted global
+                        supplier while reaffirming the values that have guided our
+                        growth from the very beginning.
+                    </p>
                 </div>
             </div>
-        </section>
-    );
-};
+        </div>
+
+        {/* CLOSING CTA */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 flex flex-col lg:flex-row lg:items-end gap-12 border-t border-neutral-100">
+            <div className="flex-1">
+                <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-6">
+                    Continuing the Journey
+                </p>
+                <h2
+                    className="text-5xl lg:text-6xl tracking-tight text-neutral-950"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                    Inspired by achievement,
+                    <br />
+                    driven by purpose.
+                </h2>
+            </div>
+            <div className="lg:max-w-md">
+                <p className="text-lg leading-8 text-neutral-600 mb-8">
+                    As we continue to grow, these recognitions motivate us to uphold
+                    the highest standards of quality, sustainability, and innovation
+                    while creating lasting value for customers, communities, and
+                    future generations.
+                </p>
+                <a
+                    href="/about"
+                    className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
+                >
+                    Our Story <ArrowRight className="w-4 h-4" />
+                </a>
+            </div>
+        </div>
+
+    </section>
+);
 
 export default AwardsGlobalRecognition;

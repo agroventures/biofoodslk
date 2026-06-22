@@ -1,48 +1,59 @@
-import React from 'react';
-import { Leaf, Quote } from 'lucide-react';
+import React from "react";
+import { Leaf } from "lucide-react";
 
 function HomeClosingReflection() {
-    return (
-        <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-b border-neutral-100 py-24 lg:py-36">
-            <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center space-y-10">
-                
-                {/* ── Micro Blueprint Indicator ── */}
-                <div className="flex items-center justify-center gap-3">
-                    <div className="w-8 h-px bg-neutral-200" />
-                    <div className="p-2.5 bg-neutral-50 border border-neutral-200 text-neutral-950">
-                        <Leaf className="w-4 h-4 stroke-[1.5]" />
-                    </div>
-                    <div className="w-8 h-px bg-neutral-200" />
-                </div>
+  return (
+    <section className="relative overflow-hidden bg-brand-light py-32 lg:py-48">
+      {/* Decorative Number */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <span className="select-none text-[220px] font-black leading-none text-black/3 lg:text-[400px]">
+          08
+        </span>
+      </div>
 
-                {/* ── Minimalist Quote Frame ── */}
-                <div className="flex justify-center">
-                    <div className="p-4 bg-neutral-950 border border-neutral-950 text-white">
-                        <Quote className="w-6 h-6 stroke-[1.5] fill-white" />
-                    </div>
-                </div>
+      <div className="relative mx-auto max-w-5xl px-6 text-center lg:px-8">
+        {/* Symbol */}
+        <div className="mb-12 flex justify-center">
+          <div className="flex items-center gap-5">
+            <div className="h-px w-12 bg-brand-secondary" />
 
-                {/* ── Main High-Contrast Statement ── */}
-                <blockquote className="max-w-4xl mx-auto">
-                    <p className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-                        Every product tells a story of <br className="hidden sm:inline" />
-                        <span className="text-neutral-400 italic font-normal tracking-tight normal-case">origin</span>, care, and responsibility <br />
-                        <span className="text-neutral-500 font-mono text-base sm:text-lg block tracking-widest uppercase mt-6 sm:mt-8">
-                            Sustained through the infrastructure of Agroventures Group
-                        </span>
-                    </p>
-                </blockquote>
-
-                {/* ── System Anchor Asset ── */}
-                <div className="flex items-center justify-center gap-3 pt-4">
-                    <div className="w-12 h-px bg-linear-to-r from-transparent to-neutral-200" />
-                    <span className="font-mono text-[11px] text-neutral-400 uppercase tracking-[0.25em]">End Matrix</span>
-                    <div className="w-12 h-px bg-linear-to-l from-transparent to-neutral-200" />
-                </div>
-                
+            <div className="rounded-full bg-white p-4 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+              <Leaf className="h-5 w-5 text-brand-primary" />
             </div>
-        </section>
-    );
+
+            <div className="h-px w-12 bg-brand-secondary" />
+          </div>
+        </div>
+
+        {/* Quote */}
+        <blockquote>
+          <h2
+            className="text-4xl leading-[1.05] tracking-tight text-neutral-950 sm:text-5xl lg:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Every product carries
+            <br />
+            the story of its origin.
+          </h2>
+
+          <p className="mx-auto mt-10 max-w-3xl text-lg leading-8 text-neutral-600 lg:text-xl">
+            From carefully cultivated fields to global destinations,
+            every step reflects a commitment to quality, responsibility,
+            and respect for the people and environments that make it possible.
+          </p>
+        </blockquote>
+
+        {/* Signature */}
+        <div className="mt-16">
+          <div className="mx-auto h-px w-24 bg-brand-secondary" />
+
+          <p className="mt-6 text-xs uppercase tracking-[0.35em] text-neutral-500">
+            Bio Foods • Agroventures Group
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default HomeClosingReflection;
