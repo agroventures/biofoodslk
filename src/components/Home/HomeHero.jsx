@@ -3,7 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-brand-light" style={{ backgroundImage: "url('/Home/hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section
+      className="relative min-h-screen overflow-hidden bg-brand-light"
+      style={{
+        backgroundImage:
+          "url('https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/hero.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="absolute inset-0 bg-linear-to-r from-white/30 via-white/10 to-transparent z-0" />
       {/* Decorative line */}
       <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-300 lg:block" />
@@ -33,8 +41,8 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-lg text-lg leading-8 text-neutral-600">
-            Every product begins with carefully selected natural ingredients
-            and is thoughtfully crafted to deliver exceptional quality with a
+            Every product begins with carefully selected natural ingredients and
+            is thoughtfully crafted to deliver exceptional quality with a
             timeless touch.
           </p>
 
@@ -59,7 +67,9 @@ export default function Hero() {
           transition={{ duration: 6, repeat: Infinity }}
           className="absolute right-16 top-1/2 z-20 -translate-y-1/2 rounded-2xl bg-white/90 backdrop-blur-sm p-6 shadow-xl hidden lg:block"
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Since</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+            Since
+          </p>
           <h3 className="mt-2 text-3xl font-semibold text-neutral-900">1993</h3>
           <p className="mt-2 text-sm text-neutral-500">Organic Products</p>
         </motion.div>

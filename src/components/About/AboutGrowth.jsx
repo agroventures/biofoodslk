@@ -41,9 +41,9 @@ export default function AboutGrowth() {
     <section className="bg-white overflow-hidden">
 
       {/* ── FULL-BLEED IMAGE + HEADLINE ── */}
-      <div className="relative h-[60vh] min-h-[420px]">
+      <div className="relative h-[60vh] min-h-105">
         <img
-          src="/About/name_board.webp"
+          src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/name_board.webp"
           alt="Growth"
           className="absolute inset-0 h-full w-full object-cover"
         />

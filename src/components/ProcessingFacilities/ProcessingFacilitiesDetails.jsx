@@ -27,7 +27,7 @@ function ImageCarousel({ images, name }) {
   const next = (e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % images.length); };
 
   return (
-    <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+    <div className="relative aspect-4/3 overflow-hidden bg-neutral-100">
       {images.map((src, i) => (
         <img
           key={i}

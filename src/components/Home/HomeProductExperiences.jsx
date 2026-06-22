@@ -52,11 +52,7 @@ function HomeProductExperiences({ section }) {
               className={`
                 grid items-center gap-12
                 lg:grid-cols-12
-                ${
-                  index % 2 === 1
-                    ? "lg:[&>*:first-child]:order-2"
-                    : ""
-                }
+                ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}
               `}
             >
               {/* Image */}
@@ -92,7 +88,6 @@ function HomeProductExperiences({ section }) {
                   className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-brand-primary"
                 >
                   Explore Collection
-
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
                 </Link>
               </div>
@@ -120,8 +115,8 @@ function HomeProductExperiences({ section }) {
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
             From cultivation to export, our products are supported by
-            transparent supply chains, internationally recognized standards,
-            and a commitment to sustainability.
+            transparent supply chains, internationally recognized standards, and
+            a commitment to sustainability.
           </p>
         </div>
       </div>
