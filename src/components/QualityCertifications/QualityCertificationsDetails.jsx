@@ -242,7 +242,7 @@ function QualityCertificationsDetails() {
                   <img
                     src={cert.img}
                     alt={cert.name}
-                    className="max-h-16 max-w-[120px] object-contain"
+                    className="max-h-16 max-w-30 object-contain"
                   />
                 </div>
 

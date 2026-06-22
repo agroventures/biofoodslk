@@ -34,7 +34,7 @@ function TermsAndConditions() {
       <header className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
         {/* Decorative bg number */}
         <div className="pointer-events-none absolute right-10 top-10 hidden select-none xl:block">
-          <span className="text-[280px] font-black leading-none text-black/[0.03]">
+          <span className="text-[280px] font-black leading-none text-black/3">
             T&C
           </span>
         </div>

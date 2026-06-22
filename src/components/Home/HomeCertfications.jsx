@@ -2,6 +2,23 @@ import React from "react";
 import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const ICS = [
+  "/QualityCertifications/demeter.avif",
+  "/QualityCertifications/logo2.avif",
+  "/QualityCertifications/usda_organic.avif",
+  "/QualityCertifications/control_union_certifications.avif",
+  "/QualityCertifications/biologique_canada.avif",
+  "/QualityCertifications/naturland.avif",
+  "/QualityCertifications/fairtrade.avif"
+]
+
+const foodSafety = [
+  "/QualityCertifications/controle_equitable_par_ecocert.avif",
+  "/QualityCertifications/amfori.png",
+  "/QualityCertifications/fssc.jpg",
+  "/QualityCertifications/control_union.png",
+]
+
 function HomeCertifications({ section }) {
   return (
     <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28 xl:py-40">
@@ -82,12 +99,15 @@ function HomeCertifications({ section }) {
                   </span>
                 </div>
 
-                <div className="flex min-h-45 items-center justify-center">
-                  <img
-                    src="/Home/ICS_logos.avif"
-                    alt="Organic Certifications"
-                    className="max-h-27.5 w-full object-contain"
-                  />
+                <div className="grid grid-cols-3 gap-4 items-center justify-items-center min-h-45">
+                  {ICS.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt="Organic Certifications"
+                      className="h-12 w-full object-contain"
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -114,12 +134,15 @@ function HomeCertifications({ section }) {
                   </span>
                 </div>
 
-                <div className="flex min-h-45 items-center justify-center">
-                  <img
-                    src="/Home/Foodsafety.avif"
-                    alt="Food Safety Certifications"
-                    className="max-h-27.5 w-full object-contain"
-                  />
+                <div className="grid grid-cols-2 gap-4 items-center justify-items-center min-h-45">
+                  {foodSafety.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt="Food Safety Certifications"
+                      className="h-12 w-full object-contain"
+                    />
+                  ))}
                 </div>
               </div>
             </div>

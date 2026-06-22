@@ -24,7 +24,7 @@ function PrivacyPolicy() {
       {/* HERO */}
       <header className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
         <div className="pointer-events-none absolute right-10 top-10 hidden select-none xl:block">
-          <span className="text-[280px] font-black leading-none text-black/[0.03]">
+          <span className="text-[280px] font-black leading-none text-black/3">
             PP
           </span>
         </div>
