@@ -114,7 +114,7 @@ function AboutAwards() {
                     <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
                         <h4 className="text-sm font-black uppercase tracking-[0.4em] text-neutral-400">Historical Milestones</h4>
                         <div className="h-px grow bg-neutral-100 mx-8 hidden md:block"></div>
-                        <span className="text-xs font-bold text-brand-primary bg-brand-primary/5 px-4 py-1.5 rounded-full">1999 — 2019 Accolades</span>
+                        <span className="text-xs font-bold text-brand-primary bg-brand-primary/5 px-4 py-1.5 rounded-full">1999 - 2019 Accolades</span>
                     </div>
 
                     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">

@@ -1,13 +1,13 @@
 import React from "react";
 import { Leaf } from "lucide-react";
 
-function HomeClosingReflection() {
+function HomeClosingReflection({section}) {
   return (
     <section className="relative overflow-hidden bg-brand-light py-32 lg:py-48">
       {/* Decorative Number */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <span className="select-none text-[220px] font-black leading-none text-black/3 lg:text-[400px]">
-          08
+          {section}
         </span>
       </div>
 

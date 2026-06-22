@@ -132,7 +132,7 @@ function GlobalPresenceAgroVentures() {
                                 <p className="text-xl lg:text-2xl xl:text-3xl font-black text-brand-dark leading-tight">
                                     Ultimately, being powered by Agroventures means that Bio Foods combines{' '}
                                     <span className="text-brand-primary">the authenticity of origin</span> with{' '}
-                                    <span className="text-brand-secondary">the strength of a global enterprise</span>—
+                                    <span className="text-brand-secondary">the strength of a global enterprise</span>-
                                     delivering products that are as{' '}
                                     <span className="text-brand-primary">dependable</span> as they are{' '}
                                     <span className="text-brand-secondary">exceptional</span>.

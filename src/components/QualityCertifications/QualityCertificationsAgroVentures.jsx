@@ -40,7 +40,7 @@ function QualityCertificationsAgroVentures() {
   return (
     <section className="w-full bg-white text-neutral-950 border-t border-neutral-100">
 
-      {/* INTRO — dark split */}
+      {/* INTRO - dark split */}
       <div className="bg-brand-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
 
@@ -74,7 +74,7 @@ function QualityCertificationsAgroVentures() {
         </div>
       </div>
 
-      {/* ENHANCEMENTS — numbered rows */}
+      {/* ENHANCEMENTS - numbered rows */}
       <div className="py-24 lg:py-32 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -98,7 +98,7 @@ function QualityCertificationsAgroVentures() {
               <p className="mt-6 text-sm leading-8 text-neutral-600">
                 Through this integration, Bio Foods benefits from enhanced
                 governance structures, improved operational efficiencies, and
-                stronger quality management systems — supporting sustainable
+                stronger quality management systems - supporting sustainable
                 growth at every level.
               </p>
             </motion.div>
@@ -163,7 +163,7 @@ function QualityCertificationsAgroVentures() {
               >
                 "From compliance
                 to continuous
-                improvement — quality
+                improvement - quality
                 is built into every step."
               </p>
             </motion.div>

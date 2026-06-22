@@ -54,7 +54,7 @@ const AwardsLegacy = () => (
             </div>
         </div>
 
-        {/* PRINCIPLES — numbered row */}
+        {/* PRINCIPLES - numbered row */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
             <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
                 {principles.map(({ icon: Icon, number, title, description }) => (

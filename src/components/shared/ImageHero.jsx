@@ -35,11 +35,11 @@ const ImageHero = ({
               transition={{ duration: 0.6 }}
               className="mb-8 flex items-center gap-4"
             >
-              <div className="h-px w-12 bg-[#D7C29E]" />
+              <div className="h-px w-12 bg-brand-gold" />
 
               <div className="flex items-center gap-2">
                 {Icon && (
-                  <Icon className="h-4 w-4 text-[#D7C29E]" />
+                  <Icon className="h-4 w-4 text-brand-gold" />
                 )}
 
                 <span className="text-xs uppercase tracking-[0.35em] text-white/80">
@@ -71,7 +71,7 @@ const ImageHero = ({
               className="mt-8 max-w-2xl"
             >
               {subtitle && (
-                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-[#D7C29E]">
+                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-brand-gold">
                   {subtitle}
                 </p>
               )}

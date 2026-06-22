@@ -162,7 +162,7 @@ const Navbar = () => {
           z-50
           h-full
           w-full
-          sm:w-[520px]
+          sm:w-130
           bg-brand-light
           text-neutral-900
           flex

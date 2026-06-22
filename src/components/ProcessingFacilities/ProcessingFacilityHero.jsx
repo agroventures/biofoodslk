@@ -6,7 +6,7 @@ function ProcessingFacilityHero() {
   return (
     <ImageHero
         icon={Recycle}
-        img="/ProcessingFacility/hero1.jpg"
+        img="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/ProcessingFacility/hero.webp"
         badge="Process"
         title="Processing Facility"
         subtitle="Quality Assurance"

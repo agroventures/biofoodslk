@@ -41,9 +41,9 @@ export default function AboutGrowth() {
     <section className="bg-white overflow-hidden">
 
       {/* ── FULL-BLEED IMAGE + HEADLINE ── */}
-      <div className="relative h-[60vh] min-h-[420px]">
+      <div className="relative h-[60vh] min-h-105">
         <img
-          src="/About/name_board.webp"
+          src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/name_board.webp"
           alt="Growth"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -122,7 +122,7 @@ export default function AboutGrowth() {
               <p className="text-base leading-7 text-neutral-600">
                 Over time, our collaboration with Agroventures Group helped
                 strengthen production capacity while keeping our core values
-                unchanged — respect for nature, fairness for farmers, and
+                unchanged - respect for nature, fairness for farmers, and
                 purity in food.
               </p>
               <p className="text-base leading-7 text-neutral-600">

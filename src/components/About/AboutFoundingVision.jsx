@@ -56,7 +56,7 @@ function AboutFoundingVision() {
               <span className="text-neutral-900">
                 Dr. Sarath Ranaweera
               </span>{" "}
-              with a clear idea — agriculture should support nature,
+              with a clear idea - agriculture should support nature,
               not extract from it.
             </p>
           </div>

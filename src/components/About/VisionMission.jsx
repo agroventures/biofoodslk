@@ -46,7 +46,7 @@ function VisionMission() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
-            Our vision and mission guide every decision — from supporting farming
+            Our vision and mission guide every decision - from supporting farming
             communities to delivering certified organic products worldwide.
           </p>
         </div>
@@ -101,7 +101,7 @@ function VisionMission() {
 
             <p className="mt-8 text-base leading-8 text-neutral-600">
               We produce high-quality organic foods through ethical sourcing,
-              scientific innovation, and fair partnerships with growers — creating
+              scientific innovation, and fair partnerships with growers - creating
               value for both people and nature.
             </p>
           </div>
@@ -116,7 +116,7 @@ function VisionMission() {
             className="text-3xl lg:text-5xl text-white/90 tracking-tight leading-snug max-w-4xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            "Every harvest is a promise — to the land, to the farmer,
+            "Every harvest is a promise - to the land, to the farmer,
             and to the people who trust what we grow."
           </p>
           <p className="mt-6 text-sm text-white/50 uppercase tracking-[0.3em]">
@@ -149,7 +149,7 @@ function VisionMission() {
               the long term.
             </h2>
             <p className="lg:col-span-5 lg:col-start-8 text-base leading-8 text-neutral-600">
-              Our practices are designed to endure — cultivating resilience in
+              Our practices are designed to endure - cultivating resilience in
               every farm, partnership, and product we bring to the world.
             </p>
           </div>

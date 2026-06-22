@@ -44,7 +44,7 @@ function SustainabilityAgroVentures() {
                         {/* Opening Statement */}
                         <div className="bg-white border border-brand-light rounded-3xl p-8 lg:p-12 shadow-sm">
                             <p className="text-lg lg:text-xl text-brand-dark/80 leading-relaxed mb-6">
-                                Sustainability within Bio Foods is deeply rooted in its origins—but through Agroventures Group,
+                                Sustainability within Bio Foods is deeply rooted in its origins - but through Agroventures Group,
                                 it is elevated into a{' '}
                                 <span className="font-bold text-brand-secondary">structured, measurable, and future-focused ESG</span>{' '}
                                 (Environmental, Social, and Governance) framework.
