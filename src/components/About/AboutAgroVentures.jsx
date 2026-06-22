@@ -53,7 +53,7 @@ export default function AboutAgroVentures() {
             </motion.h2>
 
             <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
-              Bio Foods operates as part of Agro Ventures Group — a diversified
+              Bio Foods operates as part of Agro Ventures Group - a diversified
               agribusiness organisation connecting farming, processing,
               manufacturing, and international trade across Sri Lanka and beyond.
             </motion.p>
@@ -159,7 +159,7 @@ export default function AboutAgroVentures() {
             </motion.div>
 
             <motion.p {...fadeUp(0.1)} className="max-w-sm text-sm leading-7 text-neutral-600">
-              Eight specialised companies operating under one group — each
+              Eight specialised companies operating under one group - each
               contributing to a connected, resilient agribusiness ecosystem.
             </motion.p>
           </div>

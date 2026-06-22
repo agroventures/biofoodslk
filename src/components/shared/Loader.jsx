@@ -1,75 +1,73 @@
-import React, { useEffect, useState } from 'react';
-import { Leaf } from 'lucide-react';
+import React, { useEffect, useState } from "react";
 
 const Loader = () => {
-    const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(0);
 
-    // Simulate loading progress
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setProgress((prev) => (prev >= 100 ? 0 : prev + 2));
-        }, 50);
-        return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => (prev >= 100 ? 100 : prev + 1.2));
+    }, 30);
+    return () => clearInterval(interval);
+  }, []);
 
-    return (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
-            <div className="relative flex items-center justify-center">
-                
-                {/* Outer Progress Ring */}
-                <svg className="w-32 h-32 transform -rotate-90">
-                    <circle
-                        cx="64"
-                        cy="64"
-                        r="60"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        fill="transparent"
-                        className="text-slate-100"
-                    />
-                    <circle
-                        cx="64"
-                        cy="64"
-                        r="60"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        fill="transparent"
-                        strokeDasharray={377}
-                        strokeDashoffset={377 - (377 * progress) / 100}
-                        strokeLinecap="round"
-                        className="text-brand-primary transition-all duration-150 ease-out"
-                    />
-                </svg>
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-brand-light overflow-hidden">
 
-                {/* Center Icon with Pulse Effect */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                        {/* Glowing pulse behind the leaf */}
-                        <div className="absolute inset-0 bg-brand-primary/20 rounded-full blur-xl animate-ping" />
-                        
-                        <div className="relative bg-white p-4 rounded-full shadow-sm border border-brand-primary/10">
-                            <img src="/logo.png" alt="Logo" className="w-12" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+      {/* Large decorative letter */}
+      <span className="pointer-events-none absolute left-0 top-0 select-none text-[40vw] font-black leading-none text-black/[0.03]">
+        B
+      </span>
 
-            {/* Brand Text */}
-            <div className="mt-8 text-center">
-                <h2 className="text-xl font-black text-slate-900 tracking-tighter uppercase">
-                    Bio <span className="text-brand-primary">Foods</span>
-                </h2>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mt-2">
-                    Nurturing Nature
-                </p>
-                
-                {/* Percentage Indicator */}
-                <div className="mt-4 tabular-nums text-xs font-mono text-slate-300">
-                    {progress}%
-                </div>
-            </div>
+      {/* Center content */}
+      <div className="relative flex flex-col items-center gap-10">
+
+        {/* Logo + brand name */}
+        <div className="flex flex-col items-center gap-5">
+          <div className="rounded-full bg-white shadow-sm border border-brand-primary/10 p-5">
+            <img src="/logo.png" alt="Bio Foods" className="w-12 h-12 object-contain" />
+          </div>
+
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[0.45em] text-neutral-400 mb-2">
+              Est. Sri Lanka
+            </p>
+            <h1
+              className="text-4xl tracking-tight text-neutral-900"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Bio <span className="text-brand-secondary">Foods</span>
+            </h1>
+            <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-400 mt-1">
+              Nurturing Nature
+            </p>
+          </div>
         </div>
-    );
+
+        {/* Progress bar */}
+        <div className="w-48 flex flex-col gap-2">
+          <div className="h-px w-full bg-neutral-200 overflow-hidden">
+            <div
+              className="h-full bg-brand-secondary transition-all duration-75 ease-out"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <div className="flex justify-between text-[10px] tracking-[0.2em] text-neutral-400 font-mono">
+            <span>Loading</span>
+            <span>{Math.floor(progress)}%</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom line */}
+      <div className="absolute bottom-10 left-0 right-0 flex items-center justify-center gap-4 px-8">
+        <div className="h-px flex-1 max-w-20 bg-neutral-200" />
+        <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400">
+          Premium Organic Exports
+        </span>
+        <div className="h-px flex-1 max-w-20 bg-neutral-200" />
+      </div>
+    </div>
+  );
 };
 
 export default Loader;

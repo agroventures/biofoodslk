@@ -122,7 +122,7 @@ export default function AboutGrowth() {
               <p className="text-base leading-7 text-neutral-600">
                 Over time, our collaboration with Agroventures Group helped
                 strengthen production capacity while keeping our core values
-                unchanged — respect for nature, fairness for farmers, and
+                unchanged - respect for nature, fairness for farmers, and
                 purity in food.
               </p>
               <p className="text-base leading-7 text-neutral-600">

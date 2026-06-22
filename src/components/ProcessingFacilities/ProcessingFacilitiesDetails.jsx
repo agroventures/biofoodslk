@@ -131,7 +131,7 @@ function ProcessingFacilitiesDetails() {
           const reverse = index % 2 !== 0;
 
           return hasImages ? (
-            /* WITH IMAGES — editorial split */
+            /* WITH IMAGES - editorial split */
             <motion.div
               key={facility.id}
               {...fadeUp(0)}
@@ -180,7 +180,7 @@ function ProcessingFacilitiesDetails() {
               </div>
             </motion.div>
           ) : (
-            /* WITHOUT IMAGES — full-width text layout */
+            /* WITHOUT IMAGES - full-width text layout */
             <motion.div
               key={facility.id}
               {...fadeUp(0)}

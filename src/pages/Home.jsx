@@ -44,7 +44,7 @@ function Home() {
             <HomeCertifications section="04" />
             <HomeCorePrinciples section="05" />
             <HomeProductExperiences section="06" />
-            <HomeClosingReflection />
+            <HomeClosingReflection section="07" />
             <Footer />
         </div>
     )

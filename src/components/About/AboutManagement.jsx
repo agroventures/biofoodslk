@@ -12,7 +12,7 @@ const fadeUp = (delay = 0) => ({
 
 const founderHighlights = [
   { icon: Award, label: "Fairest Fair-trader of the World", sub: "Fair Trade Awards · Bonn, 2014" },
-  { icon: Users, label: "MOPA — Leading Producer Org in Asia", sub: "Marginalized Organic Producers' Association" },
+  { icon: Users, label: "MOPA - Leading Producer Org in Asia", sub: "Marginalized Organic Producers' Association" },
   { icon: Sprout, label: "Pioneer of Fair Pricing for Farmers", sub: "Stable income regardless of market fluctuations" },
 ];
 
@@ -158,12 +158,12 @@ export default function AboutManagement() {
                             moved into food systems after witnessing the fragility of
                             conventional agriculture. His first tea production was made in
                             a rented facility and presented at a trade fair, where demand
-                            quickly exceeded supply — marking the beginning of Bio Foods.
+                            quickly exceeded supply - marking the beginning of Bio Foods.
                           </p>
                           <p>
                             This led to one of the earliest structured fair pricing systems
                             for farmers, ensuring stable income regardless of market
-                            fluctuations — a model later aligned with global fair-trade
+                            fluctuations - a model later aligned with global fair-trade
                             standards. MOPA, established under Bio Foods, was recognised
                             as one of the leading small producer organisations in Asia.
                           </p>

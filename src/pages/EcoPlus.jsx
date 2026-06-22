@@ -62,8 +62,8 @@ function EcoPlus() {
                         </h2>
                         <p className="text-slate-600 text-lg leading-relaxed">
                             After years of research with leading soil microbiologists, we’ve cracked the code.
-                            Our formula reintroduces **six essential microbes**—organisms that no longer coexist naturally
-                            due to chemical farming—into a substrate of certified organic, unstressed animal waste.
+                            Our formula reintroduces **six essential microbes** - organisms that no longer coexist naturally
+                            due to chemical farming - into a substrate of certified organic, unstressed animal waste.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -93,7 +93,7 @@ function EcoPlus() {
                     <h3 className="text-3xl font-black text-slate-900 mb-6">
                         "If you provide people with a better product, the people will win the fight for you."
                     </h3>
-                    <p className="text-slate-500 font-medium uppercase tracking-widest text-sm">— Dr. Sarath Ranaweera, Chairman</p>
+                    <p className="text-slate-500 font-medium uppercase tracking-widest text-sm">- Dr. Sarath Ranaweera, Chairman</p>
 
                     <div className="mt-16 bg-white p-12 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100">
                         <div className="flex flex-col md:flex-row items-center justify-around gap-12">

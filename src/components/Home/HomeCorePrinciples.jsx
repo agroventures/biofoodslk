@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Leaf,
-  Handshake,
-  ScanLine,
-  Gauge,
-  Sparkles,
-} from "lucide-react";
+import { Leaf, Handshake, ScanLine, Gauge, Sparkles } from "lucide-react";
 
 function HomeCorePrinciples({ section }) {
   const principles = [
@@ -69,7 +63,7 @@ function HomeCorePrinciples({ section }) {
           </h2>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
-            These values guide every decision we make—from cultivation and
+            These values guide every decision we make-from cultivation and
             sourcing to processing, quality assurance, and global partnerships.
           </p>
         </div>
@@ -79,16 +73,7 @@ function HomeCorePrinciples({ section }) {
           {principles.map((principle, index) => (
             <div
               key={index}
-              className="
-                group
-                grid
-                gap-6
-                py-10
-                transition-all
-                duration-500
-                lg:grid-cols-12
-                lg:gap-8
-              "
+              className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8"
             >
               {/* Number + Icon (side-by-side on mobile, separate columns on lg) */}
               <div className="flex items-center gap-4 lg:contents">
@@ -139,8 +124,8 @@ function HomeCorePrinciples({ section }) {
             className="max-w-4xl text-3xl leading-tight text-neutral-950 lg:text-5xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            Sustainable practices, trusted partnerships,
-            and uncompromising quality at every stage.
+            Sustainable practices, trusted partnerships, and uncompromising
+            quality at every stage.
           </h3>
         </div>
       </div>

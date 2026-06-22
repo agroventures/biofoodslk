@@ -68,7 +68,7 @@ export default function AboutBioFoods() {
               <p className="text-lg leading-8 text-neutral-600">
                 Since 1993, Bio Foods has worked closely with farming communities
                 across Sri Lanka to produce organic food with deep respect for
-                people and the environment — from field to table.
+                people and the environment - from field to table.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {values.map(({ icon: Icon, text }, i) => (

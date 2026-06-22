@@ -6,7 +6,7 @@ const achievements = [
         icon: Trophy,
         number: "01",
         title: "World's Fairest Fair Trader Award",
-        org: "FLO — Fairtrade Labelling Organizations",
+        org: "FLO - Fairtrade Labelling Organizations",
         description:
             "Recognized for pioneering leadership in fair-trade practices and sustainable value creation across global supply chains.",
     },

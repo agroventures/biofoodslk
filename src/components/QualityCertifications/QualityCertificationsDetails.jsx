@@ -111,7 +111,7 @@ function QualityCertificationsDetails() {
         </div>
       </div>
 
-      {/* QUALITY FRAMEWORK — numbered rows */}
+      {/* QUALITY FRAMEWORK - numbered rows */}
       <div className="py-24 lg:py-32 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -254,7 +254,7 @@ function QualityCertificationsDetails() {
                   {cert.name}
                 </h4>
 
-                {/* desc — clipped */}
+                {/* desc - clipped */}
                 <p className="text-xs leading-6 text-neutral-500 line-clamp-3 flex-1">
                   {cert.desc}
                 </p>
@@ -267,7 +267,7 @@ function QualityCertificationsDetails() {
         </div>
       </div>
 
-      {/* QA SYSTEMS — 3-col grid */}
+      {/* QA SYSTEMS - 3-col grid */}
       <div className="py-24 lg:py-32 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
