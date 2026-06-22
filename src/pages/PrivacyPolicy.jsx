@@ -1,143 +1,257 @@
-import React from 'react';
-import Navbar from '../components/shared/Navbar';
-import Footer from '../components/shared/Footer';
-import { ShieldCheck, Gavel, AlertCircle, RefreshCw, Mail, Cookie, Landmark } from 'lucide-react';
-import useSEO from '../hooks/useSEO';
+import React from "react";
+import Navbar from "../components/shared/Navbar";
+import Footer from "../components/shared/Footer";
+import {
+  Sparkles,
+  ShieldCheck,
+  Gavel,
+  AlertCircle,
+  Cookie,
+  Landmark,
+  Mail,
+} from "lucide-react";
+import useSEO from "../hooks/useSEO";
 
 function PrivacyPolicy() {
-    const url = window.location.href;
+  const url = window.location.href;
 
-    useSEO({
-        // title: "Organic & Fairtrade Tea Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
-        // description: "Premium organic tea, spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
-        url,
-        image_alt: "Privacy Policy",
-        // keywords: ["organic food Sri Lanka, fair trade tea, organic spices exporter, coconut products Sri Lanka"],
-    });
+  useSEO({ url, image_alt: "Privacy Policy" });
 
-    return (
-        <div className="min-h-screen bg-white">
-            <Navbar />
+  return (
+    <div className="min-h-screen bg-white text-neutral-950 antialiased">
+      <Navbar />
 
-            {/* Header Section */}
-            <header className="bg-slate-50 border-b border-slate-100 py-16 lg:py-24">
-                <div className="max-w-4xl mx-auto px-6">
-                    <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-1.5 rounded-full mb-6">
-                        <ShieldCheck size={16} />
-                        <span className="text-xs font-bold uppercase tracking-widest">Privacy & Governance</span>
-                    </div>
-                    <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight mb-4">
-                        Privacy <span className="text-brand-primary">Policy</span>
-                    </h1>
-                    <p className="text-slate-500 font-medium max-w-2xl">
-                        This policy outlines our commitment to protecting your data and the legal boundaries governing your use of the Bio Foods platform.
-                    </p>
-                </div>
-            </header>
-
-            <main className="max-w-4xl mx-auto px-6 py-20">
-                <div className="prose prose-slate max-w-none">
-
-                    {/* Disclaimer Section */}
-                    <section className="mb-16 flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                        <div className="bg-white p-4 rounded-2xl shadow-sm">
-                            <AlertCircle className="text-brand-primary" size={32} />
-                        </div>
-                        <div>
-                            <h2 className="text-xl font-bold text-slate-900 m-0 mb-2">No Warranties</h2>
-                            <p className="text-slate-600 text-sm leading-relaxed m-0">
-                                This Website is provided "as is," with all faults. Bio Foods expresses no representations or
-                                warranties of any kind related to this Website or the materials contained herein.
-                                Nothing on this Website shall be interpreted as advising you.
-                            </p>
-                        </div>
-                    </section>
-
-                    {/* Liability & Indemnification */}
-                    <div className="grid md:grid-cols-2 gap-8 mb-16">
-                        <section className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <Gavel className="text-slate-400" size={20} />
-                                <h3 className="text-lg font-black text-slate-900 uppercase tracking-tight m-0">Limitation of Liability</h3>
-                            </div>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                In no event shall Bio Foods, its officers, or directors be held liable for anything arising out of your
-                                use of this Website. We are not liable for any indirect, consequential, or special liabilities.
-                            </p>
-                        </section>
-
-                        <section className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <ShieldCheck className="text-slate-400" size={20} />
-                                <h3 className="text-lg font-black text-slate-900 uppercase tracking-tight m-0">Indemnification</h3>
-                            </div>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                You hereby indemnify Bio Foods to the fullest extent from any liabilities, costs, or demands
-                                arising from your breach of any provisions within these terms.
-                            </p>
-                        </section>
-                    </div>
-
-                    <hr className="border-slate-100 mb-16" />
-
-                    {/* Governance Sections */}
-                    <div className="space-y-12 mb-20">
-                        <section>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">Severability & Variation</h3>
-                            <p className="text-slate-600">
-                                If any provision is found invalid under applicable law, it shall be deleted without affecting
-                                the remaining provisions. Bio Foods reserves the right to revise these Terms at any time;
-                                users are expected to review these terms regularly.
-                            </p>
-                        </section>
-
-                        <section className="p-8 border border-slate-200 rounded-3xl">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Landmark className="text-brand-primary" size={24} />
-                                <h3 className="text-xl font-bold text-slate-900 m-0">Governing Law & Jurisdiction</h3>
-                            </div>
-                            <p className="text-slate-600 m-0">
-                                These Terms will be governed by and interpreted in accordance with the
-                                <span className="text-slate-900 font-bold"> laws of Sri Lanka</span>.
-                                You submit to the non-exclusive jurisdiction of the state and federal courts located in
-                                Sri Lanka for the resolution of any disputes.
-                            </p>
-                        </section>
-
-                        {/* Cookie Policy Callout */}
-                        <section className="bg-brand-primary text-white p-8 lg:p-12 rounded-[2.5rem] shadow-xl shadow-brand-primary/20 relative overflow-hidden">
-                            <Cookie className="absolute -right-4 -bottom-4 w-32 h-32 opacity-10 rotate-12" />
-                            <h3 className="text-2xl font-black mb-4">Cookie Policy</h3>
-                            <p className="text-white/80 mb-6 leading-relaxed">
-                                We use cookies to enhance website performance, learn about your interests, and provide social media features.
-                                By continuing to browse, you consent to our use of cookies.
-                            </p>
-                            {/* <button className="bg-white text-brand-primary font-bold px-8 py-3 rounded-full hover:bg-slate-100 transition-colors">
-                                Manage Preferences
-                            </button> */}
-                        </section>
-                    </div>
-
-                    {/* Contact Footer */}
-                    <div className="flex flex-col items-center text-center p-12 bg-slate-50 rounded-[3rem] border border-slate-100">
-                        <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-primary mb-6">
-                            <Mail size={24} />
-                        </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-2">Questions?</h3>
-                        <p className="text-slate-500 mb-6">Reach out to our legal and data protection team.</p>
-                        <a
-                            href="mailto:info@biofoodslk.com"
-                            className="text-brand-primary font-black text-lg hover:underline underline-offset-8"
-                        >
-                            info@biofoodslk.com
-                        </a>
-                    </div>
-                </div>
-            </main>
-
-            <Footer />
+      {/* HERO */}
+      <header className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+        <div className="pointer-events-none absolute right-10 top-10 hidden select-none xl:block">
+          <span className="text-[280px] font-black leading-none text-black/[0.03]">
+            PP
+          </span>
         </div>
-    );
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-brand-secondary" />
+              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                Privacy &amp; Governance
+              </span>
+            </div>
+          </div>
+
+          <h1
+            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Privacy
+            <br />
+            <span className="text-neutral-400">Policy</span>
+          </h1>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            Understanding how we protect, manage, and process information across
+            our digital platforms.
+          </p>
+
+          <p className="mt-6 text-xs uppercase tracking-[0.25em] text-neutral-400">
+            Last Updated: October 2023
+          </p>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+
+        {/* INTRO GRID */}
+        <section className="grid grid-cols-1 gap-20 lg:grid-cols-12 lg:gap-24 mb-24">
+          {/* Left */}
+          <div className="lg:col-span-7">
+            <span className="text-xs uppercase tracking-[0.3em] text-brand-secondary">
+              Data Protection
+            </span>
+
+            <h2
+              className="mt-6 text-4xl leading-tight tracking-tight lg:text-5xl"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Built on trust,
+              <br />transparency, and responsibility.
+            </h2>
+
+            {/* Statement card */}
+            <div className="relative mt-10 overflow-hidden rounded-4xl bg-brand-light p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-10">
+              <div className="absolute left-0 top-0 h-full w-1 bg-brand-secondary" />
+              <p className="text-xl font-light leading-snug text-neutral-900 lg:text-2xl">
+                This privacy policy explains how Agroventures Group collects,
+                uses, and protects information provided through our website.
+              </p>
+            </div>
+
+            <p className="mt-8 text-lg leading-8 text-neutral-600">
+              We maintain responsible data practices designed to ensure secure
+              interactions and transparent communication with every individual
+              who engages with our platform.
+            </p>
+          </div>
+
+          {/* Right – policy cards */}
+          <div className="lg:col-span-5 lg:sticky lg:top-20 space-y-5">
+            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+              Key Commitments
+            </span>
+
+            {[
+              {
+                icon: Gavel,
+                label: "01",
+                title: "Legal Compliance",
+                text: "We operate according to applicable regulations and maintain responsible handling of all collected information.",
+              },
+              {
+                icon: ShieldCheck,
+                label: "02",
+                title: "Security Framework",
+                text: "Appropriate technical and operational safeguards are maintained to protect information integrity at all times.",
+              },
+            ].map((card) => (
+              <div
+                key={card.label}
+                className="group rounded-[28px] bg-brand-light p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+              >
+                <div className="flex gap-5">
+                  <div className="h-fit rounded-2xl bg-brand-muted p-4 text-brand-primary">
+                    <card.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="mb-2 flex items-center gap-3">
+                      <span className="text-xs tracking-[0.25em] text-brand-secondary">
+                        {card.label}
+                      </span>
+                      <h4 className="text-xl font-semibold tracking-tight text-neutral-950">
+                        {card.title}
+                      </h4>
+                    </div>
+                    <p className="leading-7 text-neutral-600">{card.text}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* INFORMATION USAGE NOTICE */}
+        <section className="rounded-[28px] bg-brand-light p-10 lg:p-14 mb-24">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-brand-secondary">
+              How We Use Your Data
+            </span>
+            <div className="h-px flex-1 bg-neutral-200" />
+          </div>
+
+          <div className="flex items-start gap-5">
+            <div className="h-fit rounded-2xl bg-brand-muted p-4 text-brand-primary shrink-0">
+              <AlertCircle className="h-5 w-5" />
+            </div>
+            <div>
+              <h3
+                className="text-3xl tracking-tight mb-4"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Information Usage
+              </h3>
+              <p className="text-lg leading-8 text-neutral-600 max-w-3xl">
+                Information collected through our communication channels is used
+                only for business communication, service improvement, and
+                operational requirements. We do not sell or share personal data
+                with third parties for marketing purposes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* COOKIE + GOVERNANCE */}
+        <section className="space-y-10">
+          {[
+            {
+              icon: Cookie,
+              label: "03",
+              title: "Cookie Management",
+              text: "Cookies help us improve website performance, understand usage patterns, and provide a better browsing experience. You may manage cookie preferences through your browser settings.",
+            },
+            {
+              icon: Landmark,
+              label: "04",
+              title: "Governing Law",
+              text: "This privacy framework follows the applicable laws and regulations of Sri Lanka. Any disputes arising from this policy will be subject to the jurisdiction of Sri Lankan courts.",
+            },
+            {
+              icon: ShieldCheck,
+              label: "05",
+              title: "Policy Updates",
+              text: "We may update this policy periodically to reflect operational, legal, or technological improvements. Continued use of the platform following any updates constitutes acceptance of the revised terms.",
+            },
+          ].map((block) => (
+            <div
+              key={block.label}
+              className="border-t border-neutral-100 pt-10 grid lg:grid-cols-12 gap-8"
+            >
+              <div className="lg:col-span-4 flex items-start gap-4">
+                <div className="h-fit rounded-2xl bg-brand-muted p-4 text-brand-primary">
+                  <block.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <span className="text-xs tracking-[0.25em] text-brand-secondary">
+                    {block.label}
+                  </span>
+                  <h3
+                    className="mt-1 text-2xl tracking-tight"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    {block.title}
+                  </h3>
+                </div>
+              </div>
+              <p className="lg:col-span-8 text-lg leading-8 text-neutral-600 lg:pt-1">
+                {block.text}
+              </p>
+            </div>
+          ))}
+        </section>
+
+        {/* CONTACT */}
+        <section className="mt-24 rounded-[28px] bg-brand-primary p-12 text-white text-center">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">
+              Get in Touch
+            </span>
+          </div>
+
+          <Mail className="mx-auto mb-6 h-6 w-6 text-brand-gold" />
+
+          <h3
+            className="text-4xl tracking-tight"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Privacy Enquiries
+          </h3>
+
+          <p className="mt-4 text-base leading-7 text-white/70 max-w-md mx-auto">
+            For any questions regarding how we handle your data, please reach
+            out to our team directly.
+          </p>
+
+          <a
+            href="mailto:info@biofoodsagro.com"
+            className="mt-8 inline-block text-lg underline underline-offset-8 text-brand-gold hover:text-white transition-colors duration-200"
+          >
+            info@biofoodsagro.com
+          </a>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default PrivacyPolicy;

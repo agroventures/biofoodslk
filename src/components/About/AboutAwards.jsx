@@ -70,11 +70,11 @@ function AboutAwards() {
                         <Trophy className="w-5 h-5" />
                         <span className="font-bold tracking-[0.2em] uppercase text-xs">Accolades</span>
                     </div>
-                    <h2 className="text-5xl lg:text-7xl font-black text-gray-900 tracking-tighter mb-4">
+                    <h2 className="text-5xl lg:text-7xl font-black text-neutral-950 tracking-tighter mb-4">
                         A Legacy of <br />
                         <span className="text-brand-primary italic">Excellence</span>
                     </h2>
-                    <p className="text-gray-500 font-medium max-w-xl mx-auto">
+                    <p className="text-neutral-500 font-medium max-w-xl mx-auto">
                         Decades of commitment to fair trade, organic innovation, and sustainable leadership recognized on both national and global stages.
                     </p>
                 </div>
@@ -82,26 +82,26 @@ function AboutAwards() {
                 {/* Top Tier Awards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {featuredAwards.map((award, index) => (
-                        <div key={index} className="group relative bg-brand-light p-8 rounded-[2.5rem] border border-gray-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+                        <div key={index} className="group relative bg-brand-light p-8 rounded-[2.5rem] border border-neutral-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
                             <div className="flex justify-between items-start mb-8">
-                                <div className="p-4 bg-white rounded-2xl shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-colors duration-500">
+                                <div className="p-4 bg-white rounded-2xl shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-colors duration-500 text-neutral-700">
                                     {React.cloneElement(award.icon, { size: 32, className: "transition-colors" })}
                                 </div>
-                                <span className="text-2xl font-black text-gray-300 group-hover:text-brand-secondary/20 transition-colors">
+                                <span className="text-2xl font-black text-neutral-300 group-hover:text-brand-secondary/20 transition-colors">
                                     {award.year}
                                 </span>
                             </div>
                             
-                            <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-primary transition-colors">
+                            <h3 className="text-xl font-bold text-neutral-950 mb-3 leading-tight group-hover:text-brand-primary transition-colors">
                                 {award.title}
                             </h3>
-                            <p className="text-gray-500 text-sm leading-relaxed font-medium mb-6">
+                            <p className="text-neutral-500 text-sm leading-relaxed font-medium mb-6">
                                 {award.desc}
                             </p>
 
                             <div className="mt-auto flex items-center gap-2">
                                 <div className={`w-2 h-2 rounded-full ${award.type === 'Global' ? 'bg-brand-accent' : 'bg-brand-secondary'}`} />
-                                <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">
                                     {award.type} Recognition
                                 </span>
                             </div>
@@ -110,24 +110,24 @@ function AboutAwards() {
                 </div>
 
                 {/* Detailed Historical Timeline List */}
-                <div className="mt-32 pt-16 border-t border-gray-100">
+                <div className="mt-32 pt-16 border-t border-neutral-100">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
-                        <h4 className="text-sm font-black uppercase tracking-[0.4em] text-gray-400">Historical Milestones</h4>
-                        <div className="h-px grow bg-gray-100 mx-8 hidden md:block"></div>
+                        <h4 className="text-sm font-black uppercase tracking-[0.4em] text-neutral-400">Historical Milestones</h4>
+                        <div className="h-px grow bg-neutral-100 mx-8 hidden md:block"></div>
                         <span className="text-xs font-bold text-brand-primary bg-brand-primary/5 px-4 py-1.5 rounded-full">1999 — 2019 Accolades</span>
                     </div>
 
                     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                         {historicalAwards.map((item, i) => (
-                            <div key={i} className="group flex gap-6 items-start p-4 rounded-2xl transition-colors hover:bg-brand-light/50">
-                                <div className="shrink-0 w-16 text-brand-primary font-black text-lg border-r border-gray-100 pr-4">
+                            <div key={i} className="group flex gap-6 items-start p-4 rounded-2xl transition-colors hover:bg-brand-muted/50">
+                                <div className="shrink-0 w-16 text-brand-primary font-black text-lg border-r border-neutral-100 pr-4">
                                     {item.year}
                                 </div>
                                 <div>
-                                    <h5 className="font-bold text-gray-900 text-sm uppercase tracking-wide group-hover:text-brand-primary transition-colors">
+                                    <h5 className="font-bold text-neutral-950 text-sm uppercase tracking-wide group-hover:text-brand-primary transition-colors">
                                         {item.t}
                                     </h5>
-                                    <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                                    <p className="text-xs text-neutral-500 mt-2 leading-relaxed">
                                         {item.d}
                                     </p>
                                 </div>

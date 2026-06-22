@@ -6,7 +6,7 @@ function ProcessingFacilityHero() {
   return (
     <ImageHero
         icon={Recycle}
-        img="/ProcessingFacility/hero.jpg"
+        img="/ProcessingFacility/hero1.jpg"
         badge="Process"
         title="Processing Facility"
         subtitle="Quality Assurance"

@@ -1,90 +1,132 @@
-import React from 'react';
-import { Leaf, Coffee, Nut, Snowflake, Sprout, ArrowRight, Sparkles, Package } from 'lucide-react';
-import { products } from '../../data/products';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Package, ArrowUpRight } from "lucide-react";
+import { products } from "../../data/products";
+import { Link } from "react-router-dom";
 
-function HomeProductExperiences() {
-    return (
-        <section className="relative w-full py-20 lg:py-28 bg-brand-light overflow-hidden">
-            {/* Background Decorations */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 right-0 w-150 h-150 bg-brand-primary/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-150 h-150 bg-brand-secondary/5 rounded-full blur-3xl" />
+function HomeProductExperiences({ section }) {
+  return (
+    <section className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+      {/* Decorative Number */}
+      <div className="pointer-events-none absolute right-0 top-0 hidden select-none xl:block">
+        <span className="text-[280px] font-black leading-none text-black/3">
+          {section}
+        </span>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-24 max-w-5xl">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+
+            <div className="flex items-center gap-2">
+              <Package className="h-4 w-4 text-brand-secondary" />
+
+              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                Product Collection
+              </span>
             </div>
+          </div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
-                <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10 shadow-sm">
-                        <Package className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.15em] uppercase text-xs">Our Portfolio</span>
-                    </div>
+          <h2
+            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Crafted From Nature.
+            <br />
+            Shared With The World.
+          </h2>
 
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-6">
-                        Product <br className="sm:hidden" />
-                        <span className="text-brand-primary">Experiences</span>
-                    </h2>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            Explore a carefully curated portfolio of organic and natural
+            products, responsibly sourced and produced to meet the expectations
+            of international markets.
+          </p>
+        </div>
 
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        A curated portfolio designed for premium markets
-                    </p>
+        {/* Editorial Product Rows */}
+        <div className="space-y-12 lg:space-y-20">
+          {products.slice(0, 4).map((product, index) => (
+            <div
+              key={index}
+              className={`
+                grid items-center gap-12
+                lg:grid-cols-12
+                ${
+                  index % 2 === 1
+                    ? "lg:[&>*:first-child]:order-2"
+                    : ""
+                }
+              `}
+            >
+              {/* Image */}
+              <div className="lg:col-span-6">
+                <div className="overflow-hidden rounded-[36px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    className="h-64 sm:h-80 lg:h-105 w-full object-cover transition duration-700 hover:scale-105"
+                  />
                 </div>
+              </div>
 
-                {/* Products Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    {products.map((product, index) => (
-                        <div 
-                            key={index}
-                            className={`group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${index === 4 ? 'md:col-span-2 lg:col-span-1' : ''}`}
-                        >
-                            {/* Image Container */}
-                            <div className="relative h-48 overflow-hidden">
-                                <img 
-                                    src={product.img} 
-                                    alt={product.name}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
-                            </div>
+              {/* Content */}
+              <div className="lg:col-span-6">
+                <span className="text-xs tracking-[0.25em] text-secondary">
+                  0{index + 1}
+                </span>
 
-                            {/* Content */}
-                            <div className="p-6 lg:p-8">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-primary transition-colors">
-                                    {product.name}
-                                </h3>
-                                
-                                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                                    {product.desc.length > 100 ? product.desc.slice(0, 100) + '...' : product.desc}
-                                </p>
+                <h3
+                  className="mt-4 text-4xl tracking-tight text-neutral-950 lg:text-5xl"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  {product.name}
+                </h3>
 
-                                <Link to='/products'
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary hover:text-brand-accent transition-colors"
-                                >
-                                    Learn More
-                                    <ArrowRight className="w-4 h-4" />
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <p className="mt-6 max-w-lg text-lg leading-8 text-neutral-600">
+                  {product.desc}
+                </p>
 
-                {/* Bottom CTA */}
-                <div className="mt-16 text-center">
-                    <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl p-2 pr-6 shadow-xl border border-gray-100">
-                        <div className="bg-brand-primary text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2">
-                            <Sparkles className="w-5 h-5" />
-                            Premium Quality
-                        </div>
-                        <p className="text-gray-600 text-sm font-medium px-4">
-                            All products certified organic & fair-trade
-                        </p>
-                    </div>
-                </div>
+                <Link
+                  to="/products"
+                  className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-brand-primary"
+                >
+                  Explore Collection
+
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                </Link>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+        {/* Closing Panel */}
+        <div className="mt-28 rounded-[40px] bg-brand-primary p-10 text-white lg:p-14">
+          <div className="mb-4 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-gold" />
+
+            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">
+              Product Promise
+            </span>
+          </div>
+
+          <h3
+            className="max-w-4xl text-3xl leading-tight lg:text-5xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Every product begins with responsible sourcing and ends with
+            uncompromising quality.
+          </h3>
+
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
+            From cultivation to export, our products are supported by
+            transparent supply chains, internationally recognized standards,
+            and a commitment to sustainability.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default HomeProductExperiences;

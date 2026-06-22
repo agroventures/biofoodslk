@@ -1,126 +1,193 @@
-import React from 'react';
-import { Eye, Target, Leaf, Sparkles, Globe, ShieldCheck, Users } from 'lucide-react';
+import React from "react";
+import { Eye, Target, Leaf, Heart, CheckCircle2, Sparkles } from "lucide-react";
+
+const sustainability = [
+  {
+    icon: Leaf,
+    title: "Organic Farming",
+    description: "Protecting soil health and biodiversity through natural farming methods.",
+  },
+  {
+    icon: Heart,
+    title: "Fair Partnerships",
+    description: "Supporting farmers through long-term relationships and fair pricing.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Traceability",
+    description: "Ensuring transparency throughout the entire supply chain.",
+  },
+];
 
 function VisionMission() {
-    return (
-        <div className="w-full bg-white">
-            {/* Vision Section - Focus on Clarity and Brand Primary */}
-            <section className="relative py-20 lg:py-32 bg-brand-light overflow-hidden">
-                <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-                    <div className='absolute top-0 right-0 w-125 h-125 rounded-full blur-[120px] opacity-10' style={{ backgroundColor: 'var(--color-brand-primary)' }} />
-                </div>
+  return (
+    <div className="w-full bg-white text-neutral-950">
 
-                <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-5 gap-12 items-center">
-                        <div className="lg:col-span-3">
-                            <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-8 border border-brand-primary/10 shadow-sm">
-                                <Eye className="w-5 h-5" />
-                                <span className="font-bold tracking-[0.2em] uppercase text-xs">Our Vision</span>
-                            </div>
+      {/* INTRO */}
+      <section className="border-y border-neutral-100 py-24 lg:py-36">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="mb-16 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-brand-primary" />
+              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                Vision & Mission
+              </span>
+            </div>
+          </div>
 
-                            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 tracking-tighter mb-8 leading-[0.9]">
-                                To be the <br />
-                                <span className="text-brand-primary">Leading Light</span> <br />
-                                of Organic Asia.
-                            </h2>
+          <h1
+            className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Growing responsibly,
+            <br />
+            creating lasting impact.
+          </h1>
 
-                            <div className="max-w-xl">
-                                <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                                    To become a global benchmark in organic agriculture, recognized for integrity, innovation, and sustainability.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Visual Metric Block instead of Image */}
-                        <div className="lg:col-span-2 grid grid-cols-2 gap-4">
-                            <div className="bg-white p-8 rounded-4xl shadow-xl border border-gray-100 flex flex-col items-center text-center">
-                                <Globe className="w-10 h-10 text-brand-secondary mb-4" />
-                                <span className="text-3xl font-black text-gray-900">Asia</span>
-                                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Focus</span>
-                            </div>
-                            <div className="bg-brand-primary p-8 rounded-4xl shadow-xl flex flex-col items-center text-center mt-8">
-                                <ShieldCheck className="w-10 h-10 text-brand-accent mb-4" />
-                                <span className="text-3xl font-black text-white">100%</span>
-                                <span className="text-xs font-bold text-white/60 uppercase tracking-widest mt-1">Organic</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Mission Section - Clean Grid Layout */}
-            <section className="py-20 lg:py-32 bg-white">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="flex flex-col lg:flex-row gap-16 items-start">
-                        <div className="lg:w-1/3 sticky top-32">
-                            <div className="inline-flex items-center gap-2 bg-brand-secondary/5 text-brand-secondary px-5 py-2.5 rounded-full mb-6 border border-brand-secondary/10">
-                                <Target className="w-5 h-5" />
-                                <span className="font-bold tracking-[0.2em] uppercase text-xs">Our Mission</span>
-                            </div>
-                            <h2 className="text-4xl lg:text-6xl font-black text-gray-900 tracking-tight leading-none">
-                                Raising <br />
-                                <span className="text-brand-secondary">Standards</span>
-                            </h2>
-                        </div>
-
-                        <div className="lg:w-2/3">
-                            <div className="bg-brand-light rounded-[2.5rem] p-10 lg:p-16 relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
-                                    <Sparkles className="w-32 h-32 text-brand-primary" />
-                                </div>
-                                <p className="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight relative z-10">
-                                    "To produce and deliver premium organic products through ethical sourcing, scientific advancement, and responsible business practices."
-                                </p>
-                                <div className="mt-12 flex items-center gap-6 relative z-10">
-                                    <div className="flex -space-x-3">
-                                        {[1, 2, 3].map(i => (
-                                            <div key={i} className="w-12 h-12 rounded-full border-4 border-brand-light bg-gray-200 flex items-center justify-center overflow-hidden">
-                                                <Users className="w-6 h-6 text-gray-400" />
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <span className="text-sm font-bold text-brand-primary uppercase tracking-widest">Team Effort</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Sustainability - The Commitment */}
-            {/* <section className="py-20 lg:py-32 bg-gray-900 text-white overflow-hidden relative">
-                <div className="absolute bottom-0 right-0 w-150 h-150 bg-brand-primary/20 rounded-full blur-[150px]" />
-
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <div className="inline-flex items-center gap-2 bg-white/10 text-brand-accent px-5 py-2.5 rounded-full mb-8 border border-white/10 backdrop-blur-md">
-                            <Leaf className="w-5 h-5" />
-                            <span className="font-bold tracking-[0.2em] uppercase text-xs">Sustainability</span>
-                        </div>
-                        <h2 className="text-4xl lg:text-6xl font-black mb-10 tracking-tight">
-                            A promise to <span className="text-brand-accent italic">future</span> generations.
-                        </h2>
-                        
-                        <div className="space-y-8">
-                            <p className="text-xl text-gray-400 leading-relaxed">
-                                We believe in the combination of organic and fair trade practices as the tool to establish sustainability in all agricultural practices. 
-                            </p>
-                            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-left">
-                                <div>
-                                    <h4 className="text-brand-accent font-bold uppercase tracking-widest text-sm mb-3">Organic Standards</h4>
-                                    <p className="text-gray-400 text-sm leading-relaxed">Ensuring environment remains fertile and chemical-free for the generations to come.</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-brand-accent font-bold uppercase tracking-widest text-sm mb-3">Fair Trade Security</h4>
-                                    <p className="text-gray-400 text-sm leading-relaxed">Guaranteeing fair prices to provide incentives for farmers to continue their vital work.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            Our vision and mission guide every decision — from supporting farming
+            communities to delivering certified organic products worldwide.
+          </p>
         </div>
-    );
+      </section>
+
+      {/* VISION + MISSION SPLIT */}
+      <section className="py-24 lg:py-32 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-neutral-200">
+
+          {/* VISION */}
+          <div className="pb-16 lg:pb-0 lg:pr-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-light rounded-full">
+                <Eye className="h-4 w-4 text-brand-primary" />
+              </div>
+              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">Vision</span>
+            </div>
+
+            <h2
+              className="text-4xl lg:text-5xl tracking-tight text-neutral-950 leading-tight"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Leading organic agriculture across Asia and beyond.
+            </h2>
+
+            <div className="mt-8 h-px w-12 bg-brand-secondary" />
+
+            <p className="mt-8 text-base leading-8 text-neutral-600">
+              We aspire to create a future where organic agriculture strengthens
+              communities, restores ecosystems, and becomes the trusted standard
+              for food production globally.
+            </p>
+          </div>
+
+          {/* MISSION */}
+          <div className="pt-16 lg:pt-0 lg:pl-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-light rounded-full">
+                <Target className="h-4 w-4 text-brand-primary" />
+              </div>
+              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">Mission</span>
+            </div>
+
+            <h2
+              className="text-4xl lg:text-5xl tracking-tight text-neutral-950 leading-tight"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Raising standards through responsible farming.
+            </h2>
+
+            <div className="mt-8 h-px w-12 bg-brand-secondary" />
+
+            <p className="mt-8 text-base leading-8 text-neutral-600">
+              We produce high-quality organic foods through ethical sourcing,
+              scientific innovation, and fair partnerships with growers — creating
+              value for both people and nature.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* TYPOGRAPHIC STATEMENT */}
+      <section className="bg-brand-primary py-20 lg:py-28 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p
+            className="text-3xl lg:text-5xl text-white/90 tracking-tight leading-snug max-w-4xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            "Every harvest is a promise — to the land, to the farmer,
+            and to the people who trust what we grow."
+          </p>
+          <p className="mt-6 text-sm text-white/50 uppercase tracking-[0.3em]">
+            Bio Foods Philosophy
+          </p>
+        </div>
+      </section>
+
+      {/* SUSTAINABILITY */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <div className="mb-20 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+            <div className="flex items-center gap-2">
+              <Leaf className="h-4 w-4 text-brand-primary" />
+              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                Sustainability
+              </span>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-12 items-end mb-16">
+            <h2
+              className="lg:col-span-5 text-4xl lg:text-6xl tracking-tight"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Built for
+              <br />
+              the long term.
+            </h2>
+            <p className="lg:col-span-5 lg:col-start-8 text-base leading-8 text-neutral-600">
+              Our practices are designed to endure — cultivating resilience in
+              every farm, partnership, and product we bring to the world.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
+            {sustainability.map((item, i) => (
+              <div
+                key={i}
+                className="group p-8 lg:p-10 hover:bg-brand-light transition-colors duration-300"
+              >
+                <span className="text-xs text-neutral-400 tracking-[0.3em] uppercase">
+                  0{i + 1}
+                </span>
+
+                <div className="mt-6 flex items-center gap-3">
+                  <item.icon className="h-5 w-5 text-brand-primary" />
+                  <h3
+                    className="text-xl text-neutral-900"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+
+                <p className="mt-4 text-sm leading-7 text-neutral-600">
+                  {item.description}
+                </p>
+
+                <div className="mt-6 h-px w-0 group-hover:w-12 bg-brand-secondary transition-all duration-500" />
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  );
 }
 
 export default VisionMission;

@@ -1,31 +1,41 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, X } from 'lucide-react';
-import { FaFacebookF } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import React, { useState } from "react";
+import {
+    Mail,
+    Phone,
+    MapPin,
+    ArrowUpRight,
+    CheckCircle2,
+    X,
+    Sparkles,
+} from "lucide-react";
+import { FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
 
-function ContactForm() {
+const ContactForm = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-    const [submitStatus, setSubmitStatus] = useState(null);
-
-    // 1. Create a state object for all form fields
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
     });
 
-    // 2. Handle input changes
     const handleChange = (e) => {
         const { id, value } = e.target;
-        setFormData(prev => ({ ...prev, [id]: value }));
+
+        setFormData((prev) => ({
+            ...prev,
+            [id]: value,
+        }));
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         setIsLoading(true);
 
         try {
@@ -35,187 +45,252 @@ function ContactForm() {
                 formData,
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
-            setSubmitStatus('success');
+
             setIsSubmitted(true);
-            setFormData({ name: '', email: '', subject: '', message: '' });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+            });
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+
         } catch (error) {
-            setSubmitStatus('error');
+            console.log(error);
+
         } finally {
             setIsLoading(false);
         }
     };
 
+
     return (
-        <div className="max-w-6xl mx-auto my-16 px-6">
-
-            {/* --- Success Message Header --- */}
-            {isSubmitted && (
-                <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl flex items-center justify-between animate-in fade-in slide-in-from-top-4 duration-500">
-                    <div className="flex items-center gap-4">
-                        <div className="p-2 bg-green-500 rounded-full">
-                            <CheckCircle2 className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold text-green-900">Message Sent Successfully!</h3>
-                            <p className="text-green-700">Thank you for reaching out. Our team will get back to you shortly.</p>
-                        </div>
+        <section className="w-full bg-white py-24 lg:py-36 border-t border-neutral-100">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                {/* HEADER */}
+                <div className="mb-24">
+                    <div className="flex items-center gap-3 mb-6">
+                        <Sparkles className="h-4 w-4 text-brand-primary" />
+                        <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                            Contact Us
+                        </span>
                     </div>
-                    <button
-                        onClick={() => setIsSubmitted(false)}
-                        className="p-2 hover:bg-green-100 rounded-full transition-colors"
-                        aria-label="Close message"
+
+                    <h2
+                        className="text-5xl lg:text-7xl tracking-tight text-neutral-950"
+                        style={{
+                            fontFamily: "Cormorant Garamond, serif",
+                        }}
                     >
-                        <X className="w-5 h-5 text-green-600" />
-                    </button>
+                        Let's start a
+                        <br />
+                        conversation.
+                    </h2>
+
+                    <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-600">
+
+                        Whether you are looking for premium organic products,
+                        partnership opportunities, or global distribution,
+                        our team is ready to connect with you.
+                    </p>
                 </div>
-            )}
 
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+                {/* SUCCESS MESSAGE */}
 
-                {/* Left Side: Contact Info Panel */}
-                <div className="md:w-1/3 bg-gray-900 p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl" />
-                    <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 bg-brand-accent/10 rounded-full blur-3xl" />
+                {isSubmitted && (
 
-                    <div className="relative z-10">
-                        <h2 className="text-3xl font-bold mb-4">Get in touch</h2>
-                        <p className="text-gray-400 mb-10 leading-relaxed">
-                            Our team welcomes inquiries related to partnerships, product sourcing, and global distribution.
-                        </p>
+                    <div className=" mb-10 bg-brand-light border border-brand-primary/20 p-6 flex justify-between items-center">
+                        <div className="flex items-center gap-3">
+                            <CheckCircle2
+                                className="w-5 h-5 text-brand-primary"
+                            />
 
-                        <div className="space-y-8">
-                            <div className="border-l-4 border-brand-primary pl-4 py-1">
-                                <h4 className="font-bold text-lg leading-tight">BioFoodsLK</h4>
-                                <p className="text-gray-400 text-xs uppercase tracking-wider">Agroventures Group Sri Lanka</p>
-                            </div>
-
-                            <div className="flex items-start gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl border border-white/10 transition-all group-hover:bg-brand-primary/20 group-hover:border-brand-primary/30">
-                                    <MapPin className="w-6 h-6 text-brand-accent" />
-                                </div>
-                                <div>
-                                    <h4 className="font-medium text-white">Visit Us</h4>
-                                    <address className="not-italic text-sm text-gray-400 leading-relaxed">
-                                        52/1/D, New Kandy Road,<br /> Kothalawala, Kaduwela, Sri-Lanka.
-                                    </address>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl border border-white/10 transition-all group-hover:bg-brand-primary/20 group-hover:border-brand-primary/30">
-                                    <Phone className="w-6 h-6 text-brand-accent" />
-                                </div>
-                                <div>
-                                    <h4 className="font-medium text-white">Call Us</h4>
-                                    <p className="text-sm text-gray-400">+94 11 7487100</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl border border-white/10 transition-all group-hover:bg-brand-primary/20 group-hover:border-brand-primary/30">
-                                    <Mail className="w-6 h-6 text-brand-accent" />
-                                </div>
-                                <div>
-                                    <h4 className="font-medium text-white">Email Us</h4>
-                                    <p className="text-sm text-gray-400">info@biofoodslk.com</p>
-                                </div>
-                            </div>
+                            <p className="text-neutral-700">
+                                Thank you for contacting us.
+                                Our team will get back to you shortly.
+                            </p>
                         </div>
+
+                        <button
+                            onClick={() => setIsSubmitted(false)}
+                            className="text-neutral-400 hover:text-neutral-900"
+                        >
+                            <X className="w-4 h-4" />
+                        </button>
                     </div>
 
-                    {/* Social Links */}
-                    <div className="mt-12 pt-8 border-t border-white/10 relative z-10">
-                        <div className="flex items-center gap-4">
-                            {[
-                                { icon: <FaFacebookF />, href: "https://www.facebook.com/Biofoofdslk/", label: "Facebook" },
-                                { icon: <FaXTwitter />, href: "https://x.com/biofoodslk", label: "X" },
-                            ].map((social, idx) => (
+                )}
+
+                {/* MAIN GRID */}
+                <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+                    {/* CONTACT DETAILS */}
+                    <div className="lg:col-span-4">
+                        <div className="bg-brand-light p-10 h-full">
+                            <p className=" text-xs uppercase tracking-[0.3em] text-brand-primary mb-8">
+                                Contact Information
+                            </p>
+
+                            <div className="space-y-10">
+                                <div>
+                                    <MapPin className="w-5 h-5 text-brand-primary mb-4" />
+                                    <h3 className="text-xl text-neutral-950 mb-2">
+                                        Head Office
+                                    </h3>
+
+                                    <p className="text-neutral-600 leading-7">
+                                        52/1/D, New Kandy Road,
+                                        <br />
+                                        Kothalawala, Kaduwela,
+                                        <br />
+                                        Sri Lanka.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <Phone className="w-5 h-5 text-brand-primary mb-4" />
+                                    <h3 className="text-xl text-neutral-950 mb-2">
+                                        Phone
+                                    </h3>
+
+                                    <a
+                                        href="tel:+94117487100"
+                                        className="text-neutral-600 hover:text-brand-primary"
+                                    >
+                                        +94 11 7487100
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <Mail className="w-5 h-5 text-brand-primary mb-4" />
+                                    <h3 className="text-xl text-neutral-950 mb-2">
+                                        Email
+                                    </h3>
+
+                                    <a
+                                        href="mailto:info@biofoodsagro.com"
+                                        className="text-neutral-600 hover:text-brand-primary"
+                                    >
+                                        info@biofoodsagro.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* SOCIAL */}
+                            <div className="mt-12 pt-8 border-t border-neutral-200 flex gap-3">
                                 <a
-                                    key={idx}
-                                    href={social.href}
+                                    href="https://www.facebook.com/Biofoofdslk/"
                                     target="_blank"
                                     rel="noreferrer"
-                                    aria-label={social.label}
-                                    className="w-11 h-11 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 group"
+                                    className="w-10 h-10 flex items-center justify-center border border-neutral-200 hover:bg-brand-primary hover:text-white transition"
                                 >
-                                    <span className="text-gray-400 group-hover:text-white">{social.icon}</span>
+                                    <FaFacebookF size={14} />
                                 </a>
-                            ))}
+
+                                <a
+                                    href="https://x.com/biofoodslk"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="w-10 h-10 flex items-center justify-center border border-neutral-200 hover:bg-brand-primary hover:text-white transition"
+                                >
+                                    <FaXTwitter size={14} />
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Right Side: Interactive Form */}
-                <div className="md:w-2/3 p-8 lg:p-12 bg-white">
-                    <form className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6" onSubmit={handleSubmit}>
-                        <div className="space-y-2">
-                            <label htmlFor="name" className="text-sm font-bold text-gray-700 ml-1">Full Name</label>
-                            <input
-                                id="name"
-                                required
-                                type="text"
-                                value={formData.name} // Controlled value
-                                onChange={handleChange} // Change handler
-                                placeholder="John Doe"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
-                            />
-                        </div>
+                    {/* FORM */}
+                    <div className="lg:col-span-8">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="border border-neutral-200 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 gap-8"
+                        >
 
-                        <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
-                            <input
-                                id="email"
-                                required
-                                type="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="john@example.com"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
-                            />
-                        </div>
+                            <div>
+                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                    Name
+                                </label>
 
-                        <div className="sm:col-span-2 space-y-2">
-                            <label htmlFor="subject" className="text-sm font-bold text-gray-700 ml-1">Subject</label>
-                            <input
-                                id="subject"
-                                required
-                                type="text"
-                                value={formData.subject}
-                                onChange={handleChange}
-                                placeholder="How can we help you?"
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all"
-                            />
-                        </div>
+                                <input
+                                    id="name"
+                                    required
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
+                                    placeholder="Your name"
+                                />
+                            </div>
 
-                        <div className="sm:col-span-2 space-y-2">
-                            <label htmlFor="message" className="text-sm font-bold text-gray-700 ml-1">Message</label>
-                            <textarea
-                                id="message"
-                                required
-                                rows="4"
-                                value={formData.message}
-                                onChange={handleChange}
-                                placeholder="Write your message here..."
-                                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all resize-none"
-                            ></textarea>
-                        </div>
+                            <div>
+                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                    Email
+                                </label>
 
-                        <div className="sm:col-span-2 pt-4">
-                            <button
-                                type="submit"
-                                disabled={isLoading}
-                                className="w-full sm:w-auto px-12 py-4 bg-brand-primary hover:bg-brand-secondary disabled:bg-gray-400 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
-                            >
-                                {isLoading ? "Sending..." : "Send Message"}
-                                {!isLoading && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
-                            </button>
-                        </div>
-                    </form>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    required
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
+                                    placeholder="Email address"
+                                />
+                            </div>
+
+                            <div className="md:col-span-2">
+                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                    Subject
+                                </label>
+
+                                <input
+                                    id="subject"
+                                    required
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                    className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
+                                    placeholder="How can we help?"
+                                />
+                            </div>
+
+                            <div className="md:col-span-2">
+                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    required
+                                    rows="6"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="mt-3 w-full border border-neutral-200 px-5 py-4 resize-none outline-none focus:border-brand-primary"
+                                    placeholder="Write your message..."
+                                />
+                            </div>
+
+                            <div className="md:col-span-2">
+                                <button
+                                    disabled={isLoading}
+                                    className=" inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white hover:opacity-90 transition"
+                                >
+                                    {isLoading
+                                        ? "Sending..."
+                                        : "Send Message"
+                                    }
+                                    <ArrowUpRight className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
-}
+};
+
 
 export default ContactForm;

@@ -1,129 +1,285 @@
-import React from 'react';
-import { processingFacilities } from '../../data/processingFacilities';
-import { Factory, CheckCircle2, MapPin, Award, TrendingUp, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { processingFacilities } from "../../data/processingFacilities";
+import { Award, TrendingUp, Shield, Globe, ChevronRight, ChevronLeft, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
+
+const STATS = [
+  { value: "30+",  label: "Years Experience", icon: TrendingUp },
+  { value: "20+",  label: "Countries Served",  icon: Globe },
+  { value: "100%", label: "Quality Assured",   icon: Shield },
+  { value: "ISO",  label: "Certified Facility", icon: Award },
+];
+
+const BADGES = ["ISO Certified", "HACCP Compliant", "Export Ready", "Quality Assured"];
+
+/* ── Image Carousel ── */
+function ImageCarousel({ images, name }) {
+  const [current, setCurrent] = useState(0);
+  const prev = (e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + images.length) % images.length); };
+  const next = (e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % images.length); };
+
+  return (
+    <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+      {images.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt={`${name} ${i + 1}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+            current === i ? "opacity-100 scale-100" : "opacity-0 scale-105 pointer-events-none"
+          }`}
+        />
+      ))}
+
+      {images.length > 1 && (
+        <>
+          <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
+            <ChevronLeft className="w-4 h-4 text-neutral-800" />
+          </button>
+          <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
+            <ChevronRight className="w-4 h-4 text-neutral-800" />
+          </button>
+
+          {/* counter */}
+          <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm px-3 py-1 text-xs text-white tracking-widest">
+            {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+          </div>
+
+          {/* progress dots */}
+          <div className="absolute bottom-4 left-4 flex gap-1.5">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`h-0.5 rounded-full transition-all ${current === i ? "w-6 bg-white" : "w-2 bg-white/40"}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+/* ── Main Component ── */
 function ProcessingFacilitiesDetails() {
-    return (
-        <section className='relative w-full py-20 lg:py-28 bg-brand-light overflow-hidden'>
-            {/* Background Decorations - Using Brand Colors with high blur */}
-            <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-                <div className='absolute top-20 -right-20 w-96 h-96 rounded-full blur-[120px] opacity-10' style={{ backgroundColor: 'var(--color-brand-primary)' }} />
-                <div className='absolute bottom-20 -left-20 w-96 h-96 rounded-full blur-[120px] opacity-10' style={{ backgroundColor: 'var(--color-brand-secondary)' }} />
-            </div>
+  return (
+    <section className="w-full bg-white text-neutral-950">
 
-            <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                {/* Section Header */}
-                <div className="mb-16 lg:mb-20 text-center">
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10 shadow-sm">
-                        <Factory className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.15em] uppercase text-xs">Our Infrastructure</span>
-                    </div>
+      {/* INTRO */}
+      <div className="py-24 lg:py-36 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-                    {/* Title */}
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-4 leading-tight">
-                        World-Class <br />
-                        <span className="text-brand-primary">
-                            Processing Facilities
-                        </span>
-                    </h2>
+          <motion.span
+            {...fadeUp(0)}
+            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+          >
+            <span className="h-px w-10 bg-brand-secondary" />
+            Processing Facilities
+          </motion.span>
 
-                    {/* Subtitle */}
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-                        State-of-the-art facilities ensuring the highest standards of quality and safety throughout our supply chain.
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <motion.h2
+              {...fadeUp(0.1)}
+              className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              World-class facilities,
+              <br />
+              <span className="text-brand-primary">crafted for quality.</span>
+            </motion.h2>
+
+            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
+              Our processing facilities combine modern technology, international
+              quality standards, and decades of experience to deliver premium
+              organic products for global markets.
+            </motion.p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* STATS BAND */}
+      <div className="bg-brand-primary">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+          {STATS.map(({ value, label, icon: Icon }, i) => (
+            <motion.div key={label} {...fadeUp(i * 0.08)} className="py-10 px-6 flex items-center justify-between gap-3">
+              <div>
+                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                  {value}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">{label}</p>
+              </div>
+              <Icon className="h-4 w-4 text-white/20 shrink-0" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* FACILITIES */}
+      <div className="divide-y divide-neutral-100">
+        {processingFacilities.map((facility, index) => {
+          const hasImages = facility.images && facility.images.length > 0;
+          const reverse = index % 2 !== 0;
+
+          return hasImages ? (
+            /* WITH IMAGES — editorial split */
+            <motion.div
+              key={facility.id}
+              {...fadeUp(0)}
+              className="py-24 lg:py-32"
+            >
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className={`grid lg:grid-cols-12 gap-12 lg:gap-16 items-center ${reverse ? "direction-rtl" : ""}`}>
+
+                  {/* IMAGE */}
+                  <div className={`lg:col-span-7 ${reverse ? "lg:order-2" : ""}`}>
+                    <ImageCarousel images={facility.images} name={facility.name} />
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className={`lg:col-span-5 ${reverse ? "lg:order-1" : ""}`}>
+                    <span className="text-xs text-neutral-400 tracking-[0.3em] uppercase">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <div className="mt-4 h-px w-8 bg-brand-secondary" />
+
+                    <h3
+                      className="mt-6 text-3xl lg:text-4xl tracking-tight leading-snug"
+                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                      {facility.name}
+                    </h3>
+
+                    <p className="mt-6 text-sm leading-8 text-neutral-600">
+                      {facility.description}
                     </p>
-                </div>
 
-                {/* Grid Layout */}
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12'>
-                    {processingFacilities.map((facility, index) => (
-                        <div
-                            key={facility.id}
-                            className={`group relative bg-white rounded-4xl lg:rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 ${
-                                index % 2 !== 0 ? 'lg:mt-12' : ''
-                            }`}
+                    <div className="mt-8 flex flex-wrap gap-2">
+                      {BADGES.map((badge) => (
+                        <span
+                          key={badge}
+                          className="px-3 py-1.5 border border-neutral-200 text-xs uppercase tracking-[0.2em] text-neutral-600 bg-brand-light"
                         >
-                            <div className="relative p-6 lg:p-10 flex flex-col h-full">
-                                {/* Header Info */}
-                                <div className="mb-6">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-xs font-black uppercase text-brand-secondary bg-brand-secondary/5 px-4 py-2 rounded-full inline-flex items-center gap-2 border border-brand-secondary/10">
-                                            <Sparkles className="w-3.5 h-3.5" />
-                                            {facility.name}
-                                        </span>
-                                    </div>
-
-                                    <p className='text-sm text-gray-600 leading-relaxed font-medium'>
-                                        {facility.description}
-                                    </p>
-                                </div>
-
-                                {/* Image with Enhanced Overlay */}
-                                <div className='relative w-full aspect-4/3 rounded-2xl lg:rounded-3xl overflow-hidden mb-8 shadow-inner'>
-                                    <img
-                                        src={facility.image}
-                                        alt={facility.name}
-                                        className='w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110'
-                                    />
-
-                                    {/* Gradient Overlay */}
-                                    <div className='absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-60' />
-
-                                    {/* Floating Icon - Using Brand Secondary */}
-                                    <div className="absolute top-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:rotate-12">
-                                        <Factory className="w-6 h-6 text-brand-primary" />
-                                    </div>
-                                </div>
-
-                                {/* Features Grid */}
-                                <div className="grid grid-cols-2 gap-4 mb-8">
-                                    <div className="flex items-center gap-3 bg-gray-50 rounded-2xl p-4 transition-colors group-hover:bg-brand-secondary/5">
-                                        <Award className="w-5 h-5 text-brand-secondary shrink-0" />
-                                        <span className="text-xs font-bold text-gray-700 uppercase tracking-wider">Certified</span>
-                                    </div>
-                                    <div className="flex items-center gap-3 bg-gray-50 rounded-2xl p-4 transition-colors group-hover:bg-brand-secondary/5">
-                                        <TrendingUp className="w-5 h-5 text-brand-secondary shrink-0" />
-                                        <span className="text-xs font-bold text-gray-700 uppercase tracking-wider">High Tech</span>
-                                    </div>
-                                </div>
-
-                                {/* Footer */}
-                                <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-5 h-5 text-brand-accent" />
-                                        <span className="text-sm font-bold text-gray-900 uppercase tracking-widest">
-                                            ISO Certified
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Bottom CTA Section */}
-                <div className="mt-20 lg:mt-32 text-center">
-                    <div className="inline-flex flex-col md:flex-row items-center gap-8 bg-white p-2 pr-8 rounded-[2.5rem] shadow-xl border border-gray-100 pl-8 py-6 md:py-4">
-                        <div className="flex items-center gap-4">
-                            <div className="w-14 h-14 bg-brand-primary rounded-full flex items-center justify-center shadow-lg shadow-brand-primary/20">
-                                <MapPin className="w-6 h-6 text-white" />
-                            </div>
-                            <div className="text-left">
-                                <p className="font-bold text-gray-900 text-lg">Partner With Us</p>
-                                <p className="text-sm text-gray-500 font-medium">Become a certified organic supplier today.</p>
-                            </div>
-                        </div>
-                        <Link to='/contact' className="w-full md:w-auto">
-                            <button className="w-full bg-brand-primary hover:bg-brand-secondary text-white px-10 py-4 rounded-2xl font-bold transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/30 active:scale-95 whitespace-nowrap">
-                                Get In Touch
-                            </button>
-                        </Link>
+                          {badge}
+                        </span>
+                      ))}
                     </div>
+                  </div>
+
                 </div>
+              </div>
+            </motion.div>
+          ) : (
+            /* WITHOUT IMAGES — full-width text layout */
+            <motion.div
+              key={facility.id}
+              {...fadeUp(0)}
+              className="py-24 lg:py-32 bg-brand-light"
+            >
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+                <div className="flex items-start gap-8 lg:gap-16">
+                  <span
+                    className="hidden lg:block text-[80px] leading-none font-light text-neutral-200 select-none"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <div className="flex-1 grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                      <span className="text-xs text-neutral-400 tracking-[0.3em] uppercase lg:hidden">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div className="mt-4 lg:mt-0 h-px w-8 bg-brand-secondary mb-6" />
+
+                      <h3
+                        className="text-3xl lg:text-4xl tracking-tight leading-snug"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        {facility.name}
+                      </h3>
+                    </div>
+
+                    <div>
+                      <p className="text-sm leading-8 text-neutral-600">
+                        {facility.description}
+                      </p>
+
+                      <div className="mt-8 flex flex-wrap gap-2">
+                        {BADGES.map((badge) => (
+                          <span
+                            key={badge}
+                            className="px-3 py-1.5 border border-neutral-200 text-xs uppercase tracking-[0.2em] text-neutral-600 bg-white"
+                          >
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* CTA BANNER */}
+      <div className="bg-brand-primary py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-end">
+
+            <div>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50 mb-8">
+                <span className="h-px w-8 bg-brand-secondary" />
+                Partner With Us
+              </span>
+
+              <h2
+                className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Bringing organic products
+                to markets worldwide.
+              </h2>
             </div>
-        </section>
-    );
+
+            <div className="flex flex-col justify-end gap-8">
+              <p className="text-base leading-8 text-white/60">
+                From sourcing and processing to export and distribution, our
+                facilities are designed to maintain quality, consistency, and
+                traceability at every stage of the journey.
+              </p>
+
+              <div>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                >
+                  Contact Us
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
 }
 
 export default ProcessingFacilitiesDetails;

@@ -1,70 +1,151 @@
-import React from 'react';
-import { Leaf, Handshake, ScanLine, Gauge, Sparkles } from 'lucide-react';
+import React from "react";
+import {
+  Leaf,
+  Handshake,
+  ScanLine,
+  Gauge,
+  Sparkles,
+} from "lucide-react";
 
-function HomeCorePrinciples() {
-    const principles = [
-        {
-            icon: Leaf,
-            title: "Organic & Biodynamic Integrity",
-            color: "bg-brand-primary/5 text-brand-primary border-brand-primary/10"
-        },
-        {
-            icon: Handshake,
-            title: "Ethical Fair-Trade Engagement",
-            color: "bg-brand-secondary/5 text-brand-secondary border-brand-secondary/10"
-        },
-        {
-            icon: ScanLine,
-            title: "End-to-End Traceability",
-            color: "bg-brand-primary/5 text-brand-primary border-brand-primary/10"
-        },
-        {
-            icon: Gauge,
-            title: "Precision Quality Management",
-            color: "bg-brand-secondary/5 text-brand-secondary border-brand-secondary/10"
-        }
-    ];
+function HomeCorePrinciples({ section }) {
+  const principles = [
+    {
+      icon: Leaf,
+      title: "Organic & Biodynamic Integrity",
+      description:
+        "Respecting natural ecosystems through responsible cultivation and regenerative agricultural practices.",
+    },
+    {
+      icon: Handshake,
+      title: "Ethical Fair-Trade Engagement",
+      description:
+        "Supporting farming communities through equitable partnerships and long-term relationships.",
+    },
+    {
+      icon: ScanLine,
+      title: "End-to-End Traceability",
+      description:
+        "Ensuring transparency across every stage of sourcing, production, and distribution.",
+    },
+    {
+      icon: Gauge,
+      title: "Precision Quality Management",
+      description:
+        "Maintaining rigorous standards through continuous monitoring and quality assurance systems.",
+    },
+  ];
 
-    return (
-        <section className="w-full py-20 lg:py-24 bg-brand-light border-t border-brand-light">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="text-center mb-12 lg:mb-16">
-                    <div className="inline-flex items-center gap-2 bg-brand-primary/5 text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/10">
-                        <Sparkles className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.15em] uppercase text-xs">What We Stand For</span>
-                    </div>
+  return (
+    <section className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+      {/* Decorative Number */}
+      <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
+        <span className="text-[280px] font-black leading-none text-black/3">
+          {section}
+        </span>
+      </div>
 
-                    <h2 className="text-4xl sm:text-5xl font-black text-brand-dark tracking-tight">
-                        Our Core <span className="text-brand-primary">Principles</span>
-                    </h2>
-                </div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-24 max-w-4xl">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
 
-                {/* Principles Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {principles.map((principle, index) => (
-                        <div
-                            key={index}
-                            className="group relative bg-white border border-brand-light rounded-2xl lg:rounded-3xl p-6 lg:p-8 hover:border-brand-primary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-                        >
-                            {/* Icon */}
-                            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${principle.color} group-hover:scale-110 transition-transform duration-300`}>
-                                <principle.icon className="w-7 h-7" />
-                            </div>
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-brand-secondary" />
 
-                            {/* Content */}
-                            <h3 className="text-lg font-bold text-brand-dark leading-snug">
-                                {principle.title}
-                            </h3>
-
-                            {/* Decorative Corner */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-linear-to-bl from-brand-primary/5 to-transparent rounded-bl-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        </div>
-                    ))}
-                </div>
+              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                What We Stand For
+              </span>
             </div>
-        </section>
-    );
+          </div>
+
+          <h2
+            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Principles That
+            <br />
+            Shape Everything We Do.
+          </h2>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            These values guide every decision we make—from cultivation and
+            sourcing to processing, quality assurance, and global partnerships.
+          </p>
+        </div>
+
+        {/* Editorial List */}
+        <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+          {principles.map((principle, index) => (
+            <div
+              key={index}
+              className="
+                group
+                grid
+                gap-6
+                py-10
+                transition-all
+                duration-500
+                lg:grid-cols-12
+                lg:gap-8
+              "
+            >
+              {/* Number + Icon (side-by-side on mobile, separate columns on lg) */}
+              <div className="flex items-center gap-4 lg:contents">
+                <div className="lg:col-span-1">
+                  <span className="text-sm tracking-[0.25em] text-brand-secondary">
+                    0{index + 1}
+                  </span>
+                </div>
+
+                <div className="lg:col-span-1">
+                  <div className="rounded-2xl bg-white p-4 shadow-sm w-fit text-brand-primary">
+                    <principle.icon className="h-5 w-5" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Title */}
+              <div className="lg:col-span-4">
+                <h3
+                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  {principle.title}
+                </h3>
+              </div>
+
+              {/* Description */}
+              <div className="lg:col-span-6">
+                <p className="max-w-xl text-lg leading-8 text-neutral-600">
+                  {principle.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Closing Statement */}
+        <div className="mt-20 rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-14">
+          <div className="mb-4 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+
+            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+              Our Promise
+            </span>
+          </div>
+
+          <h3
+            className="max-w-4xl text-3xl leading-tight text-neutral-950 lg:text-5xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Sustainable practices, trusted partnerships,
+            and uncompromising quality at every stage.
+          </h3>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default HomeCorePrinciples;

@@ -1,233 +1,190 @@
-import React from 'react';
-import { Award, Globe, Leaf, Users, TrendingUp, Heart, CheckCircle2, Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Award, Globe, Leaf, Users, TrendingUp, Heart, CheckCircle2 } from "lucide-react";
 
-function AboutBioFoods() {
-    const milestones = [
-        { year: "1993", title: "Established", description: "Family-owned business founded in Kandy" },
-        { year: "2014", title: "World Recognition", description: "First ever 'World's Fairest Fairtrader Award'" },
-        { year: "2018", title: "25th Anniversary", description: "Leading exporters of organic products" },
-        { year: "2024", title: "Global Leader", description: "Trusted worldwide for organic excellence" }
-    ];
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
 
-    const achievements = [
-        {
-            icon: Award,
-            title: "World's Fairest Fairtrader",
-            description: "Awarded to Dr. Sarath Ranaweera by FLO in 2014",
-            color: "bg-brand-primary"
-        },
-        {
-            icon: Users,
-            title: "Best Small Organic Farmer Group",
-            description: "MOPA recognized as best in Asia by FLO 2014",
-            color: "bg-brand-secondary"
-        },
-        {
-            icon: Globe,
-            title: "Global Certifications",
-            description: "Trusted across Europe, North America, Japan & Australia",
-            color: "bg-brand-accent"
-        }
-    ];
+const milestones = [
+  { year: "1993", title: "Founded in Kandy", description: "A family beginning rooted in organic farming traditions." },
+  { year: "2014", title: "Global Recognition", description: "Awarded for leadership in fair trade agriculture." },
+  { year: "2018", title: "Growing Reach", description: "Expanded as a leading certified organic exporter." },
+  { year: "2024", title: "Today", description: "Trusted by partners across more than 30 countries." },
+];
 
-    const values = [
-        { icon: Leaf, text: "100% Organic & Biodynamic" },
-        { icon: Heart, text: "Fair Trade Standards" },
-        { icon: CheckCircle2, text: "Complete Traceability" },
-        { icon: TrendingUp, text: "Sustainable Agriculture" }
-    ];
+const stats = [
+  { value: "30+", label: "Years of Farming" },
+  { value: "100%", label: "Certified Organic" },
+  { value: "30+", label: "Countries Reached" },
+  { value: "1993", label: "Established" },
+];
 
-    return (
-        <section className="relative w-full py-20 lg:py-28 bg-brand-light overflow-hidden">
-            {/* Background Decorations using brand colors */}
-            <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-                <div className='absolute top-40 right-10 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl' />
-                <div className='absolute bottom-40 left-10 w-96 h-96 bg-brand-secondary/20 rounded-full blur-3xl' />
-            </div>
+const values = [
+  { icon: Leaf, text: "Certified Organic" },
+  { icon: Heart, text: "Fair Trade" },
+  { icon: CheckCircle2, text: "Traceable Chain" },
+  { icon: TrendingUp, text: "Sustainable Growth" },
+];
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="mb-16 text-center">
-                    <div className="inline-flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 rounded-full mb-6 border border-brand-primary/20 shadow-sm">
-                        <Sparkles className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.15em] uppercase text-xs">Our Story</span>
-                    </div>
+const achievements = [
+  { icon: Award, title: "Fair Trade Recognition", description: "International acknowledgment for ethical sourcing and transparent supply chains." },
+  { icon: Users, title: "Farmer Communities", description: "Long-term partnerships supporting smallholder farmers across Sri Lanka." },
+  { icon: Globe, title: "Global Trust", description: "Certified and distributed across major organic markets worldwide." },
+];
 
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-6">
-                        About <br className="sm:hidden" />
-                        <span className="text-brand-primary">Bio Foods</span>
-                    </h2>
+export default function AboutBioFoods() {
+  return (
+    <div className="w-full bg-white text-neutral-950 overflow-hidden">
+
+      {/* ── EDITORIAL INTRO ── */}
+      <section className="relative py-28 lg:py-40 border-b border-neutral-100">
+        {/* vertical rule */}
+        <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-200 lg:block" />
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
+          <motion.span
+            {...fadeUp(0)}
+            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+          >
+            <span className="h-px w-10 bg-brand-secondary" />
+            About Bio Foods
+          </motion.span>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <motion.h1
+              {...fadeUp(0.1)}
+              className="text-5xl lg:text-7xl leading-[1.05] tracking-tight"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Rooted in nature,
+              <br />
+              <span className="text-brand-primary">grown with care.</span>
+            </motion.h1>
+
+            <motion.div {...fadeUp(0.2)}>
+              <p className="text-lg leading-8 text-neutral-600">
+                Since 1993, Bio Foods has worked closely with farming communities
+                across Sri Lanka to produce organic food with deep respect for
+                people and the environment — from field to table.
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {values.map(({ icon: Icon, text }, i) => (
+                  <div key={i} className="flex items-center gap-3 border border-neutral-200 px-4 py-3 hover:border-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 shrink-0 text-brand-primary" />
+                    <span className="text-sm text-neutral-700">{text}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── STATS BAND ── */}
+      <section className="bg-brand-primary">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+          {stats.map((s, i) => (
+            <motion.div
+              key={i}
+              {...fadeUp(i * 0.1)}
+              className="py-12 px-6 text-center"
+            >
+              <p className="text-4xl lg:text-5xl font-semibold text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                {s.value}
+              </p>
+              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/60">{s.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── TIMELINE ── */}
+      <section className="py-28 bg-brand-light">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
+          <motion.h2
+            {...fadeUp(0)}
+            className="text-4xl lg:text-6xl mb-20"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Our Journey
+          </motion.h2>
+
+          <div className="grid md:grid-cols-4 gap-0">
+            {milestones.map((m, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp(i * 0.1)}
+                className="relative border-l-2 border-brand-primary pl-6 pb-12 md:pb-0 md:border-l-0 md:border-t-2 md:pl-0 md:pt-6 md:pr-8"
+              >
+                {/* dot */}
+                <span className="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-brand-primary md:-left-0 md:-top-[5px] md:left-0" />
+                <p className="text-sm font-semibold text-brand-secondary tracking-widest">{m.year}</p>
+                <h3 className="mt-2 text-lg font-medium text-neutral-900">{m.title}</h3>
+                <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{m.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ACHIEVEMENTS ── */}
+      <section className="py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+            <motion.h2
+              {...fadeUp(0)}
+              className="text-4xl lg:text-6xl"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Recognition
+              <br />& Trust
+            </motion.h2>
+            <motion.p {...fadeUp(0.1)} className="max-w-md text-neutral-500 text-sm leading-7">
+              Over three decades of commitment to ethical agriculture have earned Bio Foods recognition from leading international certifying bodies and trade partners.
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {achievements.map(({ icon: Icon, title, description }, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp(i * 0.1)}
+                className="group border border-neutral-200 p-8 hover:border-brand-primary transition-colors duration-300"
+              >
+                <div className="h-10 w-10 flex items-center justify-center bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                  <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
                 </div>
+                <h3 className="mt-6 text-xl font-medium" style={{ fontFamily: "Cormorant Garamond, serif" }}>{title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                {/* Main Content Grid */}
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
-                    {/* Left Column */}
-                    <div className="space-y-6">
-                        <div className="bg-white rounded-3xl p-8 shadow-lg border border-brand-primary/10">
-                            <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-6">
-                                <Leaf className="w-7 h-7 text-white" />
-                            </div>
-                            <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
-                                Established in 1993, we are a company devoted to sustainable, organic and fair trade way of life.
-                                Starting out as a family owned business based in Kandy, this company has grown to be one of the
-                                world leaders in biodynamic, organic and fair-trade agriculture.
-                            </p>
-                            <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
-                                We have always believed in clean, agrochemically uncontaminated produce the way nature makes it.
-                                Even our fertilizer is certified organic, so that we can leave behind clean air, water and soil
-                                for all living things, present and future.
-                            </p>
-                            <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
-                                In addition, from its very inception, Bio Foods also ensured fair trade standards to take care
-                                of our farmers from fluctuating market prices and middle-man exploitation. This is what makes
-                                us leaders in modern sustainable agriculture.
-                            </p>
-                        </div>
+      {/* ── CLOSING BANNER ── */}
+      <section className="bg-brand-muted border-t border-neutral-200 py-20">
+        <motion.div
+          {...fadeUp(0)}
+          className="max-w-4xl mx-auto px-6 text-center"
+        >
+          <p className="text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+            <span className="h-px w-8 bg-brand-secondary inline-block align-middle mr-3" />
+            Est. 1993 · Kandy, Sri Lanka
+            <span className="h-px w-8 bg-brand-secondary inline-block align-middle ml-3" />
+          </p>
+          <h2
+            className="text-4xl lg:text-6xl text-neutral-900 leading-tight"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            "From the soil of Sri Lanka<br />to tables around the world."
+          </h2>
+        </motion.div>
+      </section>
 
-                        {/* Values Grid */}
-                        <div className="grid grid-cols-2 gap-4">
-                            {values.map((value, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white rounded-2xl p-5 border border-brand-primary/10 hover:shadow-lg transition-all duration-300 group"
-                                >
-                                    <value.icon className="w-6 h-6 text-brand-primary mb-3 group-hover:scale-110 transition-transform" />
-                                    <p className="text-sm font-bold text-gray-900">{value.text}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Right Column */}
-                    <div className="space-y-6">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                            <img
-                                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop"
-                                alt="Bio Foods Story"
-                                className="w-full h-100 object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-brand-primary/80 to-transparent" />
-
-                            {/* Award Badge */}
-                            <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-5 shadow-xl">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center shrink-0">
-                                        <Award className="w-6 h-6 text-white" />
-                                    </div>
-                                    <div>
-                                        <p className="font-black text-gray-900 text-sm mb-1">World's Fairest Fairtrader</p>
-                                        <p className="text-xs text-gray-600">Dr. Sarath Ranaweera - 2014</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Timeline */}
-                        <div className="bg-white rounded-3xl p-8 shadow-lg border border-brand-primary/10">
-                            <h4 className="text-xl font-bold text-gray-900 mb-6">Our Journey</h4>
-                            <div className="space-y-6">
-                                {milestones.map((milestone, index) => (
-                                    <div key={index} className="flex gap-4 group">
-                                        <div className="shrink-0">
-                                            <div className="w-16 h-16 bg-brand-light border-2 border-brand-primary/20 rounded-xl flex items-center justify-center group-hover:bg-brand-primary group-hover:border-brand-primary transition-colors">
-                                                <span className="text-brand-primary group-hover:text-white font-black text-sm transition-colors">{milestone.year}</span>
-                                            </div>
-                                        </div>
-                                        <div className="flex-1 pt-2">
-                                            <h5 className="font-bold text-gray-900 mb-1">{milestone.title}</h5>
-                                            <p className="text-sm text-gray-600">{milestone.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Achievements Section */}
-                <div className="mb-16">
-                    <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Recognition & Achievements</h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {achievements.map((achievement, index) => (
-                            <div
-                                key={index}
-                                className="group bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-brand-primary/10"
-                            >
-                                <div className={`w-14 h-14 ${achievement.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
-                                    <achievement.icon className="w-7 h-7 text-white" />
-                                </div>
-                                <h4 className="text-lg font-bold text-gray-900 mb-2">{achievement.title}</h4>
-                                <p className="text-sm text-gray-600">{achievement.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Bottom Content */}
-                <div className="bg-white rounded-3xl p-8 lg:p-12 border border-brand-primary/10 shadow-xl">
-                    <h3 className="text-2xl lg:text-3xl font-black text-brand-primary mb-6">Our Operations Today</h3>
-
-                    <div className="space-y-6 text-base lg:text-lg text-gray-700 leading-relaxed">
-                        <p>
-                            As a longtime processor and exporter of high quality products, Bio Foods plays a major role in
-                            the organic post-harvested food industry in Sri Lanka. While fulfilling the ever-growing needs
-                            of the international market, we take all the necessary steps (and responsibility!) to assure the
-                            sustainability of all stakeholders of this essential supply chain; from producer to consumer.
-                        </p>
-
-                        <p>
-                            We provide a guaranteed minimum price at the farm-gate, transparent documentation for assured
-                            traceability and rigorously maintain local and international environmental regulations. While we
-                            were initially established as an exporter of organic and fair trade teas, Bio Foods soon expanded
-                            to be the worlds' first fairtrade registered processor & exporter for spices.
-                        </p>
-
-                        <p>
-                            We are now gearing up to introduce a large range of products marketed under our own brand, which
-                            was our chairman's initiative to give back to the people of the land that we harvest our wonderful
-                            produce from. These products range from teas, spices, herbs, fruits, vegetables, coconut products,
-                            to whole grains, and should soon be accessible to the a discerning international audience as well,
-                            because we believe that the #organicway is for everyone, no matter where they are from.
-                        </p>
-
-                        <p>
-                            We have organised our many certified organic farmers into farmer groups, and we process our harvest
-                            in our own processing units, scattered all over Sri Lanka. We also package the final goods, which
-                            is why we can take responsibility (and pride!) in the transparency of our entire production line.
-                        </p>
-
-                        <p>
-                            We currently can export the final products in bulk form or in consumer packing all over the world,
-                            from Europe, North America, Japan, Australia and many other developed countries, under many different
-                            certifications. The farmer associations founded by Bio Foods have set both local and international
-                            standards, with our Marginalized organic Producers Association (MOPA) being awarded "Best Small
-                            Organic Farmer Group in Asia" in 2014 by the Fairtrade Labelling Organization (FLO).
-                        </p>
-                    </div>
-
-                    {/* Bottom Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-10 border-t border-brand-primary/10">
-                        <div className="text-center">
-                            <div className="text-3xl lg:text-4xl font-black text-brand-primary mb-2">30+</div>
-                            <div className="text-sm text-gray-600 font-semibold">Years Experience</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl lg:text-4xl font-black text-brand-primary mb-2">1000+</div>
-                            <div className="text-sm text-gray-600 font-semibold">Farmer Families</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl lg:text-4xl font-black text-brand-primary mb-2">100%</div>
-                            <div className="text-sm text-gray-600 font-semibold">Organic Certified</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl lg:text-4xl font-black text-brand-primary mb-2">Global</div>
-                            <div className="text-sm text-gray-600 font-semibold">Export Reach</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+    </div>
+  );
 }
-
-export default AboutBioFoods;

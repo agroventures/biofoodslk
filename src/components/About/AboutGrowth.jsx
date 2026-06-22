@@ -1,81 +1,165 @@
-import React from 'react';
-import { TrendingUp, ArrowUpRight, Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import { TrendingUp, ArrowUpRight, PackageCheck, Handshake } from "lucide-react";
 
-function AboutGrowth() {
-    return (
-        <section className="w-full py-20 lg:py-24 bg-white border-t border-brand-light">
-            <div className="w-full px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                        
-                        {/* Image Side */}
-                        <div className="relative rounded-3xl overflow-hidden shadow-xl group">
-                            <img 
-                                src="https://images.unsplash.com/photo-1595855759920-86582396756a?w=800&h=700&fit=crop" 
-                                alt="Growth and Transformation" 
-                                className="w-full h-100 lg:h-137.5 object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-brand-dark/40 to-transparent" />
-                            
-                            {/* Floating Badge */}
-                            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-brand-light">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-brand-primary/10 rounded-xl flex items-center justify-center">
-                                        <TrendingUp className="w-5 h-5 text-brand-primary" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs font-bold text-brand-dark/50 uppercase tracking-wider">Established</p>
-                                        <p className="text-lg font-black text-brand-dark">1993 — Present</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
 
-                        {/* Content Side */}
-                        <div>
-                            <div className="inline-flex items-center gap-2 bg-brand-secondary/5 text-brand-secondary px-5 py-2.5 rounded-full mb-6 border border-brand-secondary/10">
-                                <Sparkles className="w-5 h-5" />
-                                <span className="font-bold tracking-[0.15em] uppercase text-xs">Evolution</span>
-                            </div>
+const metrics = [
+  { value: "30+", label: "Years of Growth" },
+  { value: "100%", label: "Organic Output" },
+  { value: "30+", label: "Export Markets" },
+  { value: "1000s", label: "Farming Partners" },
+];
 
-                            <h2 className="text-4xl sm:text-5xl font-black text-brand-dark tracking-tight mb-8">
-                                Growth & <span className="text-brand-secondary">Transformation</span>
-                            </h2>
+const pillars = [
+  {
+    icon: TrendingUp,
+    title: "Steady Expansion",
+    description:
+      "From a single farming initiative to an internationally recognised organic brand, growth has been intentional and values-driven.",
+  },
+  {
+    icon: PackageCheck,
+    title: "Production Scale",
+    description:
+      "Collaboration with Agroventures Group strengthened processing capacity without compromising product purity or ethical standards.",
+  },
+  {
+    icon: Handshake,
+    title: "Enduring Partnerships",
+    description:
+      "Long-term relationships with farmers, buyers and certifying bodies remain the foundation of every milestone we reach.",
+  },
+];
 
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="shrink-0 mt-2">
-                                        <div className="w-2 h-2 bg-brand-secondary rounded-full" />
-                                    </div>
-                                    <p className="text-lg text-brand-dark/80 leading-relaxed">
-                                        From a modest initiative focused on organic farming, Bio Foods has grown into a globally 
-                                        recognized exporter serving premium international markets.
-                                    </p>
-                                </div>
+export default function AboutGrowth() {
+  return (
+    <section className="bg-white overflow-hidden">
 
-                                <div className="flex gap-4">
-                                    <div className="shrink-0 mt-2">
-                                        <div className="w-2 h-2 bg-brand-primary rounded-full" />
-                                    </div>
-                                    <p className="text-lg text-brand-dark/80 leading-relaxed">
-                                        The integration with Agroventures Group represents a defining moment enabling the company 
-                                        to expand its capabilities while preserving its core values.
-                                    </p>
-                                </div>
-                            </div>
+      {/* ── FULL-BLEED IMAGE + HEADLINE ── */}
+      <div className="relative h-[60vh] min-h-[420px]">
+        <img
+          src="/About/name_board.webp"
+          alt="Growth"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* gradient overlay */}
+        <div className="absolute inset-0 bg-linear-to-t from-neutral-950/70 via-neutral-950/30 to-transparent" />
 
-                            {/* Decorative Element */}
-                            <div className="mt-10 flex items-center gap-4">
-                                <div className="h-px flex-1 bg-brand-light" />
-                                <ArrowUpRight className="w-5 h-5 text-brand-secondary" />
-                                <div className="h-px w-12 bg-brand-secondary/30" />
-                            </div>
-                        </div>
-                    </div>
+        {/* badge */}
+        <motion.span
+          {...fadeUp(0.1)}
+          className="absolute top-10 left-8 lg:left-16 inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/70"
+        >
+          <span className="h-px w-10 bg-brand-secondary" />
+          Growth &amp; Evolution
+        </motion.span>
+
+        {/* headline pinned to bottom-left */}
+        <motion.div
+          {...fadeUp(0.2)}
+          className="absolute bottom-10 left-8 lg:left-16 max-w-2xl"
+        >
+          <h2
+            className="text-5xl lg:text-7xl leading-[1.05] tracking-tight text-white"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            From local roots
+            <br />
+            <span className="text-brand-secondary">to global reach.</span>
+          </h2>
+        </motion.div>
+
+        {/* corner label */}
+        <div className="absolute bottom-10 right-8 lg:right-16 hidden lg:flex items-center gap-2 text-white/50">
+          <span className="text-xs uppercase tracking-[0.3em]">Since 1993</span>
+          <ArrowUpRight className="h-3 w-3" />
+        </div>
+      </div>
+
+      {/* ── METRICS BAND ── */}
+      <div className="bg-brand-primary">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+          {metrics.map((m, i) => (
+            <motion.div
+              key={i}
+              {...fadeUp(i * 0.08)}
+              className="py-10 px-6 text-center"
+            >
+              <p
+                className="text-4xl lg:text-5xl font-semibold text-white"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                {m.value}
+              </p>
+              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/60">
+                {m.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── STORY + PILLARS ── */}
+      <div className="py-28 lg:py-40 border-b border-neutral-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
+
+          {/* top story row */}
+          <div className="grid lg:grid-cols-2 gap-16 mb-20 pb-20 border-b border-neutral-100">
+            <motion.p
+              {...fadeUp(0)}
+              className="text-2xl lg:text-3xl leading-snug text-neutral-800"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              "What began as a small farming initiative in Sri Lanka has grown into a trusted organic food producer working with international partners around the world."
+            </motion.p>
+
+            <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-5">
+              <p className="text-base leading-7 text-neutral-600">
+                Over time, our collaboration with Agroventures Group helped
+                strengthen production capacity while keeping our core values
+                unchanged — respect for nature, fairness for farmers, and
+                purity in food.
+              </p>
+              <p className="text-base leading-7 text-neutral-600">
+                Every step of growth has been guided by those same principles,
+                ensuring that scaling our operations never comes at the cost of
+                the people and land that make it all possible.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* pillars */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {pillars.map(({ icon: Icon, title, description }, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp(i * 0.1)}
+                className="group border border-neutral-200 p-8 hover:border-brand-primary transition-colors duration-300"
+              >
+                <div className="h-10 w-10 flex items-center justify-center bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                  <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
                 </div>
-            </div>
-        </section>
-    );
-}
+                <h3
+                  className="mt-6 text-xl font-medium"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
+                  {description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
 
-export default AboutGrowth;
+        </div>
+      </div>
+
+    </section>
+  );
+}
