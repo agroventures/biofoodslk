@@ -3,20 +3,20 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
-      className="relative min-h-screen overflow-hidden bg-brand-light"
-      style={{
-        backgroundImage:
-          "url('https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/hero.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative min-h-screen overflow-hidden bg-brand-light">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full opacity-75 object-cover"
+        src="/Home/eco-plus.mp4"
+      />
       {/* Background overlay gradient for premium readable text separation */}
-      <div className="absolute inset-0 bg-linear-to-r from-white/60 via-white/30 to-transparent z-0" />
+      <div className="absolute inset-0 bg-linear-to-r from-brand-primary/60 via-brand-primary/30 to-transparent z-0" />
       
       {/* Decorative vertical line */}
-      <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-300 lg:block" />
+      {/* <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-300 lg:block" /> */}
 
       {/* Grid container with explicit responsive vertical alignments */}
       <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center lg:items-center gap-10 px-8 pt-24 pb-32 lg:grid-cols-12 lg:gap-16 lg:px-16 xl:px-24">
@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="lg:col-span-7 flex flex-col justify-center"
         >
-          <span className="mb-6 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">
+          <span className="mb-6 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.35em] text-white">
             <span className="h-px w-12 bg-brand-secondary" />
             BIOFOODSLK
           </span>
@@ -44,7 +44,7 @@ export default function Hero() {
             <span className="text-brand-primary">Refined for the World.</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-base leading-8 text-neutral-600 md:text-lg">
+          <p className="mt-6 max-w-lg text-base leading-8 text-white md:text-lg">
             Every product begins with carefully selected natural ingredients and
             is thoughtfully crafted to deliver exceptional quality with a
             timeless touch.
@@ -75,7 +75,7 @@ export default function Hero() {
           {[
             { value: "30+", label: "Years of Experience", desc: "Trusted by families since 1993", accent: "bg-brand-primary" },
             { value: "100%", label: "Organic Ingredients", desc: "No additives, no compromise", accent: "bg-brand-secondary" },
-            { value: "50+", label: "Countries Served", desc: "Taking Sri Lanka's best to the world", accent: "bg-neutral-700" },
+            { value: "20+", label: "Countries Served", desc: "Taking Sri Lanka's best to the world", accent: "bg-neutral-700" },
           ].map(({ value, label, desc, accent }, i) => (
             <motion.div
               key={label}
