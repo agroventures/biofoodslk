@@ -10,7 +10,7 @@ export default function Hero() {
         loop
         playsInline
         className="absolute inset-0 h-full w-full opacity-75 object-cover"
-        src="/Home/eco-plus.mp4"
+        src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/eco-plus.mp4"
       />
       {/* Background overlay gradient for premium readable text separation */}
       <div className="absolute inset-0 bg-linear-to-r from-brand-primary/60 via-brand-primary/30 to-transparent z-0" />
