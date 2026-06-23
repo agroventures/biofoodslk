@@ -7,11 +7,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          animations: ['framer-motion'],
-          icons: ['lucide-react', 'react-icons'],
-          swiper: ['swiper'],
+        manualChunks(id) {
+          if (id.includes('react-dom') || id.includes('react-router-dom')) return 'vendor';
+          if (id.includes('react')) return 'vendor';
+          if (id.includes('framer-motion')) return 'animations';
+          if (id.includes('lucide-react') || id.includes('react-icons')) return 'icons';
+          if (id.includes('swiper')) return 'swiper';
         },
       },
     },
