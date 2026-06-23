@@ -14,7 +14,7 @@ const Loader = () => {
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-brand-light overflow-hidden">
 
       {/* Large decorative letter */}
-      <span className="pointer-events-none absolute left-0 top-0 select-none text-[40vw] font-black leading-none text-black/[0.03]">
+      <span className="pointer-events-none absolute left-0 top-0 select-none text-[40vw] font-black leading-none text-black/3">
         B
       </span>
 
@@ -24,7 +24,7 @@ const Loader = () => {
         {/* Logo + brand name */}
         <div className="flex flex-col items-center gap-5">
           <div className="rounded-full bg-white shadow-sm border border-brand-primary/10 p-5">
-            <img src="/logo.png" alt="Bio Foods" className="w-12 h-12 object-contain" />
+            <img src="/logo.png" alt="Bio Foods" className="w-12 h-12 object-contain" fetchPriority="high" />
           </div>
 
           <div className="text-center">

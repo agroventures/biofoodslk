@@ -20,7 +20,7 @@ const founder = {
   id: "founder",
   name: "Dr. Sarath Ranaweera",
   role: "Founder & Consultant",
-  img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/Dr.Sarath-Ranaweera.avif",
+  img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/Dr.Sarath-Ranaweera.webp",
 };
 
 export default function AboutManagement() {

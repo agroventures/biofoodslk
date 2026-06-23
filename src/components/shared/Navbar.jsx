@@ -86,7 +86,7 @@ const Navbar = () => {
               className="shrink-0"
             >
               <img
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Bio Foods"
                 className="h-12 md:h-14 w-auto transition-all duration-300"
               />
