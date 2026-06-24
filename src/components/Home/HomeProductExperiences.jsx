@@ -85,7 +85,7 @@ function HomeProductExperiences({ section }) {
 
                 <Link
                   to="/products"
-                  className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-brand-primary"
+                  className="group mt-8 inline-flex items-center gap-3 rounded-full border border-brand-primary px-6 py-3 text-sm font-medium text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
                 >
                   Explore Collection
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
