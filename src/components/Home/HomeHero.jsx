@@ -14,7 +14,7 @@ export default function Hero() {
         src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/eco-plus.mp4"
       />
       {/* Background overlay gradient for premium readable text separation */}
-      <div className="absolute inset-0 bg-linear-to-r from-brand-primary/60 via-brand-primary/30 to-transparent z-0" />
+      <div className="absolute inset-0 bg-linear-to-r from-brand-accent/30 via-brand-accent/10 to-transparent z-0" />
       
       {/* Decorative vertical line */}
       {/* <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-300 lg:block" /> */}
