@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -51,17 +52,17 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <button className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 text-white font-medium shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-brand-primary/95">
+            <Link to='/products' className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 text-white font-medium shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-brand-primary/95">
               Explore Collection
               <ArrowRight
                 size={18}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </button>
+            </Link>
 
-            <button className="rounded-full border border-neutral-300 bg-white/50 backdrop-blur-xs px-8 py-4 font-medium text-neutral-800 transition duration-300 hover:border-neutral-900 hover:bg-white">
+            <Link to='/about' className="rounded-full border border-neutral-300 bg-white/50 backdrop-blur-xs px-8 py-4 font-medium text-neutral-800 transition duration-300 hover:border-neutral-900 hover:bg-white">
               Our Story
-            </button>
+            </Link>
           </div>
         </motion.div>
 
