@@ -76,13 +76,10 @@ export default function AboutManagement() {
             {/* row */}
             <button
               onClick={() => setOpen(open === member.id ? null : member.id)}
-              className="w-full grid grid-cols-12 gap-6 items-center py-10 text-left group"
+              className="w-full flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-6 items-start lg:items-center py-10 text-left group"
             >
-              <span className="col-span-1 text-xs text-neutral-400 tabular-nums">
-                0{member.index}
-              </span>
-
-              <div className="col-span-2 aspect-square overflow-hidden border border-neutral-200 bg-neutral-50">
+              {/* Mobile: image full width on top; Desktop: col-span-3 */}
+              <div className="w-full lg:hidden aspect-[4/3] overflow-hidden border border-neutral-200 bg-neutral-50">
                 <img
                   src={member.img}
                   alt={member.name}
@@ -90,24 +87,40 @@ export default function AboutManagement() {
                 />
               </div>
 
-              <div className="col-span-7 lg:col-span-8">
-                <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-2">
-                  {member.role}
-                </p>
-                <h2
-                  className="text-3xl lg:text-5xl tracking-tight text-neutral-950 group-hover:text-brand-primary transition-colors duration-300"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  {member.name}
-                </h2>
-              </div>
+              {/* Mobile: number + name row */}
+              <div className="flex items-center gap-4 lg:contents w-full">
+                <span className="lg:col-span-1 text-xs text-neutral-400 tabular-nums shrink-0">
+                  0{member.index}
+                </span>
 
-              <div className="col-span-2 lg:col-span-1 flex justify-end">
-                <div className="h-10 w-10 border border-neutral-200 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary transition-all duration-300">
-                  {open === member.id
-                    ? <Minus className="h-4 w-4 text-neutral-700 group-hover:text-white transition-colors duration-300" />
-                    : <Plus className="h-4 w-4 text-neutral-700 group-hover:text-white transition-colors duration-300" />
-                  }
+                {/* Desktop image */}
+                <div className="hidden lg:block lg:col-span-3 aspect-square overflow-hidden border border-neutral-200 bg-neutral-50">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="lg:col-span-7 flex-1">
+                  <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-2">
+                    {member.role}
+                  </p>
+                  <h2
+                    className="text-3xl lg:text-5xl tracking-tight text-neutral-950 group-hover:text-brand-primary transition-colors duration-300"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    {member.name}
+                  </h2>
+                </div>
+
+                <div className="lg:col-span-1 flex justify-end shrink-0">
+                  <div className="h-10 w-10 border border-neutral-200 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary transition-all duration-300">
+                    {open === member.id
+                      ? <Minus className="h-4 w-4 text-neutral-700 group-hover:text-white transition-colors duration-300" />
+                      : <Plus className="h-4 w-4 text-neutral-700 group-hover:text-white transition-colors duration-300" />
+                    }
+                  </div>
                 </div>
               </div>
             </button>
