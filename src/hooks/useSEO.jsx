@@ -18,15 +18,15 @@ const useSEO = ({
   // Basic
   title = "Organic & Fairtrade Spices Coconut Producer | Bio Foods | Sri Lanka",
   description = "Premium organic spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
-  keywords = ["biofoods, biofoods sri lanka, biofoods.lk, biofoods agroventures, organic food Sri Lanka, organic spices exporter, coconut products Sri Lanka"],
+  keywords = ["biofoods, biofoods pvt ltd, biofoodslk, biofoods sri lanka, biofoodsagro, biofoods agroventures, organic food Sri Lanka, organic spices exporter, coconut products Sri Lanka"],
 
   // Open Graph
   locale = "en_US",
   type = "website",
   url,
   site_name = "BioFoodsLK",
-  image = "https://www.biofoods.lk/logo.png",
-  image_secure_url = "https://www.biofoods.lk/logo.png",
+  image = "https://www.biofoodsagro.com/logo.png",
+  image_secure_url = "https://www.biofoodsagro.com/logo.png",
   image_width = "1200",
   image_height = "630",
   image_alt,
