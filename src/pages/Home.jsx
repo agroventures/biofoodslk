@@ -25,8 +25,8 @@ function Home() {
             <Navbar />
             <HomeHero section="1" />
             <HomeBrandNarrative section="02" />
-            <HomeAgroVenturesAdvantage section="03" />
-            <HomeCertifications section="04" />
+            <HomeCertifications section="03" />
+            <HomeAgroVenturesAdvantage section="04" />
             <HomeCorePrinciples section="05" />
             <HomeProductExperiences section="06" />
             <HomeClosingReflection section="07" />
