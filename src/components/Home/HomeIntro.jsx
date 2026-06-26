@@ -6,11 +6,15 @@ import {
   Award,
 } from "lucide-react";
 
-export default function HomeIntro() {
+export default function HomeIntro({section}) {
   return (
     <section className="relative overflow-hidden bg-white py-28 lg:py-40">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.08),transparent_45%)]" />
+      <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
+        <span className="text-[280px] font-black leading-none text-black/3">
+          {section}
+        </span>
+      </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -22,6 +26,7 @@ export default function HomeIntro() {
             viewport={{ once: true }}
           >
             <div className="mb-6 flex items-center gap-4">
+              <span className="text-xs font-medium text-neutral-400">{section}</span>
               <div className="h-px w-12 bg-brand-secondary" />
               <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
                 About Bio Foods Agro
@@ -48,9 +53,9 @@ export default function HomeIntro() {
                 Learn More
               </button>
 
-              <button className="group flex items-center gap-3 rounded-full border border-neutral-300 px-8 py-4 font-semibold text-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:text-neutral-900">
+              {/* <button className="group flex items-center gap-3 rounded-full border border-neutral-300 px-8 py-4 font-semibold text-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:text-neutral-900">
                 Download Profile
-              </button>
+              </button> */}
             </div>
           </motion.div>
 

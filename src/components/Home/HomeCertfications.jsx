@@ -23,7 +23,7 @@ function HomeCertifications({ section }) {
   return (
     <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28 xl:py-40">
       {/* Decorative Number */}
-      <div className="pointer-events-none absolute left-10 top-0 hidden select-none xl:block">
+      <div className="pointer-events-none absolute right-10 top-0 hidden select-none xl:block">
         <span className="text-[280px] font-black leading-none text-black/3">
           {section}
         </span>

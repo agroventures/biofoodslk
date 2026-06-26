@@ -187,10 +187,10 @@ export default function Hero() {
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
-              to="/catalogue"
+              to="/contact"
               className="group flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-black"
             >
-              Download Catalogue
+              Contact Our Team
               <Download size={18} className="transition-transform duration-300 group-hover:translate-y-0.5" />
             </Link>
           </motion.div>

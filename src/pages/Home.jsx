@@ -28,8 +28,8 @@ function Home() {
             <HomeCertifications section="03" />
             <HomeAgroVenturesAdvantage section="04" />
             {/* <HomeCorePrinciples section="05" /> */}
-            <HomeProductExperiences section="06" />
-            <HomeClosingReflection section="07" />
+            <HomeProductExperiences section="05" />
+            <HomeClosingReflection section="06" />
             <Footer />
         </div>
     )
