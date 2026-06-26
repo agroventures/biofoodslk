@@ -104,11 +104,9 @@ function HomeCertifications({ section }) {
               Global Standards.
             </h2>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-neutral-600">
-              Every product is supported by internationally recognized
-              certifications that reflect our commitment to organic integrity,
-              food safety, traceability, and responsible sourcing.
-            </p>
+          <p className="mt-8 max-w-xl text-lg leading-8 text-neutral-600">
+            Internationally recognized certifications reflecting our commitment to organic integrity, food safety, and responsible sourcing.
+          </p>
 
             <div className="mt-12">
               <Link to="/quality-certifications">
@@ -140,10 +138,8 @@ function HomeCertifications({ section }) {
                 It is the standard we begin with.
               </h3>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-                Our systems are designed to exceed expectations through
-                transparent sourcing, rigorous quality controls, and continuous
-                improvement across every stage of production.
+              <p className="mt-6 max-w-2xl text-base leading-7 text-white/80">
+                Transparent sourcing, rigorous quality controls, and continuous improvement at every stage.
               </p>
             </div>
           </div>

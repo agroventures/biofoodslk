@@ -65,10 +65,7 @@ function QualityCertificationsDetails() {
             </motion.h2>
 
             <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
-              Every product is supported by internationally recognised
-              certifications, rigorous quality systems, and complete traceability
-              processes that ensure consistency, safety, and sustainability
-              throughout the value chain.
+              Internationally recognised certifications, rigorous quality systems, and complete traceability - ensuring consistency, safety, and sustainability throughout the value chain.
             </motion.p>
           </div>
 
@@ -185,16 +182,12 @@ function QualityCertificationsDetails() {
             </p>
           </motion.div>
 
-          <motion.div {...fadeUp(0.15)} className="space-y-6">
+          <motion.div {...fadeUp(0.15)} className="space-y-5">
             <p className="text-sm leading-8 text-neutral-600">
-              Organic certification requires strict compliance across cultivation,
-              harvesting, processing and distribution. Every stage is monitored
-              to ensure environmental responsibility and product integrity.
+              Strict compliance across cultivation, harvesting, processing, and distribution - every stage monitored for environmental responsibility and product integrity.
             </p>
             <p className="text-sm leading-8 text-neutral-600">
-              These certifications provide transparency, consumer confidence and
-              global market access while supporting sustainable farming practices
-              and long-term ecosystem health.
+              Transparency, consumer confidence, and global market access - supporting sustainable farming and long-term ecosystem health.
             </p>
           </motion.div>
 
@@ -335,10 +328,7 @@ function QualityCertificationsDetails() {
 
             <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-8">
               <p className="text-base leading-8 text-white/60">
-                Our commitment to quality extends beyond certification. Through
-                rigorous testing, traceability systems and internationally
-                recognised standards, we ensure every product meets the
-                expectations of customers worldwide.
+                Rigorous testing, traceability systems, and internationally recognised standards - every product meets the expectations of customers worldwide.
               </p>
               <div>
                 <a

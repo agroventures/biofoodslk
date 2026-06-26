@@ -3,11 +3,11 @@ import Footer from '../components/shared/Footer';
 import HomeHero from '../components/Home/HomeHero';
 import HomeCertifications from '../components/Home/HomeCertfications';
 import useSEO from '../hooks/useSEO';
-import HomeBrandNarrative from '../components/Home/HomeBrandNarrative';
 import HomeAgroVenturesAdvantage from '../components/Home/HomeAgroVenturesAdvantage';
 import HomeCorePrinciples from '../components/Home/HomeCorePrinciples';
 import HomeClosingReflection from '../components/Home/HomeClosingReflection';
 import HomeProductExperiences from '../components/Home/HomeProductExperiences';
+import HomeIntro from '../components/Home/HomeIntro';
 
 function Home() {
     const url = window.location.href;
@@ -24,7 +24,7 @@ function Home() {
         <div className="min-h-screen">
             <Navbar />
             <HomeHero section="1" />
-            <HomeBrandNarrative section="02" />
+            <HomeIntro section="02" />
             <HomeCertifications section="03" />
             <HomeAgroVenturesAdvantage section="04" />
             <HomeCorePrinciples section="05" />

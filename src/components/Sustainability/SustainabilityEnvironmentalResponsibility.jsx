@@ -19,7 +19,7 @@ function SustainabilityEnvironmentalResponsibility() {
             <section className="w-full py-20 lg:py-24 bg-white border-t border-brand-light">
                 <div className="w-full px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-12">
+        <div className="text-center mb-12">
                             <div className="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center mx-auto mb-6">
                                 <Leaf className="w-7 h-7 text-brand-primary" />
                             </div>

@@ -46,8 +46,7 @@ function VisionMission() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
-            Our vision and mission guide every decision - from supporting farming
-            communities to delivering certified organic products worldwide.
+            Our vision and mission guide every decision - from supporting farming communities to delivering certified organic products worldwide.
           </p>
         </div>
       </section>
@@ -75,9 +74,7 @@ function VisionMission() {
             <div className="mt-8 h-px w-12 bg-brand-secondary" />
 
             <p className="mt-8 text-base leading-8 text-neutral-600">
-              We aspire to create a future where organic agriculture strengthens
-              communities, restores ecosystems, and becomes the trusted standard
-              for food production globally.
+              A future where organic agriculture strengthens communities, restores ecosystems, and becomes the global standard.
             </p>
           </div>
 
@@ -100,9 +97,7 @@ function VisionMission() {
             <div className="mt-8 h-px w-12 bg-brand-secondary" />
 
             <p className="mt-8 text-base leading-8 text-neutral-600">
-              We produce high-quality organic foods through ethical sourcing,
-              scientific innovation, and fair partnerships with growers - creating
-              value for both people and nature.
+              High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation - creating value for people and nature.
             </p>
           </div>
 
@@ -149,8 +144,7 @@ function VisionMission() {
               the long term.
             </h2>
             <p className="lg:col-span-5 lg:col-start-8 text-base leading-8 text-neutral-600">
-              Our practices are designed to endure - cultivating resilience in
-              every farm, partnership, and product we bring to the world.
+              Cultivating resilience in every farm, partnership, and product we bring to the world.
             </p>
           </div>
 

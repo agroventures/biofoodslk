@@ -28,9 +28,7 @@ function ContactMap() {
           </h2>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-600">
-            Located in Kaduwela, Sri Lanka, our headquarters connects our global
-            operations with sustainable sourcing, processing, and export
-            capabilities.
+            Located in Kaduwela, Sri Lanka - connecting sustainable sourcing, processing, and global export.
           </p>
         </div>
 
@@ -38,7 +36,7 @@ function ContactMap() {
 
         <div className="relative w-full h-137.5 overflow-hidden border border-neutral-200">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7633657422743!2d79.97150067581788!3d6.918868518440914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368947bee892b%3A0x3306e6fd6c21a8cc!2sBio%20Foods%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1775802948575!5m2!1sen!2slk"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.84603845905!2d79.85991609999999!3d6.909006100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259006085952d%3A0x7d7800e07ed544f3!2sBio%20Foods%20Agro%20Ventures%20(Pvt)%20Ltd.!5e0!3m2!1sen!2slk!4v1782451749324!5m2!1sen!2slk"
             className="
               absolute
               inset-0
@@ -95,7 +93,7 @@ function ContactMap() {
                   text-neutral-950
                 "
                 >
-                  Bio Foods HQ
+                  Bio Foods Agro Ventures
                 </h3>
               </div>
 
@@ -106,11 +104,11 @@ function ContactMap() {
                 mb-8
               "
               >
-                52/1/D, New Kandy Road,
+                No 48,
                 <br />
-                Kothalawala,
+                Sir Marcus Fernando Mawatha,
                 <br />
-                Kaduwela,
+                Colombo 07,
                 <br />
                 Sri Lanka.
               </p>

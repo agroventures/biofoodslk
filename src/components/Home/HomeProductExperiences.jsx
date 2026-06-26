@@ -38,9 +38,7 @@ function HomeProductExperiences({ section }) {
           </h2>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
-            Explore a carefully curated portfolio of organic and natural
-            products, responsibly sourced and produced to meet the expectations
-            of international markets.
+            A curated portfolio of organic products, responsibly sourced and produced for global markets.
           </p>
         </div>
 
@@ -109,14 +107,11 @@ function HomeProductExperiences({ section }) {
             className="max-w-4xl text-3xl leading-tight lg:text-5xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            Every product begins with responsible sourcing and ends with
-            uncompromising quality.
+            Every product begins with responsible sourcing and ends with uncompromising quality.
           </h3>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
-            From cultivation to export, our products are supported by
-            transparent supply chains, internationally recognized standards, and
-            a commitment to sustainability.
+            Transparent supply chains, international standards, and a commitment to sustainability.
           </p>
         </div>
       </div>

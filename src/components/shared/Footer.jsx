@@ -11,9 +11,7 @@ const Footer = () => {
     { name: "About Us", href: "/about" },
     { name: "Products", href: "/products" },
     { name: "Processing Facilities", href: "/processing-facilities" },
-    { name: "Quality & Certifications", href: "/quality-certifications" },
-    { name: "Awards & Recognition", href: "/awards" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Careers", href: "/careers" },
   ];
 
   const legalLinks = [

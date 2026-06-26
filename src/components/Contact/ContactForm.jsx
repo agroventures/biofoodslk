@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import emailjs from "@emailjs/browser";
+
 
 const ContactForm = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -35,34 +35,27 @@ const ContactForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         setIsLoading(true);
 
         try {
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formData,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-            );
-
-            setIsSubmitted(true);
-
-            setFormData({
-                name: "",
-                email: "",
-                subject: "",
-                message: "",
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+                    ...formData,
+                }),
             });
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
+            const data = await res.json();
 
+            if (data.success) {
+                setIsSubmitted(true);
+                setFormData({ name: "", email: "", subject: "", message: "" });
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
         } catch (error) {
             console.log(error);
-
         } finally {
             setIsLoading(false);
         }
@@ -93,10 +86,7 @@ const ContactForm = () => {
                     </h2>
 
                     <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-600">
-
-                        Whether you are looking for premium organic products,
-                        partnership opportunities, or global distribution,
-                        our team is ready to connect with you.
+                        Looking for organic products, partnerships, or global distribution? Our team is ready.
                     </p>
                 </div>
 

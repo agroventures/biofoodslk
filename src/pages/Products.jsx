@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from '../components/shared/Navbar'
 import Footer from '../components/shared/Footer'
 import ProductsHero from '../components/Products/ProductsHero'
-import ProductsDetails from '../components/Products/ProductsDetails'
+import ProductsGrid from '../components/Products/ProductsGrid'
+import ProductInquiryForm from '../components/Products/ProductInquiryForm'
 import useSEO from '../hooks/useSEO'
 
 function Products() {
@@ -20,7 +21,8 @@ function Products() {
     <div className='min-h-screen'>
       <Navbar />
       <ProductsHero />
-      <ProductsDetails />
+      <ProductsGrid />
+      <ProductInquiryForm />
       <Footer />
     </div>
   )

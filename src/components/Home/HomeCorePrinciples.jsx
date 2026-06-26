@@ -63,8 +63,7 @@ function HomeCorePrinciples({ section }) {
           </h2>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
-            These values guide every decision we make-from cultivation and
-            sourcing to processing, quality assurance, and global partnerships.
+            From cultivation to export, these values guide every decision we make.
           </p>
         </div>
 
@@ -124,8 +123,7 @@ function HomeCorePrinciples({ section }) {
             className="max-w-4xl text-3xl leading-tight text-neutral-950 lg:text-5xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            Sustainable practices, trusted partnerships, and uncompromising
-            quality at every stage.
+            Sustainable practices. Trusted partnerships. Uncompromising quality.
           </h3>
         </div>
       </div>

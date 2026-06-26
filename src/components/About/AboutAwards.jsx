@@ -75,7 +75,7 @@ function AboutAwards() {
                         <span className="text-brand-primary italic">Excellence</span>
                     </h2>
                     <p className="text-neutral-500 font-medium max-w-xl mx-auto">
-                        Decades of commitment to fair trade, organic innovation, and sustainable leadership recognized on both national and global stages.
+                        Recognized on national and global stages for fair trade, organic innovation, and sustainable leadership.
                     </p>
                 </div>
 

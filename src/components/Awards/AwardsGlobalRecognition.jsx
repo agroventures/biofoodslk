@@ -1,32 +1,6 @@
 import React from "react";
 import { Trophy, Award, Globe, ArrowRight } from "lucide-react";
-
-const achievements = [
-    {
-        icon: Trophy,
-        number: "01",
-        title: "World's Fairest Fair Trader Award",
-        org: "FLO - Fairtrade Labelling Organizations",
-        description:
-            "Recognized for pioneering leadership in fair-trade practices and sustainable value creation across global supply chains.",
-    },
-    {
-        icon: Award,
-        number: "02",
-        title: "Presidential Export Awards",
-        org: "Export Development Board · Government of Sri Lanka",
-        description:
-            "Honored for outstanding export performance and international market excellence across multiple consecutive years.",
-    },
-    {
-        icon: Globe,
-        number: "03",
-        title: "Sustainability Leadership",
-        org: "International Recognition",
-        description:
-            "Acknowledged globally for advancing environmental stewardship, responsible sourcing, and sustainable business practices.",
-    },
-];
+import awardsData from "../../data/awards";
 
 const AwardsGlobalRecognition = () => (
     <section className="w-full bg-white border-t border-neutral-100">
@@ -61,7 +35,7 @@ const AwardsGlobalRecognition = () => (
                 International Achievements
             </p>
             <div className="divide-y divide-neutral-200 border-t border-neutral-200">
-                {achievements.map(({ icon: Icon, number, title, org, description }) => (
+                {awardsData.map(({ icon: Icon, number, title, org, description }) => (
                     <div
                         key={number}
                         className="grid lg:grid-cols-12 gap-6 lg:gap-16 py-12 items-start group"

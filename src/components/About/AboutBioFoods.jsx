@@ -66,9 +66,7 @@ export default function AboutBioFoods() {
 
             <motion.div {...fadeUp(0.2)}>
               <p className="text-lg leading-8 text-neutral-600">
-                Since 1993, Bio Foods has worked closely with farming communities
-                across Sri Lanka to produce organic food with deep respect for
-                people and the environment - from field to table.
+                Since 1993 - cultivating certified organic products with deep respect for people, land, and the communities behind every harvest.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {values.map(({ icon: Icon, text }, i) => (
@@ -143,7 +141,7 @@ export default function AboutBioFoods() {
               <br />& Trust
             </motion.h2>
             <motion.p {...fadeUp(0.1)} className="max-w-md text-neutral-500 text-sm leading-7">
-              Over three decades of commitment to ethical agriculture have earned Bio Foods recognition from leading international certifying bodies and trade partners.
+              Three decades of ethical agriculture recognized by leading international certifying bodies and trade partners.
             </motion.p>
           </div>
 

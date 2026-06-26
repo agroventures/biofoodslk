@@ -36,10 +36,8 @@ function HomeClosingReflection({section}) {
             the story of its origin.
           </h2>
 
-          <p className="mx-auto mt-10 max-w-3xl text-lg leading-8 text-neutral-600 lg:text-xl">
-            From carefully cultivated fields to global destinations,
-            every step reflects a commitment to quality, responsibility,
-            and respect for the people and environments that make it possible.
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            From field to global destination - every step reflects quality, responsibility, and respect.
           </p>
         </blockquote>
 

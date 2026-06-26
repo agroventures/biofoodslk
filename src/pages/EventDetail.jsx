@@ -1,0 +1,99 @@
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import newsEventsData from '../data/newsEvents';
+import Navbar from '../components/shared/Navbar';
+import Footer from '../components/shared/Footer';
+import useSEO from '../hooks/useSEO';
+
+const tagColors = {
+    Award: "bg-brand-gold/20 text-brand-secondary",
+    Exhibition: "bg-emerald-50 text-emerald-700",
+    Sustainability: "bg-green-50 text-green-700",
+    Conference: "bg-blue-50 text-blue-700",
+    Certification: "bg-purple-50 text-purple-700",
+    default: "bg-neutral-100 text-neutral-500",
+};
+
+function EventDetail() {
+    const { id } = useParams();
+    const item = newsEventsData.find((e) => e.id === Number(id));
+
+    useSEO({ url: window.location.href, image_alt: item?.title ?? "Event Detail" });
+
+    if (!item) {
+        return (
+            <div className="min-h-screen flex flex-col">
+                <Navbar />
+                <div className="flex-1 flex items-center justify-center">
+                    <p className="text-neutral-500">Entry not found.</p>
+                </div>
+                <Footer />
+            </div>
+        );
+    }
+
+    const { icon: Icon, type, date, title, summary, tag, content } = item;
+    const paragraphs = content.split('\n\n');
+
+    return (
+        <div className="min-h-screen flex flex-col">
+            <Navbar />
+
+            <main className="flex-1 max-w-4xl mx-auto w-full px-6 lg:px-8 py-16 lg:py-24">
+
+                <Link
+                    to="/news-and-events"
+                    className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-brand-primary mb-12 transition-colors"
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    Back to News & Events
+                </Link>
+
+                {/* Meta */}
+                <div className="flex items-center gap-4 mb-6">
+                    <span className={`text-xs uppercase tracking-[0.2em] px-3 py-1 rounded-full ${tagColors[tag] ?? tagColors.default}`}>
+                        {tag}
+                    </span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                        {date} · {type}
+                    </span>
+                </div>
+
+                {/* Title */}
+                <h1
+                    className="text-5xl lg:text-7xl tracking-tight text-neutral-950 leading-tight mb-8"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                    {title}
+                </h1>
+
+                {/* Divider */}
+                <div className="flex items-center gap-4 mb-10">
+                    <div className="h-px flex-1 bg-neutral-200" />
+                    <Icon className="w-4 h-4 text-brand-primary shrink-0" />
+                    <div className="h-px flex-1 bg-neutral-200" />
+                </div>
+
+                {/* Summary */}
+                <p className="text-xl leading-9 text-neutral-700 mb-10 font-medium">
+                    {summary}
+                </p>
+
+                {/* Body */}
+                <div className="space-y-6">
+                    {paragraphs.map((para, i) => (
+                        <p key={i} className="text-neutral-600 leading-8 text-lg">
+                            {para}
+                        </p>
+                    ))}
+                </div>
+
+            </main>
+
+            <Footer />
+        </div>
+    );
+}
+
+export default EventDetail;

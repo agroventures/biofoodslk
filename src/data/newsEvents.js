@@ -1,0 +1,66 @@
+import { Newspaper, Calendar, Trophy, Leaf, Globe, Award } from "lucide-react";
+
+const newsEventsData = [
+    {
+        id: 1,
+        type: "News",
+        icon: Trophy,
+        date: "March 2024",
+        title: "Bio Foods Wins Global CEO Leadership Excellence Award",
+        summary: "Our Chairman, Dr. Sarath Ranaweera, was honored with the Global CEO Leadership Excellence Award for outstanding contributions to organic agriculture worldwide.",
+        tag: "Award",
+        content: "The Global CEO Leadership Excellence Awards recognize outstanding leaders driving innovation and impact across industries. Dr. Sarath Ranaweera, Chairman of Bio Foods (Pvt) Ltd, was honoured for his visionary stewardship of one of Sri Lanka's most respected organic export companies.\n\nUnder his leadership, Bio Foods has grown from a pioneering local enterprise into a globally recognized supplier of certified organic products, reaching markets across Europe, North America, and Asia. His commitment to biodynamic agriculture, fair trade, and smallholder farmer empowerment has set a benchmark for ethical business in the region.\n\nThis recognition reflects not only his personal dedication but the collective achievement of over 5,000 farming families and the entire Bio Foods team whose daily work upholds the highest standards of quality and sustainability.",
+    },
+    {
+        id: 2,
+        type: "Event",
+        icon: Globe,
+        date: "October 2023",
+        title: "Bio Foods at BioFach 2023, Nuremberg",
+        summary: "We participated in BioFach 2023, the world's leading trade fair for organic food, showcasing our latest range of certified organic coconut and spice products.",
+        tag: "Exhibition",
+        content: "BioFach, held annually in Nuremberg, Germany, is the world's premier trade fair for the organic food sector. In 2023, Bio Foods joined thousands of exhibitors and buyers from over 130 countries to present its full portfolio of certified organic and fair trade products.\n\nHighlights of this year's exhibition included the launch of new desiccated coconut grades, an expanded range of single-origin organic spices, and a dedicated showcase of Bio Foods' biodynamic certification credentials.\n\nThe event provided an invaluable platform to strengthen existing partnerships and forge new relationships with importers, distributors, and retail buyers committed to the organic movement. Our team returned with a renewed sense of purpose and a strong pipeline of new business opportunities across European markets.",
+    },
+    {
+        id: 3,
+        type: "News",
+        icon: Leaf,
+        date: "July 2023",
+        title: "Expansion of Biodynamic Farming Network",
+        summary: "Bio Foods expanded its biodynamic farming network to over 5,000 smallholder farmers across Sri Lanka, furthering its commitment to sustainable agriculture.",
+        tag: "Sustainability",
+        content: "Bio Foods has always believed that true sustainability begins at the farm. This year marked a significant milestone as our biodynamic farming network surpassed 5,000 registered smallholder farmers across Sri Lanka's key agricultural regions.\n\nThrough structured training programmes, soil health workshops, and direct field support, our agronomists have guided farming families in adopting biodynamic practices that enrich biodiversity, eliminate chemical inputs, and produce crops of exceptional purity.\n\nThis expansion strengthens the traceability of our supply chain and deepens the impact of our fair trade commitments, ensuring that every product leaving our facilities carries with it a story of responsible stewardship and community prosperity.",
+    },
+    {
+        id: 4,
+        type: "Event",
+        icon: Calendar,
+        date: "May 2023",
+        title: "Fair Trade General Assembly, Bonn",
+        summary: "Our team represented Sri Lanka at the Fair Trade General Assembly in Bonn, Germany, reinforcing our decade-long partnership with global fair trade communities.",
+        tag: "Conference",
+        content: "The Fair Trade General Assembly is a cornerstone event in the global ethical trade calendar, bringing together producers, certifiers, NGOs, and buyers to shape the future of fair trade policy and practice.\n\nBio Foods has been a proud participant since 2001, and our delegation at the 2023 assembly in Bonn continued this tradition. Representatives engaged in working sessions on pricing mechanisms, climate resilience for smallholder farmers, and the evolving landscape of fair trade certification in emerging markets.\n\nOur Chairman delivered remarks on the role of biodynamic agriculture in amplifying fair trade outcomes, drawing on more than two decades of experience building transparent, value-driven supply chains from Sri Lanka to the world.",
+    },
+    {
+        id: 5,
+        type: "News",
+        icon: Award,
+        date: "January 2023",
+        title: "Presidential Export Excellence Award 2022",
+        summary: "Bio Foods received the Presidential Export Excellence Award for the fourth time, recognized as the highest value-added organic exporter in Sri Lanka.",
+        tag: "Award",
+        content: "The Presidential Export Excellence Awards are Sri Lanka's most prestigious recognition for outstanding export achievement. Bio Foods has now been honoured four times in this category, consistently demonstrating leadership in value-added organic exports.\n\nThis recognition reflects the company's ongoing investment in processing technology, certification integrity, and product innovation. By moving beyond commodity trade to deliver finished, shelf-ready organic products, Bio Foods has created significant economic value for Sri Lanka while raising the country's profile in global health and wellness markets.\n\nReceiving this award for the fourth time is a testament to the resilience and dedication of our entire team, from farm to factory to export.",
+    },
+    {
+        id: 6,
+        type: "News",
+        icon: Newspaper,
+        date: "November 2022",
+        title: "New FSSC 22000 Recertification Achieved",
+        summary: "Bio Foods successfully renewed its FSSC 22000 food safety certification, maintaining the highest global standards across all processing facilities.",
+        tag: "Certification",
+        content: "Food Safety System Certification (FSSC 22000) is one of the most rigorous and internationally recognised food safety management standards, covering the full scope of food production from raw material handling through to finished product dispatch.\n\nFollowing a comprehensive audit of our processing facilities, Bio Foods has successfully achieved FSSC 22000 recertification. Auditors assessed our hazard analysis procedures, hygiene management systems, traceability protocols, and staff training records against the latest version of the standard.\n\nThis recertification reinforces our commitment to delivering products that are not only organically certified but also produced under conditions that guarantee consumer safety and confidence. It also fulfils a key prerequisite for supplying major retail chains and food manufacturers across Europe and North America.",
+    },
+];
+
+export default newsEventsData;

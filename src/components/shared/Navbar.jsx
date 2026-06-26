@@ -59,6 +59,7 @@ const Navbar = () => {
     { name: "Processing Facilities", href: "/processing-facilities" },
     { name: "Quality & Certifications", href: "/quality-certifications" },
     { name: "Awards & Recognition", href: "/awards" },
+    { name: "News and Events", href: "/news-and-events" },
     { name: "Contact Us", href: "/contact" },
   ];
 

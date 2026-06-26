@@ -71,11 +71,18 @@ function HomeAgroVenturesAdvantage({ section }) {
 
           <div className="flex items-end lg:col-span-5">
             <p className="max-w-md text-lg leading-8 text-neutral-600">
-              Supported by the broader Agroventures ecosystem, Bio Foods
-              benefits from an integrated network that combines agricultural
-              expertise, operational excellence, and global market access.
+              Backed by the Agroventures ecosystem - combining agricultural expertise with global market access.
             </p>
           </div>
+        </div>
+
+        {/* Facility Image */}
+        <div className="mb-12 overflow-hidden rounded-[36px] shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+          <img
+            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/ProcessingFacility/coconut/1.webp"
+            alt="Bio Foods processing facility"
+            className="h-72 w-full object-cover transition duration-700 hover:scale-105"
+          />
         </div>
 
         {/* Advantage Cards */}
@@ -130,15 +137,11 @@ function HomeAgroVenturesAdvantage({ section }) {
             className="max-w-4xl text-3xl leading-tight lg:text-5xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            A modern agricultural ecosystem built for scale,
-            consistency, and long-term sustainability.
+            A modern agricultural ecosystem built for scale, consistency, and sustainability.
           </h3>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/80">
-            The strength of Agroventures allows Bio Foods to combine the
-            authenticity of responsible cultivation with the confidence of
-            industrial-grade infrastructure, creating products trusted by
-            customers around the world.
+            Authentic cultivation meets industrial-grade infrastructure - trusted by customers around the world.
           </p>
         </div>
       </div>

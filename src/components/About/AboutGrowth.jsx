@@ -108,27 +108,18 @@ export default function AboutGrowth() {
       <div className="py-28 lg:py-40 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
 
-          {/* top story row */}
           <div className="grid lg:grid-cols-2 gap-16 mb-20 pb-20 border-b border-neutral-100">
             <motion.p
               {...fadeUp(0)}
               className="text-2xl lg:text-3xl leading-snug text-neutral-800"
               style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
-              "What began as a small farming initiative in Sri Lanka has grown into a trusted organic food producer working with international partners around the world."
+              "A small farming initiative in Sri Lanka, grown into a trusted organic producer trusted by partners around the world."
             </motion.p>
 
             <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-5">
               <p className="text-base leading-7 text-neutral-600">
-                Over time, our collaboration with Agroventures Group helped
-                strengthen production capacity while keeping our core values
-                unchanged - respect for nature, fairness for farmers, and
-                purity in food.
-              </p>
-              <p className="text-base leading-7 text-neutral-600">
-                Every step of growth has been guided by those same principles,
-                ensuring that scaling our operations never comes at the cost of
-                the people and land that make it all possible.
+                Our collaboration with Agroventures Group strengthened production capacity while keeping core values unchanged - respect for nature, fairness for farmers, and purity in food.
               </p>
             </motion.div>
           </div>

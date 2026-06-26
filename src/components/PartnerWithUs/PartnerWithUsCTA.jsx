@@ -21,7 +21,7 @@ function PartnerWithUsCTA() {
                                 </h2>
 
                                 <p className="text-lg lg:text-xl text-white/90 leading-relaxed mb-10 max-w-3xl mx-auto">
-                                    Join us in delivering ethically sourced, premium organic products to global markets.
+                                    Partner with us to deliver ethically sourced, premium organic products to global markets.
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

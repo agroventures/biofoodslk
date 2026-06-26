@@ -53,11 +53,9 @@ export default function AboutManagement() {
               <span className="text-brand-primary">Bio Foods.</span>
             </motion.h1>
 
-            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600 lg:pb-2">
-              Guided by purpose, experience, and a deep commitment to
-              sustainable agriculture, our leadership team strengthens the
-              relationships between farmers, communities, and global markets.
-            </motion.p>
+              <p className="text-lg leading-8 text-neutral-600">
+                Guided by purpose and a deep commitment to sustainable agriculture - strengthening relationships between farmers, communities, and global markets.
+              </p>
           </div>
         </div>
       </div>
@@ -145,12 +143,12 @@ export default function AboutManagement() {
                             moved into food systems after witnessing the fragility of
                             conventional agriculture. His first tea production was made in
                             a rented facility and presented at a trade fair, where demand
-                            quickly exceeded supply — marking the beginning of Bio Foods.
+                            quickly exceeded supply - marking the beginning of Bio Foods.
                           </p>
                           <p>
                             This led to one of the earliest structured fair pricing systems
                             for farmers, ensuring stable income regardless of market
-                            fluctuations — a model later aligned with global fair-trade
+                            fluctuations - a model later aligned with global fair-trade
                             standards. MOPA, established under Bio Foods, was recognised
                             as one of the leading small producer organisations in Asia.
                           </p>

@@ -52,7 +52,7 @@ function PartnerWithUsOpportunities() {
                             Partnership <span className="text-brand-secondary">Opportunities</span>
                         </h2>
                         <p className="text-lg text-brand-dark/70 max-w-2xl mx-auto">
-                            Choose the partnership model that best fits your business needs
+                            Choose the model that fits your business.
                         </p>
                     </div>
 
