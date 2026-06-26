@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import newsEventsData from '../data/newsEvents';
+import newsEventsData from '../data/events_news';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
 import useSEO from '../hooks/useSEO';
@@ -33,7 +33,7 @@ function EventDetail() {
         );
     }
 
-    const { icon: Icon, type, date, title, summary, tag, content } = item;
+    const { icon: Icon, type, date, title, summary, tag, content, images } = item;
     const paragraphs = content.split('\n\n');
 
     return (
@@ -88,6 +88,24 @@ function EventDetail() {
                         </p>
                     ))}
                 </div>
+
+                {/* Gallery */}
+                {images?.length > 0 && (
+                    <div className="mt-16">
+                        <div className="h-px bg-neutral-200 mb-10" />
+                        <div className="columns-2 md:columns-3 gap-3 space-y-3">
+                            {images.map((src, i) => (
+                                <img
+                                    key={i}
+                                    src={src}
+                                    alt={`${title} ${i + 1}`}
+                                    className="w-full break-inside-avoid object-cover"
+                                    loading="lazy"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                )}
 
             </main>
 

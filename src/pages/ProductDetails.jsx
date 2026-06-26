@@ -6,8 +6,8 @@ import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
 
 function ProductDetails() {
-  const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
+  const { slug } = useParams();
+  const product = products.find((p) => p.slug === slug);
   const [activeSubTab, setActiveSubTab] = useState(
     product?.grades && !Array.isArray(product.grades)
       ? Object.keys(product.grades)[0]

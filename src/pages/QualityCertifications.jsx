@@ -22,7 +22,7 @@ function QualityCertifications() {
       <Navbar />
       <QualityCertificationsHero />
       <QualityCertificationsDetails />
-      <QualityCertificationsAgroVentures />
+      {/* <QualityCertificationsAgroVentures /> */}
       <Footer />
     </div>
   )

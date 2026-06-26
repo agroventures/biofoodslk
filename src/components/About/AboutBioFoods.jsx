@@ -78,6 +78,14 @@ export default function AboutBioFoods() {
               </div>
             </motion.div>
           </div>
+
+          <motion.div {...fadeUp(0.3)} className="mt-16 lg:mt-20 overflow-hidden">
+            <img
+              src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/intro.webp"
+              alt="Bio Foods organic farm"
+              className="w-full h-105 lg:h-140 object-cover"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -129,7 +137,7 @@ export default function AboutBioFoods() {
       </section>
 
       {/* ── ACHIEVEMENTS ── */}
-      <section className="py-28">
+      {/* <section className="py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.h2
@@ -161,10 +169,10 @@ export default function AboutBioFoods() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CLOSING BANNER ── */}
-      <section className="bg-brand-muted border-t border-neutral-200 py-20">
+      {/* <section className="bg-brand-muted border-t border-neutral-200 py-20">
         <motion.div
           {...fadeUp(0)}
           className="max-w-4xl mx-auto px-6 text-center"
@@ -181,7 +189,7 @@ export default function AboutBioFoods() {
             "From the soil of Sri Lanka<br />to tables around the world."
           </h2>
         </motion.div>
-      </section>
+      </section> */}
 
     </div>
   );

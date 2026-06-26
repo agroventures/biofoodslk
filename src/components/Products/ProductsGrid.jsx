@@ -9,7 +9,7 @@ const ProductsGrid = () => {
         {products.map((product) => (
           <Link
             key={product.id}
-            to={`/products/${product.id}`}
+            to={`/products/${product.slug}`}
             className="group border border-neutral-200 bg-white overflow-hidden hover:shadow-md transition-all duration-300"
           >
             <div className="aspect-video overflow-hidden bg-neutral-50">

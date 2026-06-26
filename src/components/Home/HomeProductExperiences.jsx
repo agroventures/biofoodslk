@@ -43,29 +43,20 @@ function HomeProductExperiences({ section }) {
         </div>
 
         {/* Editorial Product Rows */}
-        <div className="space-y-12 lg:space-y-20">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
           {products.slice(0, 4).map((product, index) => (
-            <div
-              key={index}
-              className={`
-                grid items-center gap-12
-                lg:grid-cols-12
-                ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}
-              `}
-            >
+            <div key={index} className="flex flex-col">
               {/* Image */}
-              <div className="lg:col-span-6">
-                <div className="overflow-hidden rounded-[36px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-                  <img
-                    src={product.img}
-                    alt={product.name}
-                    className="h-64 sm:h-80 lg:h-105 w-full object-cover transition duration-700 hover:scale-105"
-                  />
-                </div>
+              <div className="overflow-hidden rounded-[36px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  className="h-64 sm:h-80 w-full object-cover transition duration-700 hover:scale-105"
+                />
               </div>
 
               {/* Content */}
-              <div className="lg:col-span-6">
+              <div className="mt-8">
                 <span className="text-xs tracking-[0.25em] text-secondary">
                   0{index + 1}
                 </span>
@@ -77,12 +68,12 @@ function HomeProductExperiences({ section }) {
                   {product.name}
                 </h3>
 
-                <p className="mt-6 max-w-lg text-lg leading-8 text-neutral-600">
+                <p className="mt-6 text-lg leading-8 text-neutral-600">
                   {product.desc}
                 </p>
 
                 <Link
-                  to="/products"
+                  to={`/products/${product.slug}`}
                   className="group mt-8 inline-flex items-center gap-3 rounded-full border border-brand-primary px-6 py-3 text-sm font-medium text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
                 >
                   Explore Collection

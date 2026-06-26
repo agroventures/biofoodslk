@@ -72,7 +72,7 @@ export default function AboutManagement() {
               <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start text-left">
                 
                 {/* Mobile Image Layer */}
-                <div className="w-full lg:hidden aspect-[16/10] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
+                <div className="w-full lg:hidden aspect-3/4 overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
                   <img
                     src={member.img}
                     alt={member.name}
@@ -86,7 +86,7 @@ export default function AboutManagement() {
                 </span>
 
                 {/* Desktop Large Image Layer */}
-                <div className="hidden lg:block lg:col-span-4 aspect-[3/4] max-h-[460px] w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
+                <div className="hidden lg:block lg:col-span-4 aspect-3/4 max-h-115 w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
                   <img
                     src={member.img}
                     alt={member.name}

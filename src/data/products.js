@@ -2,6 +2,7 @@ export const products = [
     {
         id: 5,
         name: "Organic Spices",
+        slug: "organic-spices",
         img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/organi-spices.webp",
         desc: "The world's first fair-trade certified spice exporter. Our organic, biodynamic range includes black & white pepper, cinnamon, cardamom, clove, nutmeg, mace, turmeric, ginger, and vanilla - responsibly sourced across Sri Lanka.",
         grades: {
@@ -43,6 +44,7 @@ export const products = [
     {
         id: 6,
         name: "Organic Coconut Products",
+        slug: "organic-coconut-products",
         img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/CoconutProducts/coconut.jpg",
         desc: "Sri Lanka's 'tree of life' - every part honoured, every product crafted with purpose. Our certified organic coconut range, from desiccated coconut to coconut chips, meets the highest global standards for health-conscious and vegan markets.",
         grades: {

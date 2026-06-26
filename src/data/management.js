@@ -9,7 +9,7 @@ export const management = [
     {
         id: 2,
         name: "Mrs. Manori Hettiarachchi",
-        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/manori_hettiarachchi.webp",
+        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/manori_hettiarachchi.webp?v=2",
         role: "Director of HR",
         message: "At Bio Foods, our people are at the heart of everything we do. As a pioneer in organic and fair-trade agriculture, we believe that sustainable success begins with empowering our employees, supporting our farmers, and fostering a culture rooted in integrity, innovation, and respect for nature. Our HR philosophy is centered on creating meaningful opportunities for growth while ensuring ethical practices across our value chain.We are committed to nurturing talent, promoting inclusivity, and building a workforce that is passionate about environmental stewardship and community well- being. By aligning our human capital strategies with our mission of delivering high - quality organic products to the world, we strive to cultivate not just crops - but also careers, livelihoods, and a sustainable future for all."
     }

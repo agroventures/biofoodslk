@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import newsEventsData from '../../data/newsEvents';
-
-const FILTERS = ["All", "News", "Event"];
+import newsEventsData from '../../data/events_news';
 
 const tagColors = {
     Award: "bg-brand-gold/20 text-brand-secondary",
@@ -12,66 +10,17 @@ const tagColors = {
     Sustainability: "bg-green-50 text-green-700",
     Conference: "bg-blue-50 text-blue-700",
     Certification: "bg-purple-50 text-purple-700",
+    Expansion: "bg-orange-50 text-orange-700",
     default: "bg-neutral-100 text-neutral-500",
 };
 
 function NewsEventsGrid() {
-    const [activeFilter, setActiveFilter] = useState("All");
-
-    const filtered = newsEventsData.filter(
-        (item) => activeFilter === "All" || item.type === activeFilter
-    );
-
     return (
         <section className="w-full bg-white border-t border-neutral-100">
-
-            {/* DARK HEADER BAND */}
-            <div className="bg-brand-primary text-white">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-end">
-                    <div>
-                        <p className="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
-                            News & Events
-                        </p>
-                        <h2
-                            className="text-5xl lg:text-7xl tracking-tight leading-none"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                            Milestones &
-                            <br />
-                            stories unfolding.
-                        </h2>
-                    </div>
-                    <p className="text-white/70 text-lg leading-8 lg:max-w-md lg:ml-auto">
-                        From international exhibitions to landmark achievements, explore
-                        the moments that define Bio Foods' commitment to organic
-                        excellence and sustainable growth.
-                    </p>
-                </div>
-            </div>
-
-            {/* FILTER BAR */}
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-4">
-                <div className="flex items-center gap-3">
-                    {FILTERS.map((f) => (
-                        <button
-                            key={f}
-                            onClick={() => setActiveFilter(f)}
-                            className={`text-xs uppercase tracking-[0.2em] px-5 py-2 border transition-colors ${
-                                activeFilter === f
-                                    ? "bg-brand-primary text-white border-brand-primary"
-                                    : "border-neutral-300 text-neutral-500 hover:border-brand-primary hover:text-brand-primary"
-                            }`}
-                        >
-                            {f}
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            {/* GRID */}
+            {/* LIST */}
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
                 <div className="divide-y divide-neutral-200 border-t border-neutral-200">
-                    {filtered.map(({ id, icon: Icon, number, date, title, summary, tag, type }, i) => (
+                    {newsEventsData.map(({ id, icon: Icon, date, title, summary, tag, type, images }, i) => (
                         <motion.div
                             key={id}
                             initial={{ opacity: 0, y: 24 }}
@@ -92,7 +41,7 @@ function NewsEventsGrid() {
                             </div>
 
                             {/* Date + Title */}
-                            <div className="lg:col-span-5">
+                            <div className="lg:col-span-4">
                                 <p className="text-xs uppercase tracking-[0.2em] text-neutral-400 mb-3">
                                     {date} · {type}
                                 </p>
@@ -107,8 +56,8 @@ function NewsEventsGrid() {
                                 </span>
                             </div>
 
-                            {/* Summary */}
-                            <div className="lg:col-span-6 lg:pt-1 flex flex-col gap-6">
+                            {/* Summary + CTA */}
+                            <div className="lg:col-span-4 lg:pt-1 flex flex-col gap-6">
                                 <p className="text-neutral-600 leading-8">{summary}</p>
                                 <Link
                                     to={`/news-and-events/${id}`}
@@ -117,6 +66,18 @@ function NewsEventsGrid() {
                                     Read More <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
+
+                            {/* Thumbnail */}
+                            {images?.[0] && (
+                                <div className="lg:col-span-3">
+                                    <img
+                                        src={images[0]}
+                                        alt={title}
+                                        className="w-full aspect-[4/3] object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            )}
                         </motion.div>
                     ))}
                 </div>

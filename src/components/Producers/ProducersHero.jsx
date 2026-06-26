@@ -6,7 +6,7 @@ function ProducersHero() {
   return (
     <ImageHero
       icon={GrUserWorker}
-      img="/Producers/hero.avif"
+      img="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Producers/hero.webp"
       badge="Marginalized Organic Producers' Association"
       title="MOPA"
       subtitle="Empowering Small-Scale Farmers"

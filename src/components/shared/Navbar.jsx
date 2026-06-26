@@ -55,8 +55,9 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Products", href: "/products" },
+    { name: "Producers", href: "/producers" },
     { name: "Processing Facilities", href: "/processing-facilities" },
+    { name: "Products", href: "/products" },
     { name: "Quality & Certifications", href: "/quality-certifications" },
     { name: "Awards & Recognition", href: "/awards" },
     { name: "News and Events", href: "/news-and-events" },
@@ -81,11 +82,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="h-20 md:h-24 flex items-center justify-between">
             {/* LOGO */}
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className="shrink-0"
-            >
+            <Link to="/" onClick={() => setIsOpen(false)} className="shrink-0">
               <img
                 src="/logo.svg"
                 alt="Bio Foods"
@@ -146,11 +143,7 @@ const Navbar = () => {
           backdrop-blur-sm
           transition-all
           duration-500
-          ${
-            isOpen
-              ? "opacity-100 visible"
-              : "opacity-0 invisible"
-          }
+          ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
         `}
       />
 
@@ -173,11 +166,7 @@ const Navbar = () => {
           duration-500
           ease-out
           shadow-2xl
-          ${
-            isOpen
-              ? "translate-x-0"
-              : "translate-x-full"
-          }
+          ${isOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
         {/* HEADER */}
@@ -207,8 +196,7 @@ const Navbar = () => {
         <div className="flex-1 overflow-y-auto px-8 py-12">
           <nav className="space-y-6">
             {navLinks.map((link) => {
-              const active =
-                location.pathname === link.href;
+              const active = location.pathname === link.href;
 
               return (
                 <Link
@@ -229,8 +217,7 @@ const Navbar = () => {
                     }
                   `}
                   style={{
-                    fontFamily:
-                      "Cormorant Garamond, serif",
+                    fontFamily: "Cormorant Garamond, serif",
                   }}
                 >
                   {link.name}
@@ -243,9 +230,8 @@ const Navbar = () => {
         {/* FOOTER */}
         <div className="border-t border-neutral-200 p-8">
           <p className="text-sm leading-relaxed text-neutral-500">
-            Organic products responsibly sourced,
-            processed, and distributed through
-            Agroventures Group.
+            Organic products responsibly sourced, processed, and distributed
+            through Agroventures Group.
           </p>
 
           <div className="mt-6 flex items-center gap-3">
@@ -259,9 +245,7 @@ const Navbar = () => {
       </aside>
 
       {/* PAGE SPACER */}
-      {!isHomePage && (
-        <div className="h-20 md:h-24" />
-      )}
+      {!isHomePage && <div className="h-20 md:h-24" />}
     </>
   );
 };

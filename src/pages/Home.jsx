@@ -27,7 +27,7 @@ function Home() {
             <HomeIntro section="02" />
             <HomeCertifications section="03" />
             <HomeAgroVenturesAdvantage section="04" />
-            <HomeCorePrinciples section="05" />
+            {/* <HomeCorePrinciples section="05" /> */}
             <HomeProductExperiences section="06" />
             <HomeClosingReflection section="07" />
             <Footer />

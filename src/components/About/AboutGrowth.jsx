@@ -43,7 +43,7 @@ export default function AboutGrowth() {
       {/* ── FULL-BLEED IMAGE + HEADLINE ── */}
       <div className="relative h-[60vh] min-h-105">
         <img
-          src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/name_board.webp"
+          src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/name_board.webp?v=2"
           alt="Growth"
           className="absolute inset-0 h-full w-full object-cover"
         />

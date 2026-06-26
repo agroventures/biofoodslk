@@ -34,9 +34,9 @@ function About() {
       <Navbar />
       <AboutHero />
       <AboutBioFoods />
+      <AboutManagement />
       <AboutFoundingVision />
       <AboutGrowth />
-      <AboutManagement />
       <VisionMission />
       <AboutAgroVentures />
       {/* <AboutAwards /> */}

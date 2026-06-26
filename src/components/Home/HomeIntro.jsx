@@ -7,29 +7,6 @@ import {
 } from "lucide-react";
 
 export default function HomeIntro() {
-  const highlights = [
-    {
-      icon: <Award size={22} />,
-      value: "30+",
-      label: "Years of Excellence",
-    },
-    {
-      icon: <Users size={22} />,
-      value: "15,000+",
-      label: "Partner Farmers",
-    },
-    {
-      icon: <Globe size={22} />,
-      value: "50+",
-      label: "Global Markets",
-    },
-    {
-      icon: <Leaf size={22} />,
-      value: "100%",
-      label: "Sustainable Commitment",
-    },
-  ];
-
   return (
     <section className="relative overflow-hidden bg-white py-28 lg:py-40">
       {/* Background decoration */}
@@ -85,25 +62,25 @@ export default function HomeIntro() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="overflow-hidden rounded-3xl">
-              <img
-                src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/hero.webp"
-                alt="Sri Lankan organic farm"
-                className="h-[480px] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-3xl" />
-            </div>
-            {/* Stat pills over image */}
-            <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3">
-              {highlights.map((item) => (
-                <div key={item.label} className="flex items-center gap-3 rounded-2xl bg-white/15 backdrop-blur-md border border-white/20 px-4 py-3">
-                  <div className="text-white">{item.icon}</div>
-                  <div>
-                    <p className="text-lg font-bold text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>{item.value}</p>
-                    <p className="text-[10px] uppercase tracking-widest text-white/70">{item.label}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="relative">
+              {/* Main image */}
+              <div className="overflow-hidden rounded-3xl">
+                <img
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/farmer-3.webp"
+                  alt="Farmers in Sri Lanka"
+                  className="h-120 w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent rounded-3xl" />
+              </div>
+
+              {/* Floating second image — bottom right */}
+              <div className="absolute -bottom-6 -right-6 h-44 w-44 overflow-hidden rounded-2xl ring-4 ring-white shadow-2xl">
+                <img
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/farmer-2.webp"
+                  alt="Lady Farmer"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </motion.div>
         </div>

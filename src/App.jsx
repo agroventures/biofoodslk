@@ -7,6 +7,7 @@ import Loader from './components/shared/Loader';
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
 const ProductDetails = lazy(() => import('./pages/ProductDetails'));
+const Producers = lazy(() => import('./pages/Producers'));
 const Contact = lazy(() => import('./pages/Contact'));
 const About = lazy(() => import('./pages/About'));
 const Awards = lazy(() => import('./pages/Awards'));
@@ -27,7 +28,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/products/:slug" element={<ProductDetails />} />
+          <Route path="producers" element={<Producers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/awards" element={<Awards />} />
