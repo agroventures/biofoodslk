@@ -139,6 +139,14 @@ body{
   animation: scaleIn 0.4s ease-out;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Line clamp utilities */
 .line-clamp-2 {
   display: -webkit-box;

@@ -36,7 +36,7 @@ function HomeAgroVenturesAdvantage({ section }) {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28">
       {/* Decorative Number */}
       <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
         <span className="text-[280px] font-black leading-none text-black/3">
@@ -46,14 +46,14 @@ function HomeAgroVenturesAdvantage({ section }) {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-20 grid gap-12 lg:grid-cols-12">
+        <div className="mb-12 grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
 
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-brand-secondary" />
-                <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                   Why Choose Us
                 </span>
               </div>
@@ -102,21 +102,17 @@ function HomeAgroVenturesAdvantage({ section }) {
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
               "
             >
-              <div className="mb-10 flex items-center justify-between">
+              <div className="mb-10 flex items-center justify-center">
                 <div className="rounded-2xl bg-brand-muted p-4 text-brand-primary">
                   <advantage.icon className="h-5 w-5" />
                 </div>
-
-                <span className="text-xs tracking-[0.25em] text-brand-secondary">
-                  0{index + 1}
-                </span>
               </div>
 
-              <h3 className="mb-4 text-2xl font-semibold tracking-tight text-neutral-950">
+              <h3 className="mb-4 text-2xl font-semibold text-center tracking-tight text-neutral-950">
                 {advantage.title}
               </h3>
 
-              <p className="leading-7 text-neutral-600">
+              <p className="leading-7 text-center text-neutral-600">
                 {advantage.description}
               </p>
             </div>
@@ -128,7 +124,7 @@ function HomeAgroVenturesAdvantage({ section }) {
           <div className="mb-6 flex items-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
 
-            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">
+            <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
               System Advantage
             </span>
           </div>

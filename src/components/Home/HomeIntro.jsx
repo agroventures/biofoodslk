@@ -8,9 +8,9 @@ import {
 
 export default function HomeIntro({section}) {
   return (
-    <section className="relative overflow-hidden bg-white py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-white py-20 lg:py-28">
       {/* Background decoration */}
-      <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
+      <div className="pointer-events-none absolute right-10 top-0 hidden select-none xl:block">
         <span className="text-[280px] font-black leading-none text-black/3">
           {section}
         </span>
@@ -26,9 +26,8 @@ export default function HomeIntro({section}) {
             viewport={{ once: true }}
           >
             <div className="mb-6 flex items-center gap-4">
-              <span className="text-xs font-medium text-neutral-400">{section}</span>
               <div className="h-px w-12 bg-brand-secondary" />
-              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                 About Bio Foods Agro
               </span>
             </div>

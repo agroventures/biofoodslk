@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function HomeProductExperiences({ section }) {
   return (
-    <section className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-brand-light py-10 lg:py-14">
       {/* Decorative Number */}
       <div className="pointer-events-none absolute right-0 top-0 hidden select-none xl:block">
         <span className="text-[280px] font-black leading-none text-black/3">
@@ -15,14 +15,14 @@ function HomeProductExperiences({ section }) {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-24 max-w-5xl">
+        <div className="mb-12 max-w-5xl">
           <div className="mb-6 flex items-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
 
             <div className="flex items-center gap-2">
               <Package className="h-4 w-4 text-brand-secondary" />
 
-              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                 Product Collection
               </span>
             </div>
@@ -57,10 +57,6 @@ function HomeProductExperiences({ section }) {
 
               {/* Content */}
               <div className="mt-8">
-                <span className="text-xs tracking-[0.25em] text-secondary">
-                  0{index + 1}
-                </span>
-
                 <h3
                   className="mt-4 text-4xl tracking-tight text-neutral-950 lg:text-5xl"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -89,7 +85,7 @@ function HomeProductExperiences({ section }) {
           <div className="mb-4 flex items-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
 
-            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">
+            <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
               Product Promise
             </span>
           </div>

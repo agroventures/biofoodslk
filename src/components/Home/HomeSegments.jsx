@@ -54,7 +54,7 @@ function HomeSegments() {
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-neutral-950">
               <Sparkles className="w-4 h-4 stroke-[1.5]" />
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-neutral-500">
+              <span className="font-mono text-sm uppercase tracking-[0.3em] text-neutral-500">
                 Discover Our Journey
               </span>
             </div>

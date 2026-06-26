@@ -24,12 +24,12 @@ function Home() {
         <div className="min-h-screen">
             <Navbar />
             <HomeHero section="1" />
+            {/* <HomeCertifications section="02" /> */}
             <HomeIntro section="02" />
-            <HomeCertifications section="03" />
-            <HomeAgroVenturesAdvantage section="04" />
+            <HomeAgroVenturesAdvantage section="03" />
             {/* <HomeCorePrinciples section="05" /> */}
-            <HomeProductExperiences section="05" />
-            <HomeClosingReflection section="06" />
+            <HomeProductExperiences section="04" />
+            <HomeClosingReflection section="05" />
             <Footer />
         </div>
     )

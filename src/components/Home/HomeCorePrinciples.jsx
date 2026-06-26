@@ -47,7 +47,7 @@ function HomeCorePrinciples({ section }) {
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-brand-secondary" />
 
-              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                 What We Stand For
               </span>
             </div>

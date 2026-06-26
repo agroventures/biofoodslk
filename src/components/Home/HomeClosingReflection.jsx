@@ -3,7 +3,7 @@ import { Leaf } from "lucide-react";
 
 function HomeClosingReflection({section}) {
   return (
-    <section className="relative overflow-hidden bg-brand-light py-32 lg:py-48">
+    <section className="relative overflow-hidden bg-brand-light py-100 lg:py-14">
       {/* Decorative Number */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <span className="select-none text-[220px] font-black leading-none text-black/3 lg:text-[400px]">
@@ -45,7 +45,7 @@ function HomeClosingReflection({section}) {
         <div className="mt-16">
           <div className="mx-auto h-px w-24 bg-brand-secondary" />
 
-          <p className="mt-6 text-xs uppercase tracking-[0.35em] text-neutral-500">
+          <p className="mt-6 text-sm uppercase tracking-[0.35em] text-neutral-500">
             Bio Foods • Agroventures Group
           </p>
         </div>

@@ -1,7 +1,8 @@
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { certifications as certData } from "../../data/certifications";
 
 const slides = [
   {
@@ -60,16 +61,21 @@ const slides = [
     ),
     desc: "Hand-harvested, sun-cured vanilla beans carrying the rich aroma of Sri Lanka's fertile highlands - certified organic and fair trade.",
   },
+  {
+    img: "/Awards/german_sustainability.WebP",
+    label: "Award Winning",
+    heading: (
+      <>
+        Globally Recognised
+        <br />
+        <span className="text-brand-secondary">Award Winning</span>
+        <br />
+        Excellence.
+      </>
+    ),
+    desc: "Recipients of the German Sustainability Award, Presidential Export Excellence Awards, and the Fairest Fair Trader of the World — honouring over three decades of responsible trade.",
+  },
 ];
-
-const stats = [
-  { value: "33+", label: "Years of Excellence", desc: "Organic exports since 1993", accent: "bg-brand-primary" },
-  { value: "15K+", label: "Partner Farmers", desc: "Supporting sustainable communities", accent: "bg-brand-secondary" },
-  { value: "50+", label: "Export Markets", desc: "Trusted by global buyers", accent: "bg-emerald-600" },
-  { value: "20+", label: "Certifications", desc: "Global quality standards", accent: "bg-amber-500" },
-];
-
-const certifications = ["USDA Organic", "EU Organic", "Fair Trade", "Demeter", "ISO 22000"];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -81,8 +87,25 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+  // Duplicate data to create a seamless seamless looping visual effect
+  const duplicatedCerts = [...certData, ...certData, ...certData];
+
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden flex flex-col justify-between">
+      {/* Inject Keyframe for Marquee inside the file to guarantee it works without editing tailwind.config.js */}
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-33.33%); }
+        }
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       {/* Sliding Background Images */}
       <AnimatePresence mode="sync">
         <motion.div
@@ -101,155 +124,131 @@ export default function Hero() {
       </AnimatePresence>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-black/55 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-0" />
-      <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.15),transparent_50%)] z-0" />
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/50 z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.1),transparent_60%)] z-0" />
 
-      {/* Main Content */}
+      {/* Main Centered Content */}
       <motion.div
         style={{ y: contentY }}
-        className="relative z-10 mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-12 px-6 py-24 lg:grid-cols-12 lg:px-12 xl:px-20"
+        className="relative z-10 mx-auto flex flex-1 max-w-5xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center"
       >
-        {/* Left Side */}
-        <div className="lg:col-span-7">
-          {/* Slide Label */}
-          <motion.div
-            key={`label-${current}`}
-            initial={{ opacity: 0, y: 15 }}
+        {/* Slide Label */}
+        <motion.div
+          key={`label-${current}`}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-6 inline-flex items-center gap-3 justify-center"
+        >
+          <span className="h-px w-8 bg-brand-secondary" />
+          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-white/90">
+            {slides[current].label}
+          </span>
+          <span className="h-px w-8 bg-brand-secondary" />
+        </motion.div>
+
+        {/* Heading */}
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={`heading-${current}`}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-flex items-center gap-3"
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.7 }}
+            className="font-serif text-5xl font-semibold leading-[1.1] tracking-tight text-white md:text-6xl xl:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            <span className="h-px w-12 bg-brand-secondary" />
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
-              {slides[current].label}
-            </span>
-          </motion.div>
+            {slides[current].heading}
+          </motion.h1>
+        </AnimatePresence>
 
-          {/* Heading */}
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={`heading-${current}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.7 }}
-              className="font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl xl:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
-            >
-              {slides[current].heading}
-            </motion.h1>
-          </AnimatePresence>
-
-          {/* Description */}
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={`desc-${current}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-8 max-w-2xl text-lg leading-8 text-neutral-200"
-            >
-              {slides[current].desc}
-            </motion.p>
-          </AnimatePresence>
-
-          {/* Certification Pills */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mt-8 flex flex-wrap gap-3"
-          >
-            {certifications.map((cert) => (
-              <div
-                key={cert}
-                className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md"
-              >
-                {cert}
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
+        {/* Description */}
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={`desc-${current}`}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mt-10 flex flex-wrap gap-4"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="mt-6 max-w-2xl text-base leading-7 text-neutral-200 md:text-lg md:leading-8"
           >
-            <Link
-              to="/products"
-              className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-            >
-              Explore Products
-              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <Link
-              to="/contact"
-              className="group flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-black"
-            >
-              Contact Our Team
-              <Download size={18} className="transition-transform duration-300 group-hover:translate-y-0.5" />
-            </Link>
-          </motion.div>
+            {slides[current].desc}
+          </motion.p>
+        </AnimatePresence>
 
-          {/* Slide Dots */}
-          <div className="mt-10 flex gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === current ? "w-8 bg-brand-secondary" : "w-3 bg-white/40"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
+        {/* Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto"
+        >
+          <Link
+            to="/products"
+            className="group flex items-center justify-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+          >
+            Explore Products
+            <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+          <Link
+            to="/contact"
+            className="group flex items-center justify-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-black"
+          >
+            Contact Our Team
+            <Phone size={18} className="transition-transform duration-300" />
+          </Link>
+        </motion.div>
 
-        {/* Right Side Stats */}
-        <div className="hidden lg:col-span-5 lg:flex lg:flex-col lg:gap-5">
-          {stats.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 + index * 0.15 }}
-              className="group overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:shadow-2xl"
-            >
-              <div className="flex items-center gap-6 p-7">
-                <div className={`h-16 w-1 rounded-full ${item.accent}`} />
-                <div className="min-w-[100px]">
-                  <h3 className="text-5xl font-bold text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
-                    {item.value}
-                  </h3>
-                </div>
-                <div className="border-l border-white/20 pl-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60">{item.label}</p>
-                  <p className="mt-2 text-sm leading-6 text-neutral-200">{item.desc}</p>
-                </div>
-              </div>
-            </motion.div>
+        {/* Slide Indicator Dots */}
+        <div className="mt-10 flex gap-2 justify-center">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === current ? "w-8 bg-brand-secondary" : "w-3 bg-white/40"
+              }`}
+            />
           ))}
         </div>
       </motion.div>
 
-      {/* Scroll Indicator */}
-      <button
-        onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-        className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 lg:flex"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="flex flex-col items-center"
-        >
-          <span className="mb-2 text-[10px] font-semibold uppercase tracking-[0.4em] text-white/60">Scroll</span>
-          <div className="h-12 w-px bg-white/40" />
-        </motion.div>
-      </button>
+      {/* Infinite Slider Bottom Bar */}
+      {/* Infinite Slider Bottom Bar */}
+      <div className="relative z-10 w-full backdrop-blur-sm border-t border-white/10 py-8 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 mb-4">
+          <p className="text-center text-[11px] font-bold uppercase tracking-[0.4em] text-white/50">
+            Certified &amp; Trusted By
+          </p>
+        </div>
+        
+        {/* Marquee Wrapper Track */}
+        <div className="relative w-full flex overflow-x-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+          <div className="flex gap-12 animate-marquee whitespace-nowrap min-w-full py-2">
+            {duplicatedCerts.map((cert, idx) => (
+              <Link
+                key={`${cert.id}-${idx}`}
+                to="/quality-certifications"
+                title={cert.name}
+                className="flex flex-col items-center justify-center gap-3 w-32 shrink-0 transition-all duration-300 hover:scale-110 drop-shadow-[0_8px_16px_rgba(0,0,0,0.65)]"
+              >
+                <div className="w-full flex items-center justify-center h-16">
+                  <img
+                    src={cert.img}
+                    alt={cert.name}
+                    className="h-16 w-full object-contain filter brightness-100"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="text-center text-[10px] font-bold tracking-wider text-white/80 leading-tight uppercase w-full truncate px-1">
+                  {cert.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

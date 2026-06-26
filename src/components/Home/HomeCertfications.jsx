@@ -21,9 +21,9 @@ const foodSafety = [
 
 function HomeCertifications({ section }) {
   return (
-    <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28 xl:py-40">
+    <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28">
       {/* Decorative Number */}
-      <div className="pointer-events-none absolute right-10 top-0 hidden select-none xl:block">
+      <div className="pointer-events-none absolute left-0 top-0 hidden select-none xl:block">
         <span className="text-[280px] font-black leading-none text-black/3">
           {section}
         </span>
@@ -34,15 +34,14 @@ function HomeCertifications({ section }) {
         {/* ========================================================================= */}
         {/* Full-Width Certifications Section (First)                                 */}
         {/* ========================================================================= */}
-        <div className="mb-20 space-y-12 rounded-4xl bg-white p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
+        <div className="mb-12 space-y-12 rounded-4xl bg-white p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
           
           {/* Line 01: Organic & Fairtrade (ICS) */}
           <div>
             <div className="mb-4 flex items-center justify-between border-b border-neutral-100 pb-2">
-              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500 font-medium">
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500 font-medium">
                 Organic & Fairtrade
               </span>
-              <span className="text-xs tracking-[0.25em] text-brand-secondary font-semibold">01</span>
             </div>
             <div className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-7 items-center justify-items-center min-h-24">
               {ICS.map((img, index) => (
@@ -59,10 +58,9 @@ function HomeCertifications({ section }) {
           {/* Line 02: Food Safety Systems */}
           <div>
             <div className="mb-4 flex items-center justify-between border-b border-neutral-100 pb-2">
-              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500 font-medium">
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500 font-medium">
                 Food Safety Systems
               </span>
-              <span className="text-xs tracking-[0.25em] text-brand-secondary font-semibold">02</span>
             </div>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 items-center justify-items-center min-h-24">
               {foodSafety.map((img, index) => (
@@ -89,7 +87,7 @@ function HomeCertifications({ section }) {
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-brand-secondary" />
-                <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                   Quality Assurance
                 </span>
               </div>
@@ -125,7 +123,7 @@ function HomeCertifications({ section }) {
             <div className="rounded-[40px] bg-brand-primary p-8 text-white lg:p-10 xl:p-12">
               <div className="mb-4 flex items-center gap-4">
                 <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">
+                <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
                   Commitment
                 </span>
               </div>
