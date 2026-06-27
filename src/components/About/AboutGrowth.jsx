@@ -53,7 +53,7 @@ export default function AboutGrowth() {
         {/* badge */}
         <motion.span
           {...fadeUp(0.1)}
-          className="absolute top-10 left-8 lg:left-16 inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/70"
+          className="absolute top-10 left-8 lg:left-16 inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-white/70"
         >
           <span className="h-px w-10 bg-brand-secondary" />
           Growth &amp; Evolution
@@ -76,13 +76,13 @@ export default function AboutGrowth() {
 
         {/* corner label */}
         <div className="absolute bottom-10 right-8 lg:right-16 hidden lg:flex items-center gap-2 text-white/50">
-          <span className="text-xs uppercase tracking-[0.3em]">Since 1993</span>
+          <span className="text-sm uppercase tracking-[0.3em]">Since 1993</span>
           <ArrowUpRight className="h-3 w-3" />
         </div>
       </div>
 
       {/* ── METRICS BAND ── */}
-      <div className="bg-brand-primary">
+      {/* <div className="bg-brand-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
           {metrics.map((m, i) => (
             <motion.div
@@ -96,13 +96,13 @@ export default function AboutGrowth() {
               >
                 {m.value}
               </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/60">
+              <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/60">
                 {m.label}
               </p>
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* ── STORY + PILLARS ── */}
       <div className="py-28 lg:py-40 border-b border-neutral-100">
@@ -118,7 +118,7 @@ export default function AboutGrowth() {
             </motion.p>
 
             <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-5">
-              <p className="text-base leading-7 text-neutral-600">
+              <p className="text-md leading-7 text-neutral-600">
                 Our collaboration with Agroventures Group strengthened production capacity while keeping core values unchanged - respect for nature, fairness for farmers, and purity in food.
               </p>
             </motion.div>
@@ -130,18 +130,18 @@ export default function AboutGrowth() {
               <motion.div
                 key={i}
                 {...fadeUp(i * 0.1)}
-                className="group border border-neutral-200 p-8 hover:border-brand-primary transition-colors duration-300"
+                className="group border border-neutral-200 p-8 flex flex-col items-center justify-center hover:border-brand-primary transition-colors duration-300"
               >
-                <div className="h-10 w-10 flex items-center justify-center bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
-                  <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                <div className="h-12 w-12 flex items-center justify-center bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
+                  <Icon className="h-6 w-6 text-brand-primary group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3
-                  className="mt-6 text-xl font-medium"
+                  className="mt-6 text-xl font-medium text-center"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   {title}
                 </h3>
-                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
+                <p className="mt-3 text-md text-center text-neutral-600 leading-relaxed">
                   {description}
                 </p>
               </motion.div>

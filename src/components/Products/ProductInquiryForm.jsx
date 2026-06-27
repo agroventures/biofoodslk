@@ -35,7 +35,7 @@ const ProductInquiryForm = () => {
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Sparkles className="h-4 w-4 text-brand-primary" />
-            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">Product Inquiry</span>
+            <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Product Inquiry</span>
           </div>
           <h2
             className="text-5xl lg:text-6xl tracking-tight text-neutral-950"
@@ -65,28 +65,28 @@ const ProductInquiryForm = () => {
           className="border border-neutral-200 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <div>
-            <label className="text-xs uppercase tracking-widest text-neutral-500">Name</label>
+            <label className="text-sm uppercase tracking-widest text-neutral-500">Name</label>
             <input id="name" required value={formData.name} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
               placeholder="Your name" />
           </div>
 
           <div>
-            <label className="text-xs uppercase tracking-widest text-neutral-500">Email</label>
+            <label className="text-sm uppercase tracking-widest text-neutral-500">Email</label>
             <input id="email" type="email" required value={formData.email} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
               placeholder="Email address" />
           </div>
 
           <div className="md:col-span-2">
-            <label className="text-xs uppercase tracking-widest text-neutral-500">Product of Interest</label>
+            <label className="text-sm uppercase tracking-widest text-neutral-500">Product of Interest</label>
             <input id="product" required value={formData.product} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
               placeholder="e.g. Organic Spices, Coconut Products" />
           </div>
 
           <div className="md:col-span-2">
-            <label className="text-xs uppercase tracking-widest text-neutral-500">Message</label>
+            <label className="text-sm uppercase tracking-widest text-neutral-500">Message</label>
             <textarea id="message" required rows="5" value={formData.message} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 resize-none outline-none focus:border-brand-primary"
               placeholder="Tell us about your requirements..." />

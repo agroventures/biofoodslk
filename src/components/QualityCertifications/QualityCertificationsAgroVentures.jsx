@@ -46,7 +46,7 @@ function QualityCertificationsAgroVentures() {
 
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-white/50"
+            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-white/50"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Agro Ventures Integration
@@ -82,7 +82,7 @@ function QualityCertificationsAgroVentures() {
 
             {/* sticky label col */}
             <motion.div {...fadeUp(0)} className="lg:col-span-4 lg:sticky lg:top-32">
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Strategic Alignment
               </span>
@@ -113,7 +113,7 @@ function QualityCertificationsAgroVentures() {
                 >
                   {/* index */}
                   <span
-                    className="hidden sm:block shrink-0 text-xs text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6"
+                    className="hidden sm:block shrink-0 text-sm text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -152,7 +152,7 @@ function QualityCertificationsAgroVentures() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-8">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-8">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Enhanced Capabilities
               </span>
@@ -193,7 +193,7 @@ function QualityCertificationsAgroVentures() {
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50 mb-8">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-white/50 mb-8">
                 <span className="h-px w-8 bg-brand-secondary" />
                 Sustainable Growth
               </span>

@@ -30,7 +30,7 @@ function VisionMission() {
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-brand-primary" />
-              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+              <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">
                 Vision & Mission
               </span>
             </div>
@@ -52,7 +52,7 @@ function VisionMission() {
       </section>
 
       {/* VISION + MISSION SPLIT */}
-      <section className="py-24 lg:py-32 border-b border-neutral-100">
+      <section className="py-16 lg:py-24 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-neutral-200">
 
           {/* VISION */}
@@ -61,7 +61,7 @@ function VisionMission() {
               <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-light rounded-full">
                 <Eye className="h-4 w-4 text-brand-primary" />
               </div>
-              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">Vision</span>
+              <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">Vision</span>
             </div>
 
             <h2
@@ -73,7 +73,7 @@ function VisionMission() {
 
             <div className="mt-8 h-px w-12 bg-brand-secondary" />
 
-            <p className="mt-8 text-base leading-8 text-neutral-600">
+            <p className="mt-8 text-lg leading-8 text-neutral-600">
               A future where organic agriculture strengthens communities, restores ecosystems, and becomes the global standard.
             </p>
           </div>
@@ -84,7 +84,7 @@ function VisionMission() {
               <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-light rounded-full">
                 <Target className="h-4 w-4 text-brand-primary" />
               </div>
-              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">Mission</span>
+              <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">Mission</span>
             </div>
 
             <h2
@@ -96,7 +96,7 @@ function VisionMission() {
 
             <div className="mt-8 h-px w-12 bg-brand-secondary" />
 
-            <p className="mt-8 text-base leading-8 text-neutral-600">
+            <p className="mt-8 text-lg leading-8 text-neutral-600">
               High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation - creating value for people and nature.
             </p>
           </div>
@@ -121,14 +121,14 @@ function VisionMission() {
       </section>
 
       {/* SUSTAINABILITY */}
-      <section className="py-24 lg:py-32">
+      {/* <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <div className="mb-20 flex items-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center gap-2">
               <Leaf className="h-4 w-4 text-brand-primary" />
-              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+              <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">
                 Sustainability
               </span>
             </div>
@@ -154,7 +154,7 @@ function VisionMission() {
                 key={i}
                 className="group p-8 lg:p-10 hover:bg-brand-light transition-colors duration-300"
               >
-                <span className="text-xs text-neutral-400 tracking-[0.3em] uppercase">
+                <span className="text-sm text-neutral-400 tracking-[0.3em] uppercase">
                   0{i + 1}
                 </span>
 
@@ -178,7 +178,7 @@ function VisionMission() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
     </div>
   );

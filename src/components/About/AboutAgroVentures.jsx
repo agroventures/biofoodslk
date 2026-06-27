@@ -35,7 +35,7 @@ export default function AboutAgroVentures() {
 
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Parent Group
@@ -73,7 +73,7 @@ export default function AboutAgroVentures() {
                 <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
                   {s.value}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">{s.label}</p>
+                <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{s.label}</p>
               </div>
               <ArrowUpRight className="h-5 w-5 text-white/20 shrink-0" />
             </motion.div>
@@ -87,7 +87,7 @@ export default function AboutAgroVentures() {
 
           {/* EXPERTISE */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-xs uppercase tracking-[0.35em] text-brand-primary mb-8">
+            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8">
               Areas of Expertise
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -101,8 +101,8 @@ export default function AboutAgroVentures() {
                     <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
-                    <h3 className="text-base font-medium text-neutral-900">{title}</h3>
-                    <p className="mt-1 text-sm leading-7 text-neutral-600">{description}</p>
+                    <h3 className="text-lg font-medium text-neutral-900">{title}</h3>
+                    <p className="mt-1 text-md leading-7 text-neutral-600">{description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -111,7 +111,7 @@ export default function AboutAgroVentures() {
 
           {/* ADVANTAGES */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-xs uppercase tracking-[0.35em] text-brand-primary mb-8">
+            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8">
               Strategic Advantages
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -125,8 +125,8 @@ export default function AboutAgroVentures() {
                     <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
-                    <h3 className="text-base font-medium text-neutral-900">{title}</h3>
-                    <p className="mt-1 text-sm leading-7 text-neutral-600">{description}</p>
+                    <h3 className="text-lg font-medium text-neutral-900">{title}</h3>
+                    <p className="mt-1 text-md leading-7 text-neutral-600">{description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -142,7 +142,7 @@ export default function AboutAgroVentures() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Group Companies
               </span>
@@ -156,7 +156,7 @@ export default function AboutAgroVentures() {
               </h3>
             </motion.div>
 
-            <motion.p {...fadeUp(0.1)} className="max-w-sm text-sm leading-7 text-neutral-600">
+            <motion.p {...fadeUp(0.1)} className="max-w-sm text-md leading-7 text-neutral-600">
               Eight companies under one group - each contributing to a connected, resilient agribusiness ecosystem.
             </motion.p>
           </div>

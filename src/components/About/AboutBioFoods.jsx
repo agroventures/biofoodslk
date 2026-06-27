@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { Award, Globe, Leaf, Users, TrendingUp, Heart, CheckCircle2 } from "lucide-react";
+import {
+  Award,
+  Globe,
+  Leaf,
+  Users,
+  TrendingUp,
+  Heart,
+  CheckCircle2,
+} from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -9,10 +17,26 @@ const fadeUp = (delay = 0) => ({
 });
 
 const milestones = [
-  { year: "1993", title: "Founded in Kandy", description: "A family beginning rooted in organic farming traditions." },
-  { year: "2014", title: "Global Recognition", description: "Awarded for leadership in fair trade agriculture." },
-  { year: "2018", title: "Growing Reach", description: "Expanded as a leading certified organic exporter." },
-  { year: "2024", title: "Today", description: "Trusted by partners across more than 30 countries." },
+  {
+    year: "1993",
+    title: "Founded in Kandy",
+    description: "A family beginning rooted in organic farming traditions.",
+  },
+  {
+    year: "2014",
+    title: "Global Recognition",
+    description: "Awarded for leadership in fair trade agriculture.",
+  },
+  {
+    year: "2018",
+    title: "Growing Reach",
+    description: "Expanded as a leading certified organic exporter.",
+  },
+  {
+    year: "2024",
+    title: "Today",
+    description: "Trusted by partners across more than 30 countries.",
+  },
 ];
 
 const stats = [
@@ -30,15 +54,29 @@ const values = [
 ];
 
 const achievements = [
-  { icon: Award, title: "Fair Trade Recognition", description: "International acknowledgment for ethical sourcing and transparent supply chains." },
-  { icon: Users, title: "Farmer Communities", description: "Long-term partnerships supporting smallholder farmers across Sri Lanka." },
-  { icon: Globe, title: "Global Trust", description: "Certified and distributed across major organic markets worldwide." },
+  {
+    icon: Award,
+    title: "Fair Trade Recognition",
+    description:
+      "International acknowledgment for ethical sourcing and transparent supply chains.",
+  },
+  {
+    icon: Users,
+    title: "Farmer Communities",
+    description:
+      "Long-term partnerships supporting smallholder farmers across Sri Lanka.",
+  },
+  {
+    icon: Globe,
+    title: "Global Trust",
+    description:
+      "Certified and distributed across major organic markets worldwide.",
+  },
 ];
 
 export default function AboutBioFoods() {
   return (
     <div className="w-full bg-white text-neutral-950 overflow-hidden">
-
       {/* ── EDITORIAL INTRO ── */}
       <section className="relative py-28 lg:py-40 border-b border-neutral-100">
         {/* vertical rule */}
@@ -47,7 +85,7 @@ export default function AboutBioFoods() {
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             About Bio Foods
@@ -66,11 +104,16 @@ export default function AboutBioFoods() {
 
             <motion.div {...fadeUp(0.2)}>
               <p className="text-lg leading-8 text-neutral-600">
-                Since 1993 - cultivating certified organic products with deep respect for people, land, and the communities behind every harvest.
+                Since 1993 - cultivating certified organic products with deep
+                respect for people, land, and the communities behind every
+                harvest.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {values.map(({ icon: Icon, text }, i) => (
-                  <div key={i} className="flex items-center gap-3 border border-neutral-200 px-4 py-3 hover:border-brand-primary transition-colors duration-300">
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 border border-neutral-200 px-4 py-3 hover:border-brand-primary transition-colors duration-300"
+                  >
                     <Icon className="h-4 w-4 shrink-0 text-brand-primary" />
                     <span className="text-sm text-neutral-700">{text}</span>
                   </div>
@@ -79,7 +122,10 @@ export default function AboutBioFoods() {
             </motion.div>
           </div>
 
-          <motion.div {...fadeUp(0.3)} className="mt-16 lg:mt-20 overflow-hidden">
+          <motion.div
+            {...fadeUp(0.3)}
+            className="mt-16 lg:mt-20 overflow-hidden"
+          >
             <img
               src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/intro.webp"
               alt="Bio Foods organic farm"
@@ -91,17 +137,28 @@ export default function AboutBioFoods() {
 
       {/* ── STATS BAND ── */}
       <section className="bg-brand-primary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <motion.div
               key={i}
               {...fadeUp(i * 0.1)}
-              className="py-12 px-6 text-center"
+              className={`
+          py-12 px-6 text-center
+          border-white/20
+          border-b lg:border-b-0
+          ${i % 2 === 0 ? "border-r lg:border-r" : "lg:border-r"}
+          ${i === stats.length - 1 ? "lg:border-r-0" : ""}
+        `}
             >
-              <p className="text-4xl lg:text-5xl font-semibold text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+              <p
+                className="text-4xl lg:text-5xl font-semibold text-white"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
                 {s.value}
               </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/60">{s.label}</p>
+              <p className="mt-2 text-md uppercase tracking-[0.25em] text-white/60">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -127,9 +184,15 @@ export default function AboutBioFoods() {
               >
                 {/* dot */}
                 <span className="absolute -left-1.25 top-0 h-2 w-2 rounded-full bg-brand-primary md:left-0 md:-top-1.25" />
-                <p className="text-sm font-semibold text-brand-secondary tracking-widest">{m.year}</p>
-                <h3 className="mt-2 text-lg font-medium text-neutral-900">{m.title}</h3>
-                <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{m.description}</p>
+                <p className="text-sm font-semibold text-brand-secondary tracking-widest">
+                  {m.year}
+                </p>
+                <h3 className="mt-2 text-lg font-medium text-neutral-900">
+                  {m.title}
+                </h3>
+                <p className="mt-1 text-sm text-neutral-600 leading-relaxed">
+                  {m.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -177,7 +240,7 @@ export default function AboutBioFoods() {
           {...fadeUp(0)}
           className="max-w-4xl mx-auto px-6 text-center"
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+          <p className="text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
             <span className="h-px w-8 bg-brand-secondary inline-block align-middle mr-3" />
             Est. 1993 · Kandy, Sri Lanka
             <span className="h-px w-8 bg-brand-secondary inline-block align-middle ml-3" />
@@ -190,7 +253,6 @@ export default function AboutBioFoods() {
           </h2>
         </motion.div>
       </section> */}
-
     </div>
   );
 }

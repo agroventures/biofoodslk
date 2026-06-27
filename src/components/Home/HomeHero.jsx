@@ -1,4 +1,9 @@
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -33,34 +38,34 @@ const slides = [
     ),
     desc: "Sri Lanka's tree of life - certified organic desiccated coconut, coconut chips and specialty coconut products for health-conscious global markets.",
   },
-  {
-    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/spices-whole/cinnamon_quills.webp",
-    label: "True Cinnamon",
-    heading: (
-      <>
-        Authentic Ceylon
-        <br />
-        <span className="text-brand-secondary">True Cinnamon</span>
-        <br />
-        for the World.
-      </>
-    ),
-    desc: "Ceylon cinnamon - the real kind - grown in the lush lowlands of Sri Lanka, certified organic and biodynamic for discerning buyers worldwide.",
-  },
-  {
-    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/spices-whole/vanilla_beans.webp",
-    label: "Vanilla Beans",
-    heading: (
-      <>
-        Pure Organic
-        <br />
-        <span className="text-brand-secondary">Vanilla Beans</span>
-        <br />
-        Crafted with Care.
-      </>
-    ),
-    desc: "Hand-harvested, sun-cured vanilla beans carrying the rich aroma of Sri Lanka's fertile highlands - certified organic and fair trade.",
-  },
+  // {
+  //   img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/spices-whole/cinnamon_quills.webp",
+  //   label: "True Cinnamon",
+  //   heading: (
+  //     <>
+  //       Authentic Ceylon
+  //       <br />
+  //       <span className="text-brand-secondary">True Cinnamon</span>
+  //       <br />
+  //       for the World.
+  //     </>
+  //   ),
+  //   desc: "Ceylon cinnamon - the real kind - grown in the lush lowlands of Sri Lanka, certified organic and biodynamic for discerning buyers worldwide.",
+  // },
+  // {
+  //   img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/spices-whole/vanilla_beans.webp",
+  //   label: "Vanilla Beans",
+  //   heading: (
+  //     <>
+  //       Pure Organic
+  //       <br />
+  //       <span className="text-brand-secondary">Vanilla Beans</span>
+  //       <br />
+  //       Crafted with Care.
+  //     </>
+  //   ),
+  //   desc: "Hand-harvested, sun-cured vanilla beans carrying the rich aroma of Sri Lanka's fertile highlands - certified organic and fair trade.",
+  // },
   {
     img: "/Awards/german_sustainability.WebP",
     label: "Award Winning",
@@ -73,7 +78,21 @@ const slides = [
         Excellence.
       </>
     ),
-    desc: "Recipients of the German Sustainability Award, Presidential Export Excellence Awards, and the Fairest Fair Trader of the World — honouring over three decades of responsible trade.",
+    desc: "Recipients of the German Sustainability Award, Presidential Export Excellence Awards, and the Fairest Fair Trader of the World - honouring over three decades of responsible trade.",
+  },
+  {
+    img: "/Home/hero-4.webp",
+    label: "Our People",
+    heading: (
+      <>
+        Crafted by
+        <br />
+        <span className="text-brand-secondary">Skilled Hands,</span>
+        <br />
+        Rooted in Care.
+      </>
+    ),
+    desc: "Behind every certified product are generations of dedicated Sri Lankan farmers and workers - the heart of our commitment to quality, fairness, and sustainable livelihoods.",
   },
 ];
 
@@ -83,7 +102,10 @@ export default function Hero() {
   const contentY = useTransform(scrollY, [0, 1000], [0, -60]);
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 5000);
+    const timer = setInterval(
+      () => setCurrent((c) => (c + 1) % slides.length),
+      5000,
+    );
     return () => clearInterval(timer);
   }, []);
 
@@ -99,10 +121,15 @@ export default function Hero() {
           100% { transform: translateX(-33.33%); }
         }
         .animate-marquee {
-          animation: marquee 25s linear infinite;
+          animation: marquee 15s linear infinite;
         }
         .animate-marquee:hover {
           animation-play-state: paused;
+        }
+        @media (max-width: 640px) {
+          .animate-marquee {
+            animation-duration: 8s;
+          }
         }
       `}</style>
 
@@ -125,7 +152,7 @@ export default function Hero() {
 
       {/* Overlays */}
       <div className="absolute inset-0 bg-black/60 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/50 z-0" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-black/50 z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.1),transparent_60%)] z-0" />
 
       {/* Main Centered Content */}
@@ -189,7 +216,10 @@ export default function Hero() {
             className="group flex items-center justify-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
           >
             Explore Products
-            <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight
+              size={18}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
           </Link>
           <Link
             to="/contact"
@@ -222,9 +252,9 @@ export default function Hero() {
             Certified &amp; Trusted By
           </p>
         </div>
-        
+
         {/* Marquee Wrapper Track */}
-        <div className="relative w-full flex overflow-x-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+        <div className="relative w-full flex overflow-x-hidden mask-[linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
           <div className="flex gap-12 animate-marquee whitespace-nowrap min-w-full py-2">
             {duplicatedCerts.map((cert, idx) => (
               <Link

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ZoomIn } from 'lucide-react';
 import { motion } from 'framer-motion';
 import newsEventsData from '../../data/events_news';
+import Lightbox from '../shared/Lightbox';
 
 const tagColors = {
     Award: "bg-brand-gold/20 text-brand-secondary",
@@ -15,6 +16,7 @@ const tagColors = {
 };
 
 function NewsEventsGrid() {
+    const [lightbox, setLightbox] = useState(null);
     return (
         <section className="w-full bg-white border-t border-neutral-100">
             {/* LIST */}
@@ -42,7 +44,7 @@ function NewsEventsGrid() {
 
                             {/* Date + Title */}
                             <div className="lg:col-span-4">
-                                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400 mb-3">
+                                <p className="text-sm uppercase tracking-[0.2em] text-neutral-400 mb-3">
                                     {date} · {type}
                                 </p>
                                 <h3
@@ -51,9 +53,6 @@ function NewsEventsGrid() {
                                 >
                                     {title}
                                 </h3>
-                                <span className={`mt-4 inline-block text-xs uppercase tracking-[0.15em] px-3 py-1 rounded-full ${tagColors[tag] ?? tagColors.default}`}>
-                                    {tag}
-                                </span>
                             </div>
 
                             {/* Summary + CTA */}
@@ -69,20 +68,23 @@ function NewsEventsGrid() {
 
                             {/* Thumbnail */}
                             {images?.[0] && (
-                                <div className="lg:col-span-3">
+                                <div className="lg:col-span-3 relative group cursor-zoom-in" onClick={() => setLightbox({ images, index: 0 })}>
                                     <img
                                         src={images[0]}
                                         alt={title}
                                         className="w-full aspect-[4/3] object-cover"
                                         loading="lazy"
                                     />
+                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <ZoomIn className="h-6 w-6 text-white drop-shadow" />
+                                    </div>
                                 </div>
                             )}
                         </motion.div>
                     ))}
                 </div>
             </div>
-
+            {lightbox && <Lightbox images={lightbox.images} startIndex={lightbox.index} onClose={() => setLightbox(null)} />}
         </section>
     );
 }

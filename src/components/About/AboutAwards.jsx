@@ -68,7 +68,7 @@ function AboutAwards() {
                 <div className="text-center mb-24">
                     <div className="inline-flex items-center gap-2 bg-brand-primary/5 text-brand-primary px-5 py-2.5 rounded-full mb-6">
                         <Trophy className="w-5 h-5" />
-                        <span className="font-bold tracking-[0.2em] uppercase text-xs">Accolades</span>
+                        <span className="font-bold tracking-[0.2em] uppercase text-sm">Accolades</span>
                     </div>
                     <h2 className="text-5xl lg:text-7xl font-black text-neutral-950 tracking-tighter mb-4">
                         A Legacy of <br />
@@ -114,7 +114,7 @@ function AboutAwards() {
                     <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
                         <h4 className="text-sm font-black uppercase tracking-[0.4em] text-neutral-400">Historical Milestones</h4>
                         <div className="h-px grow bg-neutral-100 mx-8 hidden md:block"></div>
-                        <span className="text-xs font-bold text-brand-primary bg-brand-primary/5 px-4 py-1.5 rounded-full">1999 - 2019 Accolades</span>
+                        <span className="text-sm font-bold text-brand-primary bg-brand-primary/5 px-4 py-1.5 rounded-full">1999 - 2019 Accolades</span>
                     </div>
 
                     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
@@ -127,7 +127,7 @@ function AboutAwards() {
                                     <h5 className="font-bold text-neutral-950 text-sm uppercase tracking-wide group-hover:text-brand-primary transition-colors">
                                         {item.t}
                                     </h5>
-                                    <p className="text-xs text-neutral-500 mt-2 leading-relaxed">
+                                    <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
                                         {item.d}
                                     </p>
                                 </div>

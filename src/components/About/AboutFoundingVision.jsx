@@ -32,7 +32,7 @@ function AboutFoundingVision() {
           <div className="h-px w-12 bg-brand-secondary" />
           <div className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-brand-primary" />
-            <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+            <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">
               Founding vision
             </span>
           </div>
@@ -68,13 +68,13 @@ function AboutFoundingVision() {
                 key={i}
                 className="flex gap-5 border border-neutral-200 p-6 hover:border-brand-primary transition-colors"
               >
-                <div className="shrink-0 rounded-full bg-brand-light p-3">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-light p-3">
                   <item.icon className="h-5 w-5 text-brand-primary" />
                 </div>
 
                 <div>
                   <h3
-                    className="text-xl text-neutral-900"
+                    className="text-2xl text-neutral-900"
                     style={{
                       fontFamily:
                         "Cormorant Garamond, serif",
@@ -83,7 +83,7 @@ function AboutFoundingVision() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-7 text-neutral-600">
+                  <p className="mt-2 text-md leading-7 text-neutral-600">
                     {item.description}
                   </p>
                 </div>

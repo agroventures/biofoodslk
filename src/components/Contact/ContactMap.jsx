@@ -11,7 +11,7 @@ function ContactMap() {
           <div className="flex items-center gap-3 mb-6">
             <Sparkles className="h-4 w-4 text-brand-primary" />
 
-            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+            <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
               Our Location
             </span>
           </div>
@@ -126,7 +126,7 @@ function ContactMap() {
                   py-4
                   bg-brand-primary
                   text-white
-                  text-xs
+                  text-sm
                   uppercase
                   tracking-[0.2em]
                   hover:opacity-90

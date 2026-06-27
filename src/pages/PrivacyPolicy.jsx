@@ -54,9 +54,9 @@ function PrivacyPolicy() {
             our digital platforms.
           </p>
 
-          <p className="mt-6 text-xs uppercase tracking-[0.25em] text-neutral-400">
+          {/* <p className="mt-6 text-xs uppercase tracking-[0.25em] text-neutral-400">
             Last Updated: October 2023
-          </p>
+          </p> */}
         </div>
       </header>
 

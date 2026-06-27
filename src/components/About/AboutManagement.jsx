@@ -36,7 +36,7 @@ export default function AboutManagement() {
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Leadership
@@ -80,11 +80,6 @@ export default function AboutManagement() {
                   />
                 </div>
 
-                {/* Desktop Index Number */}
-                <span className="hidden lg:block lg:col-span-1 text-sm text-neutral-400 tabular-nums pt-2">
-                  {member.index < 10 ? `0${member.index}` : member.index}
-                </span>
-
                 {/* Desktop Large Image Layer */}
                 <div className="hidden lg:block lg:col-span-4 aspect-3/4 max-h-115 w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
                   <img
@@ -96,7 +91,7 @@ export default function AboutManagement() {
 
                 {/* Content Info Column (Name + Message Directly Underneath) */}
                 <div className="w-full lg:col-span-7 pt-2">
-                  <p className="text-xs uppercase tracking-[0.25em] text-brand-secondary font-semibold mb-2">
+                  <p className="text-sm uppercase tracking-[0.25em] text-brand-secondary font-semibold mb-2">
                     {member.role}
                   </p>
                   <h2

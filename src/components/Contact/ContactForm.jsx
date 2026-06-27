@@ -42,7 +42,7 @@ const ContactForm = () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY_INFO_EMAIL,
                     ...formData,
                 }),
             });
@@ -69,7 +69,7 @@ const ContactForm = () => {
                 <div className="mb-24">
                     <div className="flex items-center gap-3 mb-6">
                         <Sparkles className="h-4 w-4 text-brand-primary" />
-                        <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                        <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                             Contact Us
                         </span>
                     </div>
@@ -121,7 +121,7 @@ const ContactForm = () => {
                     {/* CONTACT DETAILS */}
                     <div className="lg:col-span-4">
                         <div className="bg-brand-light p-10 h-full">
-                            <p className=" text-xs uppercase tracking-[0.3em] text-brand-primary mb-8">
+                            <p className=" text-sm uppercase tracking-[0.3em] text-brand-primary mb-8">
                                 Contact Information
                             </p>
 
@@ -201,7 +201,7 @@ const ContactForm = () => {
                         >
 
                             <div>
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label className="text-sm uppercase tracking-widest text-neutral-500">
                                     Name
                                 </label>
 
@@ -216,7 +216,7 @@ const ContactForm = () => {
                             </div>
 
                             <div>
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label className="text-sm uppercase tracking-widest text-neutral-500">
                                     Email
                                 </label>
 
@@ -232,7 +232,7 @@ const ContactForm = () => {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label className="text-sm uppercase tracking-widest text-neutral-500">
                                     Subject
                                 </label>
 
@@ -247,7 +247,7 @@ const ContactForm = () => {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label className="text-sm uppercase tracking-widest text-neutral-500">
                                     Message
                                 </label>
 

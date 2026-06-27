@@ -47,7 +47,7 @@ function QualityCertificationsDetails() {
 
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-xs uppercase tracking-[0.35em] text-neutral-500"
+            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Quality & Certifications
@@ -81,7 +81,7 @@ function QualityCertificationsDetails() {
                 <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
                   {value}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">{label}</p>
+                <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{label}</p>
               </div>
               <Icon className="h-4 w-4 text-white/20 shrink-0" />
             </motion.div>
@@ -94,14 +94,11 @@ function QualityCertificationsDetails() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
           <motion.div
             {...fadeUp(0)}
-            className="grid grid-cols-2 gap-px bg-neutral-200 border border-neutral-200"
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-px bg-neutral-200 border border-neutral-200"
           >
-            {[
-              { src: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/ICS_logos.avif", alt: "ICS" },
-              { src: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/Foodsafety.avif", alt: "Food Safety" },
-            ].map((logo) => (
-              <div key={logo.alt} className="bg-white flex items-center justify-center py-10 px-8">
-                <img src={logo.src} alt={logo.alt} className="h-12 object-contain" />
+            {certifications.map((cert) => (
+              <div key={cert.id} className="bg-white flex items-center justify-center py-8 px-6">
+                <img src={cert.img} alt={cert.name} className="h-12 object-contain" />
               </div>
             ))}
           </motion.div>
@@ -116,7 +113,7 @@ function QualityCertificationsDetails() {
 
             {/* sticky label */}
             <motion.div {...fadeUp(0)} className="lg:col-span-4 lg:sticky lg:top-32">
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Quality Framework
               </span>
@@ -138,7 +135,7 @@ function QualityCertificationsDetails() {
                   {...fadeUp(i * 0.08)}
                   className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
-                  <span className="hidden sm:block shrink-0 text-xs text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6">
+                  <span className="hidden sm:block shrink-0 text-sm text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
@@ -168,7 +165,7 @@ function QualityCertificationsDetails() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
 
           <motion.div {...fadeUp(0)}>
-            <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-8">
+            <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-8">
               <span className="h-px w-10 bg-brand-secondary" />
               Organic Certification
             </span>
@@ -200,7 +197,7 @@ function QualityCertificationsDetails() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Global Certifications
               </span>
@@ -248,7 +245,7 @@ function QualityCertificationsDetails() {
                 </h4>
 
                 {/* desc - clipped */}
-                <p className="text-xs leading-6 text-neutral-500 line-clamp-3 flex-1">
+                <p className="text-sm leading-6 text-neutral-500 line-clamp-3 flex-1">
                   {cert.desc}
                 </p>
 
@@ -266,7 +263,7 @@ function QualityCertificationsDetails() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Quality Assurance
               </span>
@@ -312,7 +309,7 @@ function QualityCertificationsDetails() {
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50 mb-8">
+              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-white/50 mb-8">
                 <span className="h-px w-8 bg-brand-secondary" />
                 Quality Commitment
               </span>

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ZoomIn } from 'lucide-react';
 import newsEventsData from '../data/events_news';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
+import Lightbox from '../components/shared/Lightbox';
 import useSEO from '../hooks/useSEO';
 
 const tagColors = {
@@ -18,6 +19,7 @@ const tagColors = {
 function EventDetail() {
     const { id } = useParams();
     const item = newsEventsData.find((e) => e.id === Number(id));
+    const [lightboxIndex, setLightboxIndex] = useState(null);
 
     useSEO({ url: window.location.href, image_alt: item?.title ?? "Event Detail" });
 
@@ -52,9 +54,6 @@ function EventDetail() {
 
                 {/* Meta */}
                 <div className="flex items-center gap-4 mb-6">
-                    <span className={`text-xs uppercase tracking-[0.2em] px-3 py-1 rounded-full ${tagColors[tag] ?? tagColors.default}`}>
-                        {tag}
-                    </span>
                     <span className="text-xs uppercase tracking-[0.2em] text-neutral-400">
                         {date} · {type}
                     </span>
@@ -95,15 +94,22 @@ function EventDetail() {
                         <div className="h-px bg-neutral-200 mb-10" />
                         <div className="columns-2 md:columns-3 gap-3 space-y-3">
                             {images.map((src, i) => (
-                                <img
-                                    key={i}
-                                    src={src}
-                                    alt={`${title} ${i + 1}`}
-                                    className="w-full break-inside-avoid object-cover"
-                                    loading="lazy"
-                                />
+                                <div key={i} className="relative group cursor-zoom-in break-inside-avoid" onClick={() => setLightboxIndex(i)}>
+                                    <img
+                                        src={src}
+                                        alt={`${title} ${i + 1}`}
+                                        className="w-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <ZoomIn className="h-6 w-6 text-white drop-shadow" />
+                                    </div>
+                                </div>
                             ))}
                         </div>
+                        {lightboxIndex !== null && (
+                            <Lightbox images={images} startIndex={lightboxIndex} onClose={() => setLightboxIndex(null)} />
+                        )}
                     </div>
                 )}
 

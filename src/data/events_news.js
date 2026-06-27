@@ -5,10 +5,9 @@ const newsEventsData = [
         id: 1,
         type: "Event",
         icon: Trophy,
-        date: "2024",
+        date: "2026 May",
         title: "Agro Ventures Opens Coconut Processing Factory in Makandura",
         summary: "Following the acquisition of the business, Agro Ventures officially opened its modern coconut processing facility in Makandura, marking a major milestone in expanding its value-added coconut product operations.",
-        tag: "Expansion",
 
         images: Array.from({ length: 29 }, (_, i) => `https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/${i + 1}.webp`),
 

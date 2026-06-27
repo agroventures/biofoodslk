@@ -32,7 +32,7 @@ const AwardsLegacy = () => (
         <div className="bg-brand-primary text-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-end">
                 <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
+                    <p className="text-sm uppercase tracking-[0.3em] text-brand-gold mb-6">
                         Legacy & Growth
                     </p>
                     <h2
@@ -81,7 +81,7 @@ const AwardsLegacy = () => (
         <div className="bg-brand-light">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24 grid lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-5">
-                    <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-6">
+                    <p className="text-sm uppercase tracking-[0.3em] text-brand-primary mb-6">
                         Preserving What Matters
                     </p>
                     <h3
@@ -111,7 +111,7 @@ const AwardsLegacy = () => (
         {/* CLOSING CTA */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 flex flex-col lg:flex-row lg:items-end gap-12 border-t border-neutral-100">
             <div className="flex-1">
-                <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-6">
+                <p className="text-sm uppercase tracking-[0.3em] text-brand-primary mb-6">
                     Looking Ahead
                 </p>
                 <h2
