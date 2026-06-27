@@ -15,20 +15,6 @@ const duplicatedCerts = [...certData, ...certData, ...certData];
 
 const slides = [
   {
-    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/organi-spices.webp",
-    label: "Organic Spices",
-    heading: (
-      <>
-        World's Finest
-        <br />
-        <span className="text-brand-secondary">Organic Spices</span>
-        <br />
-        from Sri Lanka.
-      </>
-    ),
-    desc: "The world's first fair-trade certified spice exporter - cinnamon, pepper, cardamom and more, sourced responsibly since 1993.",
-  },
-  {
     img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/CoconutProducts/coconut.jpg",
     label: "Coconut Products",
     heading: (
@@ -41,6 +27,20 @@ const slides = [
       </>
     ),
     desc: "Sri Lanka's tree of life - certified organic desiccated coconut, coconut chips and specialty coconut products for health-conscious global markets.",
+  },
+  {
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/organi-spices.webp",
+    label: "Organic Spices",
+    heading: (
+      <>
+        World's Finest
+        <br />
+        <span className="text-brand-secondary">Organic Spices</span>
+        <br />
+        from Sri Lanka.
+      </>
+    ),
+    desc: "The world's first fair-trade certified spice exporter - cinnamon, pepper, cardamom and more, sourced responsibly since 1993.",
   },
   {
     img: "/Awards/german_sustainability.WebP",
