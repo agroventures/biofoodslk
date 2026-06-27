@@ -43,7 +43,13 @@ function QualityCertificationsDetails() {
     <section className="w-full bg-white text-neutral-950">
 
       {/* INTRO */}
-      <div className="py-24 lg:py-36 border-b border-neutral-100">
+      <div className="relative py-24 lg:py-36 border-b border-neutral-100 overflow-hidden">
+        {/* Organic blob — top right */}
+        <div className="absolute top-0 right-0 w-80 h-80 text-brand-primary/[0.04] pointer-events-none translate-x-1/4 -translate-y-1/4 select-none">
+          <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_120s_linear_infinite]">
+            <path d="M45.3,-62.9C57.4,-53.8,65.1,-38.7,71.2,-22.4C77.4,-6.2,81.9,11.2,77.3,26.7C72.7,42.2,58.9,55.8,43.2,64.8C27.4,73.8,9.7,78.2,-7.9,76.5C-25.5,74.9,-43,67.2,-56,54.8C-69,42.4,-77.4,25.4,-79.1,7.5C-80.8,-10.4,-75.7,-29.2,-64.8,-42.6C-53.8,-56,-37,-64,-20.9,-69.1C-4.8,-74.2,10.6,-76.4,26.5,-74.6C42.4,-72.8,45.3,-62.9,45.3,-62.9Z" transform="translate(100, 100)" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <motion.span
@@ -74,7 +80,16 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* STATS BAND */}
-      <div className="bg-brand-primary">
+      <div className="relative bg-brand-primary overflow-hidden">
+        {/* Topography lines */}
+        <div className="absolute top-0 right-0 w-72 h-full text-white/[0.04] pointer-events-none select-none">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">
+            <path d="M0,30 Q25,15 50,40 T100,20" />
+            <path d="M0,45 Q25,30 50,55 T100,35" />
+            <path d="M0,60 Q25,45 50,70 T100,50" />
+            <path d="M0,75 Q25,60 50,85 T100,65" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
           {STATS.map(({ value, label, icon: Icon }, i) => (
             <motion.div key={label} {...fadeUp(i * 0.08)} className="py-10 px-6 flex items-center justify-between gap-3">
@@ -107,7 +122,17 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* QUALITY FRAMEWORK - numbered rows */}
-      <div className="py-24 lg:py-32 border-b border-neutral-100">
+      <div className="relative py-24 lg:py-32 border-b border-neutral-100 overflow-hidden">
+        {/* Botanical leaf — bottom left */}
+        <div className="absolute bottom-0 left-0 w-72 h-72 text-brand-gold/[0.05] pointer-events-none -translate-x-1/4 translate-y-1/4 select-none hidden lg:block">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full">
+            <path d="M50,100 Q45,60 10,40 Q40,40 50,0 Q60,40 90,40 Q55,60 50,100 Z" />
+            <path d="M50,100 Q48,70 25,55" />
+            <path d="M50,100 Q52,70 75,55" />
+            <path d="M50,75 Q47,50 30,35" />
+            <path d="M50,75 Q53,50 70,35" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <div className="grid lg:grid-cols-12 gap-16 items-start">
@@ -136,11 +161,8 @@ function QualityCertificationsDetails() {
                   {...fadeUp(i * 0.08)}
                   className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
-                  <span className="hidden sm:block shrink-0 text-sm text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
-                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-light transition-colors duration-300" />
                   </div>
                   <div className="flex-1">
                     <h4
@@ -162,7 +184,13 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* PULL-QUOTE */}
-      <div className="py-24 lg:py-32 bg-brand-light border-b border-neutral-200">
+      <div className="relative py-24 lg:py-32 bg-brand-light border-b border-neutral-200 overflow-hidden">
+        {/* Counter-rotating blob — right */}
+        <div className="absolute top-1/2 right-0 w-64 h-64 text-brand-secondary/[0.05] pointer-events-none translate-x-1/3 -translate-y-1/2 select-none hidden lg:block">
+          <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_160s_linear_infinite_reverse]">
+            <path d="M38.9,-56.5C50.3,-46.4,59.2,-34.2,64.8,-20C70.4,-5.8,72.8,10.4,68.2,24.2C63.6,38,51.9,49.4,38.4,57.2C24.9,65,9.6,69.2,-5.8,67.7C-21.3,66.2,-36.8,59,-48.4,48C-60,37,-67.8,22.2,-69.4,6.6C-71,-9,-66.4,-25.4,-57.2,-37.6C-48,-49.8,-34.2,-57.8,-20.2,-62C-6.2,-66.2,8,-66.6,20.4,-63C32.8,-59.4,27.5,-66.6,38.9,-56.5Z" transform="translate(100, 100)" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
 
           <motion.div {...fadeUp(0)}>
@@ -193,7 +221,15 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* CERTIFICATIONS GRID */}
-      <div className="py-24 lg:py-32 border-b border-neutral-100">
+      <div className="relative py-24 lg:py-32 border-b border-neutral-100 overflow-hidden">
+        {/* Topography lines — left edge */}
+        <div className="absolute top-1/4 left-0 w-64 h-64 text-brand-primary/[0.04] pointer-events-none -translate-x-1/4 select-none hidden lg:block">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">
+            <path d="M0,30 Q25,15 50,40 T100,20" />
+            <path d="M0,45 Q25,30 50,55 T100,35" />
+            <path d="M0,60 Q25,45 50,70 T100,50" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
@@ -218,42 +254,27 @@ function QualityCertificationsDetails() {
             </motion.p>
           </div>
 
-          <motion.div
-            {...fadeUp(0.1)}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, i) => (
               <motion.div
                 key={cert.id}
-                {...fadeUp(i * 0.04)}
-                className="group bg-white p-6 hover:bg-brand-light transition-colors duration-300 flex flex-col"
+                {...fadeUp(i * 0.05)}
+                className="group flex flex-col rounded-2xl border border-neutral-200 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_16px_48px_rgba(0,0,0,0.08)]"
               >
-                {/* logo */}
-                <div className="h-20 flex items-center justify-start mb-5">
-                  <img
-                    src={cert.img}
-                    alt={cert.name}
-                    className="max-h-16 max-w-30 object-contain"
-                  />
+                <div className="mb-6 h-14 flex items-center">
+                  <img src={cert.img} alt={cert.name} className="max-h-12 max-w-36 object-contain" />
                 </div>
-
-                {/* name */}
                 <h4
-                  className="text-base text-neutral-900 mb-3 leading-snug"
+                  className="mb-3 text-xl tracking-tight text-neutral-950"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   {cert.name}
                 </h4>
-
-                {/* desc - clipped */}
-                <p className="text-sm leading-6 text-neutral-500 line-clamp-3 flex-1">
-                  {cert.desc}
-                </p>
-
-                <div className="mt-4 h-px w-0 group-hover:w-8 bg-brand-secondary transition-all duration-500" />
+                <p className="text-sm leading-7 text-neutral-500 flex-1">{cert.desc}</p>
+                <div className="mt-6 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
         </div>
       </div>
@@ -286,8 +307,8 @@ function QualityCertificationsDetails() {
                 {...fadeUp(i * 0.08)}
                 className="group p-8 hover:bg-brand-light transition-colors duration-300"
               >
-                <div className="flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300 mb-5">
-                  <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                <div className="flex items-center justify-center h-10 w-10 bg-brand-primary transition-colors duration-300 mb-5">
+                  <Icon className="h-4 w-4 text-brand-light transition-colors duration-300" />
                 </div>
                 <h4
                   className="text-lg text-neutral-900 mb-3"
@@ -305,7 +326,17 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* CLOSING BANNER */}
-      <div className="bg-brand-primary py-24 lg:py-32">
+      <div className="relative bg-brand-primary py-24 lg:py-32 overflow-hidden">
+        {/* Botanical leaf — top right */}
+        <div className="absolute top-0 right-0 w-80 h-80 text-white/[0.04] pointer-events-none translate-x-1/4 -translate-y-1/4 select-none hidden lg:block">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full">
+            <path d="M50,100 Q45,60 10,40 Q40,40 50,0 Q60,40 90,40 Q55,60 50,100 Z" />
+            <path d="M50,100 Q48,70 25,55" />
+            <path d="M50,100 Q52,70 75,55" />
+            <path d="M50,75 Q47,50 30,35" />
+            <path d="M50,75 Q53,50 70,35" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 

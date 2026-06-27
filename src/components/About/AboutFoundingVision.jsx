@@ -1,5 +1,13 @@
 import React from "react";
 import { Leaf, Heart, ShieldCheck, Sparkles } from "lucide-react";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+});
 
 const principles = [
     {
@@ -25,76 +33,91 @@ const principles = [
 function AboutFoundingVision() {
 
   return (
-    <section className="bg-white py-16 lg:py-24 border-y border-neutral-100">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <LazyMotion features={domAnimation}>
+    <section className="relative bg-white py-28 lg:py-40 border-y border-neutral-100 overflow-hidden">
+      {/* Decorative number */}
+      <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
+        <span className="text-[280px] font-black leading-none text-black/3">02</span>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
 
         {/* Header */}
-        <div className="mb-20 flex items-center gap-4">
-          <div className="h-px w-12 bg-brand-secondary" />
-          <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-brand-primary" />
-            <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">
-              Founding vision
-            </span>
+        <motion.div {...fadeUp(0)} className="mb-24 max-w-4xl">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-brand-secondary" />
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Founding Vision</span>
+            </div>
           </div>
-        </div>
+          <h2
+            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            A simple belief:
+            <br />
+            <span className="italic text-brand-primary">food should be grown with care.</span>
+          </h2>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            Bio Foods was founded by{" "}
+            <span className="text-neutral-900">Dr. Sarath Ranaweera</span>{" "}
+            with a clear idea — agriculture should support nature, not extract from it.
+          </p>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
-
-          {/* LEFT */}
-          <div className="lg:col-span-5 space-y-8">
-            <h2
-              className="text-4xl lg:text-6xl tracking-tight text-neutral-950"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+        {/* Principles editorial list */}
+        <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+          {principles.map((item, index) => (
+            <motion.div
+              key={item.title}
+              {...fadeUp(index * 0.1)}
+              className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8"
             >
-              A simple belief:
-              <br />
-              food should be grown with care.
-            </h2>
-
-            <p className="text-lg leading-8 text-neutral-600">
-              Bio Foods was founded by{" "}
-              <span className="text-neutral-900">
-                Dr. Sarath Ranaweera
-              </span>{" "}
-              with a clear idea - agriculture should support nature,
-              not extract from it.
-            </p>
-          </div>
-
-          {/* RIGHT */}
-          <div className="lg:col-span-7 space-y-6">
-            {principles.map((item) => (
-              <div
-                key={item.title}
-                className="flex gap-5 border border-neutral-200 p-6 hover:border-brand-primary transition-colors"
-              >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-primary p-3">
-                  <item.icon className="h-5 w-5 text-brand-light" />
-                </div>
-
-                <div>
-                  <h3
-                    className="text-2xl text-neutral-900"
-                    style={{
-                      fontFamily:
-                        "Cormorant Garamond, serif",
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-md leading-7 text-neutral-600">
-                    {item.description}
-                  </p>
+              {/* Number + Icon */}
+              <div className="flex items-center gap-4 lg:contents">
+                <div className="lg:col-span-1">
+                  <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
+                    <item.icon className="h-5 w-5" />
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
 
+              {/* Title */}
+              <div className="lg:col-span-4">
+                <h3
+                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  {item.title}
+                </h3>
+              </div>
+
+              {/* Description */}
+              <div className="lg:col-span-6">
+                <p className="max-w-xl text-lg leading-8 text-neutral-600">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Closing statement panel */}
+        <motion.div {...fadeUp(0.3)} className="mt-20 rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-14">
+          <div className="mb-4 flex items-center gap-4">
+            <div className="h-px w-12 bg-brand-secondary" />
+            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">Our Promise</span>
+          </div>
+          <h3
+            className="max-w-4xl text-3xl leading-tight text-neutral-950 lg:text-5xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Sustainable practices. Trusted partnerships. Uncompromising quality.
+          </h3>
+        </motion.div>
+
       </div>
     </section>
+    </LazyMotion>
   );
 }
 
