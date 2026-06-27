@@ -82,6 +82,7 @@ function ProductDetails() {
                   {Object.keys(product.grades).map((tab) => (
                     <button
                       key={tab}
+                      type="button"
                       onClick={() => setActiveSubTab(tab)}
                       className={`px-4 py-2 text-xs uppercase tracking-[0.2em] transition-all ${
                         activeSubTab === tab

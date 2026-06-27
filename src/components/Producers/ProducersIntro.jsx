@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 import {
   Users,
   MapPin,
@@ -79,6 +79,7 @@ const mopaGallery = [
 export default function ProducersIntro() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   return (
+    <LazyMotion features={domAnimation}>
     <div className="w-full bg-white text-neutral-950 overflow-hidden">
       {/* EDITORIAL INTRO */}
       <section className="py-28 lg:py-40 border-b border-neutral-100">
@@ -145,7 +146,7 @@ export default function ProducersIntro() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4">
           {stats.map(({ value, label, icon: Icon }, i) => (
             <motion.div
-              key={i}
+              key={label}
               {...fadeUp(i * 0.1)}
               className={`
                 py-12 px-6 flex items-center justify-between gap-3 
@@ -234,7 +235,7 @@ export default function ProducersIntro() {
           >
             {mopaGallery.map((img, i) => (
               <div
-                key={i}
+                key={img.src}
                 className="aspect-square overflow-hidden bg-neutral-100 relative group cursor-zoom-in"
                 onClick={() => setLightboxIndex(i)}
               >
@@ -262,5 +263,6 @@ export default function ProducersIntro() {
         </div>
       </section>
     </div>
+    </LazyMotion>
   );
 }

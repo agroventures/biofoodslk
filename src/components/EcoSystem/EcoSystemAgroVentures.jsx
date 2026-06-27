@@ -1,8 +1,7 @@
 import { Globe, Package, TrendingUp } from 'lucide-react';
 import React from 'react'
 
-function EcoSystemAgroVentures() {
-    const agroventuresBenefits = [
+const agroventuresBenefits = [
         {
             icon: Globe,
             title: "Expanded Market Opportunities",
@@ -19,6 +18,8 @@ function EcoSystemAgroVentures() {
             description: "Growing orders through global expansion initiatives"
         }
     ];
+
+function EcoSystemAgroVentures() {
 
     return (
         <section className="w-full py-20 lg:py-28 bg-brand-light/30 border-t border-brand-light">
@@ -42,9 +43,9 @@ function EcoSystemAgroVentures() {
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                {agroventuresBenefits.map((benefit, index) => (
+                                {agroventuresBenefits.map((benefit) => (
                                     <div
-                                        key={index}
+                                        key={benefit.title}
                                         className="group bg-white border border-brand-light rounded-2xl p-6 hover:border-brand-secondary/20 hover:shadow-lg transition-all duration-300"
                                     >
                                         <div className="w-12 h-12 bg-brand-secondary/5 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-secondary transition-colors duration-300">

@@ -1,8 +1,7 @@
 import React from "react";
 import { Leaf, Heart, ShieldCheck, Sparkles } from "lucide-react";
 
-function AboutFoundingVision() {
-  const principles = [
+const principles = [
     {
       icon: Leaf,
       title: "Regenerate nature",
@@ -22,6 +21,8 @@ function AboutFoundingVision() {
         "Food grown without chemicals, with full respect for natural processes.",
     },
   ];
+
+function AboutFoundingVision() {
 
   return (
     <section className="bg-white py-28 lg:py-40 border-y border-neutral-100">
@@ -63,9 +64,9 @@ function AboutFoundingVision() {
 
           {/* RIGHT */}
           <div className="lg:col-span-7 space-y-6">
-            {principles.map((item, i) => (
+            {principles.map((item) => (
               <div
-                key={i}
+                key={item.title}
                 className="flex gap-5 border border-neutral-200 p-6 hover:border-brand-primary transition-colors"
               >
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-light p-3">

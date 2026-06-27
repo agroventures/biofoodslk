@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ArrowUpRight, CheckCircle2, X, Sparkles } from "lucide-react";
-import emailjs from "@emailjs/browser";
+
 
 const ProductInquiryForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", product: "", message: "" });
@@ -13,14 +13,22 @@ const ProductInquiryForm = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        { name: formData.name, email: formData.email, subject: `Product Inquiry: ${formData.product}`, message: formData.message },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", product: "", message: "" });
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY_INFO_EMAIL,
+          name: formData.name,
+          email: formData.email,
+          subject: `Product Inquiry: ${formData.product}`,
+          message: formData.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", product: "", message: "" });
+      }
     } catch (error) {
       console.log(error);
     } finally {
@@ -54,7 +62,7 @@ const ProductInquiryForm = () => {
               <CheckCircle2 className="w-5 h-5 text-brand-primary" />
               <p className="text-neutral-700">Thank you! Our team will get back to you shortly.</p>
             </div>
-            <button onClick={() => setIsSubmitted(false)} className="text-neutral-400 hover:text-neutral-900">
+            <button type="button" onClick={() => setIsSubmitted(false)} className="text-neutral-400 hover:text-neutral-900">
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -65,35 +73,35 @@ const ProductInquiryForm = () => {
           className="border border-neutral-200 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <div>
-            <label className="text-sm uppercase tracking-widest text-neutral-500">Name</label>
+            <label htmlFor="name" className="text-sm uppercase tracking-widest text-neutral-500">Name</label>
             <input id="name" required value={formData.name} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
               placeholder="Your name" />
           </div>
 
           <div>
-            <label className="text-sm uppercase tracking-widest text-neutral-500">Email</label>
+            <label htmlFor="email" className="text-sm uppercase tracking-widest text-neutral-500">Email</label>
             <input id="email" type="email" required value={formData.email} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
               placeholder="Email address" />
           </div>
 
           <div className="md:col-span-2">
-            <label className="text-sm uppercase tracking-widest text-neutral-500">Product of Interest</label>
+            <label htmlFor="product" className="text-sm uppercase tracking-widest text-neutral-500">Product of Interest</label>
             <input id="product" required value={formData.product} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 outline-none focus:border-brand-primary"
               placeholder="e.g. Organic Spices, Coconut Products" />
           </div>
 
           <div className="md:col-span-2">
-            <label className="text-sm uppercase tracking-widest text-neutral-500">Message</label>
+            <label htmlFor="message" className="text-sm uppercase tracking-widest text-neutral-500">Message</label>
             <textarea id="message" required rows="5" value={formData.message} onChange={handleChange}
               className="mt-3 w-full border border-neutral-200 px-5 py-4 resize-none outline-none focus:border-brand-primary"
               placeholder="Tell us about your requirements..." />
           </div>
 
           <div className="md:col-span-2">
-            <button disabled={isLoading}
+            <button type="submit" disabled={isLoading}
               className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white hover:opacity-90 transition">
               {isLoading ? "Sending..." : "Send Inquiry"}
               <ArrowUpRight className="w-4 h-4" />

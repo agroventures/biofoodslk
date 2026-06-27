@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { processingFacilities } from "../../data/processingFacilities";
 import { Award, TrendingUp, Shield, Globe, ChevronRight, ChevronLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -30,7 +30,7 @@ function ImageCarousel({ images, name }) {
     <div className="relative aspect-4/3 overflow-hidden bg-neutral-100">
       {images.map((src, i) => (
         <img
-          key={i}
+          key={src}
           src={src}
           alt={`${name} ${i + 1}`}
           className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
@@ -41,10 +41,10 @@ function ImageCarousel({ images, name }) {
 
       {images.length > 1 && (
         <>
-          <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
+          <button type="button" onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
             <ChevronLeft className="w-4 h-4 text-neutral-800" />
           </button>
-          <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
+          <button type="button" onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
             <ChevronRight className="w-4 h-4 text-neutral-800" />
           </button>
 
@@ -55,9 +55,10 @@ function ImageCarousel({ images, name }) {
 
           {/* progress dots */}
           <div className="absolute bottom-4 left-4 flex gap-1.5">
-            {images.map((_, i) => (
+            {images.map((src, i) => (
               <button
-                key={i}
+                key={src}
+                type="button"
                 onClick={() => setCurrent(i)}
                 className={`h-0.5 rounded-full transition-all ${current === i ? "w-6 bg-white" : "w-2 bg-white/40"}`}
               />
@@ -72,6 +73,7 @@ function ImageCarousel({ images, name }) {
 /* ── Main Component ── */
 function ProcessingFacilitiesDetails() {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="w-full bg-white text-neutral-950">
 
       {/* INTRO */}
@@ -279,6 +281,7 @@ function ProcessingFacilitiesDetails() {
       </div>
 
     </section>
+    </LazyMotion>
   );
 }
 

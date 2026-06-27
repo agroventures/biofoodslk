@@ -1,123 +1,146 @@
 import React from "react";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { Users, Package, ShieldCheck, Trophy, Sparkles, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { certifications } from "../../data/certifications";
 
-function HomeSegments() {
-  const segments = [
-    // {
-    //     id: 1,
-    //     title: "Producers",
-    //     description: "Meet our trusted organic farmers across the island.",
-    //     img: '/Home/producers.avif',
-    //     link: '/producers',
-    //     code: "SRC_01"
-    // },
-    {
-      id: 2,
-      title: "Process",
-      description: "Advanced sustainable processing techniques.",
-      img: "/Home/process.avif",
-      link: "/processing-facilities",
-      code: "PRC_02",
-    },
-    {
-      id: 3,
-      title: "Products",
-      description: "100% organic, fresh, and certified exports.",
-      img: "/Home/products.avif",
-      link: "/products",
-      code: "PROD_03",
-    },
-    {
-      id: 4,
-      title: "Quality",
-      description: "Certified excellence in every single batch.",
-      img: "/Home/quality.avif",
-      link: "/quality-certifications",
-      code: "QLTY_04",
-    },
-    {
-      id: 5,
-      title: "Management",
-      description: "Supporting sustainable farming practices.",
-      img: "/Home/management.jpg",
-      link: "/about#management",
-      code: "MGMT_05",
-    },
-  ];
+const segments = [
+  {
+    icon: Users,
+    title: "Producers",
+    description:
+      "Connect with our network of trusted organic farmers across Sri Lanka.",
+    link: "/producers",
+    img: "/Producers/hero.webp",
+  },
+  {
+    icon: Package,
+    title: "Products",
+    description:
+      "Explore our premium range of 100% organic spices and agricultural products.",
+    link: "/products",
+    img: "/Products/CoconutProducts/coconut.jpg",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality",
+    description:
+      "Discover our internationally certified quality standards and rigorous testing processes.",
+    link: "/quality-certifications",
+    logos: certifications.map((c) => ({ img: c.img, name: c.name })),
+  },
+  {
+    icon: Trophy,
+    title: "Awards",
+    description:
+      "Celebrating excellence through national and international awards for quality and sustainability.",
+    link: "/awards",
+    img: "/Awards/german_sustainability.WebP",
+  },
+];
 
+function HomeSegments({section}) {
   return (
-    <section className="w-full bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white border-t border-b border-neutral-100 py-24 lg:py-36">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* ── Editorial Section Header ── */}
-        <div className="border-b border-neutral-950 pb-8 mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 text-neutral-950">
-              <Sparkles className="w-4 h-4 stroke-[1.5]" />
-              <span className="font-mono text-sm uppercase tracking-[0.3em] text-neutral-500">
-                Discover Our Journey
-              </span>
+    <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28">
+      {/* Decorative Number */}
+      <div className="pointer-events-none absolute left-0 top-0 hidden select-none xl:block">
+        <span className="text-[280px] font-black leading-none text-black/3">
+          {section}
+        </span>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12 grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="h-px w-12 bg-brand-secondary" />
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-brand-secondary" />
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                  Discover Our Journey
+                </span>
+              </div>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tighter text-neutral-950 leading-none">
-              Experience BioFoods
+            <h2
+              className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Experience
+              <br />
+              BioFoods.
             </h2>
           </div>
-          <div className="max-w-md">
-            <p className="text-base text-neutral-600 font-medium leading-relaxed">
-              Explore every sequential operational framework dedicated to
-              delivering uncompromising agricultural transparency from origin
-              matrices to global trade hubs.
+          <div className="flex items-end lg:col-span-5">
+            <p className="max-w-md text-lg leading-8 text-neutral-600">
+              Explore our network of farmers, products, certifications, and
+              awards dedicated to uncompromising organic quality.
             </p>
           </div>
         </div>
 
-        {/* ── Corporate Grid Assembly ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {segments.map((segment) => (
+        {/* Cards */}
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {segments.map((segment, index) => (
             <Link
-              key={segment.id}
+              key={index}
               to={segment.link}
-              className="group relative block bg-neutral-950 border border-neutral-200 overflow-hidden h-80 md:h-112.5 lg:h-130 transition-all duration-300 hover:border-neutral-950"
+              className="group rounded-4xl bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] flex flex-col"
             >
-              {/* Image Layer with Contrast Mapping */}
-              <div className="absolute inset-0 z-0 h-full w-full">
-                <img
-                  src={segment.img}
-                  alt={segment.title}
-                  className="h-full w-full object-cover opacity-80 filter contrast-110 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
+              {/* Image */}
+              {segment.img && (
+                <div className="mb-6 h-40 overflow-hidden rounded-2xl">
+                  <img
+                    src={segment.img}
+                    alt={segment.title}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+              )}
+
+              {/* Certification logos */}
+              {segment.logos && (
+                <div className="mb-6 grid h-40 grid-cols-4 gap-2 content-start overflow-hidden">
+                  {segment.logos.map((logo, i) => (
+                    <div
+                      key={i}
+                      className="flex h-10 w-full items-center justify-center rounded-xl bg-brand-light p-2"
+                    >
+                      <img
+                        src={logo.img}
+                        alt={logo.name}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Icon */}
+              <div className="mb-6 flex items-center justify-center">
+                <div className="rounded-2xl bg-brand-muted p-4 text-brand-primary">
+                  <segment.icon className="h-5 w-5" />
+                </div>
               </div>
 
-              {/* Core Layout Layer */}
-              <div className="absolute inset-0 z-10 p-6 flex flex-col justify-between h-full">
-                {/* Top Tray Meta-Information */}
-                <div className="flex items-center justify-between">
-                  <div className="w-8 h-8 bg-white border border-neutral-200 text-neutral-950 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-0">
-                    <ArrowUpRight className="w-4 h-4 stroke-[1.5]" />
-                  </div>
-                </div>
+              {/* Title */}
+              <h3
+                className="mb-4 text-center text-2xl tracking-tight text-neutral-950"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                {segment.title}
+              </h3>
 
-                {/* Bottom Frame Context Payload */}
-                <div className="space-y-4">
-                  <div className="space-y-1">
-                    <h3 className="text-3xl font-black uppercase tracking-tighter text-white">
-                      {segment.title}
-                    </h3>
-                  </div>
+              {/* Description */}
+              <p className="text-center leading-7 text-neutral-600">
+                {segment.description}
+              </p>
 
-                  {/* Description block that gains sharp prominence */}
-                  <p className="text-sm text-neutral-300 font-medium leading-relaxed line-clamp-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                    {segment.description}
-                  </p>
-
-                  {/* Action Anchor Underline */}
-                  <div className="pt-2">
-                    <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white border-b border-white pb-1 group-hover:border-neutral-400 transition-colors">
-                      Learn More
-                    </span>
-                  </div>
-                </div>
+              {/* Button */}
+              <div className="mt-6 flex justify-center">
+                <span className="inline-flex items-center gap-2 rounded-full border border-brand-primary px-5 py-2 text-sm font-medium text-brand-primary transition-colors duration-300 group-hover:bg-brand-primary group-hover:text-white">
+                  Explore {segment.title}
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                </span>
               </div>
             </Link>
           ))}

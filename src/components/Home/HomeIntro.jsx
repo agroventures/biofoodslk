@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 import {
   Globe,
   Leaf,
@@ -8,6 +8,7 @@ import {
 
 export default function HomeIntro({section}) {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="relative overflow-hidden bg-white py-20 lg:py-28">
       {/* Background decoration */}
       <div className="pointer-events-none absolute right-10 top-0 hidden select-none xl:block">
@@ -48,7 +49,7 @@ export default function HomeIntro({section}) {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <button type="button" className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 Learn More
               </button>
 
@@ -82,7 +83,7 @@ export default function HomeIntro({section}) {
                 <img
                   src="/Home/farmer-female.webp"
                   alt="Lady Farmer"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
             </div>
@@ -90,5 +91,6 @@ export default function HomeIntro({section}) {
         </div>
       </div>
     </section>
+    </LazyMotion>
   );
 }

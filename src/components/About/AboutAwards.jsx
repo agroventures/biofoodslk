@@ -1,9 +1,7 @@
 import React from 'react';
 import { Award, Star, Trophy, ShieldCheck, Globe, Beaker } from 'lucide-react';
 
-function AboutAwards() {
-    // Featured/Recent/Major Awards
-    const featuredAwards = [
+const featuredAwards = [
         {
             year: "2024",
             title: "Global CEO Leadership Excellence Awards",
@@ -48,8 +46,8 @@ function AboutAwards() {
         }
     ];
 
-    // Historical and Technical Awards
-    const historicalAwards = [
+// Historical and Technical Awards
+const historicalAwards = [
         { year: "2019", t: "Presidential Awards", d: "Discovery of special enzyme in activator for green tea processing – 2nd place in Food Tech." },
         { year: "2017", t: "International Pepper Council Award", d: "Excellence in exporter of value added products." },
         { year: "2016", t: "Sri Lanka Tea Board Awards", d: "Highest FOB achiever for bulk tea & 2nd place in specialty tea." },
@@ -60,6 +58,7 @@ function AboutAwards() {
         { year: "1999", t: "NCE Exporters Award", d: "National Chamber of Commerce recognition." }
     ];
 
+function AboutAwards() {
     return (
         <section className="py-20 lg:py-32 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
@@ -81,8 +80,8 @@ function AboutAwards() {
 
                 {/* Top Tier Awards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {featuredAwards.map((award, index) => (
-                        <div key={index} className="group relative bg-brand-light p-8 rounded-[2.5rem] border border-neutral-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+                    {featuredAwards.map((award) => (
+                        <div key={award.title} className="group relative bg-brand-light p-8 rounded-[2.5rem] border border-neutral-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
                             <div className="flex justify-between items-start mb-8">
                                 <div className="p-4 bg-white rounded-2xl shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-colors duration-500 text-neutral-700">
                                     {React.cloneElement(award.icon, { size: 32, className: "transition-colors" })}
@@ -118,8 +117,8 @@ function AboutAwards() {
                     </div>
 
                     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                        {historicalAwards.map((item, i) => (
-                            <div key={i} className="group flex gap-6 items-start p-4 rounded-2xl transition-colors hover:bg-brand-muted/50">
+                        {historicalAwards.map((item) => (
+                            <div key={item.t} className="group flex gap-6 items-start p-4 rounded-2xl transition-colors hover:bg-brand-muted/50">
                                 <div className="shrink-0 w-16 text-brand-primary font-black text-lg border-r border-neutral-100 pr-4">
                                     {item.year}
                                 </div>

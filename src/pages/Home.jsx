@@ -8,6 +8,7 @@ import HomeCorePrinciples from '../components/Home/HomeCorePrinciples';
 import HomeClosingReflection from '../components/Home/HomeClosingReflection';
 import HomeProductExperiences from '../components/Home/HomeProductExperiences';
 import HomeIntro from '../components/Home/HomeIntro';
+import HomeSegments from '../components/Home/HomeSegments';
 
 function Home() {
     const url = window.location.href;
@@ -29,7 +30,8 @@ function Home() {
             <HomeAgroVenturesAdvantage section="03" />
             {/* <HomeCorePrinciples section="05" /> */}
             <HomeProductExperiences section="04" />
-            <HomeClosingReflection section="05" />
+            <HomeSegments section="05"  />
+            <HomeClosingReflection section="06" />
             <Footer />
         </div>
     )

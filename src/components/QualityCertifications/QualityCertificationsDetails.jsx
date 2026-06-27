@@ -5,7 +5,7 @@ import {
   Microscope, BadgeCheck, Shield, Award,
   FileCheck, Network, TrendingUp, Globe, ArrowUpRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -39,6 +39,7 @@ const qaItems = [
 
 function QualityCertificationsDetails() {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="w-full bg-white text-neutral-950">
 
       {/* INTRO */}
@@ -131,7 +132,7 @@ function QualityCertificationsDetails() {
             <div className="lg:col-span-8 divide-y divide-neutral-200 border-y border-neutral-200">
               {procedures.map(({ icon: Icon, title, desc }, i) => (
                 <motion.div
-                  key={i}
+                  key={title}
                   {...fadeUp(i * 0.08)}
                   className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
@@ -281,7 +282,7 @@ function QualityCertificationsDetails() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
             {qaItems.map(({ icon: Icon, title, description }, i) => (
               <motion.div
-                key={i}
+                key={title}
                 {...fadeUp(i * 0.08)}
                 className="group p-8 hover:bg-brand-light transition-colors duration-300"
               >
@@ -343,6 +344,7 @@ function QualityCertificationsDetails() {
       </div>
 
     </section>
+    </LazyMotion>
   );
 }
 

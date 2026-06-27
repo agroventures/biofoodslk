@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const ImageHero = ({
   badge,
@@ -11,6 +11,7 @@ const ImageHero = ({
   alt = "Hero image",
 }) => {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="relative min-h-[75vh] lg:min-h-[calc(100vh-6rem)] overflow-hidden bg-light">
       {/* Image */}
       <div className="absolute inset-0">
@@ -95,6 +96,7 @@ const ImageHero = ({
         <div className="h-16 w-px bg-white/30" />
       </div>
     </section>
+    </LazyMotion>
   );
 };
 

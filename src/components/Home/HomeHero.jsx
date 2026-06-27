@@ -1,5 +1,7 @@
 import {
-  motion,
+  LazyMotion,
+  domAnimation,
+  m as motion,
   AnimatePresence,
   useScroll,
   useTransform,
@@ -8,6 +10,8 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { certifications as certData } from "../../data/certifications";
+
+const duplicatedCerts = [...certData, ...certData, ...certData];
 
 const slides = [
   {
@@ -38,34 +42,6 @@ const slides = [
     ),
     desc: "Sri Lanka's tree of life - certified organic desiccated coconut, coconut chips and specialty coconut products for health-conscious global markets.",
   },
-  // {
-  //   img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/spices-whole/cinnamon_quills.webp",
-  //   label: "True Cinnamon",
-  //   heading: (
-  //     <>
-  //       Authentic Ceylon
-  //       <br />
-  //       <span className="text-brand-secondary">True Cinnamon</span>
-  //       <br />
-  //       for the World.
-  //     </>
-  //   ),
-  //   desc: "Ceylon cinnamon - the real kind - grown in the lush lowlands of Sri Lanka, certified organic and biodynamic for discerning buyers worldwide.",
-  // },
-  // {
-  //   img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Products/OrganicSpices/spices-whole/vanilla_beans.webp",
-  //   label: "Vanilla Beans",
-  //   heading: (
-  //     <>
-  //       Pure Organic
-  //       <br />
-  //       <span className="text-brand-secondary">Vanilla Beans</span>
-  //       <br />
-  //       Crafted with Care.
-  //     </>
-  //   ),
-  //   desc: "Hand-harvested, sun-cured vanilla beans carrying the rich aroma of Sri Lanka's fertile highlands - certified organic and fair trade.",
-  // },
   {
     img: "/Awards/german_sustainability.WebP",
     label: "Award Winning",
@@ -109,10 +85,8 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  // Duplicate data to create a seamless seamless looping visual effect
-  const duplicatedCerts = [...certData, ...certData, ...certData];
-
   return (
+    <LazyMotion features={domAnimation}>
     <section className="relative min-h-screen overflow-hidden flex flex-col justify-between">
       {/* Inject Keyframe for Marquee inside the file to guarantee it works without editing tailwind.config.js */}
       <style>{`
@@ -235,6 +209,7 @@ export default function Hero() {
           {slides.map((_, i) => (
             <button
               key={i}
+              type="button"
               onClick={() => setCurrent(i)}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 i === current ? "w-8 bg-brand-secondary" : "w-3 bg-white/40"
@@ -244,7 +219,6 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Infinite Slider Bottom Bar */}
       {/* Infinite Slider Bottom Bar */}
       <div className="relative z-10 w-full backdrop-blur-sm border-t border-white/10 py-8 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 mb-4">
@@ -280,5 +254,6 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    </LazyMotion>
   );
 }

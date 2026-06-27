@@ -107,6 +107,7 @@ const ContactForm = () => {
                         </div>
 
                         <button
+                            type="button"
                             onClick={() => setIsSubmitted(false)}
                             className="text-neutral-400 hover:text-neutral-900"
                         >
@@ -201,7 +202,7 @@ const ContactForm = () => {
                         >
 
                             <div>
-                                <label className="text-sm uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="name" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Name
                                 </label>
 
@@ -216,7 +217,7 @@ const ContactForm = () => {
                             </div>
 
                             <div>
-                                <label className="text-sm uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="email" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Email
                                 </label>
 
@@ -232,7 +233,7 @@ const ContactForm = () => {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-sm uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="subject" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Subject
                                 </label>
 
@@ -247,7 +248,7 @@ const ContactForm = () => {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-sm uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="message" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Message
                                 </label>
 
@@ -264,6 +265,7 @@ const ContactForm = () => {
 
                             <div className="md:col-span-2">
                                 <button
+                                    type="submit"
                                     disabled={isLoading}
                                     className=" inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white hover:opacity-90 transition"
                                 >

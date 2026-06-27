@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 import { Award, Sprout, Users } from "lucide-react";
 import { management } from "../../data/management";
 
@@ -29,6 +29,7 @@ export default function AboutManagement() {
   ];
 
   return (
+    <LazyMotion features={domAnimation}>
     <section className="w-full bg-white text-neutral-950 overflow-hidden">
 
       {/* ── HEADER ── */}
@@ -115,9 +116,9 @@ export default function AboutManagement() {
 
                         {/* Cards Showcase */}
                         <div className="grid sm:grid-cols-3 gap-4">
-                          {founderHighlights.map(({ icon: Icon, label, sub }, i) => (
+                          {founderHighlights.map(({ icon: Icon, label, sub }) => (
                             <div
-                              key={i}
+                              key={label}
                               className="border border-neutral-150 rounded-2xl p-5 bg-neutral-50/50 shadow-sm"
                             >
                               <div className="h-9 w-9 rounded-xl flex items-center justify-center bg-brand-light mb-3">
@@ -171,5 +172,6 @@ export default function AboutManagement() {
       </div>
 
     </section>
+    </LazyMotion>
   );
 }

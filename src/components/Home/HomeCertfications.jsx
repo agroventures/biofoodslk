@@ -109,6 +109,7 @@ function HomeCertifications({ section }) {
             <div className="mt-12">
               <Link to="/quality-certifications">
                 <button
+                  type="button"
                   className="group inline-flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
                   Explore Certifications

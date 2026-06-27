@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 import { TrendingUp, ArrowUpRight, PackageCheck, Handshake } from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
@@ -38,6 +38,7 @@ const pillars = [
 
 export default function AboutGrowth() {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="bg-white overflow-hidden">
 
       {/* ── FULL-BLEED IMAGE + HEADLINE ── */}
@@ -128,7 +129,7 @@ export default function AboutGrowth() {
           <div className="grid md:grid-cols-3 gap-6">
             {pillars.map(({ icon: Icon, title, description }, i) => (
               <motion.div
-                key={i}
+                key={title}
                 {...fadeUp(i * 0.1)}
                 className="group border border-neutral-200 p-8 flex flex-col items-center justify-center hover:border-brand-primary transition-colors duration-300"
               >
@@ -152,5 +153,6 @@ export default function AboutGrowth() {
       </div>
 
     </section>
+    </LazyMotion>
   );
 }

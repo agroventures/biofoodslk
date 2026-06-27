@@ -64,7 +64,7 @@ function HomeEcoPlus() {
             </div>
 
             <Link to="/eco-plus" className="inline-block w-full sm:w-auto">
-              <button className="w-full sm:w-auto group flex items-center justify-center gap-3 bg-brand-primary hover:bg-neutral-950 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-black transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-primary/20">
+              <button type="button" className="w-full sm:w-auto group flex items-center justify-center gap-3 bg-brand-primary hover:bg-neutral-950 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-black transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-primary/20">
                 LEARN MORE ABOUT ECO PLUS
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Building2, Factory, Ship, Network, TrendingUp, Globe, ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 import { companies } from "../../data/companies";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -27,6 +27,7 @@ const advantages = [
 
 export default function AboutAgroVentures() {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="w-full bg-white text-neutral-950 border-y border-neutral-100">
 
       {/* INTRO */}
@@ -67,8 +68,8 @@ export default function AboutAgroVentures() {
             { value: "8+",   label: "Group Companies" },
             { value: "5+",  label: "Years in Agribusiness" },
             { value: "Global", label: "Market Presence" },
-          ].map((s, i) => (
-            <motion.div key={i} {...fadeUp(i * 0.1)} className="py-10 px-8 flex items-center justify-between gap-4">
+          ].map((s) => (
+            <motion.div key={s.label} {...fadeUp()} className="py-10 px-8 flex items-center justify-between gap-4">
               <div>
                 <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
                   {s.value}
@@ -93,7 +94,7 @@ export default function AboutAgroVentures() {
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
               {expertise.map(({ icon: Icon, title, description }, i) => (
                 <motion.div
-                  key={i}
+                  key={title}
                   {...fadeUp(i * 0.1)}
                   className="group flex gap-5 py-7 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
@@ -117,7 +118,7 @@ export default function AboutAgroVentures() {
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
               {advantages.map(({ icon: Icon, title, description }, i) => (
                 <motion.div
-                  key={i}
+                  key={title}
                   {...fadeUp(i * 0.1)}
                   className="group flex gap-5 py-7 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
@@ -204,5 +205,6 @@ export default function AboutAgroVentures() {
       </div>
 
     </section>
+    </LazyMotion>
   );
 }

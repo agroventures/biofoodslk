@@ -85,9 +85,10 @@ function MediaVideos() {
                 {/* Video Grid */}
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
                     {videos.map((video, index) => (
-                        <div
+                        <button
                             key={video.id}
-                            className='group relative bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer'
+                            type="button"
+                            className='group relative bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer text-left'
                             onClick={() => handleVideoClick(video)}
                             style={{ 
                                 animationDelay: `${index * 100}ms`,
@@ -149,7 +150,7 @@ function MediaVideos() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     ))}
                 </div>
             </div>
@@ -158,7 +159,9 @@ function MediaVideos() {
             {selectedVideo && (
                 <div className='fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn'>
                     {/* Backdrop */}
-                    <div 
+                    <button
+                        type="button"
+                        aria-label="Close video"
                         className='absolute inset-0 bg-black/95 backdrop-blur-sm'
                         onClick={closeVideoPlayer}
                     />

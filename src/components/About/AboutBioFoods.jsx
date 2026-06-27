@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import React from "react";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 import {
   Award,
   Globe,
@@ -10,10 +11,10 @@ import {
 } from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 32 },
+  initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.7, delay },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, delay, ease: [0.215, 0.610, 0.355, 1] },
 });
 
 const milestones = [
@@ -53,206 +54,148 @@ const values = [
   { icon: TrendingUp, text: "Sustainable Growth" },
 ];
 
-const achievements = [
-  {
-    icon: Award,
-    title: "Fair Trade Recognition",
-    description:
-      "International acknowledgment for ethical sourcing and transparent supply chains.",
-  },
-  {
-    icon: Users,
-    title: "Farmer Communities",
-    description:
-      "Long-term partnerships supporting smallholder farmers across Sri Lanka.",
-  },
-  {
-    icon: Globe,
-    title: "Global Trust",
-    description:
-      "Certified and distributed across major organic markets worldwide.",
-  },
-];
-
 export default function AboutBioFoods() {
   return (
-    <div className="w-full bg-white text-neutral-950 overflow-hidden">
-      {/* ── EDITORIAL INTRO ── */}
-      <section className="relative py-28 lg:py-40 border-b border-neutral-100">
-        {/* vertical rule */}
-        <div className="absolute left-10 top-0 hidden h-full w-px bg-neutral-200 lg:block" />
+    <LazyMotion features={domAnimation}>
+      <div className="w-full bg-neutral-50 text-neutral-950 overflow-hidden antialiased">
+        
+        {/* ── EDITORIAL INTRO (SIDE-BY-SIDE LAYOUT) ── */}
+        <section className="relative py-24 lg:py-36 bg-white border-b border-neutral-200/60">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              
+              {/* Left Side: Content Column */}
+              <div className="flex flex-col justify-center">
+                <motion.span
+                  {...fadeUp(0)}
+                  className="inline-flex items-center gap-3 mb-6 text-md uppercase tracking-[0.4em] text-brand-gold font-semibold"
+                >
+                  <span className="h-px w-8 bg-brand-gold/60" />
+                  About Bio Foods
+                </motion.span>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-16">
-          <motion.span
-            {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
-          >
-            <span className="h-px w-10 bg-brand-secondary" />
-            About Bio Foods
-          </motion.span>
+                <motion.h1
+                  {...fadeUp(0.1)}
+                  className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-neutral-900 leading-[1.1] mb-6"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Rooted in nature, <br />
+                  <span className="italic text-brand-primary">grown with care.</span>
+                </motion.h1>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
-            <motion.h1
-              {...fadeUp(0.1)}
-              className="text-5xl lg:text-7xl leading-[1.05] tracking-tight"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
-            >
-              Rooted in nature,
-              <br />
-              <span className="text-brand-primary">grown with care.</span>
-            </motion.h1>
-
-            <motion.div {...fadeUp(0.2)}>
-              <p className="text-lg leading-8 text-neutral-600">
-                Since 1993 - cultivating certified organic products with deep
-                respect for people, land, and the communities behind every
-                harvest.
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {values.map(({ icon: Icon, text }, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 border border-neutral-200 px-4 py-3 hover:border-brand-primary transition-colors duration-300"
-                  >
-                    <Icon className="h-4 w-4 shrink-0 text-brand-primary" />
-                    <span className="text-sm text-neutral-700">{text}</span>
-                  </div>
-                ))}
+                <motion.p {...fadeUp(0.15)} className="text-neutral-600 text-lg font-light leading-relaxed mb-8">
+                  Since 1993 - cultivating certified organic products with deep
+                  respect for people, land, and the communities behind every
+                  harvest.
+                </motion.p>
+                
+                {/* Brand Values Interactive Mini-Grid */}
+                <motion.div {...fadeUp(0.2)} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {values.map(({ icon: Icon, text }) => (
+                    <div
+                      key={text}
+                      className="flex items-center gap-3.5 bg-neutral-50 border border-neutral-200/70 rounded-xl px-5 py-3.5 hover:bg-white hover:border-brand-primary hover:shadow-md hover:shadow-neutral-100 transition-all duration-300 group"
+                    >
+                      <div className="p-1.5 rounded-lg bg-white border border-neutral-200 group-hover:bg-brand-light group-hover:border-transparent transition-colors duration-300">
+                        <Icon className="h-4 w-4 shrink-0 text-brand-primary group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                      <span className="text-sm font-medium text-neutral-700 group-hover:text-neutral-900 transition-colors">{text}</span>
+                    </div>
+                  ))}
+                </motion.div>
               </div>
-            </motion.div>
+
+              {/* Right Side: Image Column */}
+              <motion.div
+                {...fadeUp(0.3)}
+                className="overflow-hidden rounded-2xl border border-neutral-200 p-2 bg-neutral-50 shadow-inner h-full max-h-137.5"
+              >
+                <img
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/intro.webp"
+                  alt="Bio Foods organic farm"
+                  className="w-full h-full min-h-87.5 lg:min-h-120 object-cover rounded-xl"
+                />
+              </motion.div>
+
+            </div>
+
           </div>
+        </section>
 
-          <motion.div
-            {...fadeUp(0.3)}
-            className="mt-16 lg:mt-20 overflow-hidden"
-          >
-            <img
-              src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/intro.webp"
-              alt="Bio Foods organic farm"
-              className="w-full h-105 lg:h-140 object-cover"
-            />
-          </motion.div>
-        </div>
-      </section>
+        {/* ── INTEGRATED STATS CARDS GRID ── */}
+        <section className="py-12 bg-white border-b border-neutral-200/60">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {stats.map((s, i) => (
+                <motion.div
+                  key={s.label}
+                  {...fadeUp(i * 0.08)}
+                  className="bg-neutral-50 border border-neutral-200/60 p-8 rounded-2xl text-center group hover:bg-brand-primary hover:border-brand-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-primary/10 transition-all duration-300"
+                >
+                  <p
+                    className="text-4xl md:text-5xl font-light tracking-tight text-brand-primary group-hover:text-white transition-colors duration-300 tabular-nums"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    {s.value}
+                  </p>
+                  <div className="w-4 h-px bg-brand-gold/60 mx-auto my-3 group-hover:bg-white/30 transition-colors" />
+                  <p className="text-sm uppercase tracking-[0.2em] font-semibold text-neutral-500 group-hover:text-white/80 transition-colors duration-300">
+                    {s.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* ── STATS BAND ── */}
-      <section className="bg-brand-primary">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4">
-          {stats.map((s, i) => (
-            <motion.div
-              key={i}
-              {...fadeUp(i * 0.1)}
-              className={`
-          py-12 px-6 text-center
-          border-white/20
-          border-b lg:border-b-0
-          ${i % 2 === 0 ? "border-r lg:border-r" : "lg:border-r"}
-          ${i === stats.length - 1 ? "lg:border-r-0" : ""}
-        `}
-            >
-              <p
-                className="text-4xl lg:text-5xl font-semibold text-white"
+        {/* ── CARD-BASED JOURNEY TIMELINE ── */}
+        <section className="py-24 lg:py-32 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row md:items-baseline justify-between border-b border-neutral-200 pb-6 mb-16">
+              <motion.h2
+                {...fadeUp(0)}
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-900 font-light"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
-                {s.value}
-              </p>
-              <p className="mt-2 text-md uppercase tracking-[0.25em] text-white/60">
-                {s.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+                Our Legacy & <span className="italic text-brand-gold">Journey</span>
+              </motion.h2>
+              <motion.p {...fadeUp(0.05)} className="text-md uppercase tracking-[0.3em] font-semibold text-neutral-400 mt-2 md:mt-0">
+                Milestones over time
+              </motion.p>
+            </div>
 
-      {/* ── TIMELINE ── */}
-      <section className="py-28 bg-brand-light">
-        <div className="max-w-7xl mx-auto px-6 lg:px-16">
-          <motion.h2
-            {...fadeUp(0)}
-            className="text-4xl lg:text-6xl mb-20"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
-          >
-            Our Journey
-          </motion.h2>
-
-          <div className="grid md:grid-cols-4 gap-0">
-            {milestones.map((m, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp(i * 0.1)}
-                className="relative border-l-2 border-brand-primary pl-6 pb-12 md:pb-0 md:border-l-0 md:border-t-2 md:pl-0 md:pt-6 md:pr-8"
-              >
-                {/* dot */}
-                <span className="absolute -left-1.25 top-0 h-2 w-2 rounded-full bg-brand-primary md:left-0 md:-top-1.25" />
-                <p className="text-sm font-semibold text-brand-secondary tracking-widest">
-                  {m.year}
-                </p>
-                <h3 className="mt-2 text-lg font-medium text-neutral-900">
-                  {m.title}
-                </h3>
-                <p className="mt-1 text-sm text-neutral-600 leading-relaxed">
-                  {m.description}
-                </p>
-              </motion.div>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              {milestones.map((m, i) => (
+                <motion.div
+                  key={m.year}
+                  {...fadeUp(i * 0.1)}
+                  className="bg-white border border-neutral-200/70 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group"
+                >
+                  {/* Subtle top bar decorative marker */}
+                  <div className="absolute top-0 left-8 right-8 h-0.5 bg-neutral-100 group-hover:bg-brand-gold transition-colors duration-300" />
+                  
+                  <div>
+                    <span
+                      className="text-3xl lg:text-4xl text-neutral-300 group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
+                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    >
+                      {m.year}
+                    </span>
+                    <h3 className="text-lg font-medium text-neutral-900 mb-2">
+                      {m.title}
+                    </h3>
+                  </div>
+                  <p className="mt-2 text-[14px] text-neutral-600 leading-relaxed font-light">
+                    {m.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── ACHIEVEMENTS ── */}
-      {/* <section className="py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-16">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
-            <motion.h2
-              {...fadeUp(0)}
-              className="text-4xl lg:text-6xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
-            >
-              Recognition
-              <br />& Trust
-            </motion.h2>
-            <motion.p {...fadeUp(0.1)} className="max-w-md text-neutral-500 text-sm leading-7">
-              Three decades of ethical agriculture recognized by leading international certifying bodies and trade partners.
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {achievements.map(({ icon: Icon, title, description }, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp(i * 0.1)}
-                className="group border border-neutral-200 p-8 hover:border-brand-primary transition-colors duration-300"
-              >
-                <div className="h-10 w-10 flex items-center justify-center bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
-                  <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="mt-6 text-xl font-medium" style={{ fontFamily: "Cormorant Garamond, serif" }}>{title}</h3>
-                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* ── CLOSING BANNER ── */}
-      {/* <section className="bg-brand-muted border-t border-neutral-200 py-20">
-        <motion.div
-          {...fadeUp(0)}
-          className="max-w-4xl mx-auto px-6 text-center"
-        >
-          <p className="text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
-            <span className="h-px w-8 bg-brand-secondary inline-block align-middle mr-3" />
-            Est. 1993 · Kandy, Sri Lanka
-            <span className="h-px w-8 bg-brand-secondary inline-block align-middle ml-3" />
-          </p>
-          <h2
-            className="text-4xl lg:text-6xl text-neutral-900 leading-tight"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
-          >
-            "From the soil of Sri Lanka<br />to tables around the world."
-          </h2>
-        </motion.div>
-      </section> */}
-    </div>
+      </div>
+    </LazyMotion>
   );
 }

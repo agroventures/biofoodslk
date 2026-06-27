@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ZoomOut, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Lightbox({ images, startIndex = 0, onClose }) {
@@ -23,6 +23,7 @@ export default function Lightbox({ images, startIndex = 0, onClose }) {
   const alt = typeof images[index] === "string" ? `Image ${index + 1}` : images[index].alt;
 
   return (
+    <LazyMotion features={domAnimation}>
     <AnimatePresence>
       <motion.div
         className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
@@ -33,15 +34,15 @@ export default function Lightbox({ images, startIndex = 0, onClose }) {
       >
         {/* Controls */}
         <div className="absolute top-4 right-4 flex gap-2" onClick={e => e.stopPropagation()}>
-          <button className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.min(s + 0.5, 3))}><ZoomIn className="h-5 w-5" /></button>
-          <button className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.max(s - 0.5, 1))}><ZoomOut className="h-5 w-5" /></button>
-          <button className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={onClose}><X className="h-5 w-5" /></button>
+          <button type="button" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.min(s + 0.5, 3))}><ZoomIn className="h-5 w-5" /></button>
+          <button type="button" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.max(s - 0.5, 1))}><ZoomOut className="h-5 w-5" /></button>
+          <button type="button" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={onClose}><X className="h-5 w-5" /></button>
         </div>
 
         {/* Arrow nav */}
         {images.length > 1 && <>
-          <button className="absolute left-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); prev(); }}><ChevronLeft className="h-6 w-6" /></button>
-          <button className="absolute right-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); next(); }}><ChevronRight className="h-6 w-6" /></button>
+          <button type="button" className="absolute left-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); prev(); }}><ChevronLeft className="h-6 w-6" /></button>
+          <button type="button" className="absolute right-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); next(); }}><ChevronRight className="h-6 w-6" /></button>
         </>}
 
         {/* Image */}
@@ -63,5 +64,6 @@ export default function Lightbox({ images, startIndex = 0, onClose }) {
         )}
       </motion.div>
     </AnimatePresence>
+    </LazyMotion>
   );
 }

@@ -1,14 +1,24 @@
-import React, { useState, useRef } from 'react';
+import React, { useReducer, useRef } from 'react';
 import { Sparkles, ArrowUpRight, CheckCircle2, X, Paperclip } from 'lucide-react';
 
-const INITIAL_FORM = { name: '', email: '', phone: '', message: '' };
+const INITIAL_STATE = { formData: { name: '', email: '', phone: '', message: '' }, cvFile: null, dragOver: false, isLoading: false, isSubmitted: false };
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'SET_FIELD': return { ...state, formData: { ...state.formData, [action.id]: action.value } };
+        case 'SET_CV': return { ...state, cvFile: action.file };
+        case 'SET_DRAG': return { ...state, dragOver: action.over };
+        case 'SUBMIT_START': return { ...state, isLoading: true };
+        case 'SUBMIT_SUCCESS': return { ...INITIAL_STATE, isSubmitted: true };
+        case 'SUBMIT_ERROR': return { ...state, isLoading: false };
+        case 'DISMISS': return { ...state, isSubmitted: false };
+        default: return state;
+    }
+}
 
 function CareersOpenings() {
-    const [formData, setFormData] = useState(INITIAL_FORM);
-    const [cvFile, setCvFile] = useState(null);
-    const [dragOver, setDragOver] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+    const { formData, cvFile, dragOver, isLoading, isSubmitted } = state;
     const fileInputRef = useRef(null);
 
     const handleFile = (file) => {
@@ -16,23 +26,22 @@ function CareersOpenings() {
         const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
         if (!allowed.includes(file.type)) return alert('Please upload a PDF or Word document.');
         if (file.size > 5 * 1024 * 1024) return alert('File size must be under 5MB.');
-        setCvFile(file);
+        dispatch({ type: 'SET_CV', file });
     };
 
     const handleDrop = (e) => {
         e.preventDefault();
-        setDragOver(false);
+        dispatch({ type: 'SET_DRAG', over: false });
         handleFile(e.dataTransfer.files[0]);
     };
 
     const handleChange = (e) => {
-        const { id, value } = e.target;
-        setFormData((prev) => ({ ...prev, [id]: value }));
+        dispatch({ type: 'SET_FIELD', id: e.target.id, value: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
+        dispatch({ type: 'SUBMIT_START' });
         try {
             const data = new FormData();
             data.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY);
@@ -50,14 +59,11 @@ function CareersOpenings() {
             const json = await res.json();
             if (!json.success) throw new Error(json.message);
 
-            setIsSubmitted(true);
-            setFormData(INITIAL_FORM);
-            setCvFile(null);
+            dispatch({ type: 'SUBMIT_SUCCESS' });
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (err) {
             console.error(err);
-        } finally {
-            setIsLoading(false);
+            dispatch({ type: 'SUBMIT_ERROR' });
         }
     };
 
@@ -94,7 +100,7 @@ function CareersOpenings() {
                                 Thank you! Our team will review your application and reach out soon.
                             </p>
                         </div>
-                        <button onClick={() => setIsSubmitted(false)} className="text-neutral-400 hover:text-neutral-900">
+                        <button type="button" onClick={() => dispatch({ type: 'DISMISS' })} className="text-neutral-400 hover:text-neutral-900">
                             <X className="w-4 h-4" />
                         </button>
                     </div>
@@ -138,7 +144,7 @@ function CareersOpenings() {
                             className="border border-neutral-200 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 gap-8"
                         >
                             <div>
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="name" className="text-xs uppercase tracking-widest text-neutral-500">
                                     Full Name
                                 </label>
                                 <input
@@ -152,7 +158,7 @@ function CareersOpenings() {
                             </div>
 
                             <div>
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="email" className="text-xs uppercase tracking-widest text-neutral-500">
                                     Email
                                 </label>
                                 <input
@@ -167,7 +173,7 @@ function CareersOpenings() {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="phone" className="text-xs uppercase tracking-widest text-neutral-500">
                                     Phone
                                 </label>
                                 <input
@@ -181,7 +187,7 @@ function CareersOpenings() {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="message" className="text-xs uppercase tracking-widest text-neutral-500">
                                     Tell Us About Yourself
                                 </label>
                                 <textarea
@@ -196,12 +202,13 @@ function CareersOpenings() {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="cv-upload" className="text-xs uppercase tracking-widest text-neutral-500">
                                     Upload CV
                                 </label>
-                                <div
-                                    onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
-                                    onDragLeave={() => setDragOver(false)}
+                                <button
+                                    type="button"
+                                    onDragOver={(e) => { e.preventDefault(); dispatch({ type: 'SET_DRAG', over: true }); }}
+                                    onDragLeave={() => dispatch({ type: 'SET_DRAG', over: false })}
                                     onDrop={handleDrop}
                                     onClick={() => fileInputRef.current.click()}
                                     className={`mt-3 w-full border-2 border-dashed px-5 py-8 flex flex-col items-center justify-center gap-3 cursor-pointer transition ${
@@ -214,7 +221,7 @@ function CareersOpenings() {
                                             <span>{cvFile.name}</span>
                                             <button
                                                 type="button"
-                                                onClick={(e) => { e.stopPropagation(); setCvFile(null); }}
+                                                onClick={(e) => { e.stopPropagation(); dispatch({ type: 'SET_CV', file: null }); }}
                                                 className="text-neutral-400 hover:text-neutral-900"
                                             >
                                                 <X className="w-4 h-4" />
@@ -229,16 +236,18 @@ function CareersOpenings() {
                                     )}
                                     <input
                                         ref={fileInputRef}
+                                        id="cv-upload"
                                         type="file"
                                         accept=".pdf,.doc,.docx"
                                         className="hidden"
                                         onChange={(e) => handleFile(e.target.files[0])}
                                     />
-                                </div>
+                                </button>
                             </div>
 
                             <div className="md:col-span-2">
                                 <button
+                                    type="submit"
                                     disabled={isLoading}
                                     className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white hover:opacity-90 transition"
                                 >

@@ -1,6 +1,6 @@
 import React from "react";
 import { Award, Network, Shield, TrendingUp, ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -38,6 +38,7 @@ const enhancements = [
 
 function QualityCertificationsAgroVentures() {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="w-full bg-white text-neutral-950 border-t border-neutral-100">
 
       {/* INTRO - dark split */}
@@ -107,7 +108,7 @@ function QualityCertificationsAgroVentures() {
             <div className="lg:col-span-8 divide-y divide-neutral-200 border-y border-neutral-200">
               {enhancements.map(({ icon: Icon, title, description }, i) => (
                 <motion.div
-                  key={i}
+                  key={title}
                   {...fadeUp(i * 0.08)}
                   className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
@@ -232,6 +233,7 @@ function QualityCertificationsAgroVentures() {
       </div>
 
     </section>
+    </LazyMotion>
   );
 }
 

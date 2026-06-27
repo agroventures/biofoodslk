@@ -8,6 +8,7 @@ const Navbar = () => {
 
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isLightNavbar = !isHomePage || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   const navbarClasses = () => {
-    if (!isHomePage || scrolled) {
+    if (isLightNavbar) {
       return `
         bg-white/90
         backdrop-blur-xl
@@ -55,12 +56,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Producers", href: "/producers" },
     { name: "Processing Facilities", href: "/processing-facilities" },
     { name: "Products", href: "/products" },
-    { name: "Quality & Certifications", href: "/quality-certifications" },
-    { name: "Awards & Recognition", href: "/awards" },
-    { name: "News and Events", href: "/news-and-events" },
+    { name: "Awards", href: "/awards" },
+    { name: "News & Events", href: "/news-and-events" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -90,10 +89,34 @@ const Navbar = () => {
               />
             </Link>
 
-            {/* MENU BUTTON */}
+            {/* DESKTOP NAVIGATION LINKS (Visible on large screens) */}
+            <div className="hidden xl:flex items-center gap-6 text-sm font-medium uppercase tracking-wide">
+              {navLinks.map((link) => {
+                const active = location.pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`transition-colors duration-300 whitespace-nowrap ${
+                      active
+                        ? "text-brand-primary font-bold"
+                        : isLightNavbar
+                        ? "text-neutral-700 hover:text-brand-primary"
+                        : "text-white/80 hover:text-white"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* HAMBURGER MENU BUTTON (Mobile/Tablet Only - Hidden on xl screens) */}
             <button
+              type="button"
               onClick={() => setIsOpen(true)}
               className={`
+                xl:hidden
                 group
                 flex
                 items-center
@@ -118,11 +141,7 @@ const Navbar = () => {
                   border
                   transition-all
                   duration-300
-                  ${
-                    !isHomePage || scrolled
-                      ? "border-neutral-300"
-                      : "border-white/40"
-                  }
+                  ${isLightNavbar ? "border-neutral-300" : "border-white/40"}
                 `}
               >
                 <Menu size={18} />
@@ -147,7 +166,7 @@ const Navbar = () => {
         `}
       />
 
-      {/* DRAWER */}
+      {/* DRAWER (Mobile/Tablet Only) */}
       <aside
         className={`
           fixed
@@ -176,6 +195,7 @@ const Navbar = () => {
           </span>
 
           <button
+            type="button"
             onClick={() => setIsOpen(false)}
             className="
               w-10

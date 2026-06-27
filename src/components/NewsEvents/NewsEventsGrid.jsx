@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ZoomIn } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import newsEventsData from '../../data/events_news';
 import Lightbox from '../shared/Lightbox';
 
@@ -18,6 +18,7 @@ const tagColors = {
 function NewsEventsGrid() {
     const [lightbox, setLightbox] = useState(null);
     return (
+        <LazyMotion features={domAnimation}>
         <section className="w-full bg-white border-t border-neutral-100">
             {/* LIST */}
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
@@ -86,6 +87,7 @@ function NewsEventsGrid() {
             </div>
             {lightbox && <Lightbox images={lightbox.images} startIndex={lightbox.index} onClose={() => setLightbox(null)} />}
         </section>
+        </LazyMotion>
     );
 }
 
