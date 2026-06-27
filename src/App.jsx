@@ -18,6 +18,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Careers = lazy(() => import('./pages/Careers'));
 const NewsEvents = lazy(() => import('./pages/NewsEvents'));
 const EventDetail = lazy(() => import('./pages/EventDetail'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/news-and-events" element={<NewsEvents />} />
           <Route path="/news-and-events/:id" element={<EventDetail />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
