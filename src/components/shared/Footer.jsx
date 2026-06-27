@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   const contactItems = [
-    { icon: Phone, label: "+94 11 748 7100", href: "tel:+94117487100" },
+    { icon: Phone, label: "+94 11 220 1220", href: "tel:+94112201220" },
     // { icon: Mail, label: "info@biofoodsagro.com", href: "mailto:info@biofoodsagro.com" },
   ];
 
@@ -144,8 +144,8 @@ const Footer = () => {
                   <MapPin className="h-3.5 w-3.5" />
                 </div>
                 <span className="text-md leading-6">
-                  52/1/D, New Kandy Road,
-                  <br />Kaduwela, Sri Lanka
+                  48, Sir Marcus Fernando Mawathe,
+                  <br />Colombo 07, Sri Lanka
                 </span>
               </div>
             </div>
