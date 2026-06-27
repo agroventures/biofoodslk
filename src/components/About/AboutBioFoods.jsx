@@ -57,12 +57,30 @@ const values = [
 export default function AboutBioFoods() {
   return (
     <LazyMotion features={domAnimation}>
-      <div className="w-full bg-neutral-50 text-neutral-950 overflow-hidden antialiased">
+      <div className="w-full bg-neutral-50 text-neutral-950 overflow-hidden antialiased relative">
         
         {/* ── EDITORIAL INTRO (SIDE-BY-SIDE LAYOUT) ── */}
-        <section className="relative py-24 lg:py-36 bg-white border-b border-neutral-200/60">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            
+        <section className="relative py-24 lg:py-36 bg-white border-b border-neutral-200/60 overflow-hidden">
+          
+          {/* Background Vectors */}
+          <div className="absolute top-0 left-0 w-72 h-72 lg:w-120 lg:h-120 text-brand-primary/[0.03] pointer-events-none -translate-x-12 -translate-y-12 select-none">
+            <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_120s_linear_infinite]">
+              <path d="M45.3,-62.9C57.4,-53.8,65.1,-38.7,71.2,-22.4C77.4,-6.2,81.9,11.2,77.3,26.7C72.7,42.2,58.9,55.8,43.2,64.8C27.4,73.8,9.7,78.2,-7.9,76.5C-25.5,74.9,-43,67.2,-56,54.8C-69,42.4,-77.4,25.4,-79.1,7.5C-80.8,-10.4,-75.7,-29.2,-64.8,-42.6C-53.8,-56,-37,-64,-20.9,-69.1C-4.8,-74.2,10.6,-76.4,26.5,-74.6C42.4,-72.8,45.3,-62.9,45.3,-62.9Z" transform="translate(100, 100)" />
+            </svg>
+          </div>
+          
+          <div className="absolute right-1/2 bottom-0 w-96 h-96 text-brand-gold/[0.04] pointer-events-none translate-x-1/4 translate-y-1/3 select-none hidden lg:block">
+            {/* Stylized Botanical Leaf Line Art */}
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full opacity-60">
+              <path d="M50,100 Q45,60 10,40 Q40,40 50,0 Q60,40 90,40 Q55,60 50,100 Z" />
+              <path d="M50,100 Q48,70 25,55" />
+              <path d="M50,100 Q52,70 75,55" />
+              <path d="M50,75 Q47,50 30,35" />
+              <path d="M50,75 Q53,50 70,35" />
+            </svg>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
               {/* Left Side: Content Column */}
@@ -84,7 +102,7 @@ export default function AboutBioFoods() {
                   <span className="italic text-brand-primary">grown with care.</span>
                 </motion.h1>
 
-                <motion.p {...fadeUp(0.15)} className="text-neutral-600 text-lg font-light leading-relaxed mb-8">
+                <motion.p {...fadeUp(0.15)} className="text-neutral-600 text-lg font-light leading-relaxed mb-8 relative">
                   Since 1993 - cultivating certified organic products with deep
                   respect for people, land, and the communities behind every
                   harvest.
@@ -109,17 +127,16 @@ export default function AboutBioFoods() {
               {/* Right Side: Image Column */}
               <motion.div
                 {...fadeUp(0.3)}
-                className="overflow-hidden rounded-2xl border border-neutral-200 p-2 bg-neutral-50 shadow-inner h-full max-h-137.5"
+                className="overflow-hidden rounded-2xl border border-neutral-200 p-2 bg-neutral-50 shadow-inner h-full max-h-137.5 relative"
               >
                 <img
                   src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/intro.webp"
                   alt="Bio Foods organic farm"
-                  className="w-full h-full min-h-87.5 lg:min-h-120 object-cover rounded-xl"
+                  className="w-full h-full min-h-87.5 lg:min-h-120 object-cover rounded-xl relative z-10"
                 />
               </motion.div>
 
             </div>
-
           </div>
         </section>
 
@@ -150,17 +167,27 @@ export default function AboutBioFoods() {
         </section>
 
         {/* ── CARD-BASED JOURNEY TIMELINE ── */}
-        <section className="py-24 lg:py-32 bg-neutral-50">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="py-24 lg:py-32 bg-brand-primary relative overflow-hidden">
+          
+          {/* Top-Right Organic Topography Line Mapping Accent */}
+          <div className="absolute top-12 right-0 w-80 h-80 text-brand-light/2 pointer-events-none select-none translate-x-1/4">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">
+              <path d="M0,30 Q25,15 50,40 T100,20" />
+              <path d="M0,45 Q25,30 50,55 T100,35" />
+              <path d="M0,60 Q25,45 50,70 T100,50" />
+            </svg>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div className="flex flex-col md:flex-row md:items-baseline justify-between border-b border-neutral-200 pb-6 mb-16">
               <motion.h2
                 {...fadeUp(0)}
-                className="text-4xl lg:text-5xl tracking-tight text-neutral-900 font-light"
+                className="text-4xl lg:text-5xl tracking-tight text-brand-light font-light"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
                 Our Legacy & <span className="italic text-brand-gold">Journey</span>
               </motion.h2>
-              <motion.p {...fadeUp(0.05)} className="text-md uppercase tracking-[0.3em] font-semibold text-brand-dark mt-2 md:mt-0">
+              <motion.p {...fadeUp(0.05)} className="text-md uppercase tracking-[0.3em] font-semibold text-brand-muted mt-2 md:mt-0">
                 Milestones over time
               </motion.p>
             </div>
@@ -170,7 +197,7 @@ export default function AboutBioFoods() {
                 <motion.div
                   key={m.year}
                   {...fadeUp(i * 0.1)}
-                  className="bg-white border border-neutral-200/70 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group"
+                  className="bg-white backdrop-blur-xs border border-neutral-200/70 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative group"
                 >
                   {/* Subtle top bar decorative marker */}
                   <div className="absolute top-0 left-8 right-8 h-0.5 bg-neutral-100 group-hover:bg-brand-gold transition-colors duration-300" />

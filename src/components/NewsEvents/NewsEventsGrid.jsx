@@ -62,7 +62,7 @@ function NewsEventsGrid() {
                                     <img
                                         src={images[0]}
                                         alt={title}
-                                        className="w-full aspect-[4/3] object-cover"
+                                        className="w-full aspect-4/3 object-cover"
                                         loading="lazy"
                                     />
                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
