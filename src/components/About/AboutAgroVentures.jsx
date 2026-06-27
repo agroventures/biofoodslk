@@ -31,7 +31,7 @@ export default function AboutAgroVentures() {
     <section className="w-full bg-white text-neutral-950 border-y border-neutral-100">
 
       {/* INTRO */}
-      <div className="py-24 lg:py-36">
+      <div className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <motion.span

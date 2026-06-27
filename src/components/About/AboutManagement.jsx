@@ -33,7 +33,7 @@ export default function AboutManagement() {
     <section className="w-full bg-white text-neutral-950 overflow-hidden">
 
       {/* ── HEADER ── */}
-      <div className="border-b border-neutral-100 py-24 lg:py-36">
+      <div className="border-b border-neutral-100 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.span
             {...fadeUp(0)}
@@ -62,13 +62,13 @@ export default function AboutManagement() {
       </div>
 
       {/* ── ROSTER ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-24">
         <div className="space-y-24 lg:space-y-36">
           {allMembers.map((member) => (
             <motion.div
               key={member.id}
               {...fadeUp(member.index * 0.1)}
-              className="border-b border-neutral-100 pb-24 last:border-0 last:pb-0"
+              className="border-b border-neutral-100 pb-16 last:border-0 last:pb-0"
             >
               <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start text-left">
                 

@@ -70,11 +70,6 @@ const AwardsGlobalRecognition = () => (
                                 {org}
                             </p>
                         </div>
-
-                        {/* Description */}
-                        <p className="text-neutral-600 leading-relaxed font-light text-[15px] pt-2">
-                            {description}
-                        </p>
                     </div>
                 ))}
             </div>

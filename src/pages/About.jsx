@@ -36,7 +36,7 @@ function About() {
       <AboutBioFoods />
       <AboutManagement />
       <AboutFoundingVision />
-      <AboutGrowth />
+      {/* <AboutGrowth /> */}
       <VisionMission />
       <AboutAgroVentures />
       {/* <AboutAwards /> */}

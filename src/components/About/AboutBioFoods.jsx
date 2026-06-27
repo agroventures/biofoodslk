@@ -160,7 +160,7 @@ export default function AboutBioFoods() {
               >
                 Our Legacy & <span className="italic text-brand-gold">Journey</span>
               </motion.h2>
-              <motion.p {...fadeUp(0.05)} className="text-md uppercase tracking-[0.3em] font-semibold text-neutral-400 mt-2 md:mt-0">
+              <motion.p {...fadeUp(0.05)} className="text-md uppercase tracking-[0.3em] font-semibold text-brand-dark mt-2 md:mt-0">
                 Milestones over time
               </motion.p>
             </div>
@@ -177,16 +177,16 @@ export default function AboutBioFoods() {
                   
                   <div>
                     <span
-                      className="text-3xl lg:text-4xl text-neutral-300 group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
+                      className="text-3xl lg:text-4xl text-neutral-500 text-center group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
                       style={{ fontFamily: "Cormorant Garamond, serif" }}
                     >
                       {m.year}
                     </span>
-                    <h3 className="text-lg font-medium text-neutral-900 mb-2">
+                    <h3 className="text-lg font-medium text-center text-neutral-900 mb-2">
                       {m.title}
                     </h3>
                   </div>
-                  <p className="mt-2 text-[14px] text-neutral-600 leading-relaxed font-light">
+                  <p className="mt-2 text-[14px] text-neutral-600 text-center leading-relaxed font-light">
                     {m.description}
                   </p>
                 </motion.div>

@@ -24,7 +24,7 @@ function VisionMission() {
     <div className="w-full bg-white text-neutral-950">
 
       {/* INTRO */}
-      <section className="border-y border-neutral-100 py-24 lg:py-36">
+      <section className="border-y border-neutral-100 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-16 flex items-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
@@ -154,7 +154,7 @@ function VisionMission() {
                 key={i}
                 className="group p-8 lg:p-10 hover:bg-brand-light transition-colors duration-300"
               >
-                <span className="text-sm text-neutral-400 tracking-[0.3em] uppercase">
+                <span className="text-sm text-brand-dark tracking-[0.3em] uppercase">
                   0{i + 1}
                 </span>
 

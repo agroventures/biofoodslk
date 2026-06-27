@@ -26,7 +26,7 @@ const segments = [
     description:
       "Discover our internationally certified quality standards and rigorous testing processes.",
     link: "/quality-certifications",
-    logos: certifications.map((c) => ({ img: c.img, name: c.name })),
+    img: '/Home/certified.webp',
   },
   {
     icon: Trophy,
@@ -92,35 +92,17 @@ function HomeSegments({section}) {
                   <img
                     src={segment.img}
                     alt={segment.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain transition duration-700 group-hover:scale-105"
                   />
                 </div>
               )}
 
-              {/* Certification logos */}
-              {segment.logos && (
-                <div className="mb-6 grid h-40 grid-cols-4 gap-2 content-start overflow-hidden">
-                  {segment.logos.map((logo, i) => (
-                    <div
-                      key={i}
-                      className="flex h-10 w-full items-center justify-center rounded-xl bg-brand-light p-2"
-                    >
-                      <img
-                        src={logo.img}
-                        alt={logo.name}
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-
               {/* Icon */}
-              <div className="mb-6 flex items-center justify-center">
+              {/* <div className="mb-6 flex items-center justify-center">
                 <div className="rounded-2xl bg-brand-muted p-4 text-brand-primary">
                   <segment.icon className="h-5 w-5" />
                 </div>
-              </div>
+              </div> */}
 
               {/* Title */}
               <h3

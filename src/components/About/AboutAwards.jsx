@@ -100,7 +100,7 @@ function AboutAwards() {
 
                             <div className="mt-auto flex items-center gap-2">
                                 <div className={`w-2 h-2 rounded-full ${award.type === 'Global' ? 'bg-brand-accent' : 'bg-brand-secondary'}`} />
-                                <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-brand-dark">
                                     {award.type} Recognition
                                 </span>
                             </div>
@@ -111,7 +111,7 @@ function AboutAwards() {
                 {/* Detailed Historical Timeline List */}
                 <div className="mt-32 pt-16 border-t border-neutral-100">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
-                        <h4 className="text-sm font-black uppercase tracking-[0.4em] text-neutral-400">Historical Milestones</h4>
+                        <h4 className="text-sm font-black uppercase tracking-[0.4em] text-brand-dark">Historical Milestones</h4>
                         <div className="h-px grow bg-neutral-100 mx-8 hidden md:block"></div>
                         <span className="text-sm font-bold text-brand-primary bg-brand-primary/5 px-4 py-1.5 rounded-full">1999 - 2019 Accolades</span>
                     </div>

@@ -25,7 +25,7 @@ const principles = [
 function AboutFoundingVision() {
 
   return (
-    <section className="bg-white py-28 lg:py-40 border-y border-neutral-100">
+    <section className="bg-white py-16 lg:py-24 border-y border-neutral-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Header */}
@@ -69,8 +69,8 @@ function AboutFoundingVision() {
                 key={item.title}
                 className="flex gap-5 border border-neutral-200 p-6 hover:border-brand-primary transition-colors"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-light p-3">
-                  <item.icon className="h-5 w-5 text-brand-primary" />
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-primary p-3">
+                  <item.icon className="h-5 w-5 text-brand-light" />
                 </div>
 
                 <div>

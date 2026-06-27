@@ -7,7 +7,9 @@
   --color-brand-accent: #6FCF97;
   --color-brand-light: #F8F6F2;
   --color-brand-muted: #F4EFE6;
-  --color-brand-gold: #D7C29E;
+  --color-brand-dark: #2d2e2d;
+  /* --color-brand-gold: #D7C29E; */
+  --color-brand-gold: #b39c74;
 }
 
 body {
