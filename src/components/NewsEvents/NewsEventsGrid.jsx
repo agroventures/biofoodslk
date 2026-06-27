@@ -32,17 +32,6 @@ function NewsEventsGrid() {
                             transition={{ duration: 0.5, delay: i * 0.07 }}
                             className="grid lg:grid-cols-12 gap-6 lg:gap-16 py-12 items-start group"
                         >
-                            {/* Index + Icon */}
-                            <div className="lg:col-span-1 flex items-center gap-4 lg:flex-col lg:items-start lg:gap-3">
-                                <span
-                                    className="text-4xl text-neutral-200 leading-none select-none"
-                                    style={{ fontFamily: "Cormorant Garamond, serif" }}
-                                >
-                                    {String(i + 1).padStart(2, "0")}
-                                </span>
-                                <Icon className="w-4 h-4 text-brand-primary" />
-                            </div>
-
                             {/* Date + Title */}
                             <div className="lg:col-span-4">
                                 <p className="text-sm uppercase tracking-[0.2em] text-neutral-400 mb-3">

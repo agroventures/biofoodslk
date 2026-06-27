@@ -1,5 +1,13 @@
 import React from "react";
-import { Users, Package, ShieldCheck, Trophy, Sparkles, ArrowUpRight } from "lucide-react";
+import {
+  Users,
+  Package,
+  ShieldCheck,
+  Trophy,
+  Sparkles,
+  ArrowUpRight,
+  Newspaper,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { certifications } from "../../data/certifications";
 
@@ -12,21 +20,21 @@ const segments = [
     link: "/producers",
     img: "/Producers/hero.webp",
   },
-  {
-    icon: Package,
-    title: "Products",
-    description:
-      "Explore our premium range of 100% organic spices and agricultural products.",
-    link: "/products",
-    img: "/Products/CoconutProducts/coconut.jpg",
-  },
+  // {
+  //   icon: Package,
+  //   title: "Products",
+  //   description:
+  //     "Explore our premium range of 100% organic spices and agricultural products.",
+  //   link: "/products",
+  //   img: "/Products/CoconutProducts/coconut.jpg",
+  // },
   {
     icon: ShieldCheck,
     title: "Quality",
     description:
       "Discover our internationally certified quality standards and rigorous testing processes.",
     link: "/quality-certifications",
-    img: '/Home/certified.webp',
+    img: "/Home/certified.webp",
   },
   {
     icon: Trophy,
@@ -36,9 +44,17 @@ const segments = [
     link: "/awards",
     img: "/Awards/german_sustainability.WebP",
   },
+  {
+    icon: Newspaper,
+    title: "News & Events",
+    description:
+      "Explore the latest company milestones, global recognitions, sustainability achievements, industry events, and updates from Bio Foods Agro.",
+    link: "/awards",
+    img: "/Events/1/12.webp",
+  },
 ];
 
-function HomeSegments({section}) {
+function HomeSegments({ section }) {
   return (
     <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28">
       {/* Decorative Number */}

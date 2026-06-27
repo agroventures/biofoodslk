@@ -121,8 +121,8 @@ export default function AboutManagement() {
                               key={label}
                               className="border border-neutral-150 rounded-2xl p-5 bg-neutral-50/50 shadow-sm"
                             >
-                              <div className="h-9 w-9 rounded-xl flex items-center justify-center bg-brand-light mb-3">
-                                <Icon className="h-4 w-4 text-brand-primary" />
+                              <div className="h-9 w-9 rounded-xl flex items-center justify-center bg-brand-primary mb-3">
+                                <Icon className="h-4 w-4 text-brand-light" />
                               </div>
                               <p className="text-base text-neutral-900 leading-snug font-medium mb-1" style={{ fontFamily: "Cormorant Garamond, serif" }}>
                                 {label}

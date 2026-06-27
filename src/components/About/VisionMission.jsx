@@ -58,8 +58,8 @@ function VisionMission() {
           {/* VISION */}
           <div className="pb-16 lg:pb-0 lg:pr-16">
             <div className="flex items-center gap-3 mb-8">
-              <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-light rounded-full">
-                <Eye className="h-4 w-4 text-brand-primary" />
+              <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-primary rounded-full">
+                <Eye className="h-4 w-4 text-brand-light" />
               </div>
               <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">Vision</span>
             </div>
@@ -81,8 +81,8 @@ function VisionMission() {
           {/* MISSION */}
           <div className="pt-16 lg:pt-0 lg:pl-16">
             <div className="flex items-center gap-3 mb-8">
-              <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-light rounded-full">
-                <Target className="h-4 w-4 text-brand-primary" />
+              <div className="flex items-center justify-center w-10 h-10 border border-brand-primary/20 bg-brand-primary rounded-full">
+                <Target className="h-4 w-4 text-brand-light" />
               </div>
               <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">Mission</span>
             </div>

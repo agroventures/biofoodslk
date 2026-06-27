@@ -98,8 +98,8 @@ export default function AboutAgroVentures() {
                   {...fadeUp(i * 0.1)}
                   className="group flex gap-5 py-7 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
-                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
-                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-primary group-hover:bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-light group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-neutral-900">{title}</h3>
@@ -122,8 +122,8 @@ export default function AboutAgroVentures() {
                   {...fadeUp(i * 0.1)}
                   className="group flex gap-5 py-7 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
                 >
-                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-light group-hover:bg-brand-primary transition-colors duration-300">
-                    <Icon className="h-4 w-4 text-brand-primary group-hover:text-white transition-colors duration-300" />
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-primary group-hover:bg-brand-primary transition-colors duration-300">
+                    <Icon className="h-4 w-4 text-brand-light group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-neutral-900">{title}</h3>

@@ -34,7 +34,7 @@ const AwardsGlobalRecognition = () => (
         {/* ACHIEVEMENT CARDS GRID */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 lg:pb-32">
             <div className="border-b border-neutral-200 pb-6 mb-12">
-                <p className="text-md uppercase tracking-[0.3em] font-semibold text-black">
+                <p className="text-md uppercase font-semibold text-black">
                     International Achievements
                 </p>
             </div>
@@ -54,8 +54,8 @@ const AwardsGlobalRecognition = () => (
                                 >
                                     {number}
                                 </span>
-                                <div className="p-2.5 rounded-xl bg-neutral-50 group-hover:bg-brand-light transition-colors duration-300">
-                                    <Icon className="w-5 h-5 text-brand-primary group-hover:scale-110 transition-transform duration-300" />
+                                <div className="p-2.5 rounded-xl bg-brand-primary group-hover:bg-brand-light transition-colors duration-300">
+                                    <Icon className="w-5 h-5 text-brand-light group-hover:text-brand-primary group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                             </div>
 

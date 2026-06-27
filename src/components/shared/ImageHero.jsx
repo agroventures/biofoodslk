@@ -72,7 +72,7 @@ const ImageHero = ({
               className="mt-8 max-w-2xl"
             >
               {subtitle && (
-                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-brand-gold">
+                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-brand-muted">
                   {subtitle}
                 </p>
               )}

@@ -103,7 +103,7 @@ function HomeAgroVenturesAdvantage({ section }) {
               "
             >
               <div className="mb-10 flex items-center justify-center">
-                <div className="rounded-2xl bg-brand-muted p-4 text-brand-primary">
+                <div className="rounded-2xl bg-brand-primary p-4 text-brand-light">
                   <advantage.icon className="h-5 w-5" />
                 </div>
               </div>

@@ -97,8 +97,8 @@ export default function AboutBioFoods() {
                       key={text}
                       className="flex items-center gap-3.5 bg-neutral-50 border border-neutral-200/70 rounded-xl px-5 py-3.5 hover:bg-white hover:border-brand-primary hover:shadow-md hover:shadow-neutral-100 transition-all duration-300 group"
                     >
-                      <div className="p-1.5 rounded-lg bg-white border border-neutral-200 group-hover:bg-brand-light group-hover:border-transparent transition-colors duration-300">
-                        <Icon className="h-4 w-4 shrink-0 text-brand-primary group-hover:scale-110 transition-transform duration-300" />
+                      <div className="p-1.5 rounded-lg bg-brand-primary border border-neutral-200 group-hover:bg-brand-light group-hover:border-transparent transition-colors duration-300">
+                        <Icon className="h-4 w-4 shrink-0 text-brand-light group-hover:scale-110 transition-transform duration-300" />
                       </div>
                       <span className="text-sm font-medium text-neutral-700 group-hover:text-neutral-900 transition-colors">{text}</span>
                     </div>
@@ -177,7 +177,7 @@ export default function AboutBioFoods() {
                   
                   <div>
                     <span
-                      className="text-3xl lg:text-4xl text-neutral-500 text-center group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
+                      className="text-3xl lg:text-4xl text-brand-primary text-center group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
                       style={{ fontFamily: "Cormorant Garamond, serif" }}
                     >
                       {m.year}

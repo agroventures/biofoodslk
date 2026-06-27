@@ -33,7 +33,7 @@ function ImageCarousel({ images, name }) {
           key={src}
           src={src}
           alt={`${name} ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+          className={`absolute inset-0 w-full h-full object-contain transition-all duration-700 ${
             current === i ? "opacity-100 scale-100" : "opacity-0 scale-105 pointer-events-none"
           }`}
         />
