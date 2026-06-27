@@ -111,9 +111,11 @@ function ProcessingFacilitiesDetails() {
 
       {/* STATS BAND */}
       <div className="bg-brand-primary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4">
           {STATS.map(({ value, label, icon: Icon }, i) => (
-            <motion.div key={label} {...fadeUp(i * 0.08)} className="py-10 px-6 flex items-center justify-between gap-3">
+            <motion.div key={label} {...fadeUp(i * 0.08)} className={`py-10 px-6 flex items-center justify-between gap-3 border-white/20 border-b lg:border-b-0
+                ${i % 2 === 0 ? "border-r lg:border-r" : "lg:border-r"} 
+                ${i === STATS.length - 1 ? "lg:border-r-0" : ""}`}>
               <div>
                 <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
                   {value}
