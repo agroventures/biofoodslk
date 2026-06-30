@@ -9,7 +9,7 @@ function SustainabilityHero() {
             badge="Our Foundation"
             title="Sustainability"
             subtitle="A Core Commitment"
-            img="/Sustainability/hero.jpg"
+            img="/Sustainability/hero.webp"
             description={
                 <>
                     Sustainability is not an initiative - it is{' '}

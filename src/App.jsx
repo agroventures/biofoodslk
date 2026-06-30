@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import { MotionConfig } from 'framer-motion';
 import ScrollToTop from './components/shared/ScrollToTop';
 import Loader from './components/shared/Loader';
+import Sustainability from './pages/Sustainability';
 
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
@@ -41,6 +42,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/news-and-events" element={<NewsEvents />} />
           <Route path="/news-and-events/:id" element={<EventDetail />} />
+          <Route path="/sustainability/" element={<Sustainability />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

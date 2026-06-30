@@ -82,7 +82,7 @@ function HomeProductExperiences({ section }) {
 
         {/* Closing Panel */}
         <div className="mt-28 rounded-[40px] bg-brand-primary p-10 text-white lg:p-14">
-          <div className="mb-4 flex items-center gap-4">
+          <div className="mb-4 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
 
             <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
@@ -91,13 +91,13 @@ function HomeProductExperiences({ section }) {
           </div>
 
           <h3
-            className="max-w-4xl text-3xl leading-tight lg:text-5xl"
+            className="max-w-7xl text-3xl leading-tight lg:text-5xl text-center"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Every product begins with responsible sourcing and ends with uncompromising quality.
           </h3>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
+          <p className="mt-6 max-w-7xl text-lg leading-8 text-white/80 text-center">
             Transparent supply chains, international standards, and a commitment to sustainability.
           </p>
         </div>

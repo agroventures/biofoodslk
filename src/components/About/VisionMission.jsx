@@ -33,7 +33,7 @@ function VisionMission() {
     <div className="w-full bg-white text-neutral-950">
 
       {/* INTRO */}
-      <section className="relative border-y border-neutral-100 py-28 lg:py-40 overflow-hidden">
+      <section className="relative border-t border-neutral-100 py-16 lg:py-24 overflow-hidden">
         {/* Decorative number */}
         <div className="pointer-events-none absolute right-0 top-0 hidden select-none xl:block">
           <span className="text-[280px] font-black leading-none text-black/3">03</span>
@@ -59,7 +59,7 @@ function VisionMission() {
           </motion.h1>
 
           <motion.p {...fadeUp(0.15)} className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
-            Our vision and mission guide every decision — from supporting farming communities to delivering certified organic products worldwide.
+            Our vision and mission guide every decision - from supporting farming communities to delivering certified organic products worldwide.
           </motion.p>
         </div>
       </section>
@@ -124,7 +124,7 @@ function VisionMission() {
                   Raising standards through responsible farming.
                 </h3>
                 <p className="text-lg leading-8 text-neutral-600">
-                  High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation — creating value for people and nature.
+                  High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation - creating value for people and nature.
                 </p>
               </div>
             </motion.div>
@@ -133,26 +133,26 @@ function VisionMission() {
         </div>
       </section>
 
-      {/* TYPOGRAPHIC STATEMENT — matches HomeAgroVenturesAdvantage CTA panel */}
+      {/* TYPOGRAPHIC STATEMENT - matches HomeAgroVenturesAdvantage CTA panel */}
       <section className="overflow-hidden rounded-none">
         <motion.div
           {...fadeUp(0)}
           className="bg-brand-primary py-20 lg:py-28"
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="mb-6 flex items-center gap-4">
+            <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
               <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">Bio Foods Philosophy</span>
             </div>
             <h3
-              className="max-w-4xl text-3xl leading-tight lg:text-5xl text-white"
+              className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white text-center"
               style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
-              "Every harvest is a promise — to the land, to the farmer,
+              "Every harvest is a promise - to the land, to the farmer,
               and to the people who trust what we grow."
             </h3>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/80">
-              From field to global destination — every step reflects quality, responsibility, and respect.
+            <p className="mt-8 max-w-7xl text-lg leading-8 text-white/80 text-center">
+              From field to global destination - every step reflects quality, responsibility, and respect.
             </p>
           </div>
         </motion.div>

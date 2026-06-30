@@ -11,6 +11,7 @@ const Footer = () => {
     { name: "About Us", href: "/about" },
     { name: "Products", href: "/products" },
     { name: "Processing Facilities", href: "/processing-facilities" },
+    { name: "Sustainability", href: "/sustainability" },
     { name: "Careers", href: "/careers" },
   ];
 
@@ -146,7 +147,7 @@ const Footer = () => {
                 </div>
                 <span className="text-md leading-6">
                   48, Sir Marcus Fernando Mawathe,
-                  <br />Colombo 07, Sri Lanka
+                  Colombo 07, <br /> Sri Lanka
                 </span>
               </div>
             </div>

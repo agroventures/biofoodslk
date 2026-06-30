@@ -121,7 +121,7 @@ function HomeAgroVenturesAdvantage({ section }) {
 
         {/* Feature Statement */}
         <div className="mt-16 overflow-hidden rounded-[40px] bg-brand-primary p-10 text-white lg:p-14">
-          <div className="mb-6 flex items-center gap-4">
+          <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
 
             <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
@@ -130,13 +130,13 @@ function HomeAgroVenturesAdvantage({ section }) {
           </div>
 
           <h3
-            className="max-w-7xl text-3xl leading-tight lg:text-5xl"
+            className="max-w-7xl text-3xl leading-tight lg:text-5xl text-center"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             A modern agricultural ecosystem built for scale, consistency, and sustainability.
           </h3>
 
-          <p className="mt-8 max-w-7xl text-lg leading-8 text-white/80">
+          <p className="mt-8 max-w-7xl text-lg leading-8 text-white/80 text-center">
             Authentic cultivation meets industrial-grade infrastructure - trusted by customers around the world.
           </p>
         </div>

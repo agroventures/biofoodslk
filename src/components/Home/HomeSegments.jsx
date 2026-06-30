@@ -7,6 +7,7 @@ import {
   Sparkles,
   ArrowUpRight,
   Newspaper,
+  Recycle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { certifications } from "../../data/certifications";
@@ -20,21 +21,21 @@ const segments = [
     link: "/producers",
     img: "/Producers/hero.webp",
   },
-  // {
-  //   icon: Package,
-  //   title: "Products",
-  //   description:
-  //     "Explore our premium range of 100% organic spices and agricultural products.",
-  //   link: "/products",
-  //   img: "/Products/CoconutProducts/coconut.jpg",
-  // },
+  {
+    icon: Recycle,
+    title: "Sustainability",
+    description:
+      "Learn about our commitment to sustainability and eco-friendly practices.",
+    link: "/sustainability",
+    img: "/Sustainability/hero.webp",
+  },
   {
     icon: ShieldCheck,
     title: "Quality",
     description:
       "Discover our internationally certified quality standards and rigorous testing processes.",
     link: "/quality-certifications",
-    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/certified.webp",
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/certified_logo.webp",
   },
   {
     icon: Trophy,
@@ -44,14 +45,14 @@ const segments = [
     link: "/awards",
     img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german_sustainability.WebP",
   },
-  {
-    icon: Newspaper,
-    title: "News & Events",
-    description:
-      "Explore the latest company milestones, global recognitions, sustainability achievements, industry events, and updates from Bio Foods Agro.",
-    link: "/awards",
-    img: "/Events/1/12.webp",
-  },
+  // {
+  //   icon: Newspaper,
+  //   title: "News & Events",
+  //   description:
+  //     "Explore the latest company milestones, global recognitions, sustainability achievements, industry events, and updates from Bio Foods Agro.",
+  //   link: "/awards",
+  //   img: "/Events/1/12.webp",
+  // },
 ];
 
 function HomeSegments({ section }) {
@@ -108,7 +109,7 @@ function HomeSegments({ section }) {
                   <img
                     src={segment.img}
                     alt={segment.title}
-                    className="h-full w-full object-contain transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
                 </div>
               )}

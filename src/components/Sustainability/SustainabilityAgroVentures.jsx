@@ -1,177 +1,297 @@
-import { Award, Droplet, FileCheck, Globe, Heart, Leaf, Shield, Sparkles, Sprout, TrendingUp, Users } from 'lucide-react';
-import React from 'react'
+import { Award, Droplet, FileCheck, Globe, Heart, Leaf, Shield, Sparkles, Sprout, TrendingUp, Users } from 'lucide-react'
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, delay },
+})
+
+const environmentalStrategies = [
+  { icon: Sprout,     title: 'Regenerative Agriculture',          description: 'Long-term soil health and ecosystem vitality.' },
+  { icon: Droplet,    title: 'Water Resource Management',         description: 'Efficient irrigation and conservation practices.' },
+  { icon: Leaf,       title: 'Biodiversity Preservation',         description: 'Protecting diverse farming ecosystems.' },
+  { icon: TrendingUp, title: 'Environmental Footprint Reduction', description: 'Optimized processes minimizing impact.' },
+]
+
+const socialResponsibility = [
+  { icon: Users,  title: 'Farmer Support Programs', description: 'Formalized assistance and development initiatives.' },
+  { icon: Globe,  title: 'Community Development',   description: 'Infrastructure and social program investments.' },
+  { icon: Award,  title: 'Capacity Building',       description: 'Knowledge transfer and skills development.' },
+  { icon: Heart,  title: 'Economic Participation',  description: 'Inclusive opportunities across rural networks.' },
+]
+
+const governance = [
+  { icon: FileCheck,  title: 'Standardized Operational Policies', description: 'Consistent frameworks across all operations.' },
+  { icon: Shield,     title: 'International Compliance',          description: 'Alignment with global standards and regulations.' },
+  { icon: TrendingUp, title: 'Monitoring & Reporting',            description: 'Continuous performance tracking systems.' },
+  { icon: Award,      title: 'Sustainability Benchmarking',       description: 'Long-term goals and progress measurement.' },
+]
 
 function SustainabilityAgroVentures() {
-    const environmentalStrategies = [
-        { icon: Sprout, title: "Regenerative Agriculture", description: "Long-term soil health and ecosystem vitality" },
-        { icon: Droplet, title: "Water Resource Management", description: "Efficient irrigation and conservation practices" },
-        { icon: Leaf, title: "Biodiversity Preservation", description: "Protecting diverse farming ecosystems" },
-        { icon: TrendingUp, title: "Environmental Footprint Reduction", description: "Optimized processes minimizing impact" }
-    ];
+  return (
+    <LazyMotion features={domAnimation}>
+      <section className="w-full bg-white text-neutral-950 border-t border-neutral-100">
 
-    const socialResponsibility = [
-        { icon: Users, title: "Farmer Support Programs", description: "Formalized assistance and development initiatives" },
-        { icon: Globe, title: "Community Development", description: "Infrastructure and social program investments" },
-        { icon: Award, title: "Capacity Building", description: "Knowledge transfer and skills development" },
-        { icon: Heart, title: "Economic Participation", description: "Inclusive opportunities across rural networks" }
-    ];
+        {/* ── PAGE TOPIC HEADER ── */}
+        <section className="relative border-b border-neutral-100 py-16 lg:py-24 overflow-hidden">
+          <div className="pointer-events-none absolute left-0 top-0 hidden select-none xl:block">
+            <span className="text-[280px] font-black leading-none text-black/3">04</span>
+          </div>
 
-    const governance = [
-        { icon: FileCheck, title: "Standardized Operational Policies", description: "Consistent frameworks across all operations" },
-        { icon: Shield, title: "International Compliance", description: "Alignment with global standards and regulations" },
-        { icon: TrendingUp, title: "Monitoring & Reporting", description: "Continuous performance tracking systems" },
-        { icon: Award, title: "Sustainability Benchmarking", description: "Long-term goals and progress measurement" }
-    ];
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <motion.div {...fadeUp(0)} className="mb-6 flex items-center gap-4">
+              <div className="h-px w-12 bg-brand-secondary" />
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-brand-secondary" />
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Structured Excellence</span>
+              </div>
+            </motion.div>
 
-    return (
-        <section className="w-full py-20 lg:py-28 bg-white border-t border-brand-light">
-            <div className="w-full px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-12 lg:mb-16">
-                        <div className="inline-flex items-center gap-2 bg-brand-secondary/5 text-brand-secondary px-5 py-2.5 rounded-full mb-6 border border-brand-secondary/10">
-                            <Sparkles className="w-5 h-5" />
-                            <span className="font-bold tracking-[0.15em] uppercase text-xs">Structured Excellence</span>
-                        </div>
+            <motion.h1
+              {...fadeUp(0.1)}
+              className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl"
+              style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            >
+              Agroventures
+              <br />
+              <span className="italic text-brand-primary">ESG Framework</span>
+            </motion.h1>
 
-                        <h2 className="text-3xl lg:text-5xl font-black text-brand-dark tracking-tight mb-6">
-                            Agroventures <span className="text-brand-secondary">ESG Framework</span>
-                        </h2>
-                    </div>
-
-                    {/* Main Content */}
-                    <div className="max-w-5xl mx-auto space-y-8">
-                        {/* Opening Statement */}
-                        <div className="bg-white border border-brand-light rounded-3xl p-8 lg:p-12 shadow-sm">
-                            <p className="text-lg lg:text-xl text-brand-dark/80 leading-relaxed mb-6">
-                                Sustainability within Bio Foods is deeply rooted in its origins - but through Agroventures Group,
-                                it is elevated into a{' '}
-                                <span className="font-bold text-brand-secondary">structured, measurable, and future-focused ESG</span>{' '}
-                                (Environmental, Social, and Governance) framework.
-                            </p>
-                            <p className="text-base lg:text-lg text-brand-dark/70 leading-relaxed">
-                                This framework ensures that sustainability is not approached as a standalone initiative, but as
-                                an integrated system embedded across all operations.
-                            </p>
-                        </div>
-
-                        {/* Environmental Stewardship */}
-                        <div className="bg-white border border-brand-light rounded-3xl p-8 lg:p-12 shadow-sm">
-                            <div className="flex items-center gap-3 mb-8">
-                                <div className="w-12 h-12 bg-brand-primary/5 rounded-xl flex items-center justify-center">
-                                    <Leaf className="w-6 h-6 text-brand-primary" />
-                                </div>
-                                <h3 className="text-2xl font-black text-brand-dark">Environmental Stewardship</h3>
-                            </div>
-
-                            <p className="text-base text-brand-dark/70 mb-6">
-                                Agroventures implements scalable environmental strategies that focus on:
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-4">
-                                {environmentalStrategies.map((strategy, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-start gap-3 bg-brand-light/30 rounded-xl p-4 border border-brand-light"
-                                    >
-                                        <div className="shrink-0">
-                                            <div className="w-10 h-10 bg-brand-primary/5 rounded-lg flex items-center justify-center">
-                                                <strategy.icon className="w-5 h-5 text-brand-primary" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-sm font-bold text-brand-dark mb-1">{strategy.title}</h4>
-                                            <p className="text-xs text-brand-dark/60">{strategy.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Social Responsibility Enhanced */}
-                        <div className="bg-white border border-brand-light rounded-3xl p-8 lg:p-12 shadow-sm">
-                            <div className="flex items-center gap-3 mb-8">
-                                <div className="w-12 h-12 bg-brand-secondary/5 rounded-xl flex items-center justify-center">
-                                    <Users className="w-6 h-6 text-brand-secondary" />
-                                </div>
-                                <h3 className="text-2xl font-black text-brand-dark">Social Responsibility</h3>
-                            </div>
-
-                            <p className="text-base text-brand-dark/70 mb-6">
-                                The Group strengthens Bio Foods' longstanding fair-trade principles through:
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-4">
-                                {socialResponsibility.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-start gap-3 bg-brand-light/30 rounded-xl p-4 border border-brand-light"
-                                    >
-                                        <div className="shrink-0">
-                                            <div className="w-10 h-10 bg-brand-secondary/5 rounded-lg flex items-center justify-center">
-                                                <item.icon className="w-5 h-5 text-brand-secondary" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-sm font-bold text-brand-dark mb-1">{item.title}</h4>
-                                            <p className="text-xs text-brand-dark/60">{item.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Governance & Accountability */}
-                        <div className="bg-white border border-brand-light rounded-3xl p-8 lg:p-12 shadow-sm">
-                            <div className="flex items-center gap-3 mb-8">
-                                <div className="w-12 h-12 bg-brand-primary/5 rounded-xl flex items-center justify-center">
-                                    <Shield className="w-6 h-6 text-brand-primary" />
-                                </div>
-                                <h3 className="text-2xl font-black text-brand-dark">Governance & Accountability</h3>
-                            </div>
-
-                            <p className="text-base text-brand-dark/70 mb-6">
-                                At the core of the ESG framework lies a commitment to transparency, compliance, and ethical governance:
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-4">
-                                {governance.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-start gap-3 bg-brand-light/30 rounded-xl p-4 border border-brand-light"
-                                    >
-                                        <div className="shrink-0">
-                                            <div className="w-10 h-10 bg-brand-primary/5 rounded-lg flex items-center justify-center">
-                                                <item.icon className="w-5 h-5 text-brand-primary" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-sm font-bold text-brand-dark mb-1">{item.title}</h4>
-                                            <p className="text-xs text-brand-dark/60">{item.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Final Statement */}
-                        <div className="relative bg-linear-to-br from-brand-primary/5 to-brand-secondary/5 rounded-3xl p-10 lg:p-16 border border-brand-primary/10 overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
-
-                            <div className="relative text-center">
-                                <p className="text-xl lg:text-2xl font-bold text-brand-dark/90 leading-relaxed">
-                                    Through this structured ESG approach, Agroventures ensures that sustainability is{' '}
-                                    <span className="text-brand-primary">not only upheld but continuously improved</span>,
-                                    measured, and{' '}
-                                    <span className="text-brand-secondary">aligned with global expectations</span>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <motion.div {...fadeUp(0.15)} className="mt-8 grid lg:grid-cols-2 gap-12 max-w-5xl">
+              <p className="text-lg leading-8 text-neutral-600">
+                Sustainability within Bio Foods is deeply rooted in its origins - elevated through Agroventures Group into a <span className="font-semibold text-neutral-900">structured, measurable, and future-focused ESG</span> framework.
+              </p>
+              <p className="text-lg leading-8 text-neutral-600">
+                This ensures sustainability is not a standalone initiative, but an integrated system embedded across all operations - environmental, social, and governance.
+              </p>
+            </motion.div>
+          </div>
         </section>
-    )
+
+        {/* ── INTRO ── */}
+
+        {/* ── ENVIRONMENTAL STEWARDSHIP ── */}
+        <div className="border-b border-neutral-100 py-16 lg:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <motion.div {...fadeUp(0)} className="mb-16">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="h-px w-12 bg-brand-secondary" />
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-brand-secondary" />
+                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Environmental</span>
+                </div>
+              </div>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              >
+                Environmental <span className="italic text-brand-primary">Stewardship</span>
+              </h3>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              {/* Editorial list */}
+              <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+                {environmentalStrategies.map((item, i) => (
+                  <motion.div
+                    key={item.title}
+                    {...fadeUp(i * 0.1)}
+                    className="group grid grid-cols-12 gap-4 py-8 transition-all duration-500"
+                  >
+                    <div className="col-span-2">
+                      <div className="rounded-2xl bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:scale-105 transition-transform duration-300">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                    </div>
+                    <div className="col-span-10">
+                      <h4
+                        className="text-2xl tracking-tight text-neutral-950 mb-2"
+                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                      >
+                        {item.title}
+                      </h4>
+                      <p className="text-base leading-7 text-neutral-600">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Image */}
+              <motion.div {...fadeUp(0.2)} className="sticky top-24 space-y-2">
+                <img
+                  src="/ProcessingFacility/milling-and-drying.webp"
+                  alt="Sustainable processing"
+                  className="w-full h-auto object-contain rounded-2xl"
+                />
+              </motion.div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ── SOCIAL RESPONSIBILITY ── */}
+        <div className="border-b border-neutral-100 py-16 lg:py-24 bg-brand-light">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <motion.div {...fadeUp(0)} className="mb-16">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="h-px w-12 bg-brand-secondary" />
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-brand-secondary" />
+                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Social</span>
+                </div>
+              </div>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              >
+                Social <span className="italic text-brand-primary">Responsibility</span>
+              </h3>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+              {/* Image */}
+              <motion.div {...fadeUp(0.1)} className="sticky top-24 space-y-2 order-last lg:order-first">
+                <img
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Sustainability/csr.webp"
+                  alt="Farmer community"
+                  className="w-full h-150 object-cover rounded-2xl"
+                />
+              </motion.div>
+
+              {/* Editorial list */}
+              <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+                {socialResponsibility.map((item, i) => (
+                  <motion.div
+                    key={item.title}
+                    {...fadeUp(i * 0.1 + 0.1)}
+                    className="group grid grid-cols-12 gap-4 py-8 transition-all duration-500"
+                  >
+                    <div className="col-span-2">
+                      <div className="rounded-2xl bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:scale-105 transition-transform duration-300">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                    </div>
+                    <div className="col-span-10">
+                      <h4
+                        className="text-2xl tracking-tight text-neutral-950 mb-2"
+                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                      >
+                        {item.title}
+                      </h4>
+                      <p className="text-base leading-7 text-neutral-600">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* ── GOVERNANCE & ACCOUNTABILITY ── */}
+        <div className="border-b border-neutral-100 py-24 lg:py-32 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <motion.div {...fadeUp(0)} className="mb-16">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="h-px w-12 bg-brand-secondary" />
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-brand-secondary" />
+                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Governance</span>
+                </div>
+              </div>
+              <h3
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              >
+                Governance &amp; <span className="italic text-brand-primary">Accountability</span>
+              </h3>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+              {/* Editorial list */}
+              <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+                {governance.map((item, i) => (
+                  <motion.div
+                    key={item.title}
+                    {...fadeUp(i * 0.1)}
+                    className="group grid grid-cols-12 gap-4 py-8 transition-all duration-500"
+                  >
+                    <div className="col-span-2">
+                      <div className="rounded-2xl bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:scale-105 transition-transform duration-300">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                    </div>
+                    <div className="col-span-10">
+                      <h4
+                        className="text-2xl tracking-tight text-neutral-950 mb-2"
+                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                      >
+                        {item.title}
+                      </h4>
+                      <p className="text-base leading-7 text-neutral-600">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Image */}
+              <motion.div {...fadeUp(0.2)} className="sticky top-24 space-y-2">
+                <img
+                  src="/ProcessingFacility/frozen-herbs.webp"
+                  alt="Quality controlled facility"
+                  className="w-full h-72 object-cover rounded-2xl"
+                />
+                <div className="grid grid-cols-2 gap-2">
+                  <img
+                    src="/ProcessingFacility/coconut/1.webp"
+                    alt="Coconut processing"
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                  <img
+                    src="/ProcessingFacility/coconut/2.webp"
+                    alt="Processing standards"
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
+              </motion.div>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* ── CLOSING CTA BAND ── */}
+        <div className="overflow-hidden">
+          <motion.div {...fadeUp(0)} className="bg-brand-primary py-16 lg:py-24">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <div className="mb-6 flex items-center justify-center gap-4">
+                <div className="h-px w-12 bg-brand-gold" />
+                <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">ESG Philosophy</span>
+              </div>
+              <h3
+                className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white items-center text-center"
+                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              >
+                "Through this structured ESG approach, sustainability is not only upheld - it is continuously improved, measured, and aligned with global expectations."
+              </h3>
+              <p className="mt-8 max-w-7xl text-lg leading-8 text-white/80 items-center text-center">
+                Environmental stewardship, social responsibility, and transparent governance - working together as one unified framework.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+      </section>
+    </LazyMotion>
+  )
 }
 
 export default SustainabilityAgroVentures
