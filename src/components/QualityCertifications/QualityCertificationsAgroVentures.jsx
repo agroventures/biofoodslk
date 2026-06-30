@@ -44,7 +44,7 @@ function QualityCertificationsAgroVentures() {
       {/* INTRO - dark split */}
       <div className="relative bg-brand-primary overflow-hidden">
         {/* Topography lines */}
-        <div className="absolute top-0 right-0 w-80 h-full text-white/[0.04] pointer-events-none select-none hidden lg:block">
+        <div className="absolute top-0 right-0 w-80 h-full text-white/4 pointer-events-none select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">
             <path d="M0,30 Q25,15 50,40 T100,20" />
             <path d="M0,45 Q25,30 50,55 T100,35" />
@@ -53,7 +53,7 @@ function QualityCertificationsAgroVentures() {
           </svg>
         </div>
         {/* Organic blob — bottom left */}
-        <div className="absolute bottom-0 left-0 w-72 h-72 text-white/[0.03] pointer-events-none -translate-x-1/4 translate-y-1/4 select-none">
+        <div className="absolute bottom-0 left-0 w-72 h-72 text-white/3 pointer-events-none -translate-x-1/4 translate-y-1/4 select-none">
           <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_140s_linear_infinite_reverse]">
             <path d="M38.9,-56.5C50.3,-46.4,59.2,-34.2,64.8,-20C70.4,-5.8,72.8,10.4,68.2,24.2C63.6,38,51.9,49.4,38.4,57.2C24.9,65,9.6,69.2,-5.8,67.7C-21.3,66.2,-36.8,59,-48.4,48C-60,37,-67.8,22.2,-69.4,6.6C-71,-9,-66.4,-25.4,-57.2,-37.6C-48,-49.8,-34.2,-57.8,-20.2,-62C-6.2,-66.2,8,-66.6,20.4,-63C32.8,-59.4,27.5,-66.6,38.9,-56.5Z" transform="translate(100, 100)" />
           </svg>
@@ -93,7 +93,7 @@ function QualityCertificationsAgroVentures() {
       {/* ENHANCEMENTS - numbered rows */}
       <div className="relative py-24 lg:py-32 border-b border-neutral-100 overflow-hidden">
         {/* Botanical leaf — top right */}
-        <div className="absolute top-0 right-0 w-72 h-72 text-brand-gold/[0.05] pointer-events-none translate-x-1/4 -translate-y-1/4 select-none hidden lg:block">
+        <div className="absolute top-0 right-0 w-72 h-72 text-brand-gold/5 pointer-events-none translate-x-1/4 -translate-y-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full">
             <path d="M50,100 Q45,60 10,40 Q40,40 50,0 Q60,40 90,40 Q55,60 50,100 Z" />
             <path d="M50,100 Q48,70 25,55" />
@@ -174,7 +174,7 @@ function QualityCertificationsAgroVentures() {
       {/* PULL-QUOTE SECTION */}
       <div className="relative py-24 lg:py-32 bg-brand-light border-b border-neutral-200 overflow-hidden">
         {/* Organic blob — bottom right */}
-        <div className="absolute bottom-0 right-0 w-72 h-72 text-brand-primary/[0.04] pointer-events-none translate-x-1/4 translate-y-1/4 select-none hidden lg:block">
+        <div className="absolute bottom-0 right-0 w-72 h-72 text-brand-primary/4 pointer-events-none translate-x-1/4 translate-y-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_120s_linear_infinite]">
             <path d="M45.3,-62.9C57.4,-53.8,65.1,-38.7,71.2,-22.4C77.4,-6.2,81.9,11.2,77.3,26.7C72.7,42.2,58.9,55.8,43.2,64.8C27.4,73.8,9.7,78.2,-7.9,76.5C-25.5,74.9,-43,67.2,-56,54.8C-69,42.4,-77.4,25.4,-79.1,7.5C-80.8,-10.4,-75.7,-29.2,-64.8,-42.6C-53.8,-56,-37,-64,-20.9,-69.1C-4.8,-74.2,10.6,-76.4,26.5,-74.6C42.4,-72.8,45.3,-62.9,45.3,-62.9Z" transform="translate(100, 100)" />
           </svg>
@@ -222,7 +222,7 @@ function QualityCertificationsAgroVentures() {
       {/* CLOSING BANNER */}
       <div className="relative bg-brand-primary py-24 lg:py-32 overflow-hidden">
         {/* Topography lines — left */}
-        <div className="absolute top-0 left-0 w-72 h-full text-white/[0.04] pointer-events-none select-none hidden lg:block">
+        <div className="absolute top-0 left-0 w-72 h-full text-white/4 pointer-events-none select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">
             <path d="M0,30 Q25,15 50,40 T100,20" />
             <path d="M0,45 Q25,30 50,55 T100,35" />
