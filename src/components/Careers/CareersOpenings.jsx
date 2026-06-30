@@ -44,7 +44,7 @@ function CareersOpenings() {
         dispatch({ type: 'SUBMIT_START' });
         try {
             const data = new FormData();
-            data.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY_INFO_EMAIL);
+            data.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY);
             data.append('subject', 'Job Application – Bio Foods');
             data.append('name', formData.name);
             data.append('email', formData.email);
