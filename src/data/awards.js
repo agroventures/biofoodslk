@@ -36,6 +36,12 @@ const awardsData = [
         icon: Trophy,
         title: "Presidential Export Excellence Awards",
         org: "2015, 2016, 2019, 2020 · Highest Value Added Organic Exporter",
+        images: [
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2015.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2016.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2019.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2020.webp",
+        ]
     },
     {
         number: "08",

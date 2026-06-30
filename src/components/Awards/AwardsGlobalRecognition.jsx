@@ -1,13 +1,49 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
+import React, { useState } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import awardsData from "../../data/awards";
+
+const ImageSlider = ({ images }) => {
+    const [current, setCurrent] = useState(0);
+    const prev = () => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1));
+    const next = () => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1));
+    return (
+        <div className="relative w-full h-48 rounded-xl overflow-hidden mb-6 group/slider">
+            <img
+                src={images[current]}
+                alt={`Award image ${current + 1}`}
+                className="w-full h-full object-contain transition-opacity duration-300"
+            />
+            <button
+                onClick={prev}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
+            >
+                <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+                onClick={next}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
+            >
+                <ChevronRight className="w-4 h-4" />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {images.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setCurrent(i)}
+                        className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
 
 const AwardsGlobalRecognition = () => (
     <section className="w-full bg-neutral-50 border-t border-neutral-200/60 antialiased">
 
         {/* HERO SECTION */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-16 lg:pt-32 lg:pb-24">
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                 <div className="lg:col-span-7">
                     <p className="text-md uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 flex items-center gap-3">
                         <span className="w-8 h-px bg-brand-gold/50 inline-block"></span>
@@ -39,25 +75,29 @@ const AwardsGlobalRecognition = () => (
                 </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {awardsData.map(({ icon: Icon, number, title, org, description }) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                {awardsData.map(({ icon: Icon, number, title, org, description, images }) => (
                     <div
                         key={number}
                         className="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
                     >
                         <div>
-                            {/* Card Header: Number & Icon */}
-                            <div className="flex items-center justify-between border-b border-neutral-100 pb-5 mb-6">
-                                <span
-                                    className="text-4xl text-neutral-300 group-hover:text-brand-gold transition-colors duration-300 font-light tabular-nums"
-                                    style={{ fontFamily: "Cormorant Garamond, serif" }}
-                                >
-                                    {number}
-                                </span>
-                                <div className="p-2.5 rounded-xl bg-brand-primary group-hover:bg-brand-light transition-colors duration-300">
-                                    <Icon className="w-5 h-5 text-brand-light group-hover:text-brand-primary group-hover:scale-110 transition-transform duration-300" />
+                            {/* Card Header: Slider if images exist, else Number & Icon */}
+                            {images ? (
+                                <ImageSlider images={images} />
+                            ) : (
+                                <div className="flex items-center justify-between border-b border-neutral-100 pb-5 mb-6">
+                                    <span
+                                        className="text-4xl text-neutral-300 group-hover:text-brand-gold transition-colors duration-300 font-light tabular-nums"
+                                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                                    >
+                                        {number}
+                                    </span>
+                                    <div className="p-2.5 rounded-xl bg-brand-primary group-hover:bg-brand-light transition-colors duration-300">
+                                        <Icon className="w-5 h-5 text-brand-light group-hover:text-brand-primary group-hover:scale-110 transition-transform duration-300" />
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
                             {/* Award Title & Org */}
                             <h3
@@ -68,6 +108,9 @@ const AwardsGlobalRecognition = () => (
                             </h3>
                             <p className="text-xs uppercase tracking-[0.15em] font-semibold text-brand-gold mb-4">
                                 {org}
+                            </p>
+                            <p className="text-neutral-500 text-sm leading-relaxed font-light">
+                                {description}
                             </p>
                         </div>
                     </div>
