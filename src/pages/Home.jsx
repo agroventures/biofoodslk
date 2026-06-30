@@ -9,6 +9,7 @@ import HomeClosingReflection from '../components/Home/HomeClosingReflection';
 import HomeProductExperiences from '../components/Home/HomeProductExperiences';
 import HomeIntro from '../components/Home/HomeIntro';
 import HomeSegments from '../components/Home/HomeSegments';
+import HomeEcoPlus from '../components/Home/HomeEcoPlus';
 
 function Home() {
     const url = window.location.href;
@@ -31,6 +32,7 @@ function Home() {
             {/* <HomeCorePrinciples section="05" /> */}
             <HomeProductExperiences section="04" />
             <HomeSegments section="05"  />
+            <HomeEcoPlus />
             <HomeClosingReflection section="06" />
             <Footer />
         </div>

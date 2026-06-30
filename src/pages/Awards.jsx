@@ -4,7 +4,7 @@ import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
 import AwardsHero from '../components/Awards/AwardsHero';
 import AwardsGlobalRecognition from '../components/Awards/AwardsGlobalRecognition';
-// import AwardsLegacy from '../components/Awards/AwardsLegacy';
+import AwardsLegacy from '../components/Awards/AwardsLegacy';
 
 function Awards() {
     const url = window.location.href;
@@ -22,7 +22,7 @@ function Awards() {
             <Navbar />
             <AwardsHero />
             <AwardsGlobalRecognition />
-            {/* <AwardsLegacy /> */}
+            <AwardsLegacy />
             <Footer />
         </div>
     )

@@ -205,44 +205,50 @@ function CareersOpenings() {
                                 <label htmlFor="cv-upload" className="text-xs uppercase tracking-widest text-neutral-500">
                                     Upload CV
                                 </label>
-                                <button
-                                    type="button"
+                                <div
                                     onDragOver={(e) => { e.preventDefault(); dispatch({ type: 'SET_DRAG', over: true }); }}
                                     onDragLeave={() => dispatch({ type: 'SET_DRAG', over: false })}
                                     onDrop={handleDrop}
-                                    onClick={() => fileInputRef.current.click()}
-                                    className={`mt-3 w-full border-2 border-dashed px-5 py-8 flex flex-col items-center justify-center gap-3 cursor-pointer transition ${
+                                    className={`mt-3 w-full border-2 border-dashed transition ${
                                         dragOver ? 'border-brand-primary bg-brand-light' : 'border-neutral-200 hover:border-brand-primary'
                                     }`}
                                 >
-                                    <Paperclip className="w-5 h-5 text-neutral-400" />
-                                    {cvFile ? (
-                                        <div className="flex items-center gap-2 text-sm text-neutral-700">
-                                            <span>{cvFile.name}</span>
+                                    <label
+                                        htmlFor="cv-upload"
+                                        className="w-full px-5 py-8 flex flex-col items-center justify-center gap-3 cursor-pointer"
+                                    >
+                                        <Paperclip className="w-5 h-5 text-neutral-400" />
+                                        {cvFile ? (
+                                            <span className="text-sm text-neutral-700">{cvFile.name}</span>
+                                        ) : (
+                                            <p className="text-sm text-neutral-500 text-center">
+                                                Drag & drop your CV here, or <span className="text-brand-primary underline">browse</span>
+                                                <br />
+                                                <span className="text-xs text-neutral-400">PDF or Word · max 5MB</span>
+                                            </p>
+                                        )}
+                                        <input
+                                            ref={fileInputRef}
+                                            id="cv-upload"
+                                            type="file"
+                                            accept=".pdf,.doc,.docx"
+                                            className="hidden"
+                                            onChange={(e) => handleFile(e.target.files[0])}
+                                        />
+                                    </label>
+                                    {cvFile && (
+                                        <div className="flex justify-center pb-4">
                                             <button
                                                 type="button"
-                                                onClick={(e) => { e.stopPropagation(); dispatch({ type: 'SET_CV', file: null }); }}
+                                                aria-label="Remove CV"
+                                                onClick={() => dispatch({ type: 'SET_CV', file: null })}
                                                 className="text-neutral-400 hover:text-neutral-900"
                                             >
                                                 <X className="w-4 h-4" />
                                             </button>
                                         </div>
-                                    ) : (
-                                        <p className="text-sm text-neutral-500 text-center">
-                                            Drag & drop your CV here, or <span className="text-brand-primary underline">browse</span>
-                                            <br />
-                                            <span className="text-xs text-neutral-400">PDF or Word · max 5MB</span>
-                                        </p>
                                     )}
-                                    <input
-                                        ref={fileInputRef}
-                                        id="cv-upload"
-                                        type="file"
-                                        accept=".pdf,.doc,.docx"
-                                        className="hidden"
-                                        onChange={(e) => handleFile(e.target.files[0])}
-                                    />
-                                </button>
+                                </div>
                             </div>
 
                             <div className="md:col-span-2">
