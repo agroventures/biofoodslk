@@ -12,8 +12,7 @@ function SustainabilityHero() {
             img="/Sustainability/hero.webp"
             description={
                 <>
-                    Sustainability is not an initiative - it is{' '}
-                    <span className="font-bold text-brand-primary">the foundation of our operations</span>.
+                    Sustainability is not an initiative - it is the foundation of our operations.
                 </>
             }
         />
