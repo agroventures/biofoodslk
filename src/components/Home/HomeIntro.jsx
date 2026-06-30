@@ -50,7 +50,7 @@ export default function HomeIntro({section}) {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <button type="button" className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                Learn More
+                <a href="/about">Learn More</a>
               </button>
 
               {/* <button className="group flex items-center gap-3 rounded-full border border-neutral-300 px-8 py-4 font-semibold text-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:text-neutral-900">
