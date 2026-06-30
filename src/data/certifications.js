@@ -56,7 +56,7 @@ export const certifications = [
     {
         id: 10,
         name: "Fairtrade International",
-        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/fairtrade.webp",
+        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/fairtrade_new.webp",
         desc: "The most recognizable certification for ethical standards. It ensures that the cost of production is covered and provides a 'Fairtrade Premium' directly to farmers. This helps cover education, medical care, and housing, while actively fighting against unlawful child labor."
     },
     // {
@@ -82,5 +82,29 @@ export const certifications = [
         name: "BSCI",
         img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/bsci.webp",
         desc: "The Business Social Compliance Initiative is a supply chain management system that supports companies in maintaining social compliance and improvements within factories and farms globally."
+    },
+    {
+        id: 15,
+        name: "Bio Suisse",
+        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/bio_suisse.webp",
+        desc: "Bio Suisse is one of Switzerland's leading organic certification standards, ensuring environmentally friendly farming, biodiversity protection, sustainable production, and high-quality organic products."
+    },
+    {
+        id: 16,
+        name: "Soil Association Organic",
+        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/soil-association-organic.webp",
+        desc: "The Soil Association Organic certification guarantees products are produced according to strict organic farming standards, promoting healthy soils, animal welfare, biodiversity, and sustainable agriculture."
+    },
+    {
+        id: 17,
+        name: "Food Safety Management System",
+        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/foodsafetymanagementsystem.webp",
+        desc: "The Food Safety Management System (FSMS) certification demonstrates a company's commitment to identifying, controlling, and preventing food safety hazards while ensuring safe, high-quality products throughout the supply chain."
+    },
+    {
+        id: 18,
+        name: "Halal",
+        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/halal_logo.webp",
+        desc: "Halal certification verifies that products are prepared, processed, and handled in accordance with Islamic dietary laws, ensuring quality, hygiene, traceability, and compliance with recognized Halal standards."
     }
 ];
