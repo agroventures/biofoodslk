@@ -58,7 +58,7 @@ const awardsData = [
     {
         number: "13",
         icon: Globe,
-        title: "Cafédirect Award",
+        title: "Cafedirect Award",
         org: "2001 · Successful Fair Trade Partnership",
     },
     {
