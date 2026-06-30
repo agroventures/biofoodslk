@@ -59,12 +59,12 @@ export const certifications = [
         img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/fairtrade.webp",
         desc: "The most recognizable certification for ethical standards. It ensures that the cost of production is covered and provides a 'Fairtrade Premium' directly to farmers. This helps cover education, medical care, and housing, while actively fighting against unlawful child labor."
     },
-    {
-        id: 11,
-        name: "UTZ Certified",
-        img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/utz.webp",
-        desc: "Focuses on sustainable farming for tea, coffee, and cacao. It guarantees that farmers are trained in better agricultural practices and are treated ethically, ensuring long-term sustainability for both the environment and the producers."
-    },
+    // {
+    //     id: 11,
+    //     name: "UTZ Certified",
+    //     img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/QualityCertifications/utz.webp",
+    //     desc: "Focuses on sustainable farming for tea, coffee, and cacao. It guarantees that farmers are trained in better agricultural practices and are treated ethically, ensuring long-term sustainability for both the environment and the producers."
+    // },
     {
         id: 12,
         name: "Kosher Pareve",
