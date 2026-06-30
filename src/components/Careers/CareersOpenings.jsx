@@ -110,25 +110,25 @@ function CareersOpenings() {
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
                     {/* LEFT PANEL */}
                     <div className="lg:col-span-4">
-                        <div className="bg-brand-light p-10 h-full">
-                            <p className="text-xs uppercase tracking-[0.3em] text-brand-primary mb-8">
+                        <div className="bg-brand-primary p-10 h-full">
+                            <p className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold mb-8">
                                 Why Bio Foods?
                             </p>
-                            <ul className="space-y-8 text-neutral-600 leading-7">
+                            <ul className="space-y-8 text-white leading-7">
                                 <li>
-                                    <p className="text-neutral-900 mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
+                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
                                         Purpose-Driven Work
                                     </p>
                                     Contribute to organic, fair-trade agriculture that impacts communities across Sri Lanka.
                                 </li>
                                 <li>
-                                    <p className="text-neutral-900 mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
+                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
                                         Global Exposure
                                     </p>
                                     Work with international buyers, certifiers, and partners across the world.
                                 </li>
                                 <li>
-                                    <p className="text-neutral-900 mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
+                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
                                         Growth Culture
                                     </p>
                                     We invest in our people as much as we invest in our land.
