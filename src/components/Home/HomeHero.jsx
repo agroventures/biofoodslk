@@ -71,7 +71,7 @@ const slides = [
     desc: "Recipients of the German Sustainability Award, Presidential Export Excellence Awards, and the Fairest Fair Trader of the World - honouring over three decades of responsible trade.",
   },
   {
-    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/hero-4.webp",
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/hero-workers.webp",
     label: "Our People",
     heading: (
       <>
