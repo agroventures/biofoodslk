@@ -32,7 +32,7 @@ function Home() {
             {/* <HomeCorePrinciples section="05" /> */}
             <HomeProductExperiences section="04" />
             <HomeSegments section="05"  />
-            <HomeEcoPlus />
+            {/* <HomeEcoPlus /> */}
             <HomeClosingReflection section="06" />
             <Footer />
         </div>
