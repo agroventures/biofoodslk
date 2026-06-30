@@ -71,7 +71,7 @@ export default function HomeIntro({section}) {
               {/* Main image */}
               <div className="overflow-hidden rounded-3xl">
                 <img
-                  src="/Home/farmer-male.webp"
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/farmer-male.webp"
                   alt="Farmers in Sri Lanka"
                   className="h-120 w-full object-cover"
                 />
@@ -81,7 +81,7 @@ export default function HomeIntro({section}) {
               {/* Floating second image - bottom right */}
               <div className="absolute -bottom-6 -right-6 h-44 w-44 overflow-hidden rounded-2xl ring-4 ring-white shadow-2xl">
                 <img
-                  src="/Home/farmer-female.webp"
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/farmer-female.webp"
                   alt="Lady Farmer"
                   className="h-full w-full object-cover object-top"
                 />

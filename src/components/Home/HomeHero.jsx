@@ -57,7 +57,7 @@ const slides = [
     desc: "The world's first fair-trade certified spice exporter - cinnamon, pepper, cardamom and more, sourced responsibly since 1993.",
   },
   {
-    img: "/Awards/german_sustainability.WebP",
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german_sustainability.WebP",
     label: "Award Winning",
     heading: (
       <>
@@ -71,7 +71,7 @@ const slides = [
     desc: "Recipients of the German Sustainability Award, Presidential Export Excellence Awards, and the Fairest Fair Trader of the World - honouring over three decades of responsible trade.",
   },
   {
-    img: "/Home/hero-4.webp",
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/hero-4.webp",
     label: "Our People",
     heading: (
       <>

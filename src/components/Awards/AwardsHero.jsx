@@ -10,7 +10,7 @@ function AwardsHero() {
       title="Certified Purity"
       subtitle="Uncompromising Quality from Soil to Shelf"
       description="As a member of IFOAM and a world leader in biodynamic agriculture, our systems are audited to meet EU, USDA, and JAS organic regulations, ensuring every product is traceable and 100% chemical-free."
-      img="/Awards/german_sustainability.WebP"
+      img="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german_sustainability.WebP"
       alt="Quality assurance and organic certifications"
     />
   )

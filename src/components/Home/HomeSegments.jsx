@@ -34,7 +34,7 @@ const segments = [
     description:
       "Discover our internationally certified quality standards and rigorous testing processes.",
     link: "/quality-certifications",
-    img: "/Home/certified.webp",
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/certified.webp",
   },
   {
     icon: Trophy,
@@ -42,7 +42,7 @@ const segments = [
     description:
       "Celebrating excellence through national and international awards for quality and sustainability.",
     link: "/awards",
-    img: "/Awards/german_sustainability.WebP",
+    img: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german_sustainability.WebP",
   },
   {
     icon: Newspaper,
