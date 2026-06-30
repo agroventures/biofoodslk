@@ -65,8 +65,8 @@ const ContactForm = () => {
     return (
         <section className="w-full bg-white py-24 lg:py-36 border-t border-neutral-100 relative overflow-hidden">
             {/* decorative background blobs */}
-            <div className="pointer-events-none absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-brand-light opacity-60" />
-            <div className="pointer-events-none absolute -bottom-40 -left-24 w-[400px] h-[400px] rounded-full bg-brand-muted opacity-50" />
+            <div className="pointer-events-none absolute -top-32 -right-32 w-125 h-125 rounded-full bg-brand-light opacity-60" />
+            <div className="pointer-events-none absolute -bottom-40 -left-24 w-100 h-100 rounded-full bg-brand-muted opacity-50" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
                 {/* HEADER */}
