@@ -1,6 +1,6 @@
 import React from "react";
 import { Phone, Mail, MapPin, Sparkles } from "lucide-react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -26,6 +26,7 @@ const Footer = () => {
 
   const socials = [
     { icon: FaFacebookF, href: "https://www.facebook.com/Biofoofdslk/" },
+    { icon: FaInstagram, href: "https://www.instagram.com/biofoods.agro" },
     { icon: FaXTwitter, href: "https://x.com/biofoodslk" },
   ];
 

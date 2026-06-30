@@ -8,7 +8,7 @@ import {
     X,
     Sparkles,
 } from "lucide-react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 
@@ -148,7 +148,7 @@ const ContactForm = () => {
                                     <div>
                                         <h3 className="text-base text-white mb-1">Phone</h3>
                                         <a href="tel:+94117487100" className="text-white/60 hover:text-brand-gold transition text-sm">
-                                            +94 11 7487100
+                                            +94 11 2201220
                                         </a>
                                     </div>
                                 </div>
@@ -175,6 +175,14 @@ const ContactForm = () => {
                                     className="w-10 h-10 flex items-center justify-center border border-white/20 text-white/60 hover:bg-brand-gold hover:text-white hover:border-brand-gold transition"
                                 >
                                     <FaFacebookF size={14} />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/biofoods.agro"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="w-10 h-10 flex items-center justify-center border border-white/20 text-white/60 hover:bg-brand-gold hover:text-white hover:border-brand-gold transition"
+                                >
+                                    <FaInstagram size={14} />
                                 </a>
                                 <a
                                     href="https://x.com/biofoodslk"
