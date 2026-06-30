@@ -246,25 +246,25 @@ function PrivacyPolicy() {
             {...fadeUp(0.1)}
             className="overflow-hidden rounded-[40px] bg-brand-primary p-10 text-white lg:p-14"
           >
-            <div className="mb-6 flex items-center gap-4">
+            <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
               <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">Get in Touch</span>
             </div>
 
             <h3
-              className="max-w-4xl text-3xl leading-tight lg:text-5xl"
+              className="max-w-7xl text-3xl leading-tight lg:text-5xl text-center"
               style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
               Privacy enquiries welcomed.
             </h3>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/80">
+            <p className="mt-8 max-w-7xl text-lg leading-8 text-white/80 text-center">
               For any questions regarding how we handle your data, please reach out to our team directly.
             </p>
 
             <a
               href="mailto:info@biofoodsagro.com"
-              className="mt-10 inline-flex items-center gap-3 text-brand-gold hover:text-white transition-colors duration-200 group"
+              className="mt-10 flex items-center justify-center gap-3 text-brand-gold hover:text-white transition-colors duration-200 group"
             >
               <span className="text-lg underline underline-offset-8">info@biofoodsagro.com</span>
               <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
