@@ -152,7 +152,7 @@ const AwardsGlobalRecognition = () => (
         {/* BOTTOM CALL TO ACTION */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
             <div className="bg-brand-primary text-white rounded-3xl p-8 md:p-12 lg:p-20 shadow-2xl relative overflow-hidden grid lg:grid-cols-12 gap-12 items-center">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.02] rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-white/2 rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4" />
                 
                 <div className="lg:col-span-7 relative z-10">
                     <p className="text-xs uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6">
