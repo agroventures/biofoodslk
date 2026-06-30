@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import awardsData from "../../data/awards";
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images: rawImages }) => {
+    const images = Array.isArray(rawImages) ? rawImages : [rawImages];
     const [current, setCurrent] = useState(0);
     const prev = () => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1));
     const next = () => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1));
@@ -13,27 +14,31 @@ const ImageSlider = ({ images }) => {
                 alt={`Award image ${current + 1}`}
                 className="w-full h-full object-contain transition-opacity duration-300"
             />
-            <button
-                onClick={prev}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
-            >
-                <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-                onClick={next}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
-            >
-                <ChevronRight className="w-4 h-4" />
-            </button>
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-                {images.map((_, i) => (
+            {images.length > 1 && (
+                <>
                     <button
-                        key={i}
-                        onClick={() => setCurrent(i)}
-                        className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
-                    />
-                ))}
-            </div>
+                        onClick={prev}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
+                    >
+                        <ChevronLeft className="w-4 h-4" />
+                    </button>
+                    <button
+                        onClick={next}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
+                    >
+                        <ChevronRight className="w-4 h-4" />
+                    </button>
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        {images.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setCurrent(i)}
+                                className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
+                            />
+                        ))}
+                    </div>
+                </>
+            )}
         </div>
     );
 };

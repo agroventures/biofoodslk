@@ -12,6 +12,7 @@ const awardsData = [
         icon: Globe,
         title: "German Sustainability Awards",
         org: "2020 · Best Global Corporate Partnerships",
+        images: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german_sustainability.WebP",
     },
     {
         number: "03",
