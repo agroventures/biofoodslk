@@ -130,13 +130,13 @@ function HomeAgroVenturesAdvantage({ section }) {
           </div>
 
           <h3
-            className="max-w-4xl text-3xl leading-tight lg:text-5xl"
+            className="max-w-7xl text-3xl leading-tight lg:text-5xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             A modern agricultural ecosystem built for scale, consistency, and sustainability.
           </h3>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/80">
+          <p className="mt-8 max-w-7xl text-lg leading-8 text-white/80">
             Authentic cultivation meets industrial-grade infrastructure - trusted by customers around the world.
           </p>
         </div>
