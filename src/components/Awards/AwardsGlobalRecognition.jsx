@@ -1,57 +1,64 @@
 import React, { useState } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 import awardsData from "../../data/awards";
 
-const ImageSlider = ({ images: rawImages }) => {
+const AwardModal = ({ images: rawImages, title, onClose }) => {
     const images = Array.isArray(rawImages) ? rawImages : [rawImages];
     const [current, setCurrent] = useState(0);
     const prev = () => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1));
     const next = () => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1));
     return (
-        <div className="relative w-full h-48 rounded-xl overflow-hidden mb-6 group/slider">
-            <img
-                src={images[current]}
-                alt={`Award certificate ${current + 1}`}
-                className="w-full h-full object-contain transition-opacity duration-300"
-            />
-            {images.length > 1 && (
-                <>
-                    <button
-                        type="button"
-                        aria-label="Previous award image"
-                        onClick={prev}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
-                    >
-                        <ChevronLeft className="w-4 h-4" />
-                    </button>
-                    <button
-                        type="button"
-                        aria-label="Next award image"
-                        onClick={next}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
-                    >
-                        <ChevronRight className="w-4 h-4" />
-                    </button>
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-                        {images.map((src, i) => (
-                            <button
-                                key={src}
-                                type="button"
-                                aria-label={`Go to award image ${i + 1}`}
-                                onClick={() => setCurrent(i)}
-                                className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
-                            />
-                        ))}
-                    </div>
-                </>
-            )}
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+            onClick={onClose}
+        >
+            <div
+                className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <button
+                    type="button"
+                    onClick={onClose}
+                    className="absolute top-4 right-4 p-1.5 rounded-full bg-neutral-100 hover:bg-neutral-200 transition-colors"
+                >
+                    <X className="w-4 h-4 text-neutral-600" />
+                </button>
+                <p className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4">{title}</p>
+                <div className="relative w-full rounded-xl overflow-hidden bg-neutral-50">
+                    <img
+                        src={images[current]}
+                        alt={`Award certificate ${current + 1}`}
+                        className="w-full object-contain max-h-[70vh]"
+                    />
+                    {images.length > 1 && (
+                        <>
+                            <button type="button" onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-all">
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+                            <button type="button" onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-all">
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
+                            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                                {images.map((src, i) => (
+                                    <button key={src} type="button" onClick={() => setCurrent(i)}
+                                        className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
+                                    />
+                                ))}
+                            </div>
+                        </>
+                    )}
+                </div>
+            </div>
         </div>
     );
 };
 
-const AwardsGlobalRecognition = () => (
+const AwardsGlobalRecognition = () => {
+    const [modal, setModal] = useState(null);
+    return (
     <section className="w-full bg-neutral-50 border-t border-neutral-200/60 antialiased">
 
+        {modal && <AwardModal images={modal.images} title={modal.title} onClose={() => setModal(null)} />}
         {/* HERO SECTION */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-16 lg:pt-32 lg:pb-24">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
@@ -93,11 +100,8 @@ const AwardsGlobalRecognition = () => (
                         className="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
                     >
                         <div>
-                            {/* Card Header: Slider if images exist, else Number & Icon */}
-                            {images ? (
-                                <ImageSlider images={images} />
-                            ) : (
-                                <div className="flex items-center justify-between border-b border-neutral-100 pb-5 mb-6">
+                            {/* Card Header: Number & Icon */}
+                            <div className="flex items-center justify-between border-b border-neutral-100 pb-5 mb-6">
                                     <span
                                         className="text-4xl text-neutral-300 group-hover:text-brand-gold transition-colors duration-300 font-light tabular-nums"
                                         style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -108,7 +112,6 @@ const AwardsGlobalRecognition = () => (
                                         <Icon className="w-5 h-5 text-brand-light group-hover:text-brand-primary group-hover:scale-110 transition-transform duration-300" />
                                     </div>
                                 </div>
-                            )}
 
                             {/* Award Title & Org */}
                             <h3
@@ -123,6 +126,15 @@ const AwardsGlobalRecognition = () => (
                             <p className="text-neutral-500 text-sm leading-relaxed font-light">
                                 {description}
                             </p>
+                            {images && (
+                                <button
+                                    type="button"
+                                    onClick={() => setModal({ images, title: org })}
+                                    className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-semibold text-brand-primary border border-brand-primary/20 px-4 py-2 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-200"
+                                >
+                                    View Award
+                                </button>
+                            )}
                         </div>
                     </div>
                 ))}
@@ -196,7 +208,8 @@ const AwardsGlobalRecognition = () => (
             </div>
         </div>
 
-    </section>
-);
+        </section>
+    );
+};
 
 export default AwardsGlobalRecognition;
