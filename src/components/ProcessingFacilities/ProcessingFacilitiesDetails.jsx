@@ -41,10 +41,10 @@ function ImageCarousel({ images, name }) {
 
       {images.length > 1 && (
         <>
-          <button type="button" onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
+          <button type="button" aria-label="Previous image" onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
             <ChevronLeft className="w-4 h-4 text-neutral-800" />
           </button>
-          <button type="button" onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
+          <button type="button" aria-label="Next image" onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition">
             <ChevronRight className="w-4 h-4 text-neutral-800" />
           </button>
 
@@ -59,6 +59,7 @@ function ImageCarousel({ images, name }) {
               <button
                 key={src}
                 type="button"
+                aria-label={`Go to image ${i + 1}`}
                 onClick={() => setCurrent(i)}
                 className={`h-0.5 rounded-full transition-all ${current === i ? "w-6 bg-white" : "w-2 bg-white/40"}`}
               />

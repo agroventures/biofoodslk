@@ -81,8 +81,8 @@ function EventDetail() {
 
                 {/* Body */}
                 <div className="space-y-6">
-                    {paragraphs.map((para, i) => (
-                        <p key={i} className="text-neutral-600 leading-8 text-lg">
+                    {paragraphs.map((para) => (
+                        <p key={para.slice(0, 40)} className="text-neutral-600 leading-8 text-lg">
                             {para}
                         </p>
                     ))}
@@ -94,7 +94,7 @@ function EventDetail() {
                         <div className="h-px bg-neutral-200 mb-10" />
                         <div className="columns-2 md:columns-3 gap-3 space-y-3">
                             {images.map((src, i) => (
-                                <div key={i} className="relative group cursor-zoom-in break-inside-avoid" onClick={() => setLightboxIndex(i)}>
+                                <div key={src} className="relative group cursor-zoom-in break-inside-avoid" onClick={() => setLightboxIndex(i)}>
                                     <img
                                         src={src}
                                         alt={`${title} ${i + 1}`}

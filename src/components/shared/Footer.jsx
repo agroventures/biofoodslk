@@ -4,32 +4,32 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+const navLinks = [
+  { name: "About Us", href: "/about" },
+  { name: "Products", href: "/products" },
+  { name: "Processing Facilities", href: "/processing-facilities" },
+  { name: "Sustainability", href: "/sustainability" },
+  { name: "Careers", href: "/careers" },
+];
+
+const legalLinks = [
+  { name: "Terms and Conditions", href: "/terms" },
+  { name: "Privacy Policy", href: "/privacy" },
+];
+
+const contactItems = [
+  { icon: Phone, label: "+94 11 220 1220", href: "tel:+94112201220" },
+  // { icon: Mail, label: "info@biofoodsagro.com", href: "mailto:info@biofoodsagro.com" },
+];
+
+const socials = [
+  { icon: FaFacebookF, href: "https://www.facebook.com/Biofoofdslk/" },
+  { icon: FaInstagram, href: "https://www.instagram.com/biofoods.agro" },
+  { icon: FaXTwitter, href: "https://x.com/biofoodslk" },
+];
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const navLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Products", href: "/products" },
-    { name: "Processing Facilities", href: "/processing-facilities" },
-    { name: "Sustainability", href: "/sustainability" },
-    { name: "Careers", href: "/careers" },
-  ];
-
-  const legalLinks = [
-    { name: "Terms and Conditions", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
-  ];
-
-  const contactItems = [
-    { icon: Phone, label: "+94 11 220 1220", href: "tel:+94112201220" },
-    // { icon: Mail, label: "info@biofoodsagro.com", href: "mailto:info@biofoodsagro.com" },
-  ];
-
-  const socials = [
-    { icon: FaFacebookF, href: "https://www.facebook.com/Biofoofdslk/" },
-    { icon: FaInstagram, href: "https://www.instagram.com/biofoods.agro" },
-    { icon: FaXTwitter, href: "https://x.com/biofoodslk" },
-  ];
 
   return (
     <footer className="bg-[#090D0F] text-white pt-24 pb-10">
@@ -68,9 +68,9 @@ const Footer = () => {
 
             {/* Social icons */}
             <div className="flex gap-3">
-              {socials.map(({ icon: Icon, href }, i) => (
+              {socials.map(({ icon: Icon, href }) => (
                 <a
-                  key={i}
+                  key={href}
                   href={href}
                   target="_blank"
                   rel="noreferrer"

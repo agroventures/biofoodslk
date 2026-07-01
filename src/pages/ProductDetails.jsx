@@ -98,9 +98,9 @@ function ProductDetails() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-              {displayItems.map((item, idx) => (
+              {displayItems.map((item) => (
                 <div
-                  key={idx}
+                  key={item.name}
                   className="border border-neutral-200 bg-white overflow-hidden hover:shadow-sm transition-all duration-300 group"
                 >
                   <div className="aspect-square overflow-hidden bg-neutral-50">

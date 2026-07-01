@@ -97,9 +97,9 @@ function HomeSegments({ section }) {
 
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {segments.map((segment, index) => (
+          {segments.map((segment) => (
             <Link
-              key={index}
+              key={segment.title}
               to={segment.link}
               className="group rounded-4xl bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] flex flex-col"
             >

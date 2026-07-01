@@ -224,6 +224,7 @@ export default function Hero() {
               <button
                 key={i}
                 type="button"
+                aria-label={`Go to slide ${i + 1}`}
                 onClick={() => setCurrent(i)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   i === current ? "w-8 bg-brand-secondary" : "w-3 bg-white/40"

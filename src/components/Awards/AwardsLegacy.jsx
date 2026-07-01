@@ -59,18 +59,14 @@ const AwardsLegacy = () => (
             <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
                 {principles.map(({ icon: Icon, number, title, description }) => (
                     <div key={number} className="p-10 lg:p-12 flex flex-col gap-6">
-                        <div className="flex items-start justify-between">
-                            <span
-                                className="text-5xl text-neutral-100 select-none"
-                                style={{ fontFamily: "Cormorant Garamond, serif" }}
-                            >
-                                {number}
-                            </span>
-                            <Icon className="w-5 h-5 text-brand-primary mt-1" />
+                        <div className="flex items-start justify-center">
+                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-primary text-brand-light font-bold text-lg">
+                                <Icon className="w-5 h-5 text-brand-light mt-1" />
+                            </div>
                         </div>
                         <div>
-                            <h4 className="text-xl text-neutral-950 mb-3">{title}</h4>
-                            <p className="text-neutral-600 leading-7 text-sm">{description}</p>
+                            <h4 className="text-xl text-neutral-950 text-center mb-3">{title}</h4>
+                            <p className="text-neutral-600 leading-7 text-center text-sm">{description}</p>
                         </div>
                     </div>
                 ))}

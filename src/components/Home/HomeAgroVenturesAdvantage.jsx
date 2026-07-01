@@ -7,33 +7,34 @@ import {
   Sparkles,
 } from "lucide-react";
 
+const advantages = [
+  {
+    icon: GitMerge,
+    title: "Integrated Supply Chain",
+    description:
+      "A connected ecosystem ensuring consistency, transparency, and reliability from origin to global delivery.",
+  },
+  {
+    icon: Factory,
+    title: "Advanced Processing",
+    description:
+      "State-of-the-art facilities preserving quality, purity, and the natural integrity of every product.",
+  },
+  {
+    icon: Globe,
+    title: "Global Reach",
+    description:
+      "Trusted international distribution networks serving customers across diverse world markets.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Sustainable Growth",
+    description:
+      "Long-term expansion guided by environmental responsibility and strategic innovation.",
+  },
+];
+
 function HomeAgroVenturesAdvantage({ section }) {
-  const advantages = [
-    {
-      icon: GitMerge,
-      title: "Integrated Supply Chain",
-      description:
-        "A connected ecosystem ensuring consistency, transparency, and reliability from origin to global delivery.",
-    },
-    {
-      icon: Factory,
-      title: "Advanced Processing",
-      description:
-        "State-of-the-art facilities preserving quality, purity, and the natural integrity of every product.",
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description:
-        "Trusted international distribution networks serving customers across diverse world markets.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Sustainable Growth",
-      description:
-        "Long-term expansion guided by environmental responsibility and strategic innovation.",
-    },
-  ];
 
   return (
     <section className="relative overflow-hidden bg-brand-light py-20 lg:py-28">
@@ -87,9 +88,9 @@ function HomeAgroVenturesAdvantage({ section }) {
 
         {/* Advantage Cards */}
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {advantages.map((advantage, index) => (
+          {advantages.map((advantage) => (
             <div
-              key={index}
+              key={advantage.title}
               className="
                 group
                 rounded-4xl

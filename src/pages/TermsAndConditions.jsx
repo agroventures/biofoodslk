@@ -228,7 +228,7 @@ function TermsAndConditions() {
             <div className="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 border-t border-white/10">
               {prohibited.map((item, index) => (
                 <motion.div
-                  key={index}
+                  key={item}
                   {...fadeUp(index * 0.06)}
                   className="flex gap-4 py-5 px-2 border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
                 >

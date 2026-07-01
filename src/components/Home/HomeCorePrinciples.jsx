@@ -1,33 +1,34 @@
 import React from "react";
 import { Leaf, Handshake, ScanLine, Gauge, Sparkles } from "lucide-react";
 
+const principles = [
+  {
+    icon: Leaf,
+    title: "Organic & Biodynamic Integrity",
+    description:
+      "Respecting natural ecosystems through responsible cultivation and regenerative agricultural practices.",
+  },
+  {
+    icon: Handshake,
+    title: "Ethical Fair-Trade Engagement",
+    description:
+      "Supporting farming communities through equitable partnerships and long-term relationships.",
+  },
+  {
+    icon: ScanLine,
+    title: "End-to-End Traceability",
+    description:
+      "Ensuring transparency across every stage of sourcing, production, and distribution.",
+  },
+  {
+    icon: Gauge,
+    title: "Precision Quality Management",
+    description:
+      "Maintaining rigorous standards through continuous monitoring and quality assurance systems.",
+  },
+];
+
 function HomeCorePrinciples({ section }) {
-  const principles = [
-    {
-      icon: Leaf,
-      title: "Organic & Biodynamic Integrity",
-      description:
-        "Respecting natural ecosystems through responsible cultivation and regenerative agricultural practices.",
-    },
-    {
-      icon: Handshake,
-      title: "Ethical Fair-Trade Engagement",
-      description:
-        "Supporting farming communities through equitable partnerships and long-term relationships.",
-    },
-    {
-      icon: ScanLine,
-      title: "End-to-End Traceability",
-      description:
-        "Ensuring transparency across every stage of sourcing, production, and distribution.",
-    },
-    {
-      icon: Gauge,
-      title: "Precision Quality Management",
-      description:
-        "Maintaining rigorous standards through continuous monitoring and quality assurance systems.",
-    },
-  ];
 
   return (
     <section className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
@@ -71,7 +72,7 @@ function HomeCorePrinciples({ section }) {
         <div className="divide-y divide-neutral-200 border-t border-neutral-200">
           {principles.map((principle, index) => (
             <div
-              key={index}
+              key={principle.title}
               className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8"
             >
               {/* Number + Icon (side-by-side on mobile, separate columns on lg) */}

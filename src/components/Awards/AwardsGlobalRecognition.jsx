@@ -11,27 +11,33 @@ const ImageSlider = ({ images: rawImages }) => {
         <div className="relative w-full h-48 rounded-xl overflow-hidden mb-6 group/slider">
             <img
                 src={images[current]}
-                alt={`Award image ${current + 1}`}
+                alt={`Award certificate ${current + 1}`}
                 className="w-full h-full object-contain transition-opacity duration-300"
             />
             {images.length > 1 && (
                 <>
                     <button
+                        type="button"
+                        aria-label="Previous award image"
                         onClick={prev}
                         className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
                     >
                         <ChevronLeft className="w-4 h-4" />
                     </button>
                     <button
+                        type="button"
+                        aria-label="Next award image"
                         onClick={next}
                         className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1 transition-all duration-200"
                     >
                         <ChevronRight className="w-4 h-4" />
                     </button>
                     <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-                        {images.map((_, i) => (
+                        {images.map((src, i) => (
                             <button
-                                key={i}
+                                key={src}
+                                type="button"
+                                aria-label={`Go to award image ${i + 1}`}
                                 onClick={() => setCurrent(i)}
                                 className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
                             />

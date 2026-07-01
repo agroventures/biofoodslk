@@ -44,8 +44,8 @@ function HomeProductExperiences({ section }) {
 
         {/* Editorial Product Rows */}
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
-          {products.slice(0, 4).map((product, index) => (
-            <div key={index} className="flex flex-col">
+          {products.slice(0, 4).map((product) => (
+            <div key={product.slug} className="flex flex-col">
               {/* Image */}
               <div className="overflow-hidden rounded-[36px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
                 <img

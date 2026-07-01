@@ -2,6 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Processing Facilities", href: "/processing-facilities" },
+  { name: "Products", href: "/products" },
+  { name: "Awards", href: "/awards" },
+  { name: "News & Events", href: "/news-and-events" },
+  { name: "Contact Us", href: "/contact" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -52,16 +62,6 @@ const Navbar = () => {
       text-white
     `;
   };
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Processing Facilities", href: "/processing-facilities" },
-    { name: "Products", href: "/products" },
-    { name: "Awards", href: "/awards" },
-    { name: "News & Events", href: "/news-and-events" },
-    { name: "Contact Us", href: "/contact" },
-  ];
 
   return (
     <>

@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { ArrowUpRight, CheckCircle2, X, Sparkles, Leaf, Globe, ShieldCheck } from "lucide-react";
 
 
+const highlights = [
+  { icon: Leaf, text: "Certified Organic Products" },
+  { icon: Globe, text: "Global Export Ready" },
+  { icon: ShieldCheck, text: "Quality Guaranteed" },
+];
+
 const ProductInquiryForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", product: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
@@ -35,12 +41,6 @@ const ProductInquiryForm = () => {
       setIsLoading(false);
     }
   };
-
-  const highlights = [
-    { icon: Leaf, text: "Certified Organic Products" },
-    { icon: Globe, text: "Global Export Ready" },
-    { icon: ShieldCheck, text: "Quality Guaranteed" },
-  ];
 
   return (
     <section className="w-full border-t border-neutral-100 py-24 lg:py-36 relative overflow-hidden" style={{ background: "#F8F6F2" }}>
