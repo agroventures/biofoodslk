@@ -101,13 +101,7 @@ const AwardsGlobalRecognition = () => {
                     >
                         <div>
                             {/* Card Header: Number & Icon */}
-                            <div className="flex items-center justify-between border-b border-neutral-100 pb-5 mb-6">
-                                    <span
-                                        className="text-4xl text-neutral-300 group-hover:text-brand-gold transition-colors duration-300 font-light tabular-nums"
-                                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                                    >
-                                        {number}
-                                    </span>
+                            <div className="flex items-center justify-center border-b border-neutral-100 pb-5 mb-6">
                                     <div className="p-2.5 rounded-xl bg-brand-primary group-hover:bg-brand-light transition-colors duration-300">
                                         <Icon className="w-5 h-5 text-brand-light group-hover:text-brand-primary group-hover:scale-110 transition-transform duration-300" />
                                     </div>
@@ -115,22 +109,19 @@ const AwardsGlobalRecognition = () => {
 
                             {/* Award Title & Org */}
                             <h3
-                                className="text-2xl tracking-tight text-neutral-900 font-medium mb-2 group-hover:text-brand-primary transition-colors duration-300"
+                                className="text-2xl tracking-tight text-neutral-900 font-medium mb-2 text-center group-hover:text-brand-primary transition-colors duration-300"
                                 style={{ fontFamily: "Cormorant Garamond, serif" }}
                             >
                                 {title}
                             </h3>
-                            <p className="text-xs uppercase tracking-[0.15em] font-semibold text-brand-gold mb-4">
+                            <p className="text-xs uppercase tracking-[0.15em] font-semibold text-brand-gold text-center mb-4">
                                 {org}
-                            </p>
-                            <p className="text-neutral-500 text-sm leading-relaxed font-light">
-                                {description}
                             </p>
                             {images && (
                                 <button
                                     type="button"
                                     onClick={() => setModal({ images, title: org })}
-                                    className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-semibold text-brand-primary border border-brand-primary/20 px-4 py-2 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-200"
+                                    className="mt-5 mx-auto flex items-center justify-center gap-2 text-xs uppercase tracking-[0.15em] font-semibold text-brand-primary border border-brand-primary/20 px-4 py-2 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-200 w-fit"
                                 >
                                     View Award
                                 </button>
