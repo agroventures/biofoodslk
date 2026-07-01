@@ -8,26 +8,26 @@ function ContactMap() {
         {/* HEADER */}
 
         <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <Sparkles className="h-4 w-4 text-brand-primary" />
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-12 h-px bg-brand-gold" />
+            <Sparkles className="h-4 w-4 text-brand-gold" />
 
             <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
               Our Location
             </span>
+            <span className="w-12 h-px bg-brand-gold" />
           </div>
 
           <h2
-            className="text-5xl lg:text-7xl tracking-tight text-neutral-950"
+            className="text-5xl lg:text-7xl tracking-tight text-neutral-950 text-center"
             style={{
               fontFamily: "Cormorant Garamond, serif",
             }}
           >
-            Visit our
-            <br />
-            headquarters.
+            Visit Our Headquarters.
           </h2>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-600">
+          <p className="mt-8 max-w-3xl mx-auto text-lg leading-8 text-neutral-600 text-center">
             Located in Kaduwela, Sri Lanka - connecting sustainable sourcing, processing, and global export.
           </p>
         </div>

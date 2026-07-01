@@ -60,16 +60,16 @@ export default function AboutBioFoods() {
       <div className="w-full bg-neutral-50 text-neutral-950 overflow-hidden antialiased relative">
         
         {/* ── EDITORIAL INTRO (SIDE-BY-SIDE LAYOUT) ── */}
-        <section className="relative py-24 lg:py-36 bg-white border-b border-neutral-200/60 overflow-hidden">
+        <section className="relative py-16 lg:py-24 bg-white border-b border-neutral-200/60 overflow-hidden">
           
           {/* Background Vectors */}
-          <div className="absolute top-0 left-0 w-72 h-72 lg:w-120 lg:h-120 text-brand-primary/[0.03] pointer-events-none -translate-x-12 -translate-y-12 select-none">
+          <div className="absolute top-0 left-0 w-72 h-72 lg:w-120 lg:h-120 text-brand-primary/3 pointer-events-none -translate-x-12 -translate-y-12 select-none">
             <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_120s_linear_infinite]">
               <path d="M45.3,-62.9C57.4,-53.8,65.1,-38.7,71.2,-22.4C77.4,-6.2,81.9,11.2,77.3,26.7C72.7,42.2,58.9,55.8,43.2,64.8C27.4,73.8,9.7,78.2,-7.9,76.5C-25.5,74.9,-43,67.2,-56,54.8C-69,42.4,-77.4,25.4,-79.1,7.5C-80.8,-10.4,-75.7,-29.2,-64.8,-42.6C-53.8,-56,-37,-64,-20.9,-69.1C-4.8,-74.2,10.6,-76.4,26.5,-74.6C42.4,-72.8,45.3,-62.9,45.3,-62.9Z" transform="translate(100, 100)" />
             </svg>
           </div>
           
-          <div className="absolute right-1/2 bottom-0 w-96 h-96 text-brand-gold/[0.04] pointer-events-none translate-x-1/4 translate-y-1/3 select-none hidden lg:block">
+          <div className="absolute right-1/2 bottom-0 w-96 h-96 text-brand-gold/4 pointer-events-none translate-x-1/4 translate-y-1/3 select-none hidden lg:block">
             {/* Stylized Botanical Leaf Line Art */}
             <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full opacity-60">
               <path d="M50,100 Q45,60 10,40 Q40,40 50,0 Q60,40 90,40 Q55,60 50,100 Z" />

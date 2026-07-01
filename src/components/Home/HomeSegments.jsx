@@ -67,9 +67,9 @@ function HomeSegments({ section }) {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <div className="mb-6 flex items-center gap-4">
+        <div className="mb-12 flex flex-col items-center text-center gap-8">
+          <div>
+            <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-brand-secondary" />
@@ -77,18 +77,17 @@ function HomeSegments({ section }) {
                   Discover Our Journey
                 </span>
               </div>
+              <div className="h-px w-12 bg-brand-secondary" />
             </div>
             <h2
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
               style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
-              Experience
-              <br />
-              BioFoods.
+              Experience BioFoods.
             </h2>
           </div>
-          <div className="flex items-end lg:col-span-5">
-            <p className="max-w-md text-lg leading-8 text-neutral-600">
+          <div>
+            <p className="max-w-7xl text-lg leading-8 text-neutral-600 text-center">
               Explore our network of farmers, products, certifications, and
               awards dedicated to uncompromising organic quality.
             </p>

@@ -43,23 +43,24 @@ function AboutFoundingVision() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
 
         {/* Header */}
-        <motion.div {...fadeUp(0)} className="mb-24 max-w-4xl">
-          <div className="mb-6 flex items-center gap-4">
+        <motion.div {...fadeUp(0)} className="mb-24 max-w-7xl">
+          <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-brand-secondary" />
               <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Founding Vision</span>
             </div>
+            <div className="h-px w-12 bg-brand-secondary" />
           </div>
           <h2
-            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl text-center"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             A simple belief:
             <br />
             <span className="italic text-brand-primary">food should be grown with care.</span>
           </h2>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+          <p className="mt-8 max-w-7xl text-lg leading-8 text-neutral-600 text-center">
             Bio Foods was founded by{" "}
             <span className="text-neutral-900">Dr. Sarath Ranaweera</span>{" "}
             with a clear idea — agriculture should support nature, not extract from it.
@@ -102,13 +103,13 @@ function AboutFoundingVision() {
         </div>
 
         {/* Closing statement panel */}
-        <motion.div {...fadeUp(0.3)} className="mt-20 rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-14">
+        <motion.div {...fadeUp(0.3)} className="mt-20 rounded-[40px] bg-brand-primary p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-14">
           <div className="mb-4 flex items-center gap-4">
-            <div className="h-px w-12 bg-brand-secondary" />
-            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">Our Promise</span>
+            <div className="h-px w-12 bg-brand-gold" />
+            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">Our Promise</span>
           </div>
           <h3
-            className="max-w-4xl text-3xl leading-tight text-neutral-950 lg:text-5xl"
+            className="max-w-4xl text-3xl leading-tight text-brand-light lg:text-5xl"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Sustainable practices. Trusted partnerships. Uncompromising quality.

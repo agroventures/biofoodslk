@@ -40,9 +40,10 @@ export default function AboutAgroVentures() {
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Parent Group
+            <span className="h-px w-10 bg-brand-secondary" />
           </motion.span>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+          <div className="flex flex-col items-center text-center gap-8">
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
@@ -53,7 +54,7 @@ export default function AboutAgroVentures() {
               <span className="text-brand-primary">Group</span>
             </motion.h2>
 
-            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
+            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600 max-w-2xl">
               Bio Foods operates as part of Agro Ventures Group - a diversified agribusiness connecting farming, processing, and international trade across Sri Lanka and beyond.
             </motion.p>
           </div>

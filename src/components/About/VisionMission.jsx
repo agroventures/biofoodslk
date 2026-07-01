@@ -33,24 +33,25 @@ function VisionMission() {
     <div className="w-full bg-white text-neutral-950">
 
       {/* INTRO */}
-      <section className="relative border-t border-neutral-100 py-16 lg:py-24 overflow-hidden">
+      <section className="relative border-t border-neutral-100 py-16 lg:py-20 overflow-hidden">
         {/* Decorative number */}
         <div className="pointer-events-none absolute right-0 top-0 hidden select-none xl:block">
           <span className="text-[280px] font-black leading-none text-black/3">03</span>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <motion.div {...fadeUp(0)} className="mb-6 flex items-center gap-4">
+          <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <Sparkles className="h-4 w-4 text-brand-secondary" />
               <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">Vision & Mission</span>
             </div>
+            <div className="h-px w-12 bg-brand-secondary" />
           </motion.div>
 
           <motion.h1
             {...fadeUp(0.1)}
-            className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl"
+            className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-7xl text-center mx-auto"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Growing responsibly,
@@ -58,7 +59,7 @@ function VisionMission() {
             <span className="italic text-brand-primary">creating lasting impact.</span>
           </motion.h1>
 
-          <motion.p {...fadeUp(0.15)} className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+          <motion.p {...fadeUp(0.15)} className="mt-8 max-w-2xl mx-auto text-lg leading-8 text-neutral-600 text-center">
             Our vision and mission guide every decision - from supporting farming communities to delivering certified organic products worldwide.
           </motion.p>
         </div>

@@ -58,9 +58,10 @@ function QualityCertificationsDetails() {
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Quality & Certifications
+            <span className="h-px w-10 bg-brand-secondary" />
           </motion.span>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+          <div className="flex flex-col items-center text-center gap-8">
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
@@ -71,7 +72,7 @@ function QualityCertificationsDetails() {
               <span className="text-brand-primary">trusted worldwide.</span>
             </motion.h2>
 
-            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
+            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600 max-w-2xl">
               Internationally recognised certifications, rigorous quality systems, and complete traceability - ensuring consistency, safety, and sustainability throughout the value chain.
             </motion.p>
           </div>
@@ -136,10 +137,10 @@ function QualityCertificationsDetails() {
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="flex flex-col gap-16">
 
-            {/* sticky label */}
-            <motion.div {...fadeUp(0)} className="lg:col-span-4 lg:sticky lg:top-32">
+            {/* label */}
+            <motion.div {...fadeUp(0)}>
               <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Quality Framework
@@ -154,27 +155,25 @@ function QualityCertificationsDetails() {
               </h3>
             </motion.div>
 
-            {/* rows */}
-            <div className="lg:col-span-8 divide-y divide-neutral-200 border-y border-neutral-200">
+            {/* cards */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {procedures.map(({ icon: Icon, title, desc }, i) => (
                 <motion.div
                   key={title}
                   {...fadeUp(i * 0.08)}
-                  className="group flex gap-6 py-8 hover:bg-brand-light px-4 -mx-4 transition-colors duration-300"
+                  className="group flex flex-col border border-neutral-200 bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_16px_48px_rgba(0,0,0,0.08)]"
                 >
-                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-primary transition-colors duration-300">
-                    <Icon className="h-4 w-4 text-brand-light transition-colors duration-300" />
+                  <div className="shrink-0 flex items-center justify-center h-10 w-10 bg-brand-primary mb-6">
+                    <Icon className="h-4 w-4 text-brand-light" />
                   </div>
-                  <div className="flex-1">
-                    <h4
-                      className="text-lg text-neutral-900"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
-                    >
-                      {title}
-                    </h4>
-                    <p className="mt-2 text-sm leading-7 text-neutral-600">{desc}</p>
-                    <div className="mt-4 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
-                  </div>
+                  <h4
+                    className="text-xl text-neutral-900 mb-3"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    {title}
+                  </h4>
+                  <p className="text-sm leading-7 text-neutral-600 flex-1">{desc}</p>
+                  <div className="mt-6 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
                 </motion.div>
               ))}
             </div>

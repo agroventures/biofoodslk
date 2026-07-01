@@ -61,11 +61,12 @@ const AwardsGlobalRecognition = () => {
         {modal && <AwardModal images={modal.images} title={modal.title} onClose={() => setModal(null)} />}
         {/* HERO SECTION */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-16 lg:pt-32 lg:pb-24">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-                <div className="lg:col-span-7">
-                    <p className="text-md uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 flex items-center gap-3">
+            <div className="flex flex-col items-center text-center gap-8">
+                <div>
+                    <p className="text-md uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 flex items-center justify-center gap-3">
                         <span className="w-8 h-px bg-brand-gold/50 inline-block"></span>
                         Global Recognition
+                        <span className="w-8 h-px bg-brand-gold/50 inline-block"></span>
                     </p>
                     <h2
                         className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-900 leading-[1.05]"
@@ -75,8 +76,8 @@ const AwardsGlobalRecognition = () => {
                         <span className="italic text-brand-primary">excellence</span> worldwide.
                     </h2>
                 </div>
-                <div className="lg:col-span-5 lg:pt-14">
-                    <p className="text-neutral-600 text-lg leading-relaxed font-light">
+                <div>
+                    <p className="text-neutral-600 text-lg leading-relaxed font-light max-w-2xl">
                         Over the years, Bio Foods has earned recognition from respected
                         international organizations for its commitment to organic
                         excellence, ethical trade, and sustainable business practices.

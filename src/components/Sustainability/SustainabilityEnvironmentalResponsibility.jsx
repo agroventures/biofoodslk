@@ -32,17 +32,18 @@ function SustainabilityEnvironmentalResponsibility() {
           </div>
 
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            <motion.div {...fadeUp(0)} className="mb-6 flex items-center gap-4">
+            <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-brand-secondary" />
                 <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Environmental &amp; Social</span>
               </div>
+              <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
 
             <motion.h1
               {...fadeUp(0.1)}
-              className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl"
+              className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl mx-auto text-center"
               style={{ fontFamily: 'Cormorant Garamond, serif' }}
             >
               Rooted in the land,
@@ -50,7 +51,7 @@ function SustainabilityEnvironmentalResponsibility() {
               <span className="italic text-brand-primary">responsible by nature.</span>
             </motion.h1>
 
-            <motion.p {...fadeUp(0.15)} className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            <motion.p {...fadeUp(0.15)} className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 mx-auto text-center">
               Every commitment we make - to the soil, to farmers, and to the communities we serve - stems from a belief that doing right by nature means doing right by people.
             </motion.p>
           </div>
@@ -66,16 +67,17 @@ function SustainabilityEnvironmentalResponsibility() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
 
             {/* Header */}
-            <motion.div {...fadeUp(0)} className="mb-16 max-w-4xl">
-              <div className="mb-6 flex items-center gap-4">
+            <motion.div {...fadeUp(0)} className="mb-16 max-w-4xl mx-auto">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-brand-secondary" />
                   <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Environmental</span>
                 </div>
+                <div className="h-px w-12 bg-brand-secondary" />
               </div>
               <h2
-                className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+                className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl mx-auto text-center"
                 style={{ fontFamily: 'Cormorant Garamond, serif' }}
               >
                 Farming that
@@ -146,16 +148,17 @@ function SustainabilityEnvironmentalResponsibility() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
 
             {/* Header */}
-            <motion.div {...fadeUp(0)} className="mb-16 max-w-4xl">
-              <div className="mb-6 flex items-center gap-4">
+            <motion.div {...fadeUp(0)} className="mb-16 max-w-7xl">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-brand-secondary" />
                   <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Social Impact</span>
                 </div>
+                <div className="h-px w-12 bg-brand-secondary" />
               </div>
               <h2
-                className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+                className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl mx-auto text-center"
                 style={{ fontFamily: 'Cormorant Garamond, serif' }}
               >
                 People at the

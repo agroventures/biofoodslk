@@ -47,17 +47,17 @@ function HomeAgroVenturesAdvantage({ section }) {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <div className="mb-6 flex items-center gap-4">
+        <div className="mb-12 flex flex-col items-center text-center gap-8">
+          <div>
+            <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
-
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-brand-secondary" />
                 <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                   Why Choose Us
                 </span>
               </div>
+              <div className="h-px w-12 bg-brand-secondary" />
             </div>
 
             <h2
@@ -70,8 +70,8 @@ function HomeAgroVenturesAdvantage({ section }) {
             </h2>
           </div>
 
-          <div className="flex items-end lg:col-span-5">
-            <p className="max-w-md text-lg leading-8 text-neutral-600">
+          <div>
+            <p className="max-w-7xl text-lg leading-8 text-neutral-600">
               Backed by the Agroventures ecosystem - combining agricultural expertise with global market access.
             </p>
           </div>

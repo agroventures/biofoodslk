@@ -15,8 +15,8 @@ function HomeProductExperiences({ section }) {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 max-w-5xl">
-          <div className="mb-6 flex items-center gap-4">
+        <div className="mb-12 max-w-7xl">
+          <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
 
             <div className="flex items-center gap-2">
@@ -26,10 +26,11 @@ function HomeProductExperiences({ section }) {
                 Product Collection
               </span>
             </div>
+            <div className="h-px w-12 bg-brand-secondary" />
           </div>
 
           <h2
-            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
+            className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl text-center"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Crafted From Nature.
@@ -37,7 +38,7 @@ function HomeProductExperiences({ section }) {
             Shared With The World.
           </h2>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+          <p className="mt-8 max-w-7xl text-lg leading-8 text-neutral-600 text-center">
             A curated portfolio of organic products, responsibly sourced and produced for global markets.
           </p>
         </div>

@@ -41,17 +41,18 @@ function SustainabilityAgroVentures() {
           </div>
 
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            <motion.div {...fadeUp(0)} className="mb-6 flex items-center gap-4">
+            <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-brand-secondary" />
                 <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Structured Excellence</span>
               </div>
+              <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
 
             <motion.h1
               {...fadeUp(0.1)}
-              className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl"
+              className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-7xl mx-auto text-center"
               style={{ fontFamily: 'Cormorant Garamond, serif' }}
             >
               Agroventures
@@ -59,11 +60,9 @@ function SustainabilityAgroVentures() {
               <span className="italic text-brand-primary">ESG Framework</span>
             </motion.h1>
 
-            <motion.div {...fadeUp(0.15)} className="mt-8 grid lg:grid-cols-2 gap-12 max-w-5xl">
+            <motion.div {...fadeUp(0.15)} className="mt-8 max-w-7xl">
               <p className="text-lg leading-8 text-neutral-600">
                 Sustainability within Bio Foods is deeply rooted in its origins - elevated through Agroventures Group into a <span className="font-semibold text-neutral-900">structured, measurable, and future-focused ESG</span> framework.
-              </p>
-              <p className="text-lg leading-8 text-neutral-600">
                 This ensures sustainability is not a standalone initiative, but an integrated system embedded across all operations - environmental, social, and governance.
               </p>
             </motion.div>

@@ -109,17 +109,17 @@ export default function AboutGrowth() {
       <div className="py-28 lg:py-40 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
 
-          <div className="grid lg:grid-cols-2 gap-16 mb-20 pb-20 border-b border-neutral-100">
+          <div className="flex flex-col items-center text-center gap-8 mb-20 pb-20 border-b border-neutral-100">
             <motion.p
               {...fadeUp(0)}
-              className="text-2xl lg:text-3xl leading-snug text-neutral-800"
+              className="text-2xl lg:text-3xl leading-snug text-neutral-800 max-w-3xl"
               style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
               "A small farming initiative in Sri Lanka, grown into a trusted organic producer trusted by partners around the world."
             </motion.p>
 
-            <motion.div {...fadeUp(0.15)} className="flex flex-col justify-end gap-5">
-              <p className="text-md leading-7 text-neutral-600">
+            <motion.div {...fadeUp(0.15)} className="flex flex-col gap-5">
+              <p className="text-md leading-7 text-neutral-600 max-w-2xl">
                 Our collaboration with Agroventures Group strengthened production capacity while keeping core values unchanged - respect for nature, fairness for farmers, and purity in food.
               </p>
             </motion.div>

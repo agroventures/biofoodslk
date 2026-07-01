@@ -87,9 +87,10 @@ function ProcessingFacilitiesDetails() {
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Processing Facilities
+            <span className="h-px w-10 bg-brand-secondary" />
           </motion.span>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+          <div className="flex flex-col items-center text-center gap-8">
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
@@ -100,7 +101,7 @@ function ProcessingFacilitiesDetails() {
               <span className="text-brand-primary">crafted for quality.</span>
             </motion.h2>
 
-            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600">
+            <motion.p {...fadeUp(0.2)} className="text-lg leading-8 text-neutral-600 max-w-2xl">
               Our processing facilities combine modern technology, international
               quality standards, and decades of experience to deliver premium
               organic products for global markets.
@@ -140,7 +141,7 @@ function ProcessingFacilitiesDetails() {
             <motion.div
               key={facility.id}
               {...fadeUp(0)}
-              className="py-24 lg:py-32"
+              className="py-16 lg:py-24"
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className={`grid lg:grid-cols-12 gap-12 lg:gap-16 items-center ${reverse ? "direction-rtl" : ""}`}>
@@ -165,7 +166,7 @@ function ProcessingFacilitiesDetails() {
                       {facility.name}
                     </h3>
 
-                    <p className="mt-6 text-sm leading-8 text-neutral-600">
+                    <p className="mt-6 text-md leading-8 text-neutral-600">
                       {facility.description}
                     </p>
 

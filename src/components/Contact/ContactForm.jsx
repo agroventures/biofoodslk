@@ -63,7 +63,7 @@ const ContactForm = () => {
 
 
     return (
-        <section className="w-full bg-white py-24 lg:py-36 border-t border-neutral-100 relative overflow-hidden">
+        <section className="w-full bg-white py-16 lg:py-24 border-t border-neutral-100 relative overflow-hidden">
             {/* decorative background blobs */}
             <div className="pointer-events-none absolute -top-32 -right-32 w-125 h-125 rounded-full bg-brand-light opacity-60" />
             <div className="pointer-events-none absolute -bottom-40 -left-24 w-100 h-100 rounded-full bg-brand-muted opacity-50" />
@@ -71,24 +71,25 @@ const ContactForm = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
                 {/* HEADER */}
                 <div className="mb-20">
-                    <div className="flex items-center gap-3 mb-6">
-                        <span className="w-8 h-px bg-brand-primary" />
-                        <Sparkles className="h-4 w-4 text-brand-primary" />
+                    <div className="flex items-center justify-center gap-3 mb-6">
+                        <span className="w-12 h-px bg-brand-gold" />
+                        <Sparkles className="h-4 w-4 text-brand-gold" />
                         <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                             Contact Us
                         </span>
+                        <span className="w-12 h-px bg-brand-gold" />
                     </div>
 
                     <h2
-                        className="text-5xl lg:text-7xl tracking-tight text-neutral-950"
+                        className="text-5xl lg:text-7xl tracking-tight text-neutral-950 text-center"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                     >
                         Let's start a
                         <br />
-                        <span className="italic text-brand-primary">conversation.</span>
+                        <span className="italic">conversation.</span>
                     </h2>
 
-                    <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-600">
+                    <p className="mt-8 max-w-3xl mx-auto text-lg leading-8 text-neutral-600 text-center">
                         Looking for organic products, partnerships, or global distribution? Our team is ready.
                     </p>
                 </div>
