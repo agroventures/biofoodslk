@@ -6,20 +6,21 @@ const awardsData = [
         icon: Trophy,
         title: "Global CEO Leadership Excellence Awards",
         org: "2024 · Leadership",
+        images: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/Global_CEO.webp"
     },
     {
         number: "02",
         icon: Globe,
         title: "German Sustainability Awards",
         org: "2020 · Best Global Corporate Partnerships",
-        images: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german_sustainability.WebP",
+        images: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/german.webp",
     },
-    {
-        number: "03",
-        icon: Leaf,
-        title: "Sustainability Food Award",
-        org: "2019 · Finalist - Fair Trade General Assembly, Bonn",
-    },
+    // {
+    //     number: "03",
+    //     icon: Leaf,
+    //     title: "Sustainability Food Award",
+    //     org: "2019 · Finalist - Fair Trade General Assembly, Bonn",
+    // },
     {
         number: "04",
         icon: Award,
@@ -30,7 +31,7 @@ const awardsData = [
         number: "05",
         icon: Star,
         title: "International Pepper Council Award",
-        org: "2017 · Excellence in Exporter of Value Added Products",
+        org: "2016 · Excellence in Exporter of Value Added Products",
     },
     {
         number: "07",
@@ -38,10 +39,10 @@ const awardsData = [
         title: "Presidential Export Excellence Awards",
         org: "2015, 2016, 2019, 2020 · Highest Value Added Organic Exporter",
         images: [
-            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2015.webp",
-            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2016.webp",
-            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2019.webp",
-            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA-2020.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA_15.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA_16.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA_19.webp",
+            "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Awards/PEA_20.webp",
         ]
     },
     {
