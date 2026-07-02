@@ -113,7 +113,7 @@ function ContactMap() {
               </p>
 
               <a
-                href="https://maps.app.goo.gl/aYx1PH5dkiqtDgM1A"
+                href="https://maps.app.goo.gl/9ZWuvr9Y2dXNTiwi8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
