@@ -49,7 +49,7 @@ function ImageModal({ images, name, startIndex, onClose }) {
           <>
             <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white/70 hover:text-white"><ChevronLeft className="w-8 h-8" /></button>
             <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white/70 hover:text-white"><ChevronRight className="w-8 h-8" /></button>
-            <div className="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-white/50 text-sm tracking-widest">
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-sm tracking-widest">
               {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
             </div>
           </>
