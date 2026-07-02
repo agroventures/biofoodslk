@@ -49,7 +49,7 @@ function NewsEventsGrid() {
 
                             {/* Date + Title + Summary + CTA */}
                             <div className="lg:col-span-8 flex flex-col gap-4">
-                                <p className="text-base uppercase tracking-[0.2em] text-neutral-400">
+                                <p className="text-lg uppercase tracking-[0.2em] text-neutral-400">
                                     {date} · {type}
                                 </p>
                                 <h3
@@ -61,7 +61,7 @@ function NewsEventsGrid() {
                                 <p className="text-neutral-600 leading-8">{summary}</p>
                                 <Link
                                     to={`/news-and-events/${id}`}
-                                    className="self-start inline-flex items-center gap-2 text-base uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
+                                    className="self-start inline-flex items-center gap-2 text-lg uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
                                 >
                                     Read More <ArrowRight className="w-4 h-4" />
                                 </Link>

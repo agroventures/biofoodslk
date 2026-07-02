@@ -73,7 +73,7 @@ const ImageHero = ({
                 )}
 
                 {description && (
-                  <p className="text-base sm:text-lg leading-relaxed text-zinc-200 antialiased">
+                  <p className="text-lg leading-relaxed text-zinc-200 antialiased">
                     {description}
                   </p>
                 )}

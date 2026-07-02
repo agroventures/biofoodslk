@@ -245,7 +245,7 @@ function PrivacyPolicy() {
           >
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
-              <span className="text-base uppercase tracking-[0.3em] text-brand-gold">Get in Touch</span>
+              <span className="text-lg uppercase tracking-[0.3em] text-brand-gold">Get in Touch</span>
             </div>
 
             <h3

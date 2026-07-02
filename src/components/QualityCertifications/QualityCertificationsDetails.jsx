@@ -115,7 +115,7 @@ function QualityCertificationsDetails() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.span
               {...fadeUp(0)}
-              className="flex items-center justify-center gap-3 mb-10 text-base font-semibold uppercase tracking-[0.35em] text-neutral-500"
+              className="flex items-center justify-center gap-3 mb-10 text-lg font-semibold uppercase tracking-[0.35em] text-neutral-500"
             >
               <span className="h-px w-10 bg-brand-secondary" />
               Quality & Certifications
@@ -181,7 +181,7 @@ function QualityCertificationsDetails() {
                   >
                     {value}
                   </p>
-                  <p className="mt-1 text-base uppercase tracking-[0.25em] text-white/50">
+                  <p className="mt-1 text-lg uppercase tracking-[0.25em] text-white/50">
                     {label}
                   </p>
                 </div>
@@ -236,7 +236,7 @@ function QualityCertificationsDetails() {
             <div className="flex flex-col gap-16">
               {/* label */}
               <motion.div {...fadeUp(0)}>
-                <span className="flex items-center justify-center gap-3 text-base font-semibold uppercase tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="flex items-center justify-center gap-3 text-lg font-semibold uppercase tracking-[0.35em] text-neutral-500 mb-6">
                   <span className="h-px w-10 bg-brand-secondary" />
                   Quality Framework
                   <span className="h-px w-10 bg-brand-secondary" />
@@ -271,7 +271,7 @@ function QualityCertificationsDetails() {
                     >
                       {title}
                     </h4>
-                    <p className="text-base leading-7 text-neutral-600 flex-1 text-center">
+                    <p className="text-lg leading-7 text-neutral-600 flex-1 text-center">
                       {desc}
                     </p>
                     <div className="mt-6 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
@@ -299,7 +299,7 @@ function QualityCertificationsDetails() {
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center gap-10">
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-base font-semibold uppercase tracking-[0.35em] text-neutral-500 mb-8">
+              <span className="inline-flex items-center gap-3 text-lg font-semibold uppercase tracking-[0.35em] text-neutral-500 mb-8">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Organic Certification
                 <span className="h-px w-10 bg-brand-secondary" />
@@ -316,7 +316,7 @@ function QualityCertificationsDetails() {
             </motion.div>
 
             <motion.div {...fadeUp(0.15)}>
-              <p className="text-base leading-8 text-neutral-600 text-center">
+              <p className="text-lg leading-8 text-neutral-600 text-center">
                 Strict compliance across cultivation, harvesting, processing,
                 and distribution - every stage monitored for environmental
                 responsibility and product integrity.
@@ -346,7 +346,7 @@ function QualityCertificationsDetails() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col items-center text-center mb-16">
               <motion.div {...fadeUp(0)}>
-                <span className="flex items-center justify-center gap-3 text-base uppercase font-semibold tracking-[0.35em] text-neutral-500 mb-6">
+                <span className="flex items-center justify-center gap-3 text-lg uppercase font-semibold tracking-[0.35em] text-neutral-500 mb-6">
                   <span className="h-px w-10 bg-brand-secondary" />
                   Global Certifications
                   <span className="h-px w-10 bg-brand-secondary" />
@@ -363,7 +363,7 @@ function QualityCertificationsDetails() {
 
               <motion.p
                 {...fadeUp(0.1)}
-                className="mt-6 max-w-7xl text-base leading-7 text-neutral-500"
+                className="mt-6 max-w-7xl text-lg leading-7 text-neutral-500"
               >
                 {certifications.length} active certifications spanning organic
                 farming, food safety, fair trade, and international market
@@ -394,7 +394,7 @@ function QualityCertificationsDetails() {
                   >
                     {cert.name}
                   </h4>
-                  <p className="text-base leading-7 text-neutral-500 flex-1 text-center">
+                  <p className="text-lg leading-7 text-neutral-500 flex-1 text-center">
                     {cert.desc}
                   </p>
                   <div className="mt-6 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
@@ -411,7 +411,7 @@ function QualityCertificationsDetails() {
               {...fadeUp(0)}
               className="flex flex-col items-center text-center mb-16"
             >
-              <span className="inline-flex items-center gap-3 text-base font-semibold uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-lg font-semibold uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Quality Assurance
                 <span className="h-px w-10 bg-brand-secondary" />
@@ -447,7 +447,7 @@ function QualityCertificationsDetails() {
                   >
                     {title}
                   </h4>
-                  <p className="text-base leading-7 text-neutral-600 max-w-lg">
+                  <p className="text-lg leading-7 text-neutral-600 max-w-lg">
                     {description}
                   </p>
                   <div className="mt-5 h-px w-0 group-hover:w-8 bg-brand-secondary transition-all duration-500" />
@@ -478,7 +478,7 @@ function QualityCertificationsDetails() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-end">
               <motion.div {...fadeUp(0)}>
-                <span className="inline-flex items-center gap-3 text-base uppercase tracking-[0.35em] text-white/50 mb-8">
+                <span className="inline-flex items-center gap-3 text-lg uppercase tracking-[0.35em] text-white/50 mb-8">
                   <span className="h-px w-8 bg-brand-secondary" />
                   Quality Commitment
                 </span>
@@ -498,7 +498,7 @@ function QualityCertificationsDetails() {
                 {...fadeUp(0.15)}
                 className="flex flex-col justify-end gap-8"
               >
-                <p className="text-base leading-8 text-white/60">
+                <p className="text-lg leading-8 text-white/60">
                   Rigorous testing, traceability systems, and internationally
                   recognised standards - every product meets the expectations of
                   customers worldwide.
@@ -506,7 +506,7 @@ function QualityCertificationsDetails() {
                 <div>
                   <a
                     href="/contact"
-                    className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-base text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                    className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-lg text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
                   >
                     Get in Touch
                     <ArrowUpRight className="w-4 h-4" />

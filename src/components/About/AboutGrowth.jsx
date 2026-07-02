@@ -54,7 +54,7 @@ export default function AboutGrowth() {
         {/* badge */}
         <motion.span
           {...fadeUp(0.1)}
-          className="absolute top-10 left-8 lg:left-16 inline-flex items-center gap-3 text-base uppercase tracking-[0.35em] text-white/70"
+          className="absolute top-10 left-8 lg:left-16 inline-flex items-center gap-3 text-lg uppercase tracking-[0.35em] text-white/70"
         >
           <span className="h-px w-10 bg-brand-secondary" />
           Growth &amp; Evolution
@@ -77,7 +77,7 @@ export default function AboutGrowth() {
 
         {/* corner label */}
         <div className="absolute bottom-10 right-8 lg:right-16 hidden lg:flex items-center gap-2 text-white/50">
-          <span className="text-base uppercase tracking-[0.3em]">Since 1993</span>
+          <span className="text-lg uppercase tracking-[0.3em]">Since 1993</span>
           <ArrowUpRight className="h-3 w-3" />
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function AboutGrowth() {
               >
                 {m.value}
               </p>
-              <p className="mt-2 text-base uppercase tracking-[0.25em] text-white/60">
+              <p className="mt-2 text-lg uppercase tracking-[0.25em] text-white/60">
                 {m.label}
               </p>
             </motion.div>
@@ -119,7 +119,7 @@ export default function AboutGrowth() {
             </motion.p>
 
             <motion.div {...fadeUp(0.15)} className="flex flex-col gap-5">
-              <p className="text-md leading-7 text-neutral-600 max-w-2xl">
+              <p className="text-lg leading-7 text-neutral-600 max-w-2xl">
                 Our collaboration with Agroventures Group strengthened production capacity while keeping core values unchanged - respect for nature, fairness for farmers, and purity in food.
               </p>
             </motion.div>
@@ -142,7 +142,7 @@ export default function AboutGrowth() {
                 >
                   {title}
                 </h3>
-                <p className="mt-3 text-md text-center text-neutral-600 leading-relaxed">
+                <p className="mt-3 text-lg text-center text-neutral-600 leading-relaxed">
                   {description}
                 </p>
               </motion.div>

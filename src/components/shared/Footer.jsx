@@ -92,7 +92,7 @@ const Footer = () => {
                   <li key={item.href}>
                     <Link
                       to={item.href}
-                      className="text-md text-neutral-400 transition-colors duration-200 hover:text-white"
+                      className="text-base text-neutral-400 transition-colors duration-200 hover:text-white"
                     >
                       {item.name}
                     </Link>
@@ -110,7 +110,7 @@ const Footer = () => {
                   <li key={item.href}>
                     <Link
                       to={item.href}
-                      className="text-md text-neutral-400 transition-colors duration-200 hover:text-white"
+                      className="text-base text-neutral-400 transition-colors duration-200 hover:text-white"
                     >
                       {item.name}
                     </Link>
@@ -136,7 +136,7 @@ const Footer = () => {
                   <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/5">
                     <Icon className="h-3.5 w-3.5" />
                   </div>
-                  <span className="text-md">{label}</span>
+                  <span className="text-base">{label}</span>
                 </a>
               ))}
 
@@ -144,7 +144,7 @@ const Footer = () => {
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-white/5">
                   <MapPin className="h-3.5 w-3.5" />
                 </div>
-                <span className="text-md leading-6">
+                <span className="text-base leading-6">
                   48, Sir Marcus Fernando Mawathe,
                   Colombo 07, <br /> Sri Lanka
                 </span>

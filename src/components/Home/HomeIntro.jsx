@@ -28,7 +28,7 @@ export default function HomeIntro({section}) {
           >
             <div className="mb-6 flex items-center justify-center lg:justify-start gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
-              <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
+              <span className="text-lg uppercase tracking-[0.3em] font-semibold text-neutral-500">
                 About Bio Foods Agro
               </span>
             </div>

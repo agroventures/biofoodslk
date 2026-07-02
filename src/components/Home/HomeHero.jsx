@@ -195,7 +195,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-6 max-w-2xl text-base leading-7 text-neutral-200 md:text-lg md:leading-8"
+              className="mt-6 max-w-2xl text-lg leading-7 text-neutral-200 md:text-lg md:leading-8"
             >
               {slides[current].desc}
             </motion.p>

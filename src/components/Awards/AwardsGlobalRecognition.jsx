@@ -63,7 +63,7 @@ const AwardsGlobalRecognition = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-16 lg:pt-32 lg:pb-24">
             <div className="flex flex-col items-center text-center gap-8">
                 <div>
-                    <p className="text-md uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 flex items-center justify-center gap-3">
+                    <p className="text-lg uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 flex items-center justify-center gap-3">
                         <span className="w-8 h-px bg-brand-gold/50 inline-block"></span>
                         Global Recognition
                         <span className="w-8 h-px bg-brand-gold/50 inline-block"></span>
@@ -89,7 +89,7 @@ const AwardsGlobalRecognition = () => {
         {/* ACHIEVEMENT CARDS GRID */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 lg:pb-32">
             <div className="border-b border-neutral-200 pb-6 mb-12">
-                <p className="text-md uppercase font-semibold tracking-wider text-black text-center">
+                <p className="text-lg uppercase font-semibold tracking-wider text-black text-center">
                     International Achievements
                 </p>
             </div>
@@ -149,13 +149,13 @@ const AwardsGlobalRecognition = () => {
                     </h3>
                 </div>
                 <div className="lg:col-span-7 grid md:grid-cols-2 gap-8 lg:gap-12">
-                    <p className="text-neutral-600 leading-relaxed font-light text-base lg:text-md">
+                    <p className="text-neutral-600 leading-relaxed font-light text-lg lg:text-lg">
                         Every recognition received by Bio Foods represents more than
                         an achievement. It reflects our commitment to ethical
                         sourcing, environmental responsibility, and the well-being
                         of farming communities across our network.
                     </p>
-                    <p className="text-neutral-600 leading-relaxed font-light text-base lg:text-md">
+                    <p className="text-neutral-600 leading-relaxed font-light text-lg lg:text-lg">
                         These awards strengthen our position as a trusted global
                         supplier while reaffirming the values that have guided our
                         growth from the very beginning.

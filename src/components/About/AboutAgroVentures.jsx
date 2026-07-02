@@ -36,7 +36,7 @@ export default function AboutAgroVentures() {
 
           <motion.span
             {...fadeUp(0)}
-            className="flex items-center justify-center gap-3 mb-10 text-base font-semibold uppercase tracking-[0.35em] text-neutral-500"
+            className="flex items-center justify-center gap-3 mb-10 text-lg font-semibold uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Parent Group
@@ -75,7 +75,7 @@ export default function AboutAgroVentures() {
                 <p className="text-4xl lg:text-5xl text-white text-center" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {s.value}
                 </p>
-                <p className="mt-1 text-base uppercase tracking-[0.25em] text-white/50">{s.label}</p>
+                <p className="mt-1 text-lg uppercase tracking-[0.25em] text-white/50">{s.label}</p>
               </div>
             </motion.div>
           ))}
@@ -88,7 +88,7 @@ export default function AboutAgroVentures() {
 
           {/* EXPERTISE */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-base uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
+            <motion.p {...fadeUp(0)} className="text-lg uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
               Areas of Expertise
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -103,7 +103,7 @@ export default function AboutAgroVentures() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-neutral-900">{title}</h3>
-                    <p className="mt-1 text-md leading-7 text-neutral-600">{description}</p>
+                    <p className="mt-1 text-lg leading-7 text-neutral-600">{description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -112,7 +112,7 @@ export default function AboutAgroVentures() {
 
           {/* ADVANTAGES */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-base uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
+            <motion.p {...fadeUp(0)} className="text-lg uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
               Strategic Advantages
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -127,7 +127,7 @@ export default function AboutAgroVentures() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-neutral-900">{title}</h3>
-                    <p className="mt-1 text-md leading-7 text-neutral-600">{description}</p>
+                    <p className="mt-1 text-lg leading-7 text-neutral-600">{description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -143,7 +143,7 @@ export default function AboutAgroVentures() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.div {...fadeUp(0)}>
-              <span className="flex items-center justify-center font-semibold gap-3 text-base uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="flex items-center justify-center font-semibold gap-3 text-lg uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Group Companies
                 <span className="h-px w-10 bg-brand-secondary" />
@@ -158,7 +158,7 @@ export default function AboutAgroVentures() {
               </h3>
             </motion.div>
 
-            <motion.p {...fadeUp(0.1)} className="max-w-sm text-md leading-7 text-neutral-600 text-center lg:text-left">
+            <motion.p {...fadeUp(0.1)} className="max-w-sm text-lg leading-7 text-neutral-600 text-center lg:text-left">
               Eight companies under one group - each contributing to a connected, resilient agribusiness ecosystem.
             </motion.p>
           </div>

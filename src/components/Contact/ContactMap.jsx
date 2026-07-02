@@ -3,14 +3,14 @@ import { MapPin, Navigation } from "lucide-react";
 
 function ContactMap() {
   return (
-    <section className="w-full bg-white py-24 lg:py-36 border-t border-neutral-100">
+    <section className="w-full bg-white py-16 lg:py-24 border-t border-neutral-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* HEADER */}
 
         <div className="mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-12 h-px bg-brand-gold" />
-            <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
+            <span className="text-lg uppercase tracking-[0.3em] font-semibold text-neutral-500">
               Our Location
             </span>
             <span className="w-12 h-px bg-brand-gold" />
@@ -125,7 +125,7 @@ function ContactMap() {
                   py-4
                   bg-brand-primary
                   text-white
-                  text-base
+                  text-lg
                   uppercase
                   tracking-[0.2em]
                   hover:opacity-90

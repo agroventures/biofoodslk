@@ -207,7 +207,7 @@ function TermsAndConditions() {
           >
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
-              <span className="text-base uppercase tracking-[0.3em] text-brand-gold">Restrictions</span>
+              <span className="text-lg uppercase tracking-[0.3em] text-brand-gold">Restrictions</span>
             </div>
 
             <div className="flex items-center gap-4 mb-10">
@@ -235,7 +235,7 @@ function TermsAndConditions() {
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-base leading-7 text-white/80">{item}</p>
+                  <p className="text-lg leading-7 text-white/80">{item}</p>
                 </motion.div>
               ))}
             </div>
@@ -283,7 +283,7 @@ function TermsAndConditions() {
           >
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
-              <span className="text-base uppercase tracking-[0.3em] text-brand-gold">Get in Touch</span>
+              <span className="text-lg uppercase tracking-[0.3em] text-brand-gold">Get in Touch</span>
             </div>
 
             <h3
