@@ -24,7 +24,7 @@ const useSEO = ({
   locale = "en_US",
   type = "website",
   url,
-  site_name = "BioFoodsLK",
+  site_name = "Bio Foods Agroventures",
   image = "https://www.biofoodsagro.com/logo.png",
   image_secure_url = "https://www.biofoodsagro.com/logo.png",
   image_width = "1200",
