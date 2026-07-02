@@ -252,7 +252,7 @@ export default function Hero() {
           </div>
 
           {/* Drag Slider Track */}
-          <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+          <div className="relative w-full overflow-hidden mask-[linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
             <motion.div
               ref={sliderRef}
               className="flex py-2 cursor-grab active:cursor-grabbing"
