@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { processingFacilities } from "../../data/processingFacilities";
-import { Award, TrendingUp, Shield, Globe, ChevronRight, ChevronLeft, ArrowUpRight } from "lucide-react";
+import { Award, TrendingUp, Shield, Globe, ChevronRight, ChevronLeft, ArrowUpRight, X, ZoomIn } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
@@ -20,14 +21,53 @@ const STATS = [
 
 const BADGES = ["ISO Certified", "HACCP Compliant", "Export Ready", "Quality Assured"];
 
+/* ── Image Modal ── */
+function ImageModal({ images, name, startIndex, onClose }) {
+  const [current, setCurrent] = useState(startIndex);
+  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
+  const next = () => setCurrent((c) => (c + 1) % images.length);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, []);
+
+  return createPortal(
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90" onClick={onClose}>
+      <button onClick={onClose} className="absolute top-4 right-4 text-white/70 hover:text-white"><X className="w-6 h-6" /></button>
+
+      <div className="relative max-w-5xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
+        <img src={images[current]} alt={`${name} ${current + 1}`} className="w-full max-h-[80vh] object-contain" />
+
+        {images.length > 1 && (
+          <>
+            <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white/70 hover:text-white"><ChevronLeft className="w-8 h-8" /></button>
+            <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white/70 hover:text-white"><ChevronRight className="w-8 h-8" /></button>
+            <div className="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-white/50 text-sm tracking-widest">
+              {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+            </div>
+          </>
+        )}
+      </div>
+    </div>,
+    document.body
+  );
+}
+
 /* ── Image Carousel ── */
-function ImageCarousel({ images, name }) {
+function ImageCarousel({ images, name, onOpen }) {
   const [current, setCurrent] = useState(0);
   const prev = (e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + images.length) % images.length); };
   const next = (e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % images.length); };
 
   return (
-    <div className="relative aspect-4/3 overflow-hidden bg-neutral-100">
+    <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 cursor-zoom-in group" onClick={() => onOpen(current)}>
       {images.map((src, i) => (
         <img
           key={src}
@@ -38,6 +78,9 @@ function ImageCarousel({ images, name }) {
           }`}
         />
       ))}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition pointer-events-none">
+        <ZoomIn className="w-8 h-8 text-white drop-shadow-lg" />
+      </div>
 
       {images.length > 1 && (
         <>
@@ -60,7 +103,7 @@ function ImageCarousel({ images, name }) {
                 key={src}
                 type="button"
                 aria-label={`Go to image ${i + 1}`}
-                onClick={() => setCurrent(i)}
+                onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
                 className={`h-0.5 rounded-full transition-all ${current === i ? "w-6 bg-white" : "w-2 bg-white/40"}`}
               />
             ))}
@@ -73,9 +116,12 @@ function ImageCarousel({ images, name }) {
 
 /* ── Main Component ── */
 function ProcessingFacilitiesDetails() {
+  const [modal, setModal] = useState(null); // { images, name, index }
+
   return (
     <LazyMotion features={domAnimation}>
     <section className="w-full bg-white text-neutral-950">
+      {modal && <ImageModal images={modal.images} name={modal.name} startIndex={modal.index} onClose={() => setModal(null)} />}
 
       {/* INTRO */}
       <div className="py-24 lg:py-36 border-b border-neutral-100">
@@ -148,17 +194,11 @@ function ProcessingFacilitiesDetails() {
 
                   {/* IMAGE */}
                   <div className={`lg:col-span-7 ${reverse ? "lg:order-2" : ""}`}>
-                    <ImageCarousel images={facility.images} name={facility.name} />
+                    <ImageCarousel images={facility.images} name={facility.name} onOpen={(i) => setModal({ images: facility.images, name: facility.name, index: i })} />
                   </div>
 
                   {/* CONTENT */}
                   <div className={`lg:col-span-5 ${reverse ? "lg:order-1" : ""}`}>
-                    <span className="text-base text-neutral-400 tracking-[0.3em] uppercase">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-
-                    <div className="mt-4 h-px w-8 bg-brand-secondary" />
-
                     <h3
                       className="mt-6 text-3xl lg:text-4xl tracking-tight leading-snug"
                       style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
@@ -174,7 +214,7 @@ function ProcessingFacilitiesDetails() {
                       {BADGES.map((badge) => (
                         <span
                           key={badge}
-                          className="px-3 py-1.5 border border-neutral-200 text-base uppercase tracking-[0.2em] text-neutral-600 bg-brand-light"
+                          className="px-3 py-1.5 border border-brand-primary text-base uppercase tracking-[0.2em] text-brand-primary bg-brand-light"
                         >
                           {badge}
                         </span>
