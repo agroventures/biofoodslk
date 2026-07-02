@@ -10,11 +10,11 @@ function QualityCertifications() {
   const url = window.location.href;
 
   useSEO({
-    // title: "Organic & Fairtrade Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
-    // description: "Premium organic spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
+    title: "Quality Certifications | USDA Organic, Fairtrade, FSSC 22000 | Bio Foods",
+    description: "Bio Foods holds 20+ international certifications including USDA Organic, Fairtrade, FSSC 22000, Demeter, Naturland, BRC Food, Halal and more — guaranteeing the highest quality standards.",
+    keywords: ["organic certifications Sri Lanka", "USDA organic", "fairtrade certified", "FSSC 22000", "Demeter certified", "BRC food", "bio foods certifications"],
     url,
-    image_alt: "Quality and Certifications",
-    // keywords: ["organic food Sri Lanka, fair trade organic spices exporter, coconut products Sri Lanka"],
+    image_alt: "Quality Certifications – Bio Foods Agroventures",
   });
 
   return (

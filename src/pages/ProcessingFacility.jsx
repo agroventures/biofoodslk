@@ -9,11 +9,11 @@ function ProcessingFacility() {
   const url = window.location.href;
 
   useSEO({
-    // title: "Organic & Fairtrade Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
-    description: "Premium organic spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
+    title: "Processing Facilities | Bio Foods Agroventures Sri Lanka",
+    description: "Explore Bio Foods Agroventures' state-of-the-art processing facilities for organic spices, desiccated coconut, coconut chips and frozen herbs in Sri Lanka.",
+    keywords: ["spice processing Sri Lanka", "coconut processing facility", "organic food processing", "bio foods factory"],
     url,
-    image_alt: "Processing Facilities",
-    // keywords: ["organic food Sri Lanka, fair trade organic spices exporter, coconut products Sri Lanka"],
+    image_alt: "Processing Facilities – Bio Foods Agroventures",
   });
 
   return (

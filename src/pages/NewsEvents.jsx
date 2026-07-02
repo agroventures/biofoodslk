@@ -9,8 +9,11 @@ function NewsEvents() {
     const url = window.location.href;
 
     useSEO({
+        title: "News & Events | Bio Foods Agroventures Sri Lanka",
+        description: "Stay updated with the latest news, events, exhibitions and milestones from Bio Foods Agroventures — Sri Lanka's leading organic and fair-trade agribusiness.",
+        keywords: ["bio foods news", "bio foods events", "organic food Sri Lanka news", "agroventures events"],
         url,
-        image_alt: "News & Events",
+        image_alt: "News & Events – Bio Foods Agroventures",
     });
 
     return (

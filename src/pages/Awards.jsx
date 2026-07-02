@@ -10,11 +10,11 @@ function Awards() {
     const url = window.location.href;
 
     useSEO({
-        // title: "Organic & Fairtrade Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
-        description: "Premium organic spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
+        title: "Awards & Global Recognition | Bio Foods Agroventures Sri Lanka",
+        description: "Bio Foods Agroventures has received prestigious international awards including the German Sustainability Award and PEA recognition for excellence in organic and fair-trade agriculture.",
+        keywords: ["bio foods awards", "German Sustainability Award", "organic food award Sri Lanka", "fair trade recognition"],
         url,
-        image_alt: "Awards",
-        // keywords: ["organic food Sri Lanka, fair trade organic spices exporter, coconut products Sri Lanka"],
+        image_alt: "Awards & Global Recognition – Bio Foods Agroventures",
     });
 
     return (

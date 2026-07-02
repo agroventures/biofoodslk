@@ -9,8 +9,11 @@ function Careers() {
     const url = window.location.href;
 
     useSEO({
+        title: "Careers at Bio Foods Agroventures | Join Our Team in Sri Lanka",
+        description: "Explore career opportunities at Bio Foods Agroventures. Join a leading organic and fair-trade certified agribusiness in Sri Lanka committed to sustainability and innovation.",
+        keywords: ["careers bio foods", "jobs Sri Lanka agribusiness", "organic food company jobs", "bio foods agroventures careers"],
         url,
-        image_alt: 'Careers at Bio Foods Sri Lanka',
+        image_alt: "Careers at Bio Foods Agroventures",
     });
 
     return (

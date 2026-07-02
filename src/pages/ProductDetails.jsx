@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { products } from '../data/products';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
+import useSEO from '../hooks/useSEO';
 
 function ProductDetails() {
   const { slug } = useParams();
@@ -19,6 +20,17 @@ function ProductDetails() {
     if (Array.isArray(product.grades)) return product.grades;
     return product.grades[activeSubTab] || [];
   }, [product, activeSubTab]);
+
+  useSEO({
+    title: product
+      ? `${product.name} | Bio Foods Sri Lanka`
+      : "Product | Bio Foods Sri Lanka",
+    description: product?.desc ?? "Certified organic products from Bio Foods Agroventures Sri Lanka.",
+    url: window.location.href,
+    image: product?.img,
+    image_secure_url: product?.img,
+    image_alt: product?.name ?? "Organic Product",
+  });
 
   if (!product) {
     return (

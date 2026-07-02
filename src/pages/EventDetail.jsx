@@ -21,7 +21,12 @@ function EventDetail() {
     const item = newsEventsData.find((e) => e.id === Number(id));
     const [lightboxIndex, setLightboxIndex] = useState(null);
 
-    useSEO({ url: window.location.href, image_alt: item?.title ?? "Event Detail" });
+    useSEO({
+        title: item ? `${item.title} | Bio Foods Agroventures` : "Event | Bio Foods Agroventures",
+        description: item?.summary ?? "News and events from Bio Foods Agroventures Sri Lanka.",
+        url: window.location.href,
+        image_alt: item?.title ?? "Event Detail",
+    });
 
     if (!item) {
         return (

@@ -9,11 +9,11 @@ function Producers() {
     const url = window.location.href;
 
     useSEO({
-        // title: "Organic & Fairtrade Spices Coconut Frozen Producer | Bio Foods | Sri Lanka",
-        // description: "Premium organic spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
+        title: "Our Producers | Organic Farmers & Smallholders | Bio Foods Sri Lanka",
+        description: "Bio Foods works with thousands of certified organic smallholder farmers across Sri Lanka, ensuring fair trade practices, sustainable agriculture and premium quality produce.",
+        keywords: ["organic farmers Sri Lanka", "fair trade producers", "smallholder farmers", "bio foods producers", "sustainable farming Sri Lanka"],
         url,
-        image_alt: "Producers",
-        // keywords: ["organic food Sri Lanka, fair trade organic spices exporter, coconut products Sri Lanka"],
+        image_alt: "Organic Producers – Bio Foods Agroventures",
     });
 
     return (
