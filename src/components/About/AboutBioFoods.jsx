@@ -91,6 +91,7 @@ export default function AboutBioFoods() {
                 >
                   <span className="h-px w-8 bg-brand-gold/60" />
                   About Bio Foods
+                  <span className="h-px w-8 bg-brand-gold/60" />
                 </motion.span>
 
                 <motion.h1
