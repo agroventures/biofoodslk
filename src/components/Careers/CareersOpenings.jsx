@@ -1,5 +1,5 @@
 import React, { useReducer, useRef } from 'react';
-import { Sparkles, ArrowUpRight, CheckCircle2, X, Paperclip } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, X, Paperclip } from 'lucide-react';
 
 const INITIAL_STATE = { formData: { name: '', email: '', phone: '', message: '' }, cvFile: null, dragOver: false, isLoading: false, isSubmitted: false };
 
@@ -73,20 +73,21 @@ function CareersOpenings() {
                 {/* HEADER */}
                 <div className="mb-20">
                     <div className="flex items-center gap-3 mb-6">
-                        <Sparkles className="h-4 w-4 text-brand-primary" />
-                        <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                        <span className="w-12 h-px bg-brand-gold" />
+                        <span className="text-xs uppercase tracking-[0.3em] font-semibold text-neutral-500">
                             Be Part of Something Good
                         </span>
+                        <span className="w-12 h-px bg-brand-gold" />
                     </div>
                     <h2
-                        className="text-5xl lg:text-7xl tracking-tight text-neutral-950"
+                        className="text-5xl lg:text-7xl tracking-tight text-neutral-950 text-center lg:text-left"
                         style={{ fontFamily: 'Cormorant Garamond, serif' }}
                     >
                         Apply to Join
                         <br />
                         Our Team.
                     </h2>
-                    <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+                    <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 text-center lg:text-left">
                         We're always looking for passionate people. Share your details and tell us how you'd like to contribute - we'll be in touch.
                     </p>
                 </div>

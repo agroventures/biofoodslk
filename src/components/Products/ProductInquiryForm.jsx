@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowUpRight, CheckCircle2, X, Sparkles, Leaf, Globe, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, X, Leaf, Globe, ShieldCheck } from "lucide-react";
 
 
 const highlights = [
@@ -45,22 +45,21 @@ const ProductInquiryForm = () => {
   return (
     <section className="w-full border-t border-neutral-100 py-24 lg:py-36 relative overflow-hidden" style={{ background: "#F8F6F2" }}>
       {/* decorative blob */}
-      <div className="pointer-events-none absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-30" style={{ background: "radial-gradient(circle, #b39c74 0%, transparent 70%)", transform: "translate(30%, -30%)" }} />
+      <div className="pointer-events-none absolute top-0 right-0 w-150 h-150 rounded-full opacity-30" style={{ background: "radial-gradient(circle, #b39c74 0%, transparent 70%)", transform: "translate(30%, -30%)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative">
         {/* HEADER */}
         <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-px bg-brand-primary" />
-            <Sparkles className="h-4 w-4 text-brand-primary" />
-            <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Product Inquiry</span>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-8 h-px bg-brand-gold" />
+            <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Product Inquiry</span>
+            <span className="w-8 h-px bg-brand-gold" />
           </div>
-          <h2 className="text-5xl lg:text-6xl tracking-tight text-neutral-950" style={{ fontFamily: "Cormorant Garamond, serif" }}>
-            Interested in our
-            <br />
+          <h2 className="text-5xl lg:text-6xl tracking-tight text-neutral-950 text-center" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+            Interested in our {" "}
             <span className="italic text-brand-primary">products?</span>
           </h2>
-          <p className="mt-4 text-lg leading-8 text-neutral-600 max-w-xl">
+          <p className="mt-4 text-lg leading-8 text-neutral-600 max-w-xl text-center mx-auto">
             Let us know what you're looking for and our team will get back to you.
           </p>
         </div>

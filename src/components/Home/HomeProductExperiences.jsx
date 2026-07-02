@@ -1,5 +1,5 @@
 import React from "react";
-import { Package, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
 
@@ -20,9 +20,7 @@ function HomeProductExperiences({ section }) {
             <div className="h-px w-12 bg-brand-secondary" />
 
             <div className="flex items-center gap-2">
-              <Package className="h-4 w-4 text-brand-secondary" />
-
-              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+              <span className="text-sm uppercase font-semibold tracking-wider text-neutral-500">
                 Product Collection
               </span>
             </div>

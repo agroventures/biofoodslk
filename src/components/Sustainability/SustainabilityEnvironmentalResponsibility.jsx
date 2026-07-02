@@ -1,4 +1,4 @@
-import { Globe, Heart, Leaf, Shield, Sparkles, Sprout, Users } from 'lucide-react'
+import { Globe, Heart, Leaf, Shield, Sprout, Users } from 'lucide-react'
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion'
 
 const fadeUp = (delay = 0) => ({
@@ -35,8 +35,7 @@ function SustainabilityEnvironmentalResponsibility() {
             <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-brand-secondary" />
-                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Environmental &amp; Social</span>
+                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental &amp; Social</span>
               </div>
               <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
@@ -71,8 +70,7 @@ function SustainabilityEnvironmentalResponsibility() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-brand-secondary" />
-                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Environmental</span>
+                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental</span>
                 </div>
                 <div className="h-px w-12 bg-brand-secondary" />
               </div>
@@ -152,8 +150,7 @@ function SustainabilityEnvironmentalResponsibility() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-brand-secondary" />
-                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Social Impact</span>
+                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Social Impact</span>
                 </div>
                 <div className="h-px w-12 bg-brand-secondary" />
               </div>
@@ -218,7 +215,8 @@ function SustainabilityEnvironmentalResponsibility() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">Our Commitment</span>
+                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">Our Commitment</span>
+                <div className="h-px w-12 bg-brand-gold" />
               </div>
               <h3
                 className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white text-center"

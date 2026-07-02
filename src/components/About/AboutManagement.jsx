@@ -65,7 +65,7 @@ export default function AboutManagement() {
           <div className="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
             <motion.span
               {...fadeUp(0)}
-              className="flex items-center justify-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
+              className="flex items-center justify-center gap-3 mb-10 text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500"
             >
               <span className="h-px w-10 bg-brand-secondary" />
               Leadership
@@ -194,9 +194,6 @@ export default function AboutManagement() {
                                   </div>
                                   <p
                                     className="text-md text-neutral-900 leading-snug font-medium mb-1 text-center"
-                                    style={{
-                                      fontFamily: "Cormorant Garamond, serif",
-                                    }}
                                   >
                                     {label}
                                   </p>

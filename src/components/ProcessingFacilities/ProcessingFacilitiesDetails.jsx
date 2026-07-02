@@ -83,7 +83,7 @@ function ProcessingFacilitiesDetails() {
 
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
+            className="flex items-center justify-center gap-3 mb-10 text-sm uppercase font-semibold tracking-[0.2em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Processing Facilities
@@ -248,13 +248,14 @@ function ProcessingFacilitiesDetails() {
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 
             <div>
-              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-white/50 mb-8">
+              <span className="flex items-center justify-center gap-3 text-sm uppercase tracking-[0.35em] font-semibold text-white/50 mb-8">
                 <span className="h-px w-8 bg-brand-secondary" />
                 Partner With Us
+                <span className="h-px w-8 bg-brand-secondary" />
               </span>
 
               <h2
-                className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05]"
+                className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05] text-center lg:text-left"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
                 Bringing organic products
@@ -263,16 +264,16 @@ function ProcessingFacilitiesDetails() {
             </div>
 
             <div className="flex flex-col justify-end gap-8">
-              <p className="text-base leading-8 text-white/60">
+              <p className="text-base leading-8 text-white/60 text-center lg:text-left">
                 From sourcing and processing to export and distribution, our
                 facilities are designed to maintain quality, consistency, and
                 traceability at every stage of the journey.
               </p>
 
-              <div>
+              <div className="flex items-center justify-center lg:justify-start">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                  className="flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
                 >
                   Contact Us
                   <ArrowUpRight className="w-4 h-4" />

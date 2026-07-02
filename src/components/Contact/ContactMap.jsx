@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Navigation, Sparkles } from "lucide-react";
+import { MapPin, Navigation } from "lucide-react";
 
 function ContactMap() {
   return (
@@ -10,9 +10,7 @@ function ContactMap() {
         <div className="mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-12 h-px bg-brand-gold" />
-            <Sparkles className="h-4 w-4 text-brand-gold" />
-
-            <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+            <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
               Our Location
             </span>
             <span className="w-12 h-px bg-brand-gold" />

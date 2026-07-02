@@ -1,4 +1,4 @@
-import { Award, Droplet, FileCheck, Globe, Heart, Leaf, Shield, Sparkles, Sprout, TrendingUp, Users } from 'lucide-react'
+import { Award, Droplet, FileCheck, Globe, Heart, Leaf, Shield, Sprout, TrendingUp, Users } from 'lucide-react'
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion'
 
 const fadeUp = (delay = 0) => ({
@@ -44,8 +44,7 @@ function SustainabilityAgroVentures() {
             <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-brand-secondary" />
-                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Structured Excellence</span>
+                <span className="text-sm uppercase tracking-wide font-semibold text-neutral-500">Structured Excellence</span>
               </div>
               <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
@@ -76,15 +75,15 @@ function SustainabilityAgroVentures() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <motion.div {...fadeUp(0)} className="mb-16">
-              <div className="mb-6 flex items-center gap-4">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-brand-secondary" />
-                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Environmental</span>
+                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental</span>
                 </div>
+                <div className="h-px w-12 bg-brand-secondary" />
               </div>
               <h3
-                className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
                 style={{ fontFamily: 'Cormorant Garamond, serif' }}
               >
                 Environmental <span className="italic text-brand-primary">Stewardship</span>
@@ -136,15 +135,14 @@ function SustainabilityAgroVentures() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <motion.div {...fadeUp(0)} className="mb-16">
-              <div className="mb-6 flex items-center gap-4">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-brand-secondary" />
-                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Social</span>
+                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Social</span>
                 </div>
               </div>
               <h3
-                className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
                 style={{ fontFamily: 'Cormorant Garamond, serif' }}
               >
                 Social <span className="italic text-brand-primary">Responsibility</span>
@@ -198,15 +196,15 @@ function SustainabilityAgroVentures() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <motion.div {...fadeUp(0)} className="mb-16">
-              <div className="mb-6 flex items-center gap-4">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-brand-secondary" />
-                  <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Governance</span>
+                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Governance</span>
                 </div>
+                <div className="h-px w-12 bg-brand-secondary" />
               </div>
               <h3
-                className="text-4xl lg:text-5xl tracking-tight text-neutral-950"
+                className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
                 style={{ fontFamily: 'Cormorant Garamond, serif' }}
               >
                 Governance &amp; <span className="italic text-brand-primary">Accountability</span>
@@ -273,7 +271,8 @@ function SustainabilityAgroVentures() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">ESG Philosophy</span>
+                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">ESG Philosophy</span>
+                <div className="h-px w-12 bg-brand-gold" />
               </div>
               <h3
                 className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white items-center text-center"

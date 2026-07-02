@@ -6,7 +6,6 @@ import {
     ArrowUpRight,
     CheckCircle2,
     X,
-    Sparkles,
 } from "lucide-react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -73,8 +72,7 @@ const ContactForm = () => {
                 <div className="mb-20">
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <span className="w-12 h-px bg-brand-gold" />
-                        <Sparkles className="h-4 w-4 text-brand-gold" />
-                        <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                        <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
                             Contact Us
                         </span>
                         <span className="w-12 h-px bg-brand-gold" />

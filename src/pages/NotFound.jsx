@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
@@ -54,7 +54,6 @@ function NotFound() {
             <motion.div {...fadeUp(0)} className="mb-8 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-brand-secondary" />
                 <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">Page Not Found</span>
               </div>
             </motion.div>

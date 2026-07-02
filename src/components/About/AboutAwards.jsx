@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Star, Trophy, ShieldCheck, Globe, Beaker, Sparkles } from 'lucide-react';
+import { Award, Star, Trophy, ShieldCheck, Globe, Beaker } from 'lucide-react';
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
@@ -82,7 +82,6 @@ function AboutAwards() {
                     <div className="mb-6 flex items-center gap-4">
                         <div className="h-px w-12 bg-brand-secondary" />
                         <div className="flex items-center gap-2">
-                            <Sparkles className="h-4 w-4 text-brand-secondary" />
                             <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Accolades</span>
                         </div>
                     </div>

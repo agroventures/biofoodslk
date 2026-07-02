@@ -36,7 +36,7 @@ export default function AboutAgroVentures() {
 
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
+            className="flex items-center justify-center gap-3 mb-10 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Parent Group
@@ -89,7 +89,7 @@ export default function AboutAgroVentures() {
 
           {/* EXPERTISE */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8">
+            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
               Areas of Expertise
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -113,7 +113,7 @@ export default function AboutAgroVentures() {
 
           {/* ADVANTAGES */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8">
+            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
               Strategic Advantages
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -144,12 +144,13 @@ export default function AboutAgroVentures() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="flex items-center justify-center font-semibold gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Group Companies
+                <span className="h-px w-10 bg-brand-secondary" />
               </span>
               <h3
-                className="text-4xl lg:text-5xl tracking-tight"
+                className="text-4xl lg:text-5xl tracking-tight text-center lg:text-left"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
                 Working together
@@ -158,7 +159,7 @@ export default function AboutAgroVentures() {
               </h3>
             </motion.div>
 
-            <motion.p {...fadeUp(0.1)} className="max-w-sm text-md leading-7 text-neutral-600">
+            <motion.p {...fadeUp(0.1)} className="max-w-sm text-md leading-7 text-neutral-600 text-center lg:text-left">
               Eight companies under one group - each contributing to a connected, resilient agribusiness ecosystem.
             </motion.p>
           </div>

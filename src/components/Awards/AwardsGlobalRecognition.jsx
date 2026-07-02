@@ -89,7 +89,7 @@ const AwardsGlobalRecognition = () => {
         {/* ACHIEVEMENT CARDS GRID */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 lg:pb-32">
             <div className="border-b border-neutral-200 pb-6 mb-12">
-                <p className="text-md uppercase font-semibold text-black">
+                <p className="text-md uppercase font-semibold tracking-wider text-black text-center">
                     International Achievements
                 </p>
             </div>
@@ -149,13 +149,13 @@ const AwardsGlobalRecognition = () => {
                     </h3>
                 </div>
                 <div className="lg:col-span-7 grid md:grid-cols-2 gap-8 lg:gap-12">
-                    <p className="text-neutral-600 leading-relaxed font-light text-[14px] lg:text-[15px]">
+                    <p className="text-neutral-600 leading-relaxed font-light text-sm lg:text-md">
                         Every recognition received by Bio Foods represents more than
                         an achievement. It reflects our commitment to ethical
                         sourcing, environmental responsibility, and the well-being
                         of farming communities across our network.
                     </p>
-                    <p className="text-neutral-600 leading-relaxed font-light text-[14px] lg:text-[15px]">
+                    <p className="text-neutral-600 leading-relaxed font-light text-sm lg:text-md">
                         These awards strengthen our position as a trusted global
                         supplier while reaffirming the values that have guided our
                         growth from the very beginning.
@@ -170,11 +170,11 @@ const AwardsGlobalRecognition = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/2 rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4" />
                 
                 <div className="lg:col-span-7 relative z-10">
-                    <p className="text-xs uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6">
+                    <p className="text-xs uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 text-center lg:text-left">
                         Continuing the Journey
                     </p>
                     <h2
-                        className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-none"
+                        className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-none text-center lg:text-left"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                     >
                         Inspired by achievement, <br />
@@ -182,20 +182,22 @@ const AwardsGlobalRecognition = () => {
                     </h2>
                 </div>
                 
-                <div className="lg:col-span-5 relative z-10 lg:pl-6 flex flex-col items-start">
-                    <p className="text-white/80 font-light leading-relaxed mb-8 text-[15px]">
+                <div className="lg:col-span-5 relative z-10 lg:pl-6 flex flex-col lg:items-start">
+                    <p className="text-white/80 font-light leading-relaxed mb-8 text-[15px] text-center lg:text-left">
                         As we continue to grow, these recognitions motivate us to uphold
                         the highest standards of quality, sustainability, and innovation
                         while creating lasting value for customers, communities, and
                         future generations.
                     </p>
-                    <a
+                    <div className="flex justify-center lg:justify-start">
+                        <a
                         href="/about"
                         className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-semibold text-white border border-white/20 bg-white/5 px-6 py-3.5 rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300 group"
                     >
                         Our Story 
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                     </a>
+                    </div>
                 </div>
             </div>
         </div>

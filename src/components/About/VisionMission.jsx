@@ -1,5 +1,5 @@
 import React from "react";
-import { Eye, Target, Leaf, Heart, CheckCircle2, Sparkles } from "lucide-react";
+import { Eye, Target, Leaf, Heart, CheckCircle2 } from "lucide-react";
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
@@ -43,8 +43,7 @@ function VisionMission() {
           <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center justify-center gap-2">
-              <Sparkles className="h-4 w-4 text-brand-secondary" />
-              <span className="text-sm uppercase tracking-[0.35em] text-neutral-500">Vision & Mission</span>
+              <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Vision & Mission</span>
             </div>
             <div className="h-px w-12 bg-brand-secondary" />
           </motion.div>
@@ -72,7 +71,7 @@ function VisionMission() {
 
             {/* VISION row */}
             <motion.div {...fadeUp(0)} className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8">
-              <div className="flex items-center gap-4 lg:contents">
+              <div className="flex items-center justify-center gap-4 lg:contents">
                 <div className="lg:col-span-1">
                   <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
                     <Eye className="h-5 w-5" />
@@ -81,7 +80,7 @@ function VisionMission() {
               </div>
               <div className="lg:col-span-4">
                 <h2
-                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
+                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   Vision
@@ -89,12 +88,12 @@ function VisionMission() {
               </div>
               <div className="lg:col-span-6">
                 <h3
-                  className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4"
+                  className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4 text-center lg:text-left"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   Leading organic agriculture across Asia and beyond.
                 </h3>
-                <p className="text-lg leading-8 text-neutral-600">
+                <p className="text-lg leading-8 text-neutral-600 text-center lg:text-left">
                   A future where organic agriculture strengthens communities, restores ecosystems, and becomes the global standard.
                 </p>
               </div>
@@ -102,7 +101,7 @@ function VisionMission() {
 
             {/* MISSION row */}
             <motion.div {...fadeUp(0.1)} className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8">
-              <div className="flex items-center gap-4 lg:contents">
+              <div className="flex items-center justify-center gap-4 lg:contents">
                 <div className="lg:col-span-1">
                   <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
                     <Target className="h-5 w-5" />
@@ -111,7 +110,7 @@ function VisionMission() {
               </div>
               <div className="lg:col-span-4">
                 <h2
-                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
+                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   Mission
@@ -119,12 +118,12 @@ function VisionMission() {
               </div>
               <div className="lg:col-span-6">
                 <h3
-                  className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4"
+                  className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4 text-center lg:text-left"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   Raising standards through responsible farming.
                 </h3>
-                <p className="text-lg leading-8 text-neutral-600">
+                <p className="text-lg leading-8 text-neutral-600 text-center lg:text-left">
                   High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation - creating value for people and nature.
                 </p>
               </div>
@@ -143,7 +142,7 @@ function VisionMission() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
-              <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">Bio Foods Philosophy</span>
+              <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">Bio Foods Philosophy</span>
             </div>
             <h3
               className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white text-center"

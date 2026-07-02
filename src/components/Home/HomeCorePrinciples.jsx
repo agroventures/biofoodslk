@@ -1,5 +1,5 @@
 import React from "react";
-import { Leaf, Handshake, ScanLine, Gauge, Sparkles } from "lucide-react";
+import { Leaf, Handshake, ScanLine, Gauge } from "lucide-react";
 
 const principles = [
   {
@@ -46,7 +46,6 @@ function HomeCorePrinciples({ section }) {
             <div className="h-px w-12 bg-brand-secondary" />
 
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-brand-secondary" />
 
               <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                 What We Stand For

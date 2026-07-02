@@ -4,7 +4,6 @@ import {
   Factory,
   Globe,
   TrendingUp,
-  Sparkles,
 } from "lucide-react";
 
 const advantages = [
@@ -52,8 +51,7 @@ function HomeAgroVenturesAdvantage({ section }) {
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-brand-secondary" />
-                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
                   Why Choose Us
                 </span>
               </div>

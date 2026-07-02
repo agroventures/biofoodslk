@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Sparkles } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { products } from '../data/products';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
@@ -46,9 +46,6 @@ function ProductDetails() {
         {/* Hero */}
         <section className="grid lg:grid-cols-12 gap-12 items-center mb-20">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-2 mb-6">
-              <Sparkles className="w-4 h-4 text-brand-primary" />
-            </div>
             <h1
               className="text-5xl lg:text-7xl tracking-tight text-neutral-950"
               style={{ fontFamily: 'Cormorant Garamond, serif' }}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Leaf, Heart, ShieldCheck, Sparkles } from "lucide-react";
+import { Leaf, Heart, ShieldCheck } from "lucide-react";
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
@@ -34,7 +34,7 @@ function AboutFoundingVision() {
 
   return (
     <LazyMotion features={domAnimation}>
-    <section className="relative bg-white py-28 lg:py-40 border-y border-neutral-100 overflow-hidden">
+    <section className="relative bg-white py-16 lg:py-24 border-y border-neutral-100 overflow-hidden">
       {/* Decorative number */}
       <div className="pointer-events-none absolute left-0 top-10 hidden select-none xl:block">
         <span className="text-[280px] font-black leading-none text-black/3">02</span>
@@ -47,8 +47,7 @@ function AboutFoundingVision() {
           <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-brand-secondary" />
-              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Founding Vision</span>
+              <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Founding Vision</span>
             </div>
             <div className="h-px w-12 bg-brand-secondary" />
           </div>
@@ -63,7 +62,7 @@ function AboutFoundingVision() {
           <p className="mt-8 max-w-7xl text-lg leading-8 text-neutral-600 text-center">
             Bio Foods was founded by{" "}
             <span className="text-neutral-900">Dr. Sarath Ranaweera</span>{" "}
-            with a clear idea — agriculture should support nature, not extract from it.
+            with a clear idea - agriculture should support nature, not extract from it.
           </p>
         </motion.div>
 
@@ -76,7 +75,7 @@ function AboutFoundingVision() {
               className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8"
             >
               {/* Number + Icon */}
-              <div className="flex items-center gap-4 lg:contents">
+              <div className="flex items-center justify-center gap-4 lg:contents">
                 <div className="lg:col-span-1">
                   <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
                     <item.icon className="h-5 w-5" />
@@ -87,7 +86,7 @@ function AboutFoundingVision() {
               {/* Title */}
               <div className="lg:col-span-4">
                 <h3
-                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
+                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
                   style={{ fontFamily: "Cormorant Garamond, serif" }}
                 >
                   {item.title}
@@ -96,7 +95,7 @@ function AboutFoundingVision() {
 
               {/* Description */}
               <div className="lg:col-span-6">
-                <p className="max-w-xl text-lg leading-8 text-neutral-600">{item.description}</p>
+                <p className="max-w-xl text-lg leading-8 text-neutral-600 text-center lg:text-left">{item.description}</p>
               </div>
             </motion.div>
           ))}
@@ -104,12 +103,13 @@ function AboutFoundingVision() {
 
         {/* Closing statement panel */}
         <motion.div {...fadeUp(0.3)} className="mt-20 rounded-[40px] bg-brand-primary p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-14">
-          <div className="mb-4 flex items-center gap-4">
+          <div className="mb-4 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
-            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold">Our Promise</span>
+            <span className="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Our Promise</span>
+            <div className="h-px w-12 bg-brand-gold" />
           </div>
           <h3
-            className="max-w-4xl text-3xl leading-tight text-brand-light lg:text-5xl"
+            className="max-w-7xl mx-auto text-3xl leading-tight text-brand-light lg:text-5xl text-center"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Sustainable practices. Trusted partnerships. Uncompromising quality.

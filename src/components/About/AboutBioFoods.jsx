@@ -87,7 +87,7 @@ export default function AboutBioFoods() {
               <div className="flex flex-col justify-center">
                 <motion.span
                   {...fadeUp(0)}
-                  className="inline-flex items-center gap-3 mb-6 text-md uppercase tracking-[0.4em] text-brand-gold font-semibold"
+                  className="inline-flex items-center gap-3 mb-6 text-sm uppercase tracking-[0.3em] text-brand-gold font-semibold"
                 >
                   <span className="h-px w-8 bg-brand-gold/60" />
                   About Bio Foods
@@ -167,7 +167,7 @@ export default function AboutBioFoods() {
         </section>
 
         {/* ── CARD-BASED JOURNEY TIMELINE ── */}
-        <section className="py-24 lg:py-32 bg-brand-primary relative overflow-hidden">
+        <section className="py-16 lg:py-24 bg-brand-primary relative overflow-hidden">
           
           {/* Top-Right Organic Topography Line Mapping Accent */}
           <div className="absolute top-12 right-0 w-80 h-80 text-brand-light/2 pointer-events-none select-none translate-x-1/4">
@@ -182,12 +182,12 @@ export default function AboutBioFoods() {
             <div className="flex flex-col md:flex-row md:items-baseline justify-between border-b border-neutral-200 pb-6 mb-16">
               <motion.h2
                 {...fadeUp(0)}
-                className="text-4xl lg:text-5xl tracking-tight text-brand-light font-light"
+                className="text-4xl lg:text-5xl tracking-tight text-brand-light font-light text-center md:text-left mb-4 md:mb-0"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
                 Our Legacy & <span className="italic text-brand-gold">Journey</span>
               </motion.h2>
-              <motion.p {...fadeUp(0.05)} className="text-md uppercase tracking-[0.3em] font-semibold text-brand-muted mt-2 md:mt-0">
+              <motion.p {...fadeUp(0.05)} className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-muted text-center md:text-left mt-2 md:mt-0">
                 Milestones over time
               </motion.p>
             </div>

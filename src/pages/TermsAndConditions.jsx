@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import {
-  Sparkles,
   FileText,
   Scale,
   EyeOff,
@@ -97,7 +96,6 @@ function TermsAndConditions() {
             <motion.div {...fadeUp(0)} className="mb-8 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-brand-secondary" />
                 <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
                   Legal &amp; Governance
                 </span>
