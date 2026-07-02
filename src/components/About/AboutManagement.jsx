@@ -45,7 +45,7 @@ export default function AboutManagement() {
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-white text-neutral-950 overflow-hidden relative">
         {/* ── HEADER ── */}
-        <div className="border-b border-neutral-100 py-16 lg:py-24 relative overflow-hidden">
+        <div className="border-b border-neutral-100 py-16 lg:py-20 relative overflow-hidden">
           {/* Ambient Vector: Growing Impact Concentric Radii */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-125 h-125 text-brand-primary/2 pointer-events-none select-none translate-x-1/4 hidden lg:block">
             <svg
@@ -93,8 +93,8 @@ export default function AboutManagement() {
         </div>
 
         {/* ── ROSTER ── */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-24 relative z-10">
-          <div className="space-y-24 lg:space-y-36">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 lg:py-20 relative z-10">
+          <div className="space-y-16 lg:space-y-24">
             {allMembers.map((member) => (
               <motion.div
                 key={member.id}
