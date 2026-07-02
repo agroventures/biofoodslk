@@ -114,7 +114,7 @@ function HomeCorePrinciples({ section }) {
           <div className="mb-4 flex items-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
 
-            <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+            <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
               Our Promise
             </span>
           </div>

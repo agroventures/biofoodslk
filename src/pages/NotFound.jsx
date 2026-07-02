@@ -54,7 +54,7 @@ function NotFound() {
             <motion.div {...fadeUp(0)} className="mb-8 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">Page Not Found</span>
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Page Not Found</span>
               </div>
             </motion.div>
 
@@ -90,7 +90,7 @@ function NotFound() {
 
             {/* Quick links */}
             <motion.div {...fadeUp(0.4)} className="mt-20 border-t border-neutral-200 pt-10">
-              <p className="mb-6 text-xs uppercase tracking-[0.3em] text-neutral-400">Explore</p>
+              <p className="mb-6 text-sm uppercase tracking-[0.3em] text-neutral-400">Explore</p>
               <div className="flex flex-wrap gap-3">
                 {links.map((link) => (
                   <Link

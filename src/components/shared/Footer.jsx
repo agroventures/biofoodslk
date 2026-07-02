@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                   Organic Excellence
                 </span>
               </div>
@@ -60,7 +60,7 @@ const Footer = () => {
 
             {/* Alliance tag */}
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5">
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-gold">
+              <span className="text-sm uppercase tracking-[0.25em] text-brand-gold">
                 Agroventures Group
               </span>
             </div>
@@ -155,11 +155,11 @@ const Footer = () => {
 
         {/* BOTTOM BAR */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-neutral-500">
+          <p className="text-sm text-neutral-500">
             © {currentYear} Bio Foods Agroventures (Pvt) Ltd. All Rights Reserved.
           </p>
 
-          <p className="text-xs text-neutral-500">
+          <p className="text-sm text-neutral-500">
             Built by{" "}
             <a
               href="https://www.ventrax.lk/"

@@ -171,7 +171,7 @@ export default function AboutAgroVentures() {
             {companies.map((item) => (
               <div
                 key={item.id}
-                className="group h-24 bg-white flex items-center justify-center p-4 hover:bg-brand-primary transition-colors duration-300"
+                className="group h-24 bg-white flex items-center justify-center p-4 hover:bg-brand-primary/70 transition-colors duration-300"
               >
                 <img
                   src={item.img}

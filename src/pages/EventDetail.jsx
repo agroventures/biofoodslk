@@ -54,7 +54,7 @@ function EventDetail() {
 
                 {/* Meta */}
                 <div className="flex items-center gap-4 mb-6">
-                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                    <span className="text-sm uppercase tracking-[0.2em] text-neutral-400">
                         {date} · {type}
                     </span>
                 </div>

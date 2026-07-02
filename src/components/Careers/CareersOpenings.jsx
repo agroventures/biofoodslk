@@ -74,7 +74,7 @@ function CareersOpenings() {
                 <div className="mb-20">
                     <div className="flex items-center gap-3 mb-6">
                         <span className="w-12 h-px bg-brand-gold" />
-                        <span className="text-xs uppercase tracking-[0.3em] font-semibold text-neutral-500">
+                        <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
                             Be Part of Something Good
                         </span>
                         <span className="w-12 h-px bg-brand-gold" />
@@ -145,7 +145,7 @@ function CareersOpenings() {
                             className="border border-neutral-200 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 gap-8"
                         >
                             <div>
-                                <label htmlFor="name" className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="name" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Full Name
                                 </label>
                                 <input
@@ -159,7 +159,7 @@ function CareersOpenings() {
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="email" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Email
                                 </label>
                                 <input
@@ -174,7 +174,7 @@ function CareersOpenings() {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label htmlFor="phone" className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="phone" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Phone
                                 </label>
                                 <input
@@ -188,7 +188,7 @@ function CareersOpenings() {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label htmlFor="message" className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="message" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Tell Us About Yourself
                                 </label>
                                 <textarea
@@ -203,7 +203,7 @@ function CareersOpenings() {
                             </div>
 
                             <div className="md:col-span-2">
-                                <label htmlFor="cv-upload" className="text-xs uppercase tracking-widest text-neutral-500">
+                                <label htmlFor="cv-upload" className="text-sm uppercase tracking-widest text-neutral-500">
                                     Upload CV
                                 </label>
                                 <div
@@ -225,7 +225,7 @@ function CareersOpenings() {
                                             <p className="text-base text-neutral-500 text-center">
                                                 Drag & drop your CV here, or <span className="text-brand-primary underline">browse</span>
                                                 <br />
-                                                <span className="text-xs text-neutral-400">PDF or Word · max 5MB</span>
+                                                <span className="text-sm text-neutral-400">PDF or Word · max 5MB</span>
                                             </p>
                                         )}
                                         <input

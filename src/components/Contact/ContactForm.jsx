@@ -203,7 +203,7 @@ const ContactForm = () => {
                         >
                             {["name", "email"].map((field) => (
                                 <div key={field} className="group">
-                                    <label htmlFor={field} className="text-xs uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
+                                    <label htmlFor={field} className="text-sm uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
                                         {field.charAt(0).toUpperCase() + field.slice(1)}
                                     </label>
                                     <input
@@ -219,7 +219,7 @@ const ContactForm = () => {
                             ))}
 
                             <div className="md:col-span-2 group">
-                                <label htmlFor="subject" className="text-xs uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
+                                <label htmlFor="subject" className="text-sm uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
                                     Subject
                                 </label>
                                 <input
@@ -233,7 +233,7 @@ const ContactForm = () => {
                             </div>
 
                             <div className="md:col-span-2 group">
-                                <label htmlFor="message" className="text-xs uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
+                                <label htmlFor="message" className="text-sm uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
                                     Message
                                 </label>
                                 <textarea
@@ -256,7 +256,7 @@ const ContactForm = () => {
                                     <span>{isLoading ? "Sending..." : "Send Message"}</span>
                                     <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                                 </button>
-                                <p className="text-xs text-neutral-400 hidden md:block">We reply within 24 hours</p>
+                                <p className="text-sm text-neutral-400 hidden md:block">We reply within 24 hours</p>
                             </div>
                         </form>
                     </div>

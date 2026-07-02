@@ -100,7 +100,7 @@ const ProductInquiryForm = () => {
             </div>
 
             <div className="relative mt-12 pt-8 border-t border-white/10">
-              <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Response Time</p>
+              <p className="text-white/40 text-sm uppercase tracking-widest mb-1">Response Time</p>
               <p className="text-white text-base">Within 24 hours</p>
             </div>
           </div>
@@ -112,7 +112,7 @@ const ProductInquiryForm = () => {
           >
             {["name", "email"].map((field) => (
               <div key={field} className="group">
-                <label htmlFor={field} className="text-xs uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
+                <label htmlFor={field} className="text-sm uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">
                   {field.charAt(0).toUpperCase() + field.slice(1)}
                 </label>
                 <input
@@ -125,14 +125,14 @@ const ProductInquiryForm = () => {
             ))}
 
             <div className="md:col-span-2 group">
-              <label htmlFor="product" className="text-xs uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">Product of Interest</label>
+              <label htmlFor="product" className="text-sm uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">Product of Interest</label>
               <input id="product" required value={formData.product} onChange={handleChange}
                 className="mt-2 w-full border-b border-neutral-200 pb-3 pt-1 outline-none bg-transparent focus:border-brand-primary transition placeholder:text-neutral-300 text-neutral-800"
                 placeholder="e.g. Organic Spices, Coconut Products" />
             </div>
 
             <div className="md:col-span-2 group">
-              <label htmlFor="message" className="text-xs uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">Message</label>
+              <label htmlFor="message" className="text-sm uppercase tracking-widest text-neutral-400 group-focus-within:text-brand-primary transition">Message</label>
               <textarea id="message" required rows="5" value={formData.message} onChange={handleChange}
                 className="mt-2 w-full border-b border-neutral-200 pb-3 pt-1 resize-none outline-none bg-transparent focus:border-brand-primary transition placeholder:text-neutral-300 text-neutral-800"
                 placeholder="Tell us about your requirements..." />

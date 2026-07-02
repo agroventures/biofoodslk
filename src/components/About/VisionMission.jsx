@@ -65,68 +65,52 @@ function VisionMission() {
       </section>
 
       {/* VISION + MISSION editorial list */}
-      <section className="py-16 lg:py-24 border-b border-neutral-100">
+      <section className="pb-16 lg:pb-24 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            {/* VISION row */}
-            <motion.div {...fadeUp(0)} className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8">
-              <div className="flex items-center justify-center gap-4 lg:contents">
-                <div className="lg:col-span-1">
-                  <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
-                    <Eye className="h-5 w-5" />
-                  </div>
-                </div>
+            {/* VISION */}
+            <motion.div {...fadeUp(0)} className="group border border-neutral-200 rounded-2xl p-8 transition-all duration-500 flex flex-col items-center text-center">
+              <div className="rounded-2xl bg-brand-primary p-4 shadow-sm w-fit text-brand-light mb-6">
+                <Eye className="h-5 w-5" />
               </div>
-              <div className="lg:col-span-4">
-                <h2
-                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
-                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
-                >
-                  Vision
-                </h2>
-              </div>
-              <div className="lg:col-span-6">
-                <h3
-                  className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4 text-center lg:text-left"
-                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
-                >
-                  Leading organic agriculture across Asia and beyond.
-                </h3>
-                <p className="text-lg leading-8 text-neutral-600 text-center lg:text-left">
-                  A future where organic agriculture strengthens communities, restores ecosystems, and becomes the global standard.
-                </p>
-              </div>
+              <h2
+                className="text-2xl lg:text-3xl tracking-tight text-neutral-950 mb-4"
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
+              >
+                Vision
+              </h2>
+              <h3
+                className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4"
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
+              >
+                Leading organic agriculture across Asia and beyond.
+              </h3>
+              <p className="text-lg leading-8 text-neutral-600">
+                A future where organic agriculture strengthens communities, restores ecosystems, and becomes the global standard.
+              </p>
             </motion.div>
 
-            {/* MISSION row */}
-            <motion.div {...fadeUp(0.1)} className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8">
-              <div className="flex items-center justify-center gap-4 lg:contents">
-                <div className="lg:col-span-1">
-                  <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
-                    <Target className="h-5 w-5" />
-                  </div>
-                </div>
+            {/* MISSION */}
+            <motion.div {...fadeUp(0.1)} className="group border border-neutral-200 rounded-2xl p-8 transition-all duration-500 flex flex-col items-center text-center">
+              <div className="rounded-2xl bg-brand-primary p-4 shadow-sm w-fit text-brand-light mb-6">
+                <Target className="h-5 w-5" />
               </div>
-              <div className="lg:col-span-4">
-                <h2
-                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
-                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
-                >
-                  Mission
-                </h2>
-              </div>
-              <div className="lg:col-span-6">
-                <h3
-                  className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4 text-center lg:text-left"
-                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
-                >
-                  Raising standards through responsible farming.
-                </h3>
-                <p className="text-lg leading-8 text-neutral-600 text-center lg:text-left">
-                  High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation - creating value for people and nature.
-                </p>
-              </div>
+              <h2
+                className="text-2xl lg:text-3xl tracking-tight text-neutral-950 mb-4"
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
+              >
+                Mission
+              </h2>
+              <h3
+                className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4"
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
+              >
+                Raising standards through responsible farming.
+              </h3>
+              <p className="text-lg leading-8 text-neutral-600">
+                High-quality organic foods through ethical sourcing, fair partnerships, and scientific innovation - creating value for people and nature.
+              </p>
             </motion.div>
 
           </div>

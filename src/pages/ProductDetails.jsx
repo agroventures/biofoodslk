@@ -72,7 +72,7 @@ function ProductDetails() {
         {product.grades && (
           <section>
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
-              <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Available Products</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">Available Products</p>
 
               {!Array.isArray(product.grades) && (
                 <div className="flex flex-wrap gap-2">
@@ -81,7 +81,7 @@ function ProductDetails() {
                       key={tab}
                       type="button"
                       onClick={() => setActiveSubTab(tab)}
-                      className={`px-4 py-2 text-xs uppercase tracking-[0.2em] transition-all ${
+                      className={`px-4 py-2 text-sm uppercase tracking-[0.2em] transition-all ${
                         activeSubTab === tab
                           ? 'bg-brand-primary text-white'
                           : 'bg-brand-light text-neutral-600 hover:bg-neutral-100'

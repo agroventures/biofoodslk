@@ -197,7 +197,7 @@ export default function AboutManagement() {
                                   >
                                     {label}
                                   </p>
-                                  <p className="text-xs text-neutral-500 leading-normal text-center">
+                                  <p className="text-sm text-neutral-500 leading-normal text-center">
                                     {sub}
                                   </p>
                                 </div>

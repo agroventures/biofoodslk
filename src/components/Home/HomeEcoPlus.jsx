@@ -22,11 +22,11 @@ function HomeEcoPlus() {
             <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-white/10 backdrop-blur-md border border-white/20 p-5 md:p-6 rounded-2xl">
               <div className="flex items-center gap-3 text-white mb-2">
                 <ShieldCheck className="text-brand-primary w-5 h-5" />
-                <span className="text-[10px] md:text-xs font-black text-brand-primary uppercase tracking-widest">
+                <span className="text-[10px] md:text-sm font-black text-brand-primary uppercase tracking-widest">
                   Patented Technology
                 </span>
               </div>
-              <p className="text-brand-primary text-xs md:text-base leading-relaxed">
+              <p className="text-brand-primary text-sm md:text-base leading-relaxed">
                 Revolutionizing agriculture with nutrient-dense, 100% organic
                 waste-to-soil solutions.
               </p>
@@ -76,13 +76,13 @@ function HomeEcoPlus() {
         <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 opacity-40 grayscale pointer-events-none">
           <div className="flex items-center gap-2 text-neutral-950">
             <Globe size={18} />
-            <span className="font-bold uppercase tracking-widest text-[10px] md:text-xs">
+            <span className="font-bold uppercase tracking-widest text-[10px] md:text-sm">
               Environmentally Neutral
             </span>
           </div>
           <div className="flex items-center gap-2 text-neutral-950">
             <Sprout size={18} />
-            <span className="font-bold uppercase tracking-widest text-[10px] md:text-xs">
+            <span className="font-bold uppercase tracking-widest text-[10px] md:text-sm">
               Soil Health First
             </span>
           </div>

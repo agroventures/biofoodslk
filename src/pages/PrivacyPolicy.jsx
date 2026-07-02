@@ -99,7 +99,7 @@ function PrivacyPolicy() {
             <motion.div {...fadeUp(0)} className="mb-8 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                   Privacy &amp; Governance
                 </span>
               </div>
@@ -144,7 +144,7 @@ function PrivacyPolicy() {
           <section className="grid grid-cols-1 gap-20 lg:grid-cols-12 lg:gap-24 mb-24">
             {/* Left */}
             <motion.div {...fadeUp(0)} className="lg:col-span-7">
-              <span className="text-xs uppercase tracking-[0.3em] text-brand-secondary">
+              <span className="text-sm uppercase tracking-[0.3em] text-brand-secondary">
                 Data Protection
               </span>
 
@@ -173,7 +173,7 @@ function PrivacyPolicy() {
 
             {/* Right – commitment cards */}
             <div className="lg:col-span-5 lg:sticky lg:top-20 space-y-5">
-              <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                 Key Commitments
               </span>
 

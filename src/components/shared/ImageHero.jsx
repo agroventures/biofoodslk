@@ -23,7 +23,7 @@ const ImageHero = ({
 
           {/* Dynamic Overlay: Subtle dark tint overall + heavy dark gradient at the bottom */}
           <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
         {/* Content */}
@@ -40,7 +40,7 @@ const ImageHero = ({
                 <div className="h-px w-12 bg-brand-gold" />
                 <div className="flex items-center gap-2">
                   {Icon && <Icon className="h-4 w-4 text-brand-gold" />}
-                  <span className="text-xs uppercase tracking-[0.35em] text-white/90 font-medium">
+                  <span className="text-sm uppercase tracking-[0.35em] text-white/90 font-medium">
                     {badge}
                   </span>
                 </div>
@@ -67,7 +67,7 @@ const ImageHero = ({
                 className="mt-6 max-w-2xl"
               >
                 {subtitle && (
-                  <p className="mb-2 text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">
+                  <p className="mb-2 text-sm uppercase tracking-[0.25em] text-brand-gold font-semibold">
                     {subtitle}
                   </p>
                 )}
@@ -84,7 +84,7 @@ const ImageHero = ({
 
         {/* Scroll Hint */}
         <div className="absolute bottom-10 right-10 hidden lg:flex flex-col items-center">
-          <span className="mb-3 text-xs uppercase tracking-[0.35em] text-white/70">
+          <span className="mb-3 text-sm uppercase tracking-[0.35em] text-white/70">
             Scroll
           </span>
           <div className="h-16 w-px bg-white/40" />

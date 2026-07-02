@@ -105,7 +105,7 @@ function AboutFoundingVision() {
         <motion.div {...fadeUp(0.3)} className="mt-20 rounded-[40px] bg-brand-primary p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)] lg:p-14">
           <div className="mb-4 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
-            <span className="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Our Promise</span>
+            <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">Our Promise</span>
             <div className="h-px w-12 bg-brand-gold" />
           </div>
           <h3

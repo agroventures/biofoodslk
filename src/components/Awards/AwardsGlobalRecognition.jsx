@@ -23,7 +23,7 @@ const AwardModal = ({ images: rawImages, title, onClose }) => {
                 >
                     <X className="w-4 h-4 text-neutral-600" />
                 </button>
-                <p className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4">{title}</p>
+                <p className="text-sm uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4">{title}</p>
                 <div className="relative w-full rounded-xl overflow-hidden bg-neutral-50">
                     <img
                         src={images[current]}
@@ -115,14 +115,14 @@ const AwardsGlobalRecognition = () => {
                             >
                                 {title}
                             </h3>
-                            <p className="text-xs uppercase tracking-[0.15em] font-semibold text-brand-gold text-center mb-4">
+                            <p className="text-sm uppercase tracking-[0.15em] font-semibold text-brand-gold text-center mb-4">
                                 {org}
                             </p>
                             {images && (
                                 <button
                                     type="button"
                                     onClick={() => setModal({ images, title: org })}
-                                    className="mt-5 mx-auto flex items-center justify-center gap-2 text-xs uppercase tracking-[0.15em] font-semibold text-brand-primary border border-brand-primary/20 px-4 py-2 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-200 w-fit"
+                                    className="mt-5 mx-auto flex items-center justify-center gap-2 text-sm uppercase tracking-[0.15em] font-semibold text-brand-primary border border-brand-primary/20 px-4 py-2 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-200 w-fit"
                                 >
                                     View Award
                                 </button>
@@ -137,7 +137,7 @@ const AwardsGlobalRecognition = () => {
         <div className="bg-white border-y border-neutral-200/60">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 grid lg:grid-cols-12 gap-12 items-center">
                 <div className="lg:col-span-5 border-l-2 border-brand-gold pl-6 lg:pl-8">
-                    <p className="text-xs uppercase tracking-[0.3em] font-semibold text-brand-primary mb-4">
+                    <p className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-primary mb-4">
                         A Trusted Reputation
                     </p>
                     <h3
@@ -170,7 +170,7 @@ const AwardsGlobalRecognition = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/2 rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4" />
                 
                 <div className="lg:col-span-7 relative z-10">
-                    <p className="text-xs uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 text-center lg:text-left">
+                    <p className="text-sm uppercase tracking-[0.4em] text-brand-gold font-semibold mb-6 text-center lg:text-left">
                         Continuing the Journey
                     </p>
                     <h2
@@ -192,7 +192,7 @@ const AwardsGlobalRecognition = () => {
                     <div className="flex justify-center lg:justify-start">
                         <a
                         href="/about"
-                        className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-semibold text-white border border-white/20 bg-white/5 px-6 py-3.5 rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300 group"
+                        className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] font-semibold text-white border border-white/20 bg-white/5 px-6 py-3.5 rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300 group"
                     >
                         Our Story 
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />

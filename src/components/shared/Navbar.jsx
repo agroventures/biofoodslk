@@ -55,7 +55,7 @@ const Navbar = () => {
     }
 
     return `
-      bg-gradient-to-b
+      bg-linear-to-b
       from-black/40
       via-black/10
       to-transparent
@@ -190,7 +190,7 @@ const Navbar = () => {
       >
         {/* HEADER */}
         <div className="flex items-center justify-between p-8 border-b border-neutral-200">
-          <span className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+          <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
             Navigation
           </span>
 
@@ -257,7 +257,7 @@ const Navbar = () => {
           <div className="mt-6 flex items-center gap-3">
             <div className="h-px w-10 bg-brand-secondary" />
 
-            <span className="text-xs uppercase tracking-[0.25em] text-neutral-400">
+            <span className="text-sm uppercase tracking-[0.25em] text-neutral-400">
               Bio Foods
             </span>
           </div>

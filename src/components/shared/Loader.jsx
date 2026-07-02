@@ -28,7 +28,7 @@ const Loader = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.45em] text-neutral-400 mb-2">
+            <p className="text-sm uppercase tracking-[0.45em] text-neutral-400 mb-2">
               Est. Sri Lanka
             </p>
             <h1

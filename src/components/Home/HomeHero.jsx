@@ -157,7 +157,7 @@ export default function Hero() {
             className="mb-6 inline-flex items-center gap-3 justify-center"
           >
             <span className="h-px w-8 bg-brand-secondary" />
-            <span className="text-xs font-semibold uppercase tracking-[0.4em] text-white/90">
+            <span className="text-sm font-semibold uppercase tracking-[0.4em] text-white/90">
               {slides[current].label}
             </span>
             <span className="h-px w-8 bg-brand-secondary" />
