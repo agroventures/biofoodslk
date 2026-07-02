@@ -124,7 +124,7 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* QUALITY FRAMEWORK - numbered rows */}
-      <div className="relative py-24 lg:py-32 border-b border-neutral-100 overflow-hidden">
+      <div className="relative py-16 lg:py-24 border-b border-neutral-100 overflow-hidden">
         {/* Botanical leaf — bottom left */}
         <div className="absolute bottom-0 left-0 w-72 h-72 text-brand-gold/5 pointer-events-none -translate-x-1/4 translate-y-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full">
@@ -184,7 +184,7 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* PULL-QUOTE */}
-      <div className="relative py-24 lg:py-32 bg-brand-light border-b border-neutral-200 overflow-hidden">
+      <div className="relative py-16 lg:py-24 bg-brand-light border-b border-neutral-200 overflow-hidden">
         {/* Counter-rotating blob — right */}
         <div className="absolute top-1/2 right-0 w-64 h-64 text-brand-secondary/5 pointer-events-none translate-x-1/3 -translate-y-1/2 select-none hidden lg:block">
           <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_160s_linear_infinite_reverse]">
@@ -221,7 +221,7 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* CERTIFICATIONS GRID */}
-      <div className="relative py-24 lg:py-32 border-b border-neutral-100 overflow-hidden">
+      <div className="relative py-16 lg:py-24 border-b border-neutral-100 overflow-hidden">
         {/* Topography lines — left edge */}
         <div className="absolute top-1/4 left-0 w-64 h-64 text-brand-primary/4 pointer-events-none -translate-x-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">
@@ -280,7 +280,7 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* QA SYSTEMS - 3-col grid */}
-      <div className="py-24 lg:py-32 border-b border-neutral-100">
+      <div className="py-16 lg:py-24 border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
@@ -326,7 +326,7 @@ function QualityCertificationsDetails() {
       </div>
 
       {/* CLOSING BANNER */}
-      <div className="relative bg-brand-primary py-24 lg:py-32 overflow-hidden">
+      <div className="relative bg-brand-primary py-16 lg:py-24 overflow-hidden">
         {/* Botanical leaf — top right */}
         <div className="absolute top-0 right-0 w-80 h-80 text-white/4 pointer-events-none translate-x-1/4 -translate-y-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full">

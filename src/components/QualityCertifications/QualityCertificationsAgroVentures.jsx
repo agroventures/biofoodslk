@@ -58,7 +58,7 @@ function QualityCertificationsAgroVentures() {
             <path d="M38.9,-56.5C50.3,-46.4,59.2,-34.2,64.8,-20C70.4,-5.8,72.8,10.4,68.2,24.2C63.6,38,51.9,49.4,38.4,57.2C24.9,65,9.6,69.2,-5.8,67.7C-21.3,66.2,-36.8,59,-48.4,48C-60,37,-67.8,22.2,-69.4,6.6C-71,-9,-66.4,-25.4,-57.2,-37.6C-48,-49.8,-34.2,-57.8,-20.2,-62C-6.2,-66.2,8,-66.6,20.4,-63C32.8,-59.4,27.5,-66.6,38.9,-56.5Z" transform="translate(100, 100)" />
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
 
           <motion.span
             {...fadeUp(0)}
@@ -91,7 +91,7 @@ function QualityCertificationsAgroVentures() {
       </div>
 
       {/* ENHANCEMENTS - numbered rows */}
-      <div className="relative py-24 lg:py-32 border-b border-neutral-100 overflow-hidden">
+      <div className="relative py-16 lg:py-24 border-b border-neutral-100 overflow-hidden">
         {/* Botanical leaf — top right */}
         <div className="absolute top-0 right-0 w-72 h-72 text-brand-gold/5 pointer-events-none translate-x-1/4 -translate-y-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5" className="w-full h-full">
@@ -172,7 +172,7 @@ function QualityCertificationsAgroVentures() {
       </div>
 
       {/* PULL-QUOTE SECTION */}
-      <div className="relative py-24 lg:py-32 bg-brand-light border-b border-neutral-200 overflow-hidden">
+      <div className="relative py-16 lg:py-24 bg-brand-light border-b border-neutral-200 overflow-hidden">
         {/* Organic blob — bottom right */}
         <div className="absolute bottom-0 right-0 w-72 h-72 text-brand-primary/4 pointer-events-none translate-x-1/4 translate-y-1/4 select-none hidden lg:block">
           <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full animate-[spin_120s_linear_infinite]">
@@ -220,7 +220,7 @@ function QualityCertificationsAgroVentures() {
       </div>
 
       {/* CLOSING BANNER */}
-      <div className="relative bg-brand-primary py-24 lg:py-32 overflow-hidden">
+      <div className="relative bg-brand-primary py-16 lg:py-24 overflow-hidden">
         {/* Topography lines — left */}
         <div className="absolute top-0 left-0 w-72 h-full text-white/4 pointer-events-none select-none hidden lg:block">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" className="w-full h-full">

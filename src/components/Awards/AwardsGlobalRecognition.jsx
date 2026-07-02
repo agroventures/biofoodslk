@@ -165,7 +165,7 @@ const AwardsGlobalRecognition = () => {
         </div>
 
         {/* BOTTOM CALL TO ACTION */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
             <div className="bg-brand-primary text-white rounded-3xl p-8 md:p-12 lg:p-20 shadow-2xl relative overflow-hidden grid lg:grid-cols-12 gap-12 items-center">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/2 rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4" />
                 

@@ -192,7 +192,7 @@ function SustainabilityAgroVentures() {
         </div>
 
         {/* ── GOVERNANCE & ACCOUNTABILITY ── */}
-        <div className="border-b border-neutral-100 py-24 lg:py-32 bg-white">
+        <div className="border-b border-neutral-100 py-16 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <motion.div {...fadeUp(0)} className="mb-16">

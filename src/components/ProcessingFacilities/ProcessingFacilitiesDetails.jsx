@@ -190,7 +190,7 @@ function ProcessingFacilitiesDetails() {
             <motion.div
               key={facility.id}
               {...fadeUp(0)}
-              className="py-24 lg:py-32 bg-brand-light"
+              className="py-16 lg:py-24 bg-brand-light"
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -243,7 +243,7 @@ function ProcessingFacilitiesDetails() {
       </div>
 
       {/* CTA BANNER */}
-      <div className="bg-brand-primary py-24 lg:py-32">
+      <div className="bg-brand-primary py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 

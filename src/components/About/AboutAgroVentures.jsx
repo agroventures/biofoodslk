@@ -83,7 +83,7 @@ export default function AboutAgroVentures() {
       </div>
 
       {/* EXPERTISE + ADVANTAGES */}
-      <div className="py-24 lg:py-32">
+      <div className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 lg:gap-20">
 
           {/* EXPERTISE */}
@@ -138,7 +138,7 @@ export default function AboutAgroVentures() {
       </div>
 
       {/* GROUP COMPANIES */}
-      <div className="border-t border-neutral-100 py-24 lg:py-32 bg-brand-light">
+      <div className="border-t border-neutral-100 py-16 lg:py-24 bg-brand-light">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
