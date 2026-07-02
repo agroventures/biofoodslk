@@ -94,7 +94,7 @@ function ProcessingFacilitiesDetails() {
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               World-class facilities,
               <br />
@@ -119,7 +119,7 @@ function ProcessingFacilitiesDetails() {
                 ${i % 2 === 0 ? "border-r lg:border-r" : "lg:border-r"} 
                 ${i === STATS.length - 1 ? "lg:border-r-0" : ""}`}>
               <div>
-                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {value}
                 </p>
                 <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{label}</p>
@@ -161,7 +161,7 @@ function ProcessingFacilitiesDetails() {
 
                     <h3
                       className="mt-6 text-3xl lg:text-4xl tracking-tight leading-snug"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                       {facility.name}
                     </h3>
@@ -197,7 +197,7 @@ function ProcessingFacilitiesDetails() {
                 <div className="flex items-start gap-8 lg:gap-16">
                   <span
                     className="hidden lg:block text-[80px] leading-none font-light text-neutral-200 select-none"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
@@ -211,7 +211,7 @@ function ProcessingFacilitiesDetails() {
 
                       <h3
                         className="text-3xl lg:text-4xl tracking-tight leading-snug"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                       >
                         {facility.name}
                       </h3>
@@ -256,7 +256,7 @@ function ProcessingFacilitiesDetails() {
 
               <h2
                 className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05] text-center lg:text-left"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Bringing organic products
                 to markets worldwide.

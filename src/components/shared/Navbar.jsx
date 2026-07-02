@@ -237,7 +237,7 @@ const Navbar = () => {
                     }
                   `}
                   style={{
-                    fontFamily: "Cormorant Garamond, serif",
+                    fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif",
                   }}
                 >
                   {link.name}

@@ -67,7 +67,7 @@ export default function AboutGrowth() {
         >
           <h2
             className="text-5xl lg:text-7xl leading-[1.05] tracking-tight text-white"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             From local roots
             <br />
@@ -93,7 +93,7 @@ export default function AboutGrowth() {
             >
               <p
                 className="text-4xl lg:text-5xl font-semibold text-white"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 {m.value}
               </p>
@@ -113,7 +113,7 @@ export default function AboutGrowth() {
             <motion.p
               {...fadeUp(0)}
               className="text-2xl lg:text-3xl leading-snug text-neutral-800 max-w-3xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               "A small farming initiative in Sri Lanka, grown into a trusted organic producer trusted by partners around the world."
             </motion.p>
@@ -138,7 +138,7 @@ export default function AboutGrowth() {
                 </div>
                 <h3
                   className="mt-6 text-xl font-medium text-center"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   {title}
                 </h3>

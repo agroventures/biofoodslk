@@ -35,7 +35,7 @@ export default function HomeIntro({section}) {
 
             <h2
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Connecting Sri Lankan Farmers
               <br />

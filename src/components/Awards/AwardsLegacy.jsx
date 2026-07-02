@@ -36,7 +36,7 @@ const AwardsLegacy = () => (
           </p>
           <h2
             className="text-5xl lg:text-7xl tracking-tight leading-none text-center lg:text-left"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             A legacy preserved,
             <br />a future strengthened.
@@ -83,7 +83,7 @@ const AwardsLegacy = () => (
           </p>
           <h3
             className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Tradition and progress, working together.
           </h3>
@@ -107,7 +107,7 @@ const AwardsLegacy = () => (
         </p>
         <h2
           className="text-5xl lg:text-6xl tracking-tight text-neutral-950 text-center"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
+          style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
         >
           Growing responsibly,
           <br />

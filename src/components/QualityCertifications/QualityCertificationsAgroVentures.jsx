@@ -72,7 +72,7 @@ function QualityCertificationsAgroVentures() {
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05] text-white"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Strengthened by
               <br />
@@ -115,7 +115,7 @@ function QualityCertificationsAgroVentures() {
 
               <h3
                 className="text-4xl lg:text-5xl tracking-tight leading-snug"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Driving long-term
                 operational excellence.
@@ -153,7 +153,7 @@ function QualityCertificationsAgroVentures() {
                   <div className="flex-1">
                     <h4
                       className="text-lg text-neutral-900"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                       {title}
                     </h4>
@@ -191,7 +191,7 @@ function QualityCertificationsAgroVentures() {
 
               <p
                 className="text-3xl lg:text-4xl tracking-tight leading-snug text-neutral-900"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 "From compliance
                 to continuous
@@ -240,7 +240,7 @@ function QualityCertificationsAgroVentures() {
 
               <h2
                 className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05]"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Building stronger
                 foundations for

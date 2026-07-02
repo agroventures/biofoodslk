@@ -65,7 +65,7 @@ function QualityCertificationsDetails() {
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Certified excellence,
               <br />
@@ -95,7 +95,7 @@ function QualityCertificationsDetails() {
           {STATS.map(({ value, label, icon: Icon }, i) => (
             <motion.div key={label} {...fadeUp(i * 0.08)} className="py-10 px-6 flex items-center justify-between gap-3">
               <div>
-                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {value}
                 </p>
                 <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{label}</p>
@@ -147,7 +147,7 @@ function QualityCertificationsDetails() {
               </span>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight leading-snug"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Built on rigorous
                 systems and continuous
@@ -168,7 +168,7 @@ function QualityCertificationsDetails() {
                   </div>
                   <h4
                     className="text-xl text-neutral-900 mb-3"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                   >
                     {title}
                   </h4>
@@ -200,7 +200,7 @@ function QualityCertificationsDetails() {
             </span>
             <p
               className="text-3xl lg:text-4xl tracking-tight leading-snug text-neutral-900"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               "What makes certified
               organic production
@@ -240,7 +240,7 @@ function QualityCertificationsDetails() {
               </span>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 International standards
                 <br />
@@ -266,7 +266,7 @@ function QualityCertificationsDetails() {
                 </div>
                 <h4
                   className="mb-3 text-xl tracking-tight text-neutral-950"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   {cert.name}
                 </h4>
@@ -291,7 +291,7 @@ function QualityCertificationsDetails() {
               </span>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Every product undergoes
                 <br />
@@ -312,7 +312,7 @@ function QualityCertificationsDetails() {
                 </div>
                 <h4
                   className="text-lg text-neutral-900 mb-3"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   {title}
                 </h4>
@@ -347,7 +347,7 @@ function QualityCertificationsDetails() {
               </span>
               <h2
                 className="text-4xl lg:text-6xl tracking-tight text-white leading-[1.05]"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Certified quality,
                 <br />

@@ -76,7 +76,7 @@ export default function AboutManagement() {
               <motion.h1
                 {...fadeUp(0.1)}
                 className="text-5xl lg:text-7xl leading-[1.05] tracking-tight"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 The people behind
                 <br />
@@ -161,7 +161,7 @@ export default function AboutManagement() {
                     </p>
                     <h2
                       className="text-4xl lg:text-4xl xl:text-5xl tracking-tight text-neutral-950"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                       {member.name}
                     </h2>
@@ -173,7 +173,7 @@ export default function AboutManagement() {
                           {/* Pull Quote */}
                           <blockquote
                             className="text-2xl lg:text-3xl leading-tight text-neutral-900 border-l-4 border-brand-primary pl-6 italic"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
+                            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                           >
                             "Farmers need stability. Without it, agriculture
                             loses its future generations."

@@ -29,7 +29,7 @@ function HomeClosingReflection({section}) {
         <blockquote>
           <h2
             className="text-4xl leading-[1.05] tracking-tight text-neutral-950 sm:text-5xl lg:text-7xl"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Every product carries
             <br />

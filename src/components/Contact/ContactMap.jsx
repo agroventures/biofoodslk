@@ -19,7 +19,7 @@ function ContactMap() {
           <h2
             className="text-5xl lg:text-7xl tracking-tight text-neutral-950 text-center"
             style={{
-              fontFamily: "Cormorant Garamond, serif",
+              fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif",
             }}
           >
             Visit Our Headquarters.

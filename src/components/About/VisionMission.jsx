@@ -51,7 +51,7 @@ function VisionMission() {
           <motion.h1
             {...fadeUp(0.1)}
             className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-7xl text-center mx-auto"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Growing responsibly,
             <br />
@@ -81,7 +81,7 @@ function VisionMission() {
               <div className="lg:col-span-4">
                 <h2
                   className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   Vision
                 </h2>
@@ -89,7 +89,7 @@ function VisionMission() {
               <div className="lg:col-span-6">
                 <h3
                   className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4 text-center lg:text-left"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   Leading organic agriculture across Asia and beyond.
                 </h3>
@@ -111,7 +111,7 @@ function VisionMission() {
               <div className="lg:col-span-4">
                 <h2
                   className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   Mission
                 </h2>
@@ -119,7 +119,7 @@ function VisionMission() {
               <div className="lg:col-span-6">
                 <h3
                   className="text-xl lg:text-2xl tracking-tight text-neutral-800 mb-4 text-center lg:text-left"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   Raising standards through responsible farming.
                 </h3>
@@ -146,7 +146,7 @@ function VisionMission() {
             </div>
             <h3
               className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white text-center"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               "Every harvest is a promise - to the land, to the farmer,
               and to the people who trust what we grow."

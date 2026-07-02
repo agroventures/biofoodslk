@@ -87,7 +87,7 @@ function AboutAwards() {
                     </div>
                     <h2
                         className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                         A legacy of
                         <br />
@@ -112,7 +112,7 @@ function AboutAwards() {
                                 </div>
                                 <span
                                     className="text-3xl tracking-tight text-neutral-200 group-hover:text-brand-secondary/30 transition-colors"
-                                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                                 >
                                     {award.year}
                                 </span>
@@ -120,7 +120,7 @@ function AboutAwards() {
 
                             <h3
                                 className="text-2xl tracking-tight text-neutral-950 mb-3 leading-tight group-hover:text-brand-primary transition-colors"
-                                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                             >
                                 {award.title}
                             </h3>
@@ -146,7 +146,7 @@ function AboutAwards() {
                     </div>
                     <h3
                         className="max-w-xl text-3xl leading-tight lg:text-4xl mb-12"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                         Three decades of recognition — 1999 to 2019.
                     </h3>
@@ -160,7 +160,7 @@ function AboutAwards() {
                             >
                                 <span
                                     className="shrink-0 text-2xl text-brand-gold/70 tabular-nums"
-                                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                                 >
                                     {item.year}
                                 </span>

@@ -48,7 +48,7 @@ function ProductDetails() {
           <div className="lg:col-span-7">
             <h1
               className="text-5xl lg:text-7xl tracking-tight text-neutral-950"
-              style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
             >
               {product.name}
             </h1>

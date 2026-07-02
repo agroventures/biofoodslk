@@ -52,7 +52,7 @@ function SustainabilityAgroVentures() {
             <motion.h1
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-7xl mx-auto text-center"
-              style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
             >
               Agroventures
               <br />
@@ -84,7 +84,7 @@ function SustainabilityAgroVentures() {
               </div>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 Environmental <span className="italic text-brand-primary">Stewardship</span>
               </h3>
@@ -107,7 +107,7 @@ function SustainabilityAgroVentures() {
                     <div className="col-span-10">
                       <h4
                         className="text-2xl tracking-tight text-neutral-950 mb-2"
-                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                        style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
                       >
                         {item.title}
                       </h4>
@@ -143,7 +143,7 @@ function SustainabilityAgroVentures() {
               </div>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 Social <span className="italic text-brand-primary">Responsibility</span>
               </h3>
@@ -176,7 +176,7 @@ function SustainabilityAgroVentures() {
                     <div className="col-span-10">
                       <h4
                         className="text-2xl tracking-tight text-neutral-950 mb-2"
-                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                        style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
                       >
                         {item.title}
                       </h4>
@@ -205,7 +205,7 @@ function SustainabilityAgroVentures() {
               </div>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 Governance &amp; <span className="italic text-brand-primary">Accountability</span>
               </h3>
@@ -229,7 +229,7 @@ function SustainabilityAgroVentures() {
                     <div className="col-span-10">
                       <h4
                         className="text-2xl tracking-tight text-neutral-950 mb-2"
-                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                        style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
                       >
                         {item.title}
                       </h4>
@@ -276,7 +276,7 @@ function SustainabilityAgroVentures() {
               </div>
               <h3
                 className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white items-center text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 "Through this structured ESG approach, sustainability is not only upheld - it is continuously improved, measured, and aligned with global expectations."
               </h3>

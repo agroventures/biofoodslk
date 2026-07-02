@@ -53,7 +53,7 @@ function AboutFoundingVision() {
           </div>
           <h2
             className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl text-center"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             A simple belief:
             <br />
@@ -87,7 +87,7 @@ function AboutFoundingVision() {
               <div className="lg:col-span-4">
                 <h3
                   className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   {item.title}
                 </h3>
@@ -110,7 +110,7 @@ function AboutFoundingVision() {
           </div>
           <h3
             className="max-w-7xl mx-auto text-3xl leading-tight text-brand-light lg:text-5xl text-center"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Sustainable practices. Trusted partnerships. Uncompromising quality.
           </h3>

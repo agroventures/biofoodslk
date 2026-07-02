@@ -108,7 +108,7 @@ function PrivacyPolicy() {
             <motion.h1
               {...fadeUp(0.1)}
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Privacy
               <br />
@@ -150,7 +150,7 @@ function PrivacyPolicy() {
 
               <h2
                 className="mt-6 text-4xl leading-tight tracking-tight lg:text-5xl"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Built on trust,
                 <br />
@@ -191,7 +191,7 @@ function PrivacyPolicy() {
                       <div className="mb-2 flex items-center gap-3">
                         <h4
                           className="text-xl tracking-tight text-neutral-950"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                          style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                         >
                           {card.title}
                         </h4>
@@ -225,7 +225,7 @@ function PrivacyPolicy() {
                 <div className="lg:col-span-4">
                   <h3
                     className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                   >
                     {block.title}
                   </h3>
@@ -251,7 +251,7 @@ function PrivacyPolicy() {
 
             <h3
               className="max-w-7xl text-3xl leading-tight lg:text-5xl text-center"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Privacy enquiries welcomed.
             </h3>

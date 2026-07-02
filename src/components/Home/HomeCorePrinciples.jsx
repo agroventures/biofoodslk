@@ -55,7 +55,7 @@ function HomeCorePrinciples({ section }) {
 
           <h2
             className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Principles That
             <br />
@@ -93,7 +93,7 @@ function HomeCorePrinciples({ section }) {
               <div className="lg:col-span-4">
                 <h3
                   className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   {principle.title}
                 </h3>
@@ -121,7 +121,7 @@ function HomeCorePrinciples({ section }) {
 
           <h3
             className="max-w-4xl text-3xl leading-tight text-neutral-950 lg:text-5xl"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Sustainable practices. Trusted partnerships. Uncompromising quality.
           </h3>

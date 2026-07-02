@@ -43,7 +43,7 @@ function SustainabilityEnvironmentalResponsibility() {
             <motion.h1
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight text-neutral-950 max-w-4xl mx-auto text-center"
-              style={{ fontFamily: 'Cormorant Garamond, serif' }}
+              style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
             >
               Rooted in the land,
               <br />
@@ -76,7 +76,7 @@ function SustainabilityEnvironmentalResponsibility() {
               </div>
               <h2
                 className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl mx-auto text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 Farming that
                 <br />
@@ -120,7 +120,7 @@ function SustainabilityEnvironmentalResponsibility() {
                       <div className="col-span-10">
                         <h3
                           className="text-2xl tracking-tight text-neutral-950 mb-2"
-                          style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                          style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
                         >
                           {item.title}
                         </h3>
@@ -156,7 +156,7 @@ function SustainabilityEnvironmentalResponsibility() {
               </div>
               <h2
                 className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl mx-auto text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 People at the
                 <br />
@@ -185,7 +185,7 @@ function SustainabilityEnvironmentalResponsibility() {
                     <div>
                       <h3
                         className="text-2xl tracking-tight text-neutral-950 mb-2 leading-tight group-hover:text-brand-primary transition-colors"
-                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                        style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
                       >
                         {item.title}
                       </h3>
@@ -220,7 +220,7 @@ function SustainabilityEnvironmentalResponsibility() {
               </div>
               <h3
                 className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white text-center"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
               >
                 "Sustainability is not what we do on the side - it is the foundation everything is built upon."
               </h3>

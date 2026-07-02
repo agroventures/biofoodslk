@@ -112,7 +112,7 @@ export default function ProducersIntro() {
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl leading-[1.05] tracking-tight"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Empowering the
               <br />
@@ -157,7 +157,7 @@ export default function ProducersIntro() {
               <div>
                 <p
                   className="text-4xl lg:text-5xl text-white"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   {value}
                 </p>
@@ -188,7 +188,7 @@ export default function ProducersIntro() {
           <motion.h2
             {...fadeUp(0)}
             className="text-4xl lg:text-6xl mb-16"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             Regional Outreach
           </motion.h2>
@@ -217,7 +217,7 @@ export default function ProducersIntro() {
             <motion.h2
               {...fadeUp(0)}
               className="text-4xl lg:text-6xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Life at the Farm Gate
             </motion.h2>

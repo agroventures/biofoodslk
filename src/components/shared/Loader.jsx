@@ -33,7 +33,7 @@ const Loader = () => {
             </p>
             <h1
               className="text-4xl tracking-tight text-neutral-900"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Bio <span className="text-brand-secondary">Foods</span>
             </h1>

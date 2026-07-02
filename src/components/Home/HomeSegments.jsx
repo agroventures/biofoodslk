@@ -79,7 +79,7 @@ function HomeSegments({ section }) {
             </div>
             <h2
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Experience BioFoods.
             </h2>
@@ -121,7 +121,7 @@ function HomeSegments({ section }) {
               {/* Title */}
               <h3
                 className="mb-4 text-center text-2xl tracking-tight text-neutral-950"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 {segment.title}
               </h3>

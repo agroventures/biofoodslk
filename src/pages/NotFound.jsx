@@ -61,7 +61,7 @@ function NotFound() {
             <motion.h1
               {...fadeUp(0.1)}
               className="text-6xl leading-[0.95] tracking-tight text-neutral-950 sm:text-7xl lg:text-8xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Lost in the
               <br />

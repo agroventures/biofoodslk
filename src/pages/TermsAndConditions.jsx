@@ -105,7 +105,7 @@ function TermsAndConditions() {
             <motion.h1
               {...fadeUp(0.1)}
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Terms &amp;
               <br />
@@ -148,7 +148,7 @@ function TermsAndConditions() {
 
               <h2
                 className="mt-6 text-4xl leading-tight tracking-tight lg:text-5xl"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Built on clarity,
                 <br />
@@ -188,7 +188,7 @@ function TermsAndConditions() {
                       <div className="mb-2 flex items-center gap-3">
                         <h4
                           className="text-xl tracking-tight text-neutral-950"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                          style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                         >
                           {card.title}
                         </h4>
@@ -217,7 +217,7 @@ function TermsAndConditions() {
               </div>
               <h3
                 className="text-3xl lg:text-4xl tracking-tight"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Prohibited Actions
               </h3>
@@ -232,7 +232,7 @@ function TermsAndConditions() {
                 >
                   <span
                     className="shrink-0 text-2xl text-brand-gold/70 tabular-nums"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
@@ -263,7 +263,7 @@ function TermsAndConditions() {
                 <div className="lg:col-span-4">
                   <h3
                     className="text-2xl lg:text-3xl tracking-tight text-neutral-950"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                   >
                     {block.title}
                   </h3>
@@ -289,7 +289,7 @@ function TermsAndConditions() {
 
             <h3
               className="max-w-7xl text-3xl leading-tight lg:text-5xl text-center"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Legal enquiries welcomed.
             </h3>

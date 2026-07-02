@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => (
     <div className="p-6">
       <h2
         className="text-2xl lg:text-3xl tracking-tight text-neutral-950 mb-3"
-        style={{ fontFamily: "Cormorant Garamond, serif" }}
+        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
       >
         {product.name}
       </h2>

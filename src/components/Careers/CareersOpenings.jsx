@@ -81,7 +81,7 @@ function CareersOpenings() {
                     </div>
                     <h2
                         className="text-5xl lg:text-7xl tracking-tight text-neutral-950 text-center lg:text-left"
-                        style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                        style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif' }}
                     >
                         Apply to Join
                         <br />
@@ -117,19 +117,19 @@ function CareersOpenings() {
                             </p>
                             <ul className="space-y-8 text-white leading-7">
                                 <li>
-                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
+                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif', fontSize: '1.2rem' }}>
                                         Purpose-Driven Work
                                     </p>
                                     Contribute to organic, fair-trade agriculture that impacts communities across Sri Lanka.
                                 </li>
                                 <li>
-                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
+                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif', fontSize: '1.2rem' }}>
                                         Global Exposure
                                     </p>
                                     Work with international buyers, certifiers, and partners across the world.
                                 </li>
                                 <li>
-                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
+                                    <p className="text-brand-gold mb-1" style={{ fontFamily: 'Calibri, Gill Sans, Trebuchet MS, sans-serif', fontSize: '1.2rem' }}>
                                         Growth Culture
                                     </p>
                                     We invest in our people as much as we invest in our land.

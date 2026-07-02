@@ -96,7 +96,7 @@ export default function AboutBioFoods() {
                 <motion.h1
                   {...fadeUp(0.1)}
                   className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-neutral-900 leading-[1.1] mb-6"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                   Rooted in nature, <br />
                   <span className="italic text-brand-primary">grown with care.</span>
@@ -152,7 +152,7 @@ export default function AboutBioFoods() {
                 >
                   <p
                     className="text-4xl md:text-5xl font-light tracking-tight text-brand-primary group-hover:text-white transition-colors duration-300 tabular-nums"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                   >
                     {s.value}
                   </p>
@@ -183,7 +183,7 @@ export default function AboutBioFoods() {
               <motion.h2
                 {...fadeUp(0)}
                 className="text-4xl lg:text-5xl tracking-tight text-brand-light font-light text-center md:text-left mb-4 md:mb-0"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Our Legacy & <span className="italic text-brand-gold">Journey</span>
               </motion.h2>
@@ -205,7 +205,7 @@ export default function AboutBioFoods() {
                   <div>
                     <span
                       className="text-3xl lg:text-4xl text-brand-primary text-center group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                       {m.year}
                     </span>

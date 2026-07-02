@@ -47,7 +47,7 @@ export default function AboutAgroVentures() {
             <motion.h2
               {...fadeUp(0.1)}
               className="text-5xl lg:text-7xl tracking-tight leading-[1.05]"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Agro Ventures
               <br />
@@ -72,7 +72,7 @@ export default function AboutAgroVentures() {
           ].map((s) => (
             <motion.div key={s.label} {...fadeUp()} className="py-10 px-8 flex items-center justify-between gap-4">
               <div>
-                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {s.value}
                 </p>
                 <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{s.label}</p>
@@ -151,7 +151,7 @@ export default function AboutAgroVentures() {
               </span>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight text-center lg:text-left"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Working together
                 <br />

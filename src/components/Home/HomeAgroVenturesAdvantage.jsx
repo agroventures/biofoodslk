@@ -60,7 +60,7 @@ function HomeAgroVenturesAdvantage({ section }) {
 
             <h2
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               The Strength Behind
               <br />
@@ -130,7 +130,7 @@ function HomeAgroVenturesAdvantage({ section }) {
 
           <h3
             className="max-w-7xl text-3xl leading-tight lg:text-5xl text-center"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+            style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
           >
             A modern agricultural ecosystem built for scale, consistency, and sustainability.
           </h3>

@@ -95,7 +95,7 @@ function HomeCertifications({ section }) {
 
             <h2
               className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl lg:text-5xl xl:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Trusted by
               <br />
@@ -131,7 +131,7 @@ function HomeCertifications({ section }) {
 
               <h3
                 className="max-w-3xl text-2xl leading-tight lg:text-3xl xl:text-4xl"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
               >
                 Certification is not the destination.
                 It is the standard we begin with.

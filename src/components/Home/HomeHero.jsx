@@ -172,7 +172,7 @@ export default function Hero() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.7 }}
               className="font-serif text-5xl font-semibold leading-[1.1] tracking-tight text-white md:text-6xl xl:text-7xl"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               {slides[current].heading}
             </motion.h1>

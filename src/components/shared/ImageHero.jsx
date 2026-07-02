@@ -53,7 +53,7 @@ const ImageHero = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-8xl font-light"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
+              style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               {title}
             </motion.h1>

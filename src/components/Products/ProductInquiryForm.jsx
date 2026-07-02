@@ -55,7 +55,7 @@ const ProductInquiryForm = () => {
             <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Product Inquiry</span>
             <span className="w-8 h-px bg-brand-gold" />
           </div>
-          <h2 className="text-5xl lg:text-6xl tracking-tight text-neutral-950 text-center" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+          <h2 className="text-5xl lg:text-6xl tracking-tight text-neutral-950 text-center" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
             Interested in our {" "}
             <span className="italic text-brand-primary">products?</span>
           </h2>

@@ -39,7 +39,7 @@ function NewsEventsGrid() {
                                 </p>
                                 <h3
                                     className="text-3xl lg:text-4xl tracking-tight text-neutral-950 leading-tight"
-                                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                                 >
                                     {title}
                                 </h3>

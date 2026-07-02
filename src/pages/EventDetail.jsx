@@ -62,7 +62,7 @@ function EventDetail() {
                 {/* Title */}
                 <h1
                     className="text-5xl lg:text-7xl tracking-tight text-neutral-950 leading-tight mb-8"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                 >
                     {title}
                 </h1>

@@ -70,7 +70,7 @@ const AwardsGlobalRecognition = () => {
                     </p>
                     <h2
                         className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-900 leading-[1.05]"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                         Recognized for <br />
                         <span className="italic text-brand-primary">excellence</span> worldwide.
@@ -111,7 +111,7 @@ const AwardsGlobalRecognition = () => {
                             {/* Award Title & Org */}
                             <h3
                                 className="text-2xl tracking-tight text-neutral-900 font-medium mb-2 text-center group-hover:text-brand-primary transition-colors duration-300"
-                                style={{ fontFamily: "Cormorant Garamond, serif" }}
+                                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                             >
                                 {title}
                             </h3>
@@ -142,7 +142,7 @@ const AwardsGlobalRecognition = () => {
                     </p>
                     <h3
                         className="text-4xl lg:text-5xl tracking-tight text-neutral-900 font-light"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                         Awards that reflect <br />
                         <span className="italic font-normal text-brand-gold">our core values.</span>
@@ -175,7 +175,7 @@ const AwardsGlobalRecognition = () => {
                     </p>
                     <h2
                         className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-none text-center lg:text-left"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
                     >
                         Inspired by achievement, <br />
                         <span className="italic text-brand-gold">driven by purpose.</span>
