@@ -30,35 +30,11 @@ function NewsEventsGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: i * 0.07 }}
-                            className="grid lg:grid-cols-12 gap-6 lg:gap-16 py-12 items-start group"
+                            className="grid lg:grid-cols-12 gap-6 lg:gap-10 py-12 items-start group"
                         >
-                            {/* Date + Title */}
-                            <div className="lg:col-span-4">
-                                <p className="text-base uppercase tracking-[0.2em] text-neutral-400 mb-3">
-                                    {date} · {type}
-                                </p>
-                                <h3
-                                    className="text-3xl lg:text-4xl tracking-tight text-neutral-950 leading-tight"
-                                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
-                                >
-                                    {title}
-                                </h3>
-                            </div>
-
-                            {/* Summary + CTA */}
-                            <div className="lg:col-span-4 lg:pt-1 flex flex-col gap-6">
-                                <p className="text-neutral-600 leading-8">{summary}</p>
-                                <Link
-                                    to={`/news-and-events/${id}`}
-                                    className="self-start inline-flex items-center gap-2 text-base uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
-                                >
-                                    Read More <ArrowRight className="w-4 h-4" />
-                                </Link>
-                            </div>
-
                             {/* Thumbnail */}
                             {images?.[0] && (
-                                <div className="lg:col-span-3 relative group cursor-zoom-in" onClick={() => setLightbox({ images, index: 0 })}>
+                                <div className="lg:col-span-4 relative group cursor-zoom-in" onClick={() => setLightbox({ images, index: 0 })}>
                                     <img
                                         src={images[0]}
                                         alt={title}
@@ -70,6 +46,26 @@ function NewsEventsGrid() {
                                     </div>
                                 </div>
                             )}
+
+                            {/* Date + Title + Summary + CTA */}
+                            <div className="lg:col-span-8 flex flex-col gap-4">
+                                <p className="text-base uppercase tracking-[0.2em] text-neutral-400">
+                                    {date} · {type}
+                                </p>
+                                <h3
+                                    className="text-3xl lg:text-4xl tracking-tight text-neutral-950 leading-tight"
+                                    style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
+                                >
+                                    {title}
+                                </h3>
+                                <p className="text-neutral-600 leading-8">{summary}</p>
+                                <Link
+                                    to={`/news-and-events/${id}`}
+                                    className="self-start inline-flex items-center gap-2 text-base uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
+                                >
+                                    Read More <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
