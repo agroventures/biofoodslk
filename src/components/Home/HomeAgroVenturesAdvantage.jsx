@@ -51,7 +51,7 @@ function HomeAgroVenturesAdvantage({ section }) {
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
+                <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
                   Why Choose Us
                 </span>
               </div>
@@ -123,7 +123,7 @@ function HomeAgroVenturesAdvantage({ section }) {
           <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
 
-            <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
+            <span className="text-base uppercase tracking-[0.3em] text-brand-gold">
               System Advantage
             </span>
           </div>

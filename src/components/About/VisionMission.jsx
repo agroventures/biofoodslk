@@ -43,7 +43,7 @@ function VisionMission() {
           <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center justify-center gap-2">
-              <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Vision & Mission</span>
+              <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Vision & Mission</span>
             </div>
             <div className="h-px w-12 bg-brand-secondary" />
           </motion.div>
@@ -142,7 +142,7 @@ function VisionMission() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-gold" />
-              <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">Bio Foods Philosophy</span>
+              <span className="text-base uppercase tracking-[0.3em] font-semibold text-brand-gold">Bio Foods Philosophy</span>
             </div>
             <h3
               className="max-w-7xl text-3xl leading-tight lg:text-5xl text-white text-center"

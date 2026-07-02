@@ -72,7 +72,7 @@ const ContactForm = () => {
                 <div className="mb-20">
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <span className="w-12 h-px bg-brand-gold" />
-                        <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
+                        <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
                             Contact Us
                         </span>
                         <span className="w-12 h-px bg-brand-gold" />
@@ -121,7 +121,7 @@ const ContactForm = () => {
                             <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-white/5 -translate-y-1/3 translate-x-1/3" />
                             <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-white/5 translate-y-1/4 -translate-x-1/4" />
 
-                            <p className="text-sm uppercase tracking-[0.3em] text-brand-gold mb-8 relative">
+                            <p className="text-base uppercase tracking-[0.3em] text-brand-gold mb-8 relative">
                                 Contact Information
                             </p>
 
@@ -132,7 +132,7 @@ const ContactForm = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-base text-white mb-1">Head Office</h3>
-                                        <p className="text-white/60 leading-7 text-sm">
+                                        <p className="text-white/60 leading-7 text-base">
                                             52/1/D, New Kandy Road,<br />
                                             Kothalawala, Kaduwela,<br />
                                             Sri Lanka.
@@ -146,7 +146,7 @@ const ContactForm = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-base text-white mb-1">Phone</h3>
-                                        <a href="tel:+94117487100" className="text-white/60 hover:text-brand-gold transition text-sm">
+                                        <a href="tel:+94117487100" className="text-white/60 hover:text-brand-gold transition text-base">
                                             +94 11 2201220
                                         </a>
                                     </div>
@@ -158,7 +158,7 @@ const ContactForm = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-base text-white mb-1">Email</h3>
-                                        <a href="mailto:info@biofoodsagro.com" className="text-white/60 hover:text-brand-gold transition text-sm">
+                                        <a href="mailto:info@biofoodsagro.com" className="text-white/60 hover:text-brand-gold transition text-base">
                                             info@biofoodsagro.com
                                         </a>
                                     </div>

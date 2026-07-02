@@ -49,7 +49,7 @@ function ImageCarousel({ images, name }) {
           </button>
 
           {/* counter */}
-          <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm px-3 py-1 text-sm text-white tracking-widest">
+          <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm px-3 py-1 text-base text-white tracking-widest">
             {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
           </div>
 
@@ -83,7 +83,7 @@ function ProcessingFacilitiesDetails() {
 
           <motion.span
             {...fadeUp(0)}
-            className="flex items-center justify-center gap-3 mb-10 text-sm uppercase font-semibold tracking-[0.2em] text-neutral-500"
+            className="flex items-center justify-center gap-3 mb-10 text-base uppercase font-semibold tracking-[0.2em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Processing Facilities
@@ -122,7 +122,7 @@ function ProcessingFacilitiesDetails() {
                 <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {value}
                 </p>
-                <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{label}</p>
+                <p className="mt-1 text-base uppercase tracking-[0.25em] text-white/50">{label}</p>
               </div>
               <Icon className="h-4 w-4 text-white/20 shrink-0" />
             </motion.div>
@@ -153,7 +153,7 @@ function ProcessingFacilitiesDetails() {
 
                   {/* CONTENT */}
                   <div className={`lg:col-span-5 ${reverse ? "lg:order-1" : ""}`}>
-                    <span className="text-sm text-neutral-400 tracking-[0.3em] uppercase">
+                    <span className="text-base text-neutral-400 tracking-[0.3em] uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
@@ -174,7 +174,7 @@ function ProcessingFacilitiesDetails() {
                       {BADGES.map((badge) => (
                         <span
                           key={badge}
-                          className="px-3 py-1.5 border border-neutral-200 text-sm uppercase tracking-[0.2em] text-neutral-600 bg-brand-light"
+                          className="px-3 py-1.5 border border-neutral-200 text-base uppercase tracking-[0.2em] text-neutral-600 bg-brand-light"
                         >
                           {badge}
                         </span>
@@ -204,7 +204,7 @@ function ProcessingFacilitiesDetails() {
 
                   <div className="flex-1 grid lg:grid-cols-2 gap-12 items-start">
                     <div>
-                      <span className="text-sm text-neutral-400 tracking-[0.3em] uppercase lg:hidden">
+                      <span className="text-base text-neutral-400 tracking-[0.3em] uppercase lg:hidden">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div className="mt-4 lg:mt-0 h-px w-8 bg-brand-secondary mb-6" />
@@ -218,7 +218,7 @@ function ProcessingFacilitiesDetails() {
                     </div>
 
                     <div>
-                      <p className="text-sm leading-8 text-neutral-600">
+                      <p className="text-base leading-8 text-neutral-600">
                         {facility.description}
                       </p>
 
@@ -226,7 +226,7 @@ function ProcessingFacilitiesDetails() {
                         {BADGES.map((badge) => (
                           <span
                             key={badge}
-                            className="px-3 py-1.5 border border-neutral-200 text-sm uppercase tracking-[0.2em] text-neutral-600 bg-white"
+                            className="px-3 py-1.5 border border-neutral-200 text-base uppercase tracking-[0.2em] text-neutral-600 bg-white"
                           >
                             {badge}
                           </span>
@@ -248,7 +248,7 @@ function ProcessingFacilitiesDetails() {
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 
             <div>
-              <span className="flex items-center justify-center gap-3 text-sm uppercase tracking-[0.35em] font-semibold text-white/50 mb-8">
+              <span className="flex items-center justify-center gap-3 text-base uppercase tracking-[0.35em] font-semibold text-white/50 mb-8">
                 <span className="h-px w-8 bg-brand-secondary" />
                 Partner With Us
                 <span className="h-px w-8 bg-brand-secondary" />
@@ -273,7 +273,7 @@ function ProcessingFacilitiesDetails() {
               <div className="flex items-center justify-center lg:justify-start">
                 <Link
                   to="/contact"
-                  className="flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                  className="flex items-center gap-3 border border-white/30 px-8 py-4 text-base text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
                 >
                   Contact Us
                   <ArrowUpRight className="w-4 h-4" />

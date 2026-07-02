@@ -58,7 +58,7 @@ export default function Lightbox({ images, startIndex = 0, onClose }) {
 
         {/* Counter */}
         {images.length > 1 && (
-          <p className="absolute bottom-4 text-white/50 text-sm tracking-widest">
+          <p className="absolute bottom-4 text-white/50 text-base tracking-widest">
             {index + 1} / {images.length}
           </p>
         )}

@@ -24,8 +24,8 @@ const ProductCard = ({ product }) => (
       >
         {product.name}
       </h2>
-      <p className="text-sm leading-6 text-neutral-500 line-clamp-2">{product.desc}</p>
-      <span className="inline-block mt-4 text-sm uppercase tracking-[0.2em] text-brand-primary group-hover:underline">
+      <p className="text-base leading-6 text-neutral-500 line-clamp-2">{product.desc}</p>
+      <span className="inline-block mt-4 text-base uppercase tracking-[0.2em] text-brand-primary group-hover:underline">
         Explore Products
       </span>
     </div>

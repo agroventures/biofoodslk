@@ -52,7 +52,7 @@ const ProductInquiryForm = () => {
         <div className="mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-brand-gold" />
-            <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Product Inquiry</span>
+            <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Product Inquiry</span>
             <span className="w-8 h-px bg-brand-gold" />
           </div>
           <h2 className="text-5xl lg:text-6xl tracking-tight text-neutral-950 text-center" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
@@ -86,14 +86,14 @@ const ProductInquiryForm = () => {
             <div className="absolute bottom-0 left-0 w-28 h-28 rounded-full bg-white/5 translate-y-1/4 -translate-x-1/4" />
 
             <div className="relative">
-              <p className="text-sm uppercase tracking-[0.3em] text-brand-gold mb-8">Why Choose Us</p>
+              <p className="text-base uppercase tracking-[0.3em] text-brand-gold mb-8">Why Choose Us</p>
               <div className="space-y-8">
                 {highlights.map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-4">
                     <div className="w-10 h-10 flex items-center justify-center bg-white/10 shrink-0">
                       <Icon className="w-4 h-4 text-brand-gold" />
                     </div>
-                    <p className="text-white/80 text-sm">{text}</p>
+                    <p className="text-white/80 text-base">{text}</p>
                   </div>
                 ))}
               </div>
@@ -101,7 +101,7 @@ const ProductInquiryForm = () => {
 
             <div className="relative mt-12 pt-8 border-t border-white/10">
               <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Response Time</p>
-              <p className="text-white text-sm">Within 24 hours</p>
+              <p className="text-white text-base">Within 24 hours</p>
             </div>
           </div>
 

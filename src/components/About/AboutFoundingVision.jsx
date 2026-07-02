@@ -47,7 +47,7 @@ function AboutFoundingVision() {
           <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-secondary" />
             <div className="flex items-center gap-2">
-              <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Founding Vision</span>
+              <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Founding Vision</span>
             </div>
             <div className="h-px w-12 bg-brand-secondary" />
           </div>
@@ -95,7 +95,7 @@ function AboutFoundingVision() {
 
               {/* Description */}
               <div className="lg:col-span-6">
-                <p className="max-w-xl text-lg leading-8 text-neutral-600 text-center lg:text-left">{item.description}</p>
+                <p className="max-w-7xl text-lg leading-8 text-neutral-600 text-center lg:text-left">{item.description}</p>
               </div>
             </motion.div>
           ))}

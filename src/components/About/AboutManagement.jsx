@@ -65,7 +65,7 @@ export default function AboutManagement() {
           <div className="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
             <motion.span
               {...fadeUp(0)}
-              className="flex items-center justify-center gap-3 mb-10 text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500"
+              className="flex items-center justify-center gap-3 mb-10 text-base uppercase tracking-[0.3em] font-semibold text-neutral-500"
             >
               <span className="h-px w-10 bg-brand-secondary" />
               Leadership

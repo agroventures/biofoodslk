@@ -20,7 +20,7 @@ function HomeProductExperiences({ section }) {
             <div className="h-px w-12 bg-brand-secondary" />
 
             <div className="flex items-center gap-2">
-              <span className="text-sm uppercase font-semibold tracking-wider text-neutral-500">
+              <span className="text-base uppercase font-semibold tracking-wider text-neutral-500">
                 Product Collection
               </span>
             </div>
@@ -71,7 +71,7 @@ function HomeProductExperiences({ section }) {
                 <div className="mt-6 flex items-center justify-center">
                   <Link
                     to={`/products/${product.slug}`}
-                    className="group mt-8 inline-flex items-center gap-3 rounded-full border border-brand-primary px-6 py-3 text-sm font-medium text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
+                    className="group mt-8 inline-flex items-center gap-3 rounded-full border border-brand-primary px-6 py-3 text-base font-medium text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
                   >
                     Explore Collection
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -87,7 +87,7 @@ function HomeProductExperiences({ section }) {
           <div className="mb-4 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-brand-gold" />
 
-            <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
+            <span className="text-base uppercase tracking-[0.3em] text-brand-gold">
               Product Promise
             </span>
           </div>

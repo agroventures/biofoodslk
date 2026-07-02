@@ -26,7 +26,7 @@ function HomeEcoPlus() {
                   Patented Technology
                 </span>
               </div>
-              <p className="text-brand-primary text-xs md:text-sm leading-relaxed">
+              <p className="text-brand-primary text-xs md:text-base leading-relaxed">
                 Revolutionizing agriculture with nutrient-dense, 100% organic
                 waste-to-soil solutions.
               </p>

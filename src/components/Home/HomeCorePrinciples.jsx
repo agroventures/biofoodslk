@@ -47,7 +47,7 @@ function HomeCorePrinciples({ section }) {
 
             <div className="flex items-center gap-2">
 
-              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+              <span className="text-base uppercase tracking-[0.3em] text-neutral-500">
                 What We Stand For
               </span>
             </div>
@@ -77,7 +77,7 @@ function HomeCorePrinciples({ section }) {
               {/* Number + Icon (side-by-side on mobile, separate columns on lg) */}
               <div className="flex items-center gap-4 lg:contents">
                 <div className="lg:col-span-1">
-                  <span className="text-sm tracking-[0.25em] text-brand-secondary">
+                  <span className="text-base tracking-[0.25em] text-brand-secondary">
                     0{index + 1}
                   </span>
                 </div>

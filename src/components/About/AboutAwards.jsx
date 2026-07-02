@@ -82,7 +82,7 @@ function AboutAwards() {
                     <div className="mb-6 flex items-center gap-4">
                         <div className="h-px w-12 bg-brand-secondary" />
                         <div className="flex items-center gap-2">
-                            <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">Accolades</span>
+                            <span className="text-base uppercase tracking-[0.3em] text-neutral-500">Accolades</span>
                         </div>
                     </div>
                     <h2
@@ -124,7 +124,7 @@ function AboutAwards() {
                             >
                                 {award.title}
                             </h3>
-                            <p className="text-neutral-600 text-sm leading-7 mb-6">
+                            <p className="text-neutral-600 text-base leading-7 mb-6">
                                 {award.desc}
                             </p>
 
@@ -142,7 +142,7 @@ function AboutAwards() {
                 <motion.div {...fadeUp(0.2)} className="mt-20 overflow-hidden rounded-[40px] bg-brand-primary p-10 text-white lg:p-14">
                     <div className="mb-6 flex items-center gap-4">
                         <div className="h-px w-12 bg-brand-gold" />
-                        <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">Historical Milestones</span>
+                        <span className="text-base uppercase tracking-[0.3em] text-brand-gold">Historical Milestones</span>
                     </div>
                     <h3
                         className="max-w-xl text-3xl leading-tight lg:text-4xl mb-12"
@@ -165,10 +165,10 @@ function AboutAwards() {
                                     {item.year}
                                 </span>
                                 <div>
-                                    <h5 className="text-sm uppercase tracking-wide text-white font-medium mb-1">
+                                    <h5 className="text-base uppercase tracking-wide text-white font-medium mb-1">
                                         {item.t}
                                     </h5>
-                                    <p className="text-sm text-white/60 leading-relaxed">{item.d}</p>
+                                    <p className="text-base text-white/60 leading-relaxed">{item.d}</p>
                                 </div>
                             </motion.div>
                         ))}

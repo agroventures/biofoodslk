@@ -149,13 +149,13 @@ const AwardsGlobalRecognition = () => {
                     </h3>
                 </div>
                 <div className="lg:col-span-7 grid md:grid-cols-2 gap-8 lg:gap-12">
-                    <p className="text-neutral-600 leading-relaxed font-light text-sm lg:text-md">
+                    <p className="text-neutral-600 leading-relaxed font-light text-base lg:text-md">
                         Every recognition received by Bio Foods represents more than
                         an achievement. It reflects our commitment to ethical
                         sourcing, environmental responsibility, and the well-being
                         of farming communities across our network.
                     </p>
-                    <p className="text-neutral-600 leading-relaxed font-light text-sm lg:text-md">
+                    <p className="text-neutral-600 leading-relaxed font-light text-base lg:text-md">
                         These awards strengthen our position as a trusted global
                         supplier while reaffirming the values that have guided our
                         growth from the very beginning.

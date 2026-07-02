@@ -62,7 +62,7 @@ function QualityCertificationsAgroVentures() {
 
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-white/50"
+            className="inline-flex items-center gap-3 mb-10 text-base uppercase tracking-[0.35em] text-white/50"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Agro Ventures Integration
@@ -108,7 +108,7 @@ function QualityCertificationsAgroVentures() {
 
             {/* sticky label col */}
             <motion.div {...fadeUp(0)} className="lg:col-span-4 lg:sticky lg:top-32">
-              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="inline-flex items-center gap-3 text-base uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Strategic Alignment
               </span>
@@ -121,7 +121,7 @@ function QualityCertificationsAgroVentures() {
                 operational excellence.
               </h3>
 
-              <p className="mt-6 text-sm leading-8 text-neutral-600">
+              <p className="mt-6 text-base leading-8 text-neutral-600">
                 Through this integration, Bio Foods benefits from enhanced
                 governance structures, improved operational efficiencies, and
                 stronger quality management systems - supporting sustainable
@@ -139,7 +139,7 @@ function QualityCertificationsAgroVentures() {
                 >
                   {/* index */}
                   <span
-                    className="hidden sm:block shrink-0 text-sm text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6"
+                    className="hidden sm:block shrink-0 text-base text-neutral-300 tracking-[0.3em] uppercase pt-1 w-6"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -157,7 +157,7 @@ function QualityCertificationsAgroVentures() {
                     >
                       {title}
                     </h4>
-                    <p className="mt-2 text-sm leading-7 text-neutral-600">
+                    <p className="mt-2 text-base leading-7 text-neutral-600">
                       {description}
                     </p>
                     <div className="mt-4 h-px w-0 group-hover:w-10 bg-brand-secondary transition-all duration-500" />
@@ -184,7 +184,7 @@ function QualityCertificationsAgroVentures() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-8">
+              <span className="inline-flex items-center gap-3 text-base uppercase tracking-[0.35em] text-neutral-500 mb-8">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Enhanced Capabilities
               </span>
@@ -201,13 +201,13 @@ function QualityCertificationsAgroVentures() {
             </motion.div>
 
             <motion.div {...fadeUp(0.15)} className="space-y-6">
-              <p className="text-sm leading-8 text-neutral-600">
+              <p className="text-base leading-8 text-neutral-600">
                 Our quality systems are designed to go beyond meeting standards.
                 Through structured monitoring, advanced technologies, and
                 integrated traceability, we create greater transparency and
                 reliability throughout the production journey.
               </p>
-              <p className="text-sm leading-8 text-neutral-600">
+              <p className="text-base leading-8 text-neutral-600">
                 The result is a resilient operational framework capable of
                 consistently delivering premium products that meet the
                 expectations of customers and international markets worldwide.
@@ -233,7 +233,7 @@ function QualityCertificationsAgroVentures() {
           <div className="grid lg:grid-cols-2 gap-12 items-end">
 
             <motion.div {...fadeUp(0)}>
-              <span className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-white/50 mb-8">
+              <span className="inline-flex items-center gap-3 text-base uppercase tracking-[0.35em] text-white/50 mb-8">
                 <span className="h-px w-8 bg-brand-secondary" />
                 Sustainable Growth
               </span>
@@ -259,7 +259,7 @@ function QualityCertificationsAgroVentures() {
               <div>
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-sm text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                  className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 text-base text-white uppercase tracking-[0.2em] hover:bg-white hover:text-brand-primary transition-colors duration-300"
                 >
                   Get in Touch
                   <ArrowUpRight className="w-4 h-4" />

@@ -44,7 +44,7 @@ function SustainabilityAgroVentures() {
             <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-sm uppercase tracking-wide font-semibold text-neutral-500">Structured Excellence</span>
+                <span className="text-base uppercase tracking-wide font-semibold text-neutral-500">Structured Excellence</span>
               </div>
               <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
@@ -78,7 +78,7 @@ function SustainabilityAgroVentures() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental</span>
+                  <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental</span>
                 </div>
                 <div className="h-px w-12 bg-brand-secondary" />
               </div>
@@ -138,7 +138,7 @@ function SustainabilityAgroVentures() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Social</span>
+                  <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Social</span>
                 </div>
               </div>
               <h3
@@ -199,7 +199,7 @@ function SustainabilityAgroVentures() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Governance</span>
+                  <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Governance</span>
                 </div>
                 <div className="h-px w-12 bg-brand-secondary" />
               </div>
@@ -271,7 +271,7 @@ function SustainabilityAgroVentures() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">ESG Philosophy</span>
+                <span className="text-base uppercase tracking-[0.3em] font-semibold text-brand-gold">ESG Philosophy</span>
                 <div className="h-px w-12 bg-brand-gold" />
               </div>
               <h3

@@ -10,7 +10,7 @@ function ContactMap() {
         <div className="mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-12 h-px bg-brand-gold" />
-            <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
+            <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
               Our Location
             </span>
             <span className="w-12 h-px bg-brand-gold" />
@@ -125,7 +125,7 @@ function ContactMap() {
                   py-4
                   bg-brand-primary
                   text-white
-                  text-sm
+                  text-base
                   uppercase
                   tracking-[0.2em]
                   hover:opacity-90

@@ -35,7 +35,7 @@ function SustainabilityEnvironmentalResponsibility() {
             <motion.div {...fadeUp(0)} className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental &amp; Social</span>
+                <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental &amp; Social</span>
               </div>
               <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
@@ -70,7 +70,7 @@ function SustainabilityEnvironmentalResponsibility() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental</span>
+                  <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Environmental</span>
                 </div>
                 <div className="h-px w-12 bg-brand-secondary" />
               </div>
@@ -150,7 +150,7 @@ function SustainabilityEnvironmentalResponsibility() {
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-secondary" />
                 <div className="flex items-center gap-2">
-                  <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">Social Impact</span>
+                  <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">Social Impact</span>
                 </div>
                 <div className="h-px w-12 bg-brand-secondary" />
               </div>
@@ -189,7 +189,7 @@ function SustainabilityEnvironmentalResponsibility() {
                       >
                         {item.title}
                       </h3>
-                      <p className="text-neutral-600 text-sm leading-7">{item.description}</p>
+                      <p className="text-neutral-600 text-base leading-7">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -215,7 +215,7 @@ function SustainabilityEnvironmentalResponsibility() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="mb-6 flex items-center justify-center gap-4">
                 <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold">Our Commitment</span>
+                <span className="text-base uppercase tracking-[0.3em] font-semibold text-brand-gold">Our Commitment</span>
                 <div className="h-px w-12 bg-brand-gold" />
               </div>
               <h3

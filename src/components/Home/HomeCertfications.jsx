@@ -39,7 +39,7 @@ function HomeCertifications({ section }) {
           {/* Line 01: Organic & Fairtrade (ICS) */}
           <div>
             <div className="mb-4 flex items-center justify-between border-b border-neutral-100 pb-2">
-              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500 font-medium">
+              <span className="text-base uppercase tracking-[0.3em] text-neutral-500 font-medium">
                 Organic & Fairtrade
               </span>
             </div>
@@ -58,7 +58,7 @@ function HomeCertifications({ section }) {
           {/* Line 02: Food Safety Systems */}
           <div>
             <div className="mb-4 flex items-center justify-between border-b border-neutral-100 pb-2">
-              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500 font-medium">
+              <span className="text-base uppercase tracking-[0.3em] text-neutral-500 font-medium">
                 Food Safety Systems
               </span>
             </div>
@@ -87,7 +87,7 @@ function HomeCertifications({ section }) {
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-brand-secondary" />
-                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                <span className="text-base uppercase tracking-[0.3em] text-neutral-500">
                   Quality Assurance
                 </span>
               </div>
@@ -124,7 +124,7 @@ function HomeCertifications({ section }) {
             <div className="rounded-[40px] bg-brand-primary p-8 text-white lg:p-10 xl:p-12">
               <div className="mb-4 flex items-center gap-4">
                 <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-gold">
+                <span className="text-base uppercase tracking-[0.3em] text-brand-gold">
                   Commitment
                 </span>
               </div>

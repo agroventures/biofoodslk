@@ -75,14 +75,14 @@ function NotFound() {
             <motion.div {...fadeUp(0.3)} className="mt-12 flex flex-col sm:flex-row gap-4">
               <Link
                 to="/"
-                className="inline-flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 text-sm font-semibold text-white uppercase tracking-[0.15em] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="inline-flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 text-base font-semibold text-white uppercase tracking-[0.15em] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 Back to Home
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 rounded-full border border-neutral-300 px-8 py-4 text-sm font-semibold text-neutral-700 uppercase tracking-[0.15em] transition-all duration-300 hover:border-brand-primary hover:text-brand-primary"
+                className="inline-flex items-center gap-3 rounded-full border border-neutral-300 px-8 py-4 text-base font-semibold text-neutral-700 uppercase tracking-[0.15em] transition-all duration-300 hover:border-brand-primary hover:text-brand-primary"
               >
                 Contact Us
               </Link>
@@ -96,7 +96,7 @@ function NotFound() {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="rounded-full border border-neutral-200 px-5 py-2 text-sm text-neutral-600 transition-all duration-300 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-light"
+                    className="rounded-full border border-neutral-200 px-5 py-2 text-base text-neutral-600 transition-all duration-300 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-light"
                   >
                     {link.label}
                   </Link>

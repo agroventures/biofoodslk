@@ -87,7 +87,7 @@ export default function AboutBioFoods() {
               <div className="flex flex-col justify-center">
                 <motion.span
                   {...fadeUp(0)}
-                  className="inline-flex items-center gap-3 mb-6 text-sm uppercase tracking-[0.3em] text-brand-gold font-semibold"
+                  className="inline-flex items-center gap-3 mb-6 text-base uppercase tracking-[0.3em] text-brand-gold font-semibold"
                 >
                   <span className="h-px w-8 bg-brand-gold/60" />
                   About Bio Foods
@@ -118,7 +118,7 @@ export default function AboutBioFoods() {
                       <div className="p-1.5 rounded-lg bg-brand-primary border border-neutral-200 group-hover:bg-brand-light group-hover:border-transparent transition-colors duration-300">
                         <Icon className="h-4 w-4 shrink-0 text-brand-light group-hover:scale-110 transition-transform duration-300" />
                       </div>
-                      <span className="text-sm font-medium text-neutral-700 group-hover:text-neutral-900 transition-colors">{text}</span>
+                      <span className="text-base font-medium text-neutral-700 group-hover:text-neutral-900 transition-colors">{text}</span>
                     </div>
                   ))}
                 </motion.div>
@@ -157,7 +157,7 @@ export default function AboutBioFoods() {
                     {s.value}
                   </p>
                   <div className="w-4 h-px bg-brand-gold/60 mx-auto my-3 group-hover:bg-white/30 transition-colors" />
-                  <p className="text-sm uppercase tracking-[0.2em] font-semibold text-neutral-500 group-hover:text-white/80 transition-colors duration-300">
+                  <p className="text-base uppercase tracking-[0.2em] font-semibold text-neutral-500 group-hover:text-white/80 transition-colors duration-300">
                     {s.label}
                   </p>
                 </motion.div>
@@ -187,7 +187,7 @@ export default function AboutBioFoods() {
               >
                 Our Legacy & <span className="italic text-brand-gold">Journey</span>
               </motion.h2>
-              <motion.p {...fadeUp(0.05)} className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-muted text-center md:text-left mt-2 md:mt-0">
+              <motion.p {...fadeUp(0.05)} className="text-base uppercase tracking-[0.3em] font-semibold text-brand-muted text-center md:text-left mt-2 md:mt-0">
                 Milestones over time
               </motion.p>
             </div>

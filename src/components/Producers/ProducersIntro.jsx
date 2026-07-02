@@ -86,7 +86,7 @@ export default function ProducersIntro() {
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.span
             {...fadeUp(0)}
-            className="inline-flex items-center gap-3 mb-10 text-sm uppercase tracking-[0.35em] text-neutral-500"
+            className="inline-flex items-center gap-3 mb-10 text-base uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Marginalized Organic Producers&apos; Association (MOPA)
@@ -96,13 +96,13 @@ export default function ProducersIntro() {
           <motion.div {...fadeUp(0.05)} className="flex flex-wrap gap-3 mb-12">
             <div className="inline-flex items-center gap-2 border border-neutral-200 px-4 py-2 hover:border-brand-primary transition-colors duration-300">
               <Award className="h-4 w-4 text-brand-primary shrink-0" />
-              <span className="text-sm uppercase tracking-[0.2em] text-neutral-700">
+              <span className="text-base uppercase tracking-[0.2em] text-neutral-700">
                 Best Small Farmer Group in Asia - 2014
               </span>
             </div>
             <div className="inline-flex items-center gap-2 border border-neutral-200 px-4 py-2 hover:border-brand-primary transition-colors duration-300">
               <ShieldCheck className="h-4 w-4 text-brand-primary shrink-0" />
-              <span className="text-sm uppercase tracking-[0.2em] text-neutral-700">
+              <span className="text-base uppercase tracking-[0.2em] text-neutral-700">
                 Largest Farmer Group in Asia
               </span>
             </div>
@@ -161,7 +161,7 @@ export default function ProducersIntro() {
                 >
                   {value}
                 </p>
-                <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">
+                <p className="mt-1 text-base uppercase tracking-[0.25em] text-white/50">
                   {label}
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function ProducersIntro() {
             className="py-12 px-6 flex items-center gap-4"
           >
             <Heart className="h-4 w-4 text-white/40 shrink-0" />
-            <p className="text-sm uppercase tracking-[0.2em] text-white/60 leading-6">
+            <p className="text-base uppercase tracking-[0.2em] text-white/60 leading-6">
               Women&apos;s
               <br />
               Empowerment
@@ -201,7 +201,7 @@ export default function ProducersIntro() {
                 className="group flex flex-col items-center justify-center gap-2 py-10 px-6 border-b md:border-b-0 hover:bg-white transition-colors duration-300"
               >
                 <MapPin className="h-4 w-4 text-brand-primary group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium uppercase tracking-[0.25em] text-neutral-700">
+                <span className="text-base font-medium uppercase tracking-[0.25em] text-neutral-700">
                   {region}
                 </span>
               </motion.div>
@@ -223,7 +223,7 @@ export default function ProducersIntro() {
             </motion.h2>
             <motion.span
               {...fadeUp(0.1)}
-              className="text-sm uppercase tracking-[0.35em] text-neutral-400"
+              className="text-base uppercase tracking-[0.35em] text-neutral-400"
             >
               #FacesOfMOPA
             </motion.span>

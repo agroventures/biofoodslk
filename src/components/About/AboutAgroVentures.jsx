@@ -36,7 +36,7 @@ export default function AboutAgroVentures() {
 
           <motion.span
             {...fadeUp(0)}
-            className="flex items-center justify-center gap-3 mb-10 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500"
+            className="flex items-center justify-center gap-3 mb-10 text-base font-semibold uppercase tracking-[0.35em] text-neutral-500"
           >
             <span className="h-px w-10 bg-brand-secondary" />
             Parent Group
@@ -70,14 +70,13 @@ export default function AboutAgroVentures() {
             { value: "5+",  label: "Years in Agribusiness" },
             { value: "Global", label: "Market Presence" },
           ].map((s) => (
-            <motion.div key={s.label} {...fadeUp()} className="py-10 px-8 flex items-center justify-between gap-4">
+            <motion.div key={s.label} {...fadeUp()} className="py-10 px-8 flex items-center justify-center gap-4">
               <div>
-                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
+                <p className="text-4xl lg:text-5xl text-white text-center" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {s.value}
                 </p>
-                <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/50">{s.label}</p>
+                <p className="mt-1 text-base uppercase tracking-[0.25em] text-white/50">{s.label}</p>
               </div>
-              <ArrowUpRight className="h-5 w-5 text-white/20 shrink-0" />
             </motion.div>
           ))}
         </div>
@@ -89,7 +88,7 @@ export default function AboutAgroVentures() {
 
           {/* EXPERTISE */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
+            <motion.p {...fadeUp(0)} className="text-base uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
               Areas of Expertise
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -113,7 +112,7 @@ export default function AboutAgroVentures() {
 
           {/* ADVANTAGES */}
           <div>
-            <motion.p {...fadeUp(0)} className="text-sm uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
+            <motion.p {...fadeUp(0)} className="text-base uppercase tracking-[0.35em] text-brand-primary mb-8 text-center lg:text-left">
               Strategic Advantages
             </motion.p>
             <div className="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
@@ -144,7 +143,7 @@ export default function AboutAgroVentures() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <motion.div {...fadeUp(0)}>
-              <span className="flex items-center justify-center font-semibold gap-3 text-sm uppercase tracking-[0.35em] text-neutral-500 mb-6">
+              <span className="flex items-center justify-center font-semibold gap-3 text-base uppercase tracking-[0.35em] text-neutral-500 mb-6">
                 <span className="h-px w-10 bg-brand-secondary" />
                 Group Companies
                 <span className="h-px w-10 bg-brand-secondary" />

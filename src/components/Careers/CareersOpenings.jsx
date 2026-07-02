@@ -112,7 +112,7 @@ function CareersOpenings() {
                     {/* LEFT PANEL */}
                     <div className="lg:col-span-4">
                         <div className="bg-brand-primary p-10 h-full">
-                            <p className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-gold mb-8">
+                            <p className="text-base uppercase tracking-[0.3em] font-semibold text-brand-gold mb-8">
                                 Why Bio Foods?
                             </p>
                             <ul className="space-y-8 text-white leading-7">
@@ -220,9 +220,9 @@ function CareersOpenings() {
                                     >
                                         <Paperclip className="w-5 h-5 text-neutral-400" />
                                         {cvFile ? (
-                                            <span className="text-sm text-neutral-700">{cvFile.name}</span>
+                                            <span className="text-base text-neutral-700">{cvFile.name}</span>
                                         ) : (
-                                            <p className="text-sm text-neutral-500 text-center">
+                                            <p className="text-base text-neutral-500 text-center">
                                                 Drag & drop your CV here, or <span className="text-brand-primary underline">browse</span>
                                                 <br />
                                                 <span className="text-xs text-neutral-400">PDF or Word · max 5MB</span>

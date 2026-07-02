@@ -31,7 +31,7 @@ const AwardsLegacy = () => (
     <div className="bg-brand-primary text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-end">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-brand-gold mb-6 text-center lg:text-left">
+          <p className="text-base uppercase tracking-[0.3em] text-brand-gold mb-6 text-center lg:text-left">
             Legacy & Growth
           </p>
           <h2
@@ -65,7 +65,7 @@ const AwardsLegacy = () => (
               <h4 className="text-xl text-neutral-950 text-center mb-3">
                 {title}
               </h4>
-              <p className="text-neutral-600 leading-7 text-center text-sm">
+              <p className="text-neutral-600 leading-7 text-center text-base">
                 {description}
               </p>
             </div>
@@ -78,7 +78,7 @@ const AwardsLegacy = () => (
     {/* <div className="bg-brand-light">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 flex flex-col gap-12">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-primary mb-6 text-center">
+          <p className="text-base uppercase tracking-[0.3em] font-semibold text-brand-primary mb-6 text-center">
             Preserving What Matters
           </p>
           <h3
@@ -102,7 +102,7 @@ const AwardsLegacy = () => (
     {/* CLOSING CTA */}
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 flex flex-col gap-12 border-t border-neutral-100">
       <div>
-        <p className="text-sm uppercase tracking-[0.3em] font-semibold text-brand-primary mb-6 text-center">
+        <p className="text-base uppercase tracking-[0.3em] font-semibold text-brand-primary mb-6 text-center">
           Looking Ahead
         </p>
         <h2
@@ -123,7 +123,7 @@ const AwardsLegacy = () => (
         <div className="flex justify-center">
           <a
             href="/about"
-            className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
+            className="flex items-center gap-2 text-base uppercase tracking-[0.2em] text-brand-primary border-b border-brand-primary pb-1 hover:opacity-70 transition"
           >
             Our Story <ArrowRight className="w-4 h-4" />
           </a>

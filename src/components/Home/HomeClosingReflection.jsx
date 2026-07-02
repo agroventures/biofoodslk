@@ -45,7 +45,7 @@ function HomeClosingReflection({section}) {
         <div className="mt-16">
           <div className="mx-auto h-px w-24 bg-brand-secondary" />
 
-          <p className="mt-6 text-sm uppercase tracking-[0.35em] text-neutral-500">
+          <p className="mt-6 text-base uppercase tracking-[0.35em] text-neutral-500">
             Bio Foods • Agroventures Group
           </p>
         </div>

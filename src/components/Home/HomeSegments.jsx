@@ -71,7 +71,7 @@ function HomeSegments({ section }) {
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <div className="flex items-center gap-2">
-                <span className="text-sm uppercase tracking-[0.3em] font-semibold text-neutral-500">
+                <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
                   Discover Our Journey
                 </span>
               </div>
@@ -133,7 +133,7 @@ function HomeSegments({ section }) {
 
               {/* Button */}
               <div className="mt-6 flex justify-center">
-                <span className="inline-flex items-center gap-2 rounded-full border border-brand-primary px-5 py-2 text-sm font-medium text-brand-primary transition-colors duration-300 group-hover:bg-brand-primary group-hover:text-white">
+                <span className="inline-flex items-center gap-2 rounded-full border border-brand-primary px-5 py-2 text-base font-medium text-brand-primary transition-colors duration-300 group-hover:bg-brand-primary group-hover:text-white">
                   Explore {segment.title}
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
                 </span>

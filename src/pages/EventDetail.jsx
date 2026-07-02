@@ -46,7 +46,7 @@ function EventDetail() {
 
                 <Link
                     to="/news-and-events"
-                    className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-brand-primary mb-12 transition-colors"
+                    className="inline-flex items-center gap-2 text-base text-neutral-500 hover:text-brand-primary mb-12 transition-colors"
                 >
                     <ArrowLeft className="w-4 h-4" />
                     Back to News & Events
