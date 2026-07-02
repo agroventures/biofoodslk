@@ -69,7 +69,7 @@ function TermsAndConditions() {
         <Navbar />
 
         {/* HERO */}
-        <header className="relative overflow-hidden bg-brand-light py-28 lg:py-40">
+        <header className="relative overflow-hidden bg-brand-light py-16 lg:py-24">
           <div className="pointer-events-none absolute right-10 top-10 hidden select-none xl:block">
             <span className="text-[280px] font-black leading-none text-black/3">T&C</span>
           </div>
@@ -92,14 +92,13 @@ function TermsAndConditions() {
             </svg>
           </div>
 
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center text-center">
             <motion.div {...fadeUp(0)} className="mb-8 flex items-center gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
-              <div className="flex items-center gap-2">
-                <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
-                  Legal &amp; Governance
-                </span>
-              </div>
+              <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                Legal &amp; Governance
+              </span>
+              <div className="h-px w-12 bg-brand-secondary" />
             </motion.div>
 
             <motion.h1
