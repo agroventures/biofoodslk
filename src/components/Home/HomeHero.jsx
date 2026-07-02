@@ -5,13 +5,16 @@ import {
   AnimatePresence,
   useScroll,
   useTransform,
+  useMotionValue,
+  useAnimation,
 } from "framer-motion";
+import { useRef } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { certifications as certData } from "../../data/certifications";
 
-const duplicatedCerts = [...certData, ...certData, ...certData];
+const certList = [...certData, ...certData];
 
 const slides = [
   {
@@ -86,10 +89,33 @@ const slides = [
   },
 ];
 
+const ITEM_W = 128 + 24; // w-32 + mx-3 each side
+
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const { scrollY } = useScroll();
   const contentY = useTransform(scrollY, [0, 1000], [0, -60]);
+  const sliderRef = useRef(null);
+  const x = useMotionValue(0);
+  const controls = useAnimation();
+  const isDragging = useRef(false);
+
+  // Auto-scroll
+  useEffect(() => {
+    let raf;
+    const speed = 0.5;
+    const step = () => {
+      if (!isDragging.current && sliderRef.current) {
+        const maxScroll = -(certList.length / 2) * ITEM_W;
+        let next = x.get() - speed;
+        if (next <= maxScroll) next = 0;
+        x.set(next);
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [x]);
 
   useEffect(() => {
     const timer = setInterval(
@@ -102,24 +128,7 @@ export default function Hero() {
   return (
     <LazyMotion features={domAnimation}>
       <section className="relative min-h-screen overflow-hidden flex flex-col justify-between">
-        {/* Inject Keyframe for Marquee inside the file to guarantee it works without editing tailwind.config.js */}
-        <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-33.33%); }
-        }
-        .animate-marquee {
-          animation: marquee 15s linear infinite;
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
-        }
-        @media (max-width: 640px) {
-          .animate-marquee {
-            animation-duration: 8s;
-          }
-        }
-      `}</style>
+
 
         {/* Sliding Background Images */}
         <AnimatePresence mode="sync">
@@ -242,22 +251,41 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Marquee Wrapper Track */}
-          <div className="relative w-full flex overflow-x-hidden mask-[linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-            <div className="flex gap-12 animate-marquee whitespace-nowrap min-w-full py-2">
-              {duplicatedCerts.map((cert, idx) => (
+          {/* Drag Slider Track */}
+          <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+            <motion.div
+              ref={sliderRef}
+              className="flex py-2 cursor-grab active:cursor-grabbing"
+              style={{ x }}
+              drag="x"
+              dragConstraints={{ left: -(certList.length / 2) * ITEM_W, right: 0 }}
+              dragElastic={0.05}
+              onDragStart={() => { isDragging.current = true; }}
+              onDragEnd={(_, info) => {
+                isDragging.current = false;
+                const maxScroll = -(certList.length / 2) * ITEM_W;
+                let snapped = x.get();
+                if (snapped > 0) snapped = 0;
+                if (snapped < maxScroll) snapped = maxScroll;
+                controls.start({ x: snapped, transition: { type: "spring", stiffness: 300, damping: 30 } });
+              }}
+              animate={controls}
+            >
+              {certList.map((cert, idx) => (
                 <Link
                   key={`${cert.id}-${idx}`}
                   to="/quality-certifications"
                   title={cert.name}
-                  className="flex flex-col items-center justify-center gap-3 w-32 shrink-0 transition-all duration-300 hover:scale-110 drop-shadow-[0_8px_16px_rgba(0,0,0,0.65)]"
+                  draggable={false}
+                  className="flex flex-col items-center justify-center gap-3 w-32 shrink-0 mx-3 transition-transform duration-300 hover:scale-110 drop-shadow-[0_8px_16px_rgba(0,0,0,0.65)]"
                 >
                   <div className="w-full flex items-center justify-center h-16">
                     <img
                       src={cert.img}
                       alt={cert.name}
-                      className="h-16 w-full object-contain filter brightness-100"
+                      className="h-16 w-full object-contain pointer-events-none"
                       loading="lazy"
+                      draggable={false}
                     />
                   </div>
                   <span className="text-center text-[10px] font-bold tracking-wider text-white/80 leading-tight uppercase w-full truncate px-1">
@@ -265,7 +293,7 @@ export default function Hero() {
                   </span>
                 </Link>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -101,7 +101,7 @@ function HomeAgroVenturesAdvantage({ section }) {
                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
               "
             >
-              <div className="mb-10 flex items-center justify-center">
+              <div className="mb-6 flex items-center justify-center">
                 <div className="rounded-2xl bg-brand-primary p-4 text-brand-light">
                   <advantage.icon className="h-5 w-5" />
                 </div>

@@ -26,7 +26,7 @@ export default function HomeIntro({section}) {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="mb-6 flex items-center gap-4">
+            <div className="mb-6 flex items-center justify-center lg:justify-start gap-4">
               <div className="h-px w-12 bg-brand-secondary" />
               <span className="text-base uppercase tracking-[0.3em] font-semibold text-neutral-500">
                 About Bio Foods Agro
@@ -34,7 +34,7 @@ export default function HomeIntro({section}) {
             </div>
 
             <h2
-              className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl"
+              className="text-5xl leading-[0.95] tracking-tight text-neutral-950 sm:text-6xl text-center lg:text-left"
               style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
             >
               Connecting Sri Lankan Farmers
@@ -42,13 +42,13 @@ export default function HomeIntro({section}) {
               with the World.
             </h2>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 text-center lg:text-left">
               Sri Lanka's leading organic exporter - connecting thousands of
               local farmers with global markets through certified, sustainable,
               and ethically sourced products since 1993.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex items-center justify-center lg:justify-start gap-4">
               <button type="button" className="group flex items-center gap-3 rounded-full bg-brand-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <a href="/about">Learn More</a>
               </button>
