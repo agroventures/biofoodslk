@@ -16,7 +16,7 @@ const setMeta = (attr, key, content) => {
 
 const useSEO = ({
   // Basic
-  title = "Organic & Fairtrade Spices Coconut Producer | Bio Foods | Sri Lanka",
+  title = "Organic & Fairtrade Spices Coconut Producer | Bio Foods",
   description = "Premium organic spices & coconut products from Sri Lanka. Certified fair-trade exporter with sustainable farming practices.",
   keywords = ["biofoods, biofoods pvt ltd, bio foods, bio foods sri lanka, bio food, agroventures, biofoodslk, biofoods sri lanka, biofoodsagro, biofoods agroventures, organic food Sri Lanka, organic spices exporter, coconut products Sri Lanka"],
 
