@@ -66,37 +66,24 @@ function AboutFoundingVision() {
           </p>
         </motion.div>
 
-        {/* Principles editorial list */}
-        <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+        {/* Principles cards */}
+        <div className="grid gap-6 sm:grid-cols-3">
           {principles.map((item, index) => (
             <motion.div
               key={item.title}
               {...fadeUp(index * 0.1)}
-              className="group grid gap-6 py-10 transition-all duration-500 lg:grid-cols-12 lg:gap-8"
+              className="group flex flex-col items-center text-center gap-4 rounded-3xl border border-neutral-200 p-8 transition-all duration-300 hover:shadow-md"
             >
-              {/* Number + Icon */}
-              <div className="flex items-center justify-center gap-4 lg:contents">
-                <div className="lg:col-span-1">
-                  <div className="rounded-2xl bg-brand-primary group-hover:bg-brand-primary p-4 shadow-sm w-fit text-brand-light group-hover:text-white transition-colors duration-300">
-                    <item.icon className="h-5 w-5" />
-                  </div>
-                </div>
+              <div className="rounded-2xl bg-brand-primary p-4 text-brand-light">
+                <item.icon className="h-6 w-6" />
               </div>
-
-              {/* Title */}
-              <div className="lg:col-span-4">
-                <h3
-                  className="text-2xl lg:text-3xl tracking-tight text-neutral-950 text-center lg:text-left"
-                  style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
-                >
-                  {item.title}
-                </h3>
-              </div>
-
-              {/* Description */}
-              <div className="lg:col-span-6">
-                <p className="max-w-7xl text-lg leading-8 text-neutral-600 text-center lg:text-left">{item.description}</p>
-              </div>
+              <h3
+                className="text-2xl tracking-tight text-neutral-950"
+                style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}
+              >
+                {item.title}
+              </h3>
+              <p className="text-base leading-7 text-neutral-600">{item.description}</p>
             </motion.div>
           ))}
         </div>
