@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { processingFacilities } from "../../data/processingFacilities";
-import { Award, TrendingUp, Shield, Globe, ChevronRight, ChevronLeft, ArrowUpRight, X, ZoomIn } from "lucide-react";
+import { ChevronRight, ChevronLeft, ArrowUpRight, X, ZoomIn } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LazyMotion, domAnimation, m as motion } from "framer-motion";
 
@@ -13,10 +13,10 @@ const fadeUp = (delay = 0) => ({
 });
 
 const STATS = [
-  { value: "30+",  label: "Years Experience", icon: TrendingUp },
-  { value: "20+",  label: "Countries Served",  icon: Globe },
-  { value: "100%", label: "Quality Assured",   icon: Shield },
-  { value: "ISO",  label: "Certified Facility", icon: Award },
+  { value: "30+",  label: "Years Experience" },
+  { value: "20+",  label: "Countries Served" },
+  { value: "100%", label: "Quality Assured" },
+  { value: "ISO",  label: "Certified Facility" },
 ];
 
 const BADGES = ["ISO Certified", "HACCP Compliant", "Export Ready", "Quality Assured"];
@@ -165,12 +165,11 @@ function ProcessingFacilitiesDetails() {
                 ${i % 2 === 0 ? "border-r lg:border-r" : "lg:border-r"} 
                 ${i === STATS.length - 1 ? "lg:border-r-0" : ""}`}>
               <div>
-                <p className="text-4xl lg:text-5xl text-white" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
+                <p className="text-4xl lg:text-5xl text-white text-center" style={{ fontFamily: "Calibri, Gill Sans, Trebuchet MS, sans-serif" }}>
                   {value}
                 </p>
-                <p className="mt-1 text-lg uppercase tracking-[0.25em] text-white/50">{label}</p>
+                <p className="mt-1 text-lg uppercase tracking-[0.25em] text-white/50 text-center">{label}</p>
               </div>
-              <Icon className="h-4 w-4 text-white/20 shrink-0" />
             </motion.div>
           ))}
         </div>
