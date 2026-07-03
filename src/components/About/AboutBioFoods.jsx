@@ -200,9 +200,6 @@ export default function AboutBioFoods() {
                   {...fadeUp(i * 0.1)}
                   className="bg-white backdrop-blur-xs border border-neutral-200/70 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative group"
                 >
-                  {/* Subtle top bar decorative marker */}
-                  <div className="absolute top-0 left-8 right-8 h-0.5 bg-neutral-100 group-hover:bg-brand-gold transition-colors duration-300" />
-                  
                   <div>
                     <span
                       className="text-3xl lg:text-4xl text-brand-primary text-center group-hover:text-brand-primary transition-colors duration-300 font-light tabular-nums block mb-4"
