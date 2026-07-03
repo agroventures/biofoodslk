@@ -137,7 +137,7 @@ function QualityCertificationsDetails() {
 
               <motion.p
                 {...fadeUp(0.2)}
-                className="text-lg leading-8 text-neutral-600 max-w-2xl"
+                className="text-lg leading-8 tracking-wide text-neutral-600 max-w-2xl"
               >
                 Internationally recognised certifications, rigorous quality
                 systems, and complete traceability - ensuring consistency,
@@ -173,7 +173,7 @@ function QualityCertificationsDetails() {
               >
                 <div>
                   <p
-                    className="text-4xl lg:text-5xl text-white"
+                    className="text-4xl lg:text-5xl text-white text-center"
                     style={{
                       fontFamily:
                         "Calibri, Gill Sans, Trebuchet MS, sans-serif",
@@ -181,11 +181,11 @@ function QualityCertificationsDetails() {
                   >
                     {value}
                   </p>
-                  <p className="mt-1 text-lg uppercase tracking-[0.25em] text-white/50">
+                  <p className="mt-1 text-lg uppercase tracking-[0.25em] text-white/50 text-center">
                     {label}
                   </p>
                 </div>
-                <Icon className="h-4 w-4 text-white/20 shrink-0" />
+                {/* <Icon className="h-4 w-4 text-white/20 shrink-0" /> */}
               </motion.div>
             ))}
           </div>
@@ -316,7 +316,7 @@ function QualityCertificationsDetails() {
             </motion.div>
 
             <motion.div {...fadeUp(0.15)}>
-              <p className="text-lg leading-8 text-neutral-600 text-center">
+              <p className="text-lg leading-8 text-neutral-600 text-center tracking-wide">
                 Strict compliance across cultivation, harvesting, processing,
                 and distribution - every stage monitored for environmental
                 responsibility and product integrity.
