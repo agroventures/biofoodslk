@@ -3,7 +3,6 @@ import { lazy, Suspense } from 'react';
 import { MotionConfig } from 'framer-motion';
 import ScrollToTop from './components/shared/ScrollToTop';
 import Loader from './components/shared/Loader';
-const Sustainability = lazy(() => import('./pages/Sustainability'));
 
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
@@ -19,6 +18,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Careers = lazy(() => import('./pages/Careers'));
 const NewsEvents = lazy(() => import('./pages/NewsEvents'));
 const EventDetail = lazy(() => import('./pages/EventDetail'));
+const Sustainability = lazy(() => import('./pages/Sustainability'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
