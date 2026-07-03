@@ -142,6 +142,8 @@ export default function AboutManagement() {
                       src={member.img}
                       alt={member.name}
                       className="w-full h-full object-cover object-top"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
@@ -151,6 +153,8 @@ export default function AboutManagement() {
                       src={member.img}
                       alt={member.name}
                       className="w-full h-full object-cover object-top"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 

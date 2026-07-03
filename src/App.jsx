@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import { MotionConfig } from 'framer-motion';
 import ScrollToTop from './components/shared/ScrollToTop';
 import Loader from './components/shared/Loader';
-import Sustainability from './pages/Sustainability';
+const Sustainability = lazy(() => import('./pages/Sustainability'));
 
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));

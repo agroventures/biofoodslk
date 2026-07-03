@@ -207,6 +207,8 @@ function QualityCertificationsDetails() {
                     src={cert.img}
                     alt={cert.name}
                     className="h-10 w-full object-contain"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}
@@ -383,6 +385,8 @@ function QualityCertificationsDetails() {
                       src={cert.img}
                       alt={cert.name}
                       className="max-h-12 max-w-36 object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h4

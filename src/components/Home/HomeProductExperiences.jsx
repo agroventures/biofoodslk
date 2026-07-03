@@ -52,6 +52,8 @@ function HomeProductExperiences({ section }) {
                   src={product.img}
                   alt={product.name}
                   className="h-64 sm:h-80 w-full object-cover transition duration-700 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
