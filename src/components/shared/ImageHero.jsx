@@ -19,6 +19,8 @@ const ImageHero = ({
             src={img}
             alt={alt}
             className="h-full w-full object-cover object-center"
+            fetchpriority="high"
+            decoding="async"
           />
 
           {/* Dynamic Overlay: Subtle dark tint overall + heavy dark gradient at the bottom */}

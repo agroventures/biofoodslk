@@ -74,6 +74,8 @@ export default function HomeIntro({section}) {
                   src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/farmer-male.webp"
                   alt="Farmers in Sri Lanka"
                   className="h-120 w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent rounded-3xl" />
               </div>
@@ -84,6 +86,8 @@ export default function HomeIntro({section}) {
                   src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Home/farmer-female.webp"
                   alt="Lady Farmer"
                   className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

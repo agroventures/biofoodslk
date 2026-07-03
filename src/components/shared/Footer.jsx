@@ -23,9 +23,9 @@ const contactItems = [
 ];
 
 const socials = [
-  { icon: FaFacebookF, href: "https://www.facebook.com/Biofoofdslk/" },
-  { icon: FaInstagram, href: "https://www.instagram.com/biofoods.agro" },
-  { icon: FaXTwitter, href: "https://x.com/biofoodslk" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/Biofoofdslk/", label: "BioFoods on Facebook" },
+  { icon: FaInstagram, href: "https://www.instagram.com/biofoods.agro", label: "BioFoods on Instagram" },
+  { icon: FaXTwitter, href: "https://x.com/biofoodslk", label: "BioFoods on X (Twitter)" },
 ];
 
 const Footer = () => {
@@ -67,15 +67,16 @@ const Footer = () => {
 
             {/* Social icons */}
             <div className="flex gap-3">
-              {socials.map(({ icon: Icon, href }) => (
+              {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={href}
                   href={href}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={label}
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-400 transition-all duration-300 hover:border-brand-secondary hover:text-brand-secondary"
                 >
-                  <Icon size={14} />
+                  <Icon size={14} aria-hidden="true" />
                 </a>
               ))}
             </div>

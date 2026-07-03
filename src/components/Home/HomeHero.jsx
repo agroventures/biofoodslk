@@ -138,13 +138,17 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="absolute inset-0 h-full w-full"
-            style={{
-              backgroundImage: `url(${slides[current].img})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+            className="absolute inset-0 h-full w-full overflow-hidden"
+          >
+            <img
+              src={slides[current].img}
+              alt={slides[current].label}
+              className="h-full w-full object-cover object-center"
+              fetchpriority={current === 0 ? "high" : "auto"}
+              loading={current === 0 ? "eager" : "lazy"}
+              decoding="async"
+            />
+          </motion.div>
         </AnimatePresence>
 
         {/* Overlays */}

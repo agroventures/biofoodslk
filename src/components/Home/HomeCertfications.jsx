@@ -48,8 +48,10 @@ function HomeCertifications({ section }) {
                 <img
                   key={index}
                   src={img}
-                  alt="Organic Certification Badge"
+                  alt={`${["Demeter Biodynamic", "EU Organic", "USDA Organic", "JAS Japan", "Biologique Canada", "Naturland", "Fairtrade International"][index]} certification`}
                   className="h-14 w-full object-contain transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               ))}
             </div>
@@ -67,8 +69,10 @@ function HomeCertifications({ section }) {
                 <img
                   key={index}
                   src={img}
-                  alt="Food Safety Certification Badge"
+                  alt={`${["Ecocert ESR", "Amfori BSCI", "FSSC 22000", "Control Union"][index]} certification`}
                   className="h-14 w-full object-contain transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               ))}
             </div>
