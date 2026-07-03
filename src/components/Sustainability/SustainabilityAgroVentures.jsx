@@ -140,6 +140,7 @@ function SustainabilityAgroVentures() {
                 <div className="flex items-center gap-2">
                   <span className="text-lg uppercase tracking-[0.3em] font-semibold text-neutral-500">Social</span>
                 </div>
+                <div className="h-px w-12 bg-brand-secondary" />
               </div>
               <h3
                 className="text-4xl lg:text-5xl tracking-tight text-neutral-950 text-center"
