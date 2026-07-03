@@ -114,6 +114,7 @@ const Navbar = () => {
             {/* HAMBURGER MENU BUTTON (Mobile/Tablet Only - Hidden on xl screens) */}
             <button
               type="button"
+              aria-label="Open navigation menu"
               onClick={() => setIsOpen(true)}
               className={`
                 xl:hidden
@@ -196,6 +197,7 @@ const Navbar = () => {
 
           <button
             type="button"
+            aria-label="Close navigation menu"
             onClick={() => setIsOpen(false)}
             className="
               w-10

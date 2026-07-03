@@ -12,7 +12,7 @@ function Awards() {
     useSEO({
         title: "Awards & Global Recognition | Bio Foods Agroventures Sri Lanka",
         description: "Bio Foods Agroventures has received prestigious international awards including the German Sustainability Award and PEA recognition for excellence in organic and fair-trade agriculture.",
-        keywords: ["bio foods awards", "German Sustainability Award", "organic food award Sri Lanka", "fair trade recognition"],
+        keywords: ["bio foods awards", "German Sustainability Award sri lanka", "PEA award organic food", "international food award sri lanka", "best organic exporter award", "fair trade excellence award", "global recognition organic food"],
         url,
         image_alt: "Awards & Global Recognition – Bio Foods Agroventures",
     });

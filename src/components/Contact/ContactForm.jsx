@@ -101,7 +101,7 @@ const ContactForm = () => {
                                 Thank you for contacting us. Our team will get back to you shortly.
                             </p>
                         </div>
-                        <button type="button" onClick={() => setIsSubmitted(false)} className="text-neutral-400 hover:text-neutral-900">
+                        <button type="button" aria-label="Dismiss message" onClick={() => setIsSubmitted(false)} className="text-neutral-400 hover:text-neutral-900">
                             <X className="w-4 h-4" />
                         </button>
                     </div>

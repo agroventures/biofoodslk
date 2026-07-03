@@ -17,7 +17,7 @@ function Home() {
     useSEO({
         title: "Organic & Fairtrade Spices & Coconut Products | Bio Foods Sri Lanka",
         description: "Bio Foods Sri Lanka — the world's first fair-trade certified spice exporter. Premium organic spices, coconut products & frozen herbs. Sustainably farmed, globally certified.",
-        keywords: ["biofoods", "organic spices Sri Lanka", "fair trade spice exporter", "coconut products Sri Lanka", "bio foods", "biofoods agroventures", "organic food exporter Sri Lanka"],
+        keywords: ["bio foods sri lanka", "biofoods agroventures", "organic spices exporter sri lanka", "fair trade spice exporter", "coconut products sri lanka", "world's first fair trade spice exporter", "organic food supplier sri lanka", "USDA organic sri lanka", "fairtrade certified exporter", "bulk organic spices", "desiccated coconut exporter", "frozen herbs sri lanka"],
         url,
         image_alt: "Bio Foods Sri Lanka – Organic & Fairtrade Products",
     });

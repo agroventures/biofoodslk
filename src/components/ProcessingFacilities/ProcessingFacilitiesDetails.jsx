@@ -40,15 +40,15 @@ function ImageModal({ images, name, startIndex, onClose }) {
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90" onClick={onClose}>
-      <button onClick={onClose} className="absolute top-4 right-4 text-white/70 hover:text-white"><X className="w-6 h-6" /></button>
+      <button aria-label="Close image modal" onClick={onClose} className="absolute top-4 right-4 text-white/70 hover:text-white"><X className="w-6 h-6" /></button>
 
       <div className="relative max-w-5xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
         <img src={images[current]} alt={`${name} ${current + 1}`} className="w-full max-h-[80vh] object-contain" />
 
         {images.length > 1 && (
           <>
-            <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white/70 hover:text-white"><ChevronLeft className="w-8 h-8" /></button>
-            <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white/70 hover:text-white"><ChevronRight className="w-8 h-8" /></button>
+            <button aria-label="Previous image" onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white/70 hover:text-white"><ChevronLeft className="w-8 h-8" /></button>
+            <button aria-label="Next image" onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white/70 hover:text-white"><ChevronRight className="w-8 h-8" /></button>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-sm tracking-widest">
               {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
             </div>

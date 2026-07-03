@@ -12,7 +12,7 @@ function Contact() {
   useSEO({
     title: "Contact Bio Foods Agroventures | Organic Spice & Coconut Exporter",
     description: "Get in touch with Bio Foods Agroventures for product inquiries, export partnerships or general information. We're based in Sri Lanka and export globally.",
-    keywords: ["contact bio foods", "organic spice exporter contact", "Sri Lanka organic food supplier", "bio foods inquiry"],
+    keywords: ["contact bio foods agroventures", "organic spice exporter sri lanka contact", "buy organic spices sri lanka", "wholesale coconut products inquiry", "spice export inquiry", "bio foods email", "sri lanka organic food supplier contact"],
     url,
     image_alt: "Contact Bio Foods Agroventures",
   });

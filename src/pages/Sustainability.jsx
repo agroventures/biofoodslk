@@ -12,7 +12,7 @@ function Sustainability() {
     useSEO({
         title: "Sustainability & Environmental Responsibility | Bio Foods Agroventures",
         description: "Bio Foods Agroventures is committed to sustainable agriculture, environmental responsibility and community development across Sri Lanka's organic farming sector.",
-        keywords: ["sustainability bio foods", "sustainable agriculture Sri Lanka", "organic farming environment", "fair trade sustainability", "CSR Sri Lanka"],
+        keywords: ["sustainable agriculture sri lanka", "organic farming sustainability", "fair trade community development", "environmental responsibility food company", "CSR agribusiness sri lanka", "carbon neutral farming", "regenerative agriculture sri lanka", "bio foods sustainability"],
         url,
         image_alt: "Sustainability – Bio Foods Agroventures",
     });

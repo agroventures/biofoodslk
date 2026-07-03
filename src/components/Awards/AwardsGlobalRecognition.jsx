@@ -18,6 +18,7 @@ const AwardModal = ({ images: rawImages, title, onClose }) => {
             >
                 <button
                     type="button"
+                    aria-label="Close modal"
                     onClick={onClose}
                     className="absolute top-4 right-4 p-1.5 rounded-full bg-neutral-100 hover:bg-neutral-200 transition-colors"
                 >
@@ -32,15 +33,15 @@ const AwardModal = ({ images: rawImages, title, onClose }) => {
                     />
                     {images.length > 1 && (
                         <>
-                            <button type="button" onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-all">
+                            <button type="button" aria-label="Previous award image" onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-all">
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
-                            <button type="button" onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-all">
+                            <button type="button" aria-label="Next award image" onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-all">
                                 <ChevronRight className="w-5 h-5" />
                             </button>
                             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
                                 {images.map((src, i) => (
-                                    <button key={src} type="button" onClick={() => setCurrent(i)}
+                                    <button key={src} type="button" aria-label={`Go to image ${i + 1}`} onClick={() => setCurrent(i)}
                                         className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
                                     />
                                 ))}

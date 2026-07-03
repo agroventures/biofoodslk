@@ -52,7 +52,7 @@ const AwardsLegacy = () => (
     </div>
 
     {/* PRINCIPLES - numbered row */}
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
       <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-200 border border-neutral-200">
         {principles.map(({ icon: Icon, number, title, description }) => (
           <div key={number} className="p-10 lg:p-12 flex flex-col gap-6">
@@ -100,7 +100,7 @@ const AwardsLegacy = () => (
     </div> */}
 
     {/* CLOSING CTA */}
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 flex flex-col gap-12 border-t border-neutral-100">
+    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20 flex flex-col gap-12 border-t border-neutral-100">
       <div>
         <p className="text-lg uppercase tracking-[0.3em] font-semibold text-brand-primary mb-6 text-center">
           Looking Ahead

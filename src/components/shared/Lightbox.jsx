@@ -34,15 +34,15 @@ export default function Lightbox({ images, startIndex = 0, onClose }) {
       >
         {/* Controls */}
         <div className="absolute top-4 right-4 flex gap-2" onClick={e => e.stopPropagation()}>
-          <button type="button" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.min(s + 0.5, 3))}><ZoomIn className="h-5 w-5" /></button>
-          <button type="button" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.max(s - 0.5, 1))}><ZoomOut className="h-5 w-5" /></button>
-          <button type="button" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={onClose}><X className="h-5 w-5" /></button>
+          <button type="button" aria-label="Zoom in" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.min(s + 0.5, 3))}><ZoomIn className="h-5 w-5" /></button>
+          <button type="button" aria-label="Zoom out" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={() => setScale(s => Math.max(s - 0.5, 1))}><ZoomOut className="h-5 w-5" /></button>
+          <button type="button" aria-label="Close lightbox" className="p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={onClose}><X className="h-5 w-5" /></button>
         </div>
 
         {/* Arrow nav */}
         {images.length > 1 && <>
-          <button type="button" className="absolute left-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); prev(); }}><ChevronLeft className="h-6 w-6" /></button>
-          <button type="button" className="absolute right-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); next(); }}><ChevronRight className="h-6 w-6" /></button>
+          <button type="button" aria-label="Previous image" className="absolute left-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); prev(); }}><ChevronLeft className="h-6 w-6" /></button>
+          <button type="button" aria-label="Next image" className="absolute right-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded" onClick={e => { e.stopPropagation(); next(); }}><ChevronRight className="h-6 w-6" /></button>
         </>}
 
         {/* Image */}

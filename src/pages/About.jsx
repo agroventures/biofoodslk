@@ -24,7 +24,7 @@ function About() {
   useSEO({
     title: "About Bio Foods Agroventures | Organic Spice & Coconut Exporter Sri Lanka",
     description: "Learn about Bio Foods Agroventures — Sri Lanka's pioneering organic and fair-trade certified spice and coconut exporter. Our story, vision, mission and leadership team.",
-    keywords: ["about bio foods", "bio foods agroventures", "organic exporter Sri Lanka", "fair trade certified", "Sri Lanka spice company"],
+    keywords: ["bio foods agroventures", "about bio foods sri lanka", "organic spice company sri lanka", "fair trade certified exporter", "sri lanka spice exporter history", "organic agribusiness sri lanka", "bio foods management team", "sustainable food company sri lanka"],
     url,
     image_alt: "About Bio Foods Agroventures",
   });

@@ -11,7 +11,7 @@ function Producers() {
     useSEO({
         title: "Our Producers | Organic Farmers & Smallholders | Bio Foods Sri Lanka",
         description: "Bio Foods works with thousands of certified organic smallholder farmers across Sri Lanka, ensuring fair trade practices, sustainable agriculture and premium quality produce.",
-        keywords: ["organic farmers Sri Lanka", "fair trade producers", "smallholder farmers", "bio foods producers", "sustainable farming Sri Lanka"],
+        keywords: ["organic smallholder farmers sri lanka", "fair trade producers sri lanka", "certified organic farmers", "spice farmers sri lanka", "coconut farmers sri lanka", "sustainable farming community", "bio foods farmer network", "organic agriculture smallholders"],
         url,
         image_alt: "Organic Producers – Bio Foods Agroventures",
     });
