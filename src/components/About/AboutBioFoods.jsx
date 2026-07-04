@@ -131,7 +131,7 @@ export default function AboutBioFoods() {
                 className="overflow-hidden rounded-2xl border border-neutral-200 p-2 bg-neutral-50 shadow-inner h-full max-h-137.5 relative"
               >
                 <img
-                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/About/intro.webp"
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/2/1.webp"
                   alt="Bio Foods organic farm"
                   className="w-full h-full min-h-87.5 lg:min-h-120 object-cover rounded-xl relative z-10"
                 />

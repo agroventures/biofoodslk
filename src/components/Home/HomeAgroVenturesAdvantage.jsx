@@ -78,9 +78,9 @@ function HomeAgroVenturesAdvantage({ section }) {
         {/* Facility Image */}
         <div className="mb-12 overflow-hidden rounded-[36px] shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
           <img
-            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/ProcessingFacility/coconut/1.webp"
+            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/2/33.webp"
             alt="Bio Foods processing facility"
-            className="h-72 w-full object-cover transition duration-700 hover:scale-105"
+            className="lg:h-150 w-full object-cover lg:object-bottom transition duration-700 hover:scale-105"
             loading="lazy"
             decoding="async"
           />
