@@ -120,10 +120,22 @@ function SustainabilityAgroVentures() {
               {/* Image */}
               <motion.div {...fadeUp(0.2)} className="sticky top-24 space-y-2">
                 <img
-                  src="/ProcessingFacility/milling-and-drying.webp"
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/1/17.webp"
                   alt="Sustainable processing"
-                  className="w-full h-auto object-contain rounded-2xl"
+                  className="w-full h-72 object-cover rounded-2xl"
                 />
+                <div className="grid grid-cols-2 gap-2">
+                  <img
+                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/1/27.webp"
+                    alt="Coconut processing"
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                  <img
+                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/1/15.webp"
+                    alt="Processing standards"
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
               </motion.div>
             </div>
 
@@ -243,22 +255,10 @@ function SustainabilityAgroVentures() {
               {/* Image */}
               <motion.div {...fadeUp(0.2)} className="sticky top-24 space-y-2">
                 <img
-                  src="/ProcessingFacility/frozen-herbs.webp"
+                  src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/2/24.webp"
                   alt="Quality controlled facility"
-                  className="w-full h-72 object-cover rounded-2xl"
+                  className="w-full object-cover rounded-2xl"
                 />
-                <div className="grid grid-cols-2 gap-2">
-                  <img
-                    src="/ProcessingFacility/coconut/1.webp"
-                    alt="Coconut processing"
-                    className="w-full h-48 object-cover rounded-2xl"
-                  />
-                  <img
-                    src="/ProcessingFacility/coconut/2.webp"
-                    alt="Processing standards"
-                    className="w-full h-48 object-cover rounded-2xl"
-                  />
-                </div>
               </motion.div>
 
             </div>
