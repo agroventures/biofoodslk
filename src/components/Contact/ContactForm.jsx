@@ -168,7 +168,7 @@ const ContactForm = () => {
                             {/* SOCIAL */}
                             <div className="mt-12 pt-8 border-t border-white/10 flex gap-3 relative">
                                 <a
-                                    href="https://www.facebook.com/Biofoofdslk/"
+                                    href="https://www.facebook.com/profile.php?id=61589426576406/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="w-10 h-10 flex items-center justify-center border border-white/20 text-white/60 hover:bg-brand-gold hover:text-white hover:border-brand-gold transition"

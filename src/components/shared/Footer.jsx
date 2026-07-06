@@ -23,7 +23,7 @@ const contactItems = [
 ];
 
 const socials = [
-  { icon: FaFacebookF, href: "https://www.facebook.com/Biofoofdslk/", label: "BioFoods on Facebook" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/profile.php?id=61589426576406/", label: "BioFoods on Facebook" },
   { icon: FaInstagram, href: "https://www.instagram.com/biofoods.agro", label: "BioFoods on Instagram" },
   { icon: FaXTwitter, href: "https://x.com/biofoodslk", label: "BioFoods on X (Twitter)" },
 ];
