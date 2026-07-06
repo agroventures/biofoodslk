@@ -7,8 +7,6 @@ import Footer from '../components/shared/Footer';
 import Lightbox from '../components/shared/Lightbox';
 import useSEO from '../hooks/useSEO';
 
-const GALLERY_PAGE = 9;
-
 const tagColors = {
     Award: "bg-brand-gold/20 text-brand-secondary",
     Exhibition: "bg-emerald-50 text-emerald-700",
@@ -22,7 +20,6 @@ function EventDetail() {
     const { id } = useParams();
     const item = newsEventsData.find((e) => e.id === Number(id));
     const [lightboxIndex, setLightboxIndex] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(GALLERY_PAGE);
 
     useSEO({
         title: item ? `${item.title} | Bio Foods Agroventures` : "Event | Bio Foods Agroventures",
@@ -101,13 +98,13 @@ function EventDetail() {
                     <div className="mt-16">
                         <div className="h-px bg-neutral-200 mb-10" />
                         <div className="columns-2 md:columns-3 gap-3 space-y-3">
-                            {images.slice(0, visibleCount).map((src, i) => (
+                            {images.map((src, i) => (
                                 <div key={src} className="relative group cursor-zoom-in break-inside-avoid" onClick={() => setLightboxIndex(i)}>
                                     <img
                                         src={src}
                                         alt={`${title} ${i + 1}`}
                                         className="w-full object-cover"
-                                        loading="lazy"
+                                        loading="eager"
                                         decoding="async"
                                     />
                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -116,17 +113,7 @@ function EventDetail() {
                                 </div>
                             ))}
                         </div>
-                        {visibleCount < images.length && (
-                            <div className="mt-8 flex justify-center">
-                                <button
-                                    type="button"
-                                    onClick={() => setVisibleCount(c => Math.min(c + GALLERY_PAGE, images.length))}
-                                    className="rounded-full border border-neutral-300 px-8 py-3 text-lg text-neutral-600 hover:border-brand-primary hover:text-brand-primary transition-colors"
-                                >
-                                    Load more ({images.length - visibleCount} remaining)
-                                </button>
-                            </div>
-                        )}
+
                         {lightboxIndex !== null && (
                             <Lightbox images={images} startIndex={lightboxIndex} onClose={() => setLightboxIndex(null)} />
                         )}
