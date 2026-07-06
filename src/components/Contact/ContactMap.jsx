@@ -26,7 +26,7 @@ function ContactMap() {
           </h2>
 
           <p className="mt-8 max-w-3xl mx-auto text-lg leading-8 text-neutral-600 text-center">
-            Located in Kaduwela, Sri Lanka - connecting sustainable sourcing, processing, and global export.
+            Located in Colombo 07, Sri Lanka - connecting sustainable sourcing, processing, and global export.
           </p>
         </div>
 

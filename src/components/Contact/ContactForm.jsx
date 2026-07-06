@@ -133,8 +133,9 @@ const ContactForm = () => {
                                     <div>
                                         <h3 className="text-lg text-white mb-1">Head Office</h3>
                                         <p className="text-white/60 leading-7 text-lg">
-                                            52/1/D, New Kandy Road,<br />
-                                            Kothalawala, Kaduwela,<br />
+                                            No 48,<br />
+                                            Sir Marcus Fernando Mawathe,<br />
+                                            Colombo 07,<br />
                                             Sri Lanka.
                                         </p>
                                     </div>
