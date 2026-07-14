@@ -137,7 +137,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 1.06 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: current === 0 ? 0.3 : 1.2, ease: "easeInOut" }}
             className="absolute inset-0 h-full w-full overflow-hidden"
           >
             <img
@@ -146,7 +146,10 @@ export default function Hero() {
               className="h-full w-full object-cover object-center"
               fetchpriority={current === 0 ? "high" : "auto"}
               loading={current === 0 ? "eager" : "lazy"}
-              decoding="async"
+              decoding={current === 0 ? "sync" : "async"}
+              width="1920"
+              height="1080"
+              sizes="100vw"
             />
           </motion.div>
         </AnimatePresence>
