@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import { MotionConfig } from 'framer-motion';
 import ScrollToTop from './components/shared/ScrollToTop';
 import Loader from './components/shared/Loader';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
