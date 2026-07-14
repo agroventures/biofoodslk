@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import { MotionConfig } from 'framer-motion';
 import ScrollToTop from './components/shared/ScrollToTop';
 import Loader from './components/shared/Loader';
+import { Analytics } from '@vercel/analytics/next';
 
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
@@ -25,6 +26,7 @@ function App() {
   return (
     <MotionConfig reducedMotion="user">
     <BrowserRouter>
+      <Analytics />
       <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <Routes>
