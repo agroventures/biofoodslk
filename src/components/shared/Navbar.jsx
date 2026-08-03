@@ -6,6 +6,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Processing Facilities", href: "/processing-facilities" },
+  { name: "Producers", href: "/producers" },
   { name: "Products", href: "/products" },
   { name: "Awards", href: "/awards" },
   { name: "News & Events", href: "/news-and-events" },
