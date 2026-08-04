@@ -163,12 +163,12 @@ const Footer = () => {
           <p className="text-sm text-neutral-500">
             Built by{" "}
             <a
-              href="https://www.ventrax.lk/"
-              target="_blank"
+              href="#"
+              // target="_blank"
               rel="noreferrer"
               className="text-neutral-300 transition-colors duration-200 hover:text-white"
             >
-              VENTRAX.LK
+              Agroventures Digital
             </a>
           </p>
         </div>
