@@ -45,7 +45,7 @@ The successful export underscores Bio Foods Agroventures' focus on delivering ex
         title: "දිරිය ගොවි ප්‍රණාම 2026",
         summary: "Bio Foods Agroventures organized this event for MOPA Organic Producers (Marginalized Organic Producers Association)",
 
-        images: Array.from({ length: 20 }, (_, i) => `https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/3/${i + 1}.webp`),
+        images: Array.from({ length: 18 }, (_, i) => `https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/3/${i + 1}.webp`),
 
         content: `Bio Foods Agroventures organized this event for MOPA Organic Producers (Marginalized Organic Producers Association).
         
