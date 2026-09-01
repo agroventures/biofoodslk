@@ -25,18 +25,35 @@ The Makandura factory is expected to play a key role in Agro Ventures' long-term
         icon: Trophy,
         date: "2026 July",
         title: "Bio Foods Agroventures 1st consignment of organic spices exported to international markets",
-        summary: "Agro Ventures successfully exported its first consignment of premium organic spices to international markets, marking a significant milestone in the company's global expansion and commitment to sustainable agriculture.",
+        summary: "Bio Foods Agroventures successfully exported its first consignment of premium organic spices to international markets, marking a significant milestone in the company's global expansion and commitment to sustainable agriculture.",
 
         images: Array.from({ length: 29 }, (_, i) => `https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/2/${i + 1}.webp`),
 
-        content: `Agro Ventures proudly announced the successful export of its first consignment of premium organic spices to international markets, showcasing the company's dedication to sustainable agriculture and high-quality production.
+        content: `Bio Foods Agroventures proudly announced the successful export of its first consignment of premium organic spices to international markets, showcasing the company's dedication to sustainable agriculture and high-quality production.
 
-The shipment included a variety of carefully cultivated organic spices, meeting stringent international quality standards and reflecting Agro Ventures' commitment to environmentally responsible farming practices.
+The shipment included a variety of carefully cultivated organic spices, meeting stringent international quality standards and reflecting Bio Foods Agroventures' commitment to environmentally responsible farming practices.
 
-This milestone represents a significant step in the company's global expansion strategy, opening new opportunities for Agro Ventures to establish its presence in key international markets and strengthen its reputation as a trusted supplier of organic agricultural products.
+This milestone represents a significant step in the company's global expansion strategy, opening new opportunities for Bio Foods Agroventures to establish its presence in key international markets and strengthen its reputation as a trusted supplier of organic agricultural products.
 
-The successful export underscores Agro Ventures' focus on delivering exceptional value to customers worldwide while promoting sustainable farming methods that benefit both the environment and local communities.`
+The successful export underscores Bio Foods Agroventures' focus on delivering exceptional value to customers worldwide while promoting sustainable farming methods that benefit both the environment and local communities.`
+    },
+    {
+        id: 3,
+        type: "Event",
+        icon: Trophy,
+        date: "2026 August",
+        title: "දිරිය ගොවි ප්‍රණාම 2026",
+        summary: "Bio Foods Agroventures organized this event for MOPA Organic Producers (Marginalized Organic Producers Association)",
+
+        images: Array.from({ length: 20 }, (_, i) => `https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/biofoodslk/Events/3/${i + 1}.webp`),
+
+        content: `Bio Foods Agroventures organized this event for MOPA Organic Producers (Marginalized Organic Producers Association).
+        
+        Event was held at Kumburegama Temple Kandy yesterday. Objective of this event is to strengthen Organic Farmers and to build trust and confidence on their future is secured by  working with  Bio Foods Agroventures Pvt Ltd.
+        
+        Senior Management and employees at Bio Foods Agroventures joined the event along with the organization committee of MOPA.`
     }
+
 
 ];
 
